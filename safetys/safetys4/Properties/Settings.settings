@@ -1,0 +1,18 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="safetys4.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="safetys4_MasterdataService_Masterdata" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://localhost/safetys4/Masterdata.asmx</Value>
+    </Setting>
+    <Setting Name="safetys4_ActioneventService_Actionevent" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://localhost/safetys4/Actionevent.asmx</Value>
+    </Setting>
+    <Setting Name="safetys_ActioneventService_Actionevent" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://localhost/safetys4/Actionevent.asmx</Value>
+    </Setting>
+    <Setting Name="safetys_MasterdataService_Masterdata" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://localhost/safetys4/Masterdata.asmx</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

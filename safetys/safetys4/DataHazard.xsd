@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DataHazard" targetNamespace="http://tempuri.org/DataHazard.xsd" xmlns:mstns="http://tempuri.org/DataHazard.xsd" xmlns="http://tempuri.org/DataHazard.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DataHazard" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="DataHazard" msprop:Generator_UserDSName="DataHazard">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="form1" msprop:Generator_TableClassName="form1DataTable" msprop:Generator_TableVarName="tableform1" msprop:Generator_RowChangedName="form1RowChanged" msprop:Generator_TablePropName="form1" msprop:Generator_RowDeletingName="form1RowDeleting" msprop:Generator_RowChangingName="form1RowChanging" msprop:Generator_RowEvHandlerName="form1RowChangeEventHandler" msprop:Generator_RowDeletedName="form1RowDeleted" msprop:Generator_RowClassName="form1Row" msprop:Generator_UserTableName="form1" msprop:Generator_RowEvArgName="form1RowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="img2" msdata:Caption="img1" msprop:Generator_ColumnVarNameInTable="columnimg2" msprop:Generator_ColumnPropNameInRow="img2" msprop:Generator_ColumnPropNameInTable="img2Column" msprop:Generator_UserColumnName="img2" type="xs:base64Binary" minOccurs="0" />
+              <xs:element name="img1" msprop:Generator_ColumnVarNameInTable="columnimg1" msprop:Generator_ColumnPropNameInRow="img1" msprop:Generator_ColumnPropNameInTable="img1Column" msprop:Generator_UserColumnName="img1" type="xs:base64Binary" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="form4" msprop:Generator_TableClassName="form4DataTable" msprop:Generator_TableVarName="tableform4" msprop:Generator_RowChangedName="form4RowChanged" msprop:Generator_TablePropName="form4" msprop:Generator_RowDeletingName="form4RowDeleting" msprop:Generator_RowChangingName="form4RowChanging" msprop:Generator_RowEvHandlerName="form4RowChangeEventHandler" msprop:Generator_RowDeletedName="form4RowDeleted" msprop:Generator_RowClassName="form4Row" msprop:Generator_UserTableName="form4" msprop:Generator_RowEvArgName="form4RowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="position" msprop:Generator_ColumnVarNameInTable="columnposition" msprop:Generator_ColumnPropNameInRow="position" msprop:Generator_ColumnPropNameInTable="positionColumn" msprop:Generator_UserColumnName="position" type="xs:string" minOccurs="0" />
+              <xs:element name="name_surname" msprop:Generator_ColumnVarNameInTable="columnname_surname" msprop:Generator_ColumnPropNameInRow="name_surname" msprop:Generator_ColumnPropNameInTable="name_surnameColumn" msprop:Generator_UserColumnName="name_surname" type="xs:string" minOccurs="0" />
+              <xs:element name="date" msprop:Generator_ColumnVarNameInTable="columndate" msprop:Generator_ColumnPropNameInRow="date" msprop:Generator_ColumnPropNameInTable="dateColumn" msprop:Generator_UserColumnName="date" type="xs:string" minOccurs="0" />
+              <xs:element name="approval" msprop:Generator_ColumnVarNameInTable="columnapproval" msprop:Generator_ColumnPropNameInRow="approval" msprop:Generator_ColumnPropNameInTable="approvalColumn" msprop:Generator_UserColumnName="approval" type="xs:string" minOccurs="0" />
+              <xs:element name="remark" msprop:Generator_ColumnVarNameInTable="columnremark" msprop:Generator_ColumnPropNameInRow="remark" msprop:Generator_ColumnPropNameInTable="remarkColumn" msprop:Generator_UserColumnName="remark" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="process_action" msprop:Generator_TableClassName="process_actionDataTable" msprop:Generator_TableVarName="tableprocess_action" msprop:Generator_RowChangedName="process_actionRowChanged" msprop:Generator_TablePropName="process_action" msprop:Generator_RowDeletingName="process_actionRowDeleting" msprop:Generator_RowChangingName="process_actionRowChanging" msprop:Generator_RowEvHandlerName="process_actionRowChangeEventHandler" msprop:Generator_RowDeletedName="process_actionRowDeleted" msprop:Generator_RowClassName="process_actionRow" msprop:Generator_UserTableName="process_action" msprop:Generator_RowEvArgName="process_actionRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="no" msprop:Generator_ColumnVarNameInTable="columnno" msprop:Generator_ColumnPropNameInRow="no" msprop:Generator_ColumnPropNameInTable="noColumn" msprop:Generator_UserColumnName="no" type="xs:string" minOccurs="0" />
+              <xs:element name="type_of_control" msdata:Caption="tb_corrective_preventive" msprop:Generator_ColumnVarNameInTable="columntype_of_control" msprop:Generator_ColumnPropNameInRow="type_of_control" msprop:Generator_ColumnPropNameInTable="type_of_controlColumn" msprop:Generator_UserColumnName="type_of_control" type="xs:string" minOccurs="0" />
+              <xs:element name="action" msdata:Caption="responsible_person" msprop:Generator_ColumnVarNameInTable="columnaction" msprop:Generator_ColumnPropNameInRow="action" msprop:Generator_ColumnPropNameInTable="actionColumn" msprop:Generator_UserColumnName="action" type="xs:string" minOccurs="0" />
+              <xs:element name="responsible_person" msdata:Caption="lbdepartment_action" msprop:Generator_ColumnVarNameInTable="columnresponsible_person" msprop:Generator_ColumnPropNameInRow="responsible_person" msprop:Generator_ColumnPropNameInTable="responsible_personColumn" msprop:Generator_UserColumnName="responsible_person" type="xs:string" minOccurs="0" />
+              <xs:element name="due_date" msprop:Generator_ColumnVarNameInTable="columndue_date" msprop:Generator_ColumnPropNameInRow="due_date" msprop:Generator_ColumnPropNameInTable="due_dateColumn" msprop:Generator_UserColumnName="due_date" type="xs:string" minOccurs="0" />
+              <xs:element name="status" msprop:Generator_ColumnVarNameInTable="columnstatus" msprop:Generator_ColumnPropNameInRow="status" msprop:Generator_ColumnPropNameInTable="statusColumn" msprop:Generator_UserColumnName="status" type="xs:string" minOccurs="0" />
+              <xs:element name="date_complete" msprop:Generator_ColumnVarNameInTable="columndate_complete" msprop:Generator_ColumnPropNameInRow="date_complete" msprop:Generator_ColumnPropNameInTable="date_completeColumn" msprop:Generator_UserColumnName="date_complete" type="xs:string" minOccurs="0" />
+              <xs:element name="attachment" msprop:Generator_ColumnVarNameInTable="columnattachment" msprop:Generator_ColumnPropNameInRow="attachment" msprop:Generator_ColumnPropNameInTable="attachmentColumn" msprop:Generator_UserColumnName="attachment" type="xs:string" minOccurs="0" />
+              <xs:element name="remark" msprop:Generator_ColumnVarNameInTable="columnremark" msprop:Generator_ColumnPropNameInRow="remark" msprop:Generator_ColumnPropNameInTable="remarkColumn" msprop:Generator_UserColumnName="remark" type="xs:string" minOccurs="0" />
+              <xs:element name="department" msprop:Generator_ColumnVarNameInTable="columndepartment" msprop:Generator_ColumnPropNameInRow="department" msprop:Generator_ColumnPropNameInTable="departmentColumn" msprop:Generator_UserColumnName="department" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

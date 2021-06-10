@@ -1,0 +1,652 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="action" xml:space="preserve">
+    <value>การดำเนินการ</value>
+  </data>
+  <data name="add_occupational_health" xml:space="preserve">
+    <value>เพิ่มผลการตรวจสุขภาพ</value>
+  </data>
+  <data name="add_process_action" xml:space="preserve">
+    <value>เพิ่มมาตรการการฟื้นฟูสุขภาพ</value>
+  </data>
+  <data name="add_risk_factor_relate_work" xml:space="preserve">
+    <value>เพิ่มปัจจัยเสี่ยงการทำงาน</value>
+  </data>
+  <data name="all_health_header" xml:space="preserve">
+    <value>การฟื้นฟูสุขภาพทั้งหมด</value>
+  </data>
+  <data name="approval" xml:space="preserve">
+    <value>การอนุมัติ</value>
+  </data>
+  <data name="approve" xml:space="preserve">
+    <value>อนุมัติ</value>
+  </data>
+  <data name="attachment" xml:space="preserve">
+    <value>เอกสารแนบ</value>
+  </data>
+  <data name="btHealthedit" xml:space="preserve">
+    <value>แก้ไข</value>
+  </data>
+  <data name="btRequestclose" xml:space="preserve">
+    <value>ขอปิดรายงานการฟื้นฟูสุขภาพ</value>
+  </data>
+  <data name="btSubmitReport" xml:space="preserve">
+    <value>ส่งผลการตรวจสอบ</value>
+  </data>
+  <data name="close_action" xml:space="preserve">
+    <value>ดำเนินการ</value>
+  </data>
+  <data name="consider_approval" xml:space="preserve">
+    <value>กรุณาเลือกผลการพิจารณาอนุมัติการแก้ไข</value>
+  </data>
+  <data name="date" xml:space="preserve">
+    <value>วันที่</value>
+  </data>
+  <data name="date_complete" xml:space="preserve">
+    <value>วันที่เสร็จ</value>
+  </data>
+  <data name="doc_no" xml:space="preserve">
+    <value>Health No.</value>
+  </data>
+  <data name="due_date" xml:space="preserve">
+    <value>กำหนดเสร็จ</value>
+  </data>
+  <data name="duration_risk_factor" xml:space="preserve">
+    <value>เวลาที่สัมผัสความเสี่ยงจริง</value>
+  </data>
+  <data name="file_action_close" xml:space="preserve">
+    <value>เอกสารแนบปิดงาน</value>
+  </data>
+  <data name="file_health_check" xml:space="preserve">
+    <value>เอกสารผลการตรวจสุขภาพ</value>
+  </data>
+  <data name="file_opinion_doctor" xml:space="preserve">
+    <value>เอกสารความเห็นทางการแพทย์</value>
+  </data>
+  <data name="file_recovery_plan" xml:space="preserve">
+    <value>เอกสารแผนการฟื้นฟู</value>
+  </data>
+  <data name="file_repeat_result_health" xml:space="preserve">
+    <value>เอกสารผลการตรวจสุขภาพซ้ำ</value>
+  </data>
+  <data name="file_result_health" xml:space="preserve">
+    <value>เอกสารผลการตรวจสุขภาพ</value>
+  </data>
+  <data name="flie_repeat_health_check" xml:space="preserve">
+    <value>เอกสารผลการตรวจสุขภาพซ้ำ</value>
+  </data>
+  <data name="have_repeat_health_check" xml:space="preserve">
+    <value>มีการตรวจสุขภาพซ้ำ</value>
+  </data>
+  <data name="healthstep1" xml:space="preserve">
+    <value>รายงานการฟื้นฟูสุขภาพ</value>
+  </data>
+  <data name="healthstep3" xml:space="preserve">
+    <value>ขอปิดรายงานการฟื้นฟูสุขภาพ</value>
+  </data>
+  <data name="hour_risk_factor" xml:space="preserve">
+    <value>ชั่วโมง</value>
+  </data>
+  <data name="lbage" xml:space="preserve">
+    <value>อายุพนักงาน</value>
+  </data>
+  <data name="lbCompany" xml:space="preserve">
+    <value>บริษัท</value>
+  </data>
+  <data name="lbcompany_reporter" xml:space="preserve">
+    <value>บริษัทของคนรายงาน</value>
+  </data>
+  <data name="lbdepartment" xml:space="preserve">
+    <value>โรงงาน/ฝ่าย</value>
+  </data>
+  <data name="lbdepartment_reporter" xml:space="preserve">
+    <value>โรงงาน/ฝ่ายของคนรายงาน</value>
+  </data>
+  <data name="lbdivision" xml:space="preserve">
+    <value>ส่วน</value>
+  </data>
+  <data name="lbemployeeid" xml:space="preserve">
+    <value>รหัสพนักงาน</value>
+  </data>
+  <data name="lbemployee_name" xml:space="preserve">
+    <value>ชื่อพนักงาน</value>
+  </data>
+  <data name="lbfucntion" xml:space="preserve">
+    <value>พื้นที่สายงาน</value>
+  </data>
+  <data name="lbfunction_reporter" xml:space="preserve">
+    <value>พื้นที่สายงานของคนรายงาน</value>
+  </data>
+  <data name="lbhealthno" xml:space="preserve">
+    <value>Health Rehabilitation No.</value>
+  </data>
+  <data name="lbhealth_rehab" xml:space="preserve">
+    <value>การฟื้นฟูสุขภาพ</value>
+  </data>
+  <data name="lbjobtype" xml:space="preserve">
+    <value>ลักษณะงานที่ทำ/ชนิดเครื่องจักร</value>
+  </data>
+  <data name="lbNameReportHeader" xml:space="preserve">
+    <value>ชื่อคนรายงาน</value>
+  </data>
+  <data name="lbsection" xml:space="preserve">
+    <value>แผนก</value>
+  </data>
+  <data name="lbserviceyear" xml:space="preserve">
+    <value>อายุงาน</value>
+  </data>
+  <data name="lbserviceyear_current" xml:space="preserve">
+    <value>อายุงานในตำแหน่งปัจจุบัน</value>
+  </data>
+  <data name="lbstatus" xml:space="preserve">
+    <value>สถานะ</value>
+  </data>
+  <data name="lbyear" xml:space="preserve">
+    <value>ปีการตรวจสุขภาพ</value>
+  </data>
+  <data name="manage" xml:space="preserve">
+    <value>จัดการ</value>
+  </data>
+  <data name="minute_risk_factor" xml:space="preserve">
+    <value>นาที</value>
+  </data>
+  <data name="name_surname" xml:space="preserve">
+    <value>ชื่อ - สกุล</value>
+  </data>
+  <data name="no" xml:space="preserve">
+    <value>No.</value>
+  </data>
+  <data name="notapprove" xml:space="preserve">
+    <value>ไม่อนุมัติ</value>
+  </data>
+  <data name="not_repeat_health_check" xml:space="preserve">
+    <value>ไม่มีการตรวจสุขภาพซ้ำ</value>
+  </data>
+  <data name="no_repeat_health_check" xml:space="preserve">
+    <value>ไม่มีการตรวจสุขภาพซ้ำ</value>
+  </data>
+  <data name="occupational_health_form" xml:space="preserve">
+    <value>ผลการตรวจสุขภาพ</value>
+  </data>
+  <data name="occupational_health_report" xml:space="preserve">
+    <value>ผลการตรวจสุขภาพตามปัจจัยเสี่ยงที่พบความผิดปกติ</value>
+  </data>
+  <data name="postion" xml:space="preserve">
+    <value>ตำแหน่ง</value>
+  </data>
+  <data name="process_action_form" xml:space="preserve">
+    <value>มาตรการการฟื้นฟูสุขภาพ</value>
+  </data>
+  <data name="reason_not_approve" xml:space="preserve">
+    <value>เนื่องจาก</value>
+  </data>
+  <data name="remark" xml:space="preserve">
+    <value>หมายเหตุ</value>
+  </data>
+  <data name="repeat_health_check" xml:space="preserve">
+    <value>มีการตรวจสุขภาพซ้ำ</value>
+  </data>
+  <data name="report_date" xml:space="preserve">
+    <value>วันที่รายงาน</value>
+  </data>
+  <data name="request_approve" xml:space="preserve">
+    <value>พิจารณาอนุมัติการแก้ไข</value>
+  </data>
+  <data name="responsible_person" xml:space="preserve">
+    <value>ผู้รับผิดชอบ</value>
+  </data>
+  <data name="result_risk_factor" xml:space="preserve">
+    <value>ผลการตรวจสิ่งแวดล้อม</value>
+  </data>
+  <data name="risk_factor_relate_work" xml:space="preserve">
+    <value>ปัจจัยเสี่ยงการทำงาน</value>
+  </data>
+  <data name="risk_factor_relate_work_form" xml:space="preserve">
+    <value>ปัจจัยเสี่ยงการทำงาน</value>
+    <comment>f</comment>
+  </data>
+  <data name="risk_factor_relate_work_other" xml:space="preserve">
+    <value>อื่นๆ</value>
+  </data>
+  <data name="rqaction" xml:space="preserve">
+    <value>กรุณากรอกการดำเนินการ</value>
+  </data>
+  <data name="rqage" xml:space="preserve">
+    <value>กรุณากรอกอายุพนักงาน</value>
+  </data>
+  <data name="rqcheckage" xml:space="preserve">
+    <value>กรอกอายุไม่ถูกต้อง</value>
+  </data>
+  <data name="rqcheckhourriskfactor" xml:space="preserve">
+    <value>กรอกชั่วโมงไม่ถูกต้อง</value>
+  </data>
+  <data name="rqcheckminuteriskfactor" xml:space="preserve">
+    <value>กรอกนาทีไม่ถูกต้อง</value>
+  </data>
+  <data name="rqcheckotherriskfactor" xml:space="preserve">
+    <value>กรุณากรอกอื่นๆ</value>
+  </data>
+  <data name="rqcheckservice_year" xml:space="preserve">
+    <value>กรอกอายุงานไม่ถูกต้อง</value>
+  </data>
+  <data name="rqcheckservice_year_current" xml:space="preserve">
+    <value>กรอกอายุงานในตำแหน่งปัจจุบันไม่ถูกต้อง</value>
+  </data>
+  <data name="rqcompany" xml:space="preserve">
+    <value>กรุณาเลือกบริษัท</value>
+  </data>
+  <data name="rqdepartment" xml:space="preserve">
+    <value>กรุณาเลือกโรงงาน/ฝ่าย</value>
+  </data>
+  <data name="rqduedate" xml:space="preserve">
+    <value>กรุณากรอกวันกำหนดเสร็จ</value>
+  </data>
+  <data name="rqduedate2" xml:space="preserve">
+    <value>วันกำหนดเสร็จจะต้องมากกว่าวันที่ปัจจุบัน</value>
+  </data>
+  <data name="rqemployeeid" xml:space="preserve">
+    <value>กรุณากรอกรหัสพนักงาน</value>
+  </data>
+  <data name="rqfilerepeatehealthcheck" xml:space="preserve">
+    <value>กรุณาแนบเอกสารการตรวจสุขภาพซ้ำ</value>
+  </data>
+  <data name="rqfile_action_close" xml:space="preserve">
+    <value>กรุณาแนบเอกสารปิดงาน</value>
+  </data>
+  <data name="rqfile_opinion_doctor" xml:space="preserve">
+    <value>กรุณาแนบเอกสารความเห็นทางการแพทย์</value>
+  </data>
+  <data name="rqfile_recovery_plan" xml:space="preserve">
+    <value>กรุณาแนบเอกสารแผนการฟื้นฟู</value>
+  </data>
+  <data name="rqfunction" xml:space="preserve">
+    <value>กรุณาเลือกพื้นที่สายงาน</value>
+  </data>
+  <data name="rqhourriskfactor" xml:space="preserve">
+    <value>กรุณากรอกชั่วโมง</value>
+  </data>
+  <data name="rqjobtype" xml:space="preserve">
+    <value>กรุณากรอกลักษณะงานที่ทำ/ชนิดเครื่องจักร</value>
+  </data>
+  <data name="rqminuteriskfactor" xml:space="preserve">
+    <value>กรุณากรอกนาที</value>
+  </data>
+  <data name="rqoccupationalhealth" xml:space="preserve">
+    <value>กรุณาเลือกผลการตรวจสุขภาพตามปัจจัยเสี่ยงที่พบความผิดปกติ</value>
+  </data>
+  <data name="rqprocessstatus" xml:space="preserve">
+    <value>กรุณาเลือกสถานะ</value>
+  </data>
+  <data name="rqrepeatehealthcheck" xml:space="preserve">
+    <value>กรุณาเลือกผลเมื่อมีการตรวจสุขภาพซ้ำ</value>
+  </data>
+  <data name="rqresponsible_person" xml:space="preserve">
+    <value>กรุณากรอกผู้รับผิดชอบ</value>
+  </data>
+  <data name="rqresultriskfactor" xml:space="preserve">
+    <value>กรุณาเลือกผลการตรวจสิงแวดล้อม</value>
+  </data>
+  <data name="rqriskfactorrelatework" xml:space="preserve">
+    <value>กรุณาเลือกปัจจัยเสี่ยงการทำงาน</value>
+  </data>
+  <data name="rqserviceyear" xml:space="preserve">
+    <value>กรุณากรอกอายุงาน</value>
+  </data>
+  <data name="rqserviceyearcurrent" xml:space="preserve">
+    <value>กรุณากรอกอายุงานในตำแหน่งปัจจุบัน</value>
+  </data>
+  <data name="rqtypecontrol" xml:space="preserve">
+    <value>กรุณาเลือกวิธีการควบคุม</value>
+  </data>
+  <data name="rqyear" xml:space="preserve">
+    <value>กรุณาเลือกปี</value>
+  </data>
+  <data name="rqyearriskfactor" xml:space="preserve">
+    <value>กรุณาเลือกปีการตรวจสิงแวดล้อม</value>
+  </data>
+  <data name="showfile" xml:space="preserve">
+    <value>แสดงไฟล์</value>
+  </data>
+  <data name="status" xml:space="preserve">
+    <value>สถานะ</value>
+  </data>
+  <data name="to" xml:space="preserve">
+    <value>ถึง</value>
+  </data>
+  <data name="typecontrol" xml:space="preserve">
+    <value>วิธีการควบคุม</value>
+  </data>
+  <data name="year_risk_factor_relate_work" xml:space="preserve">
+    <value>ปีการตรวจสิ่งแวดล้อม</value>
+  </data>
+  <data name="file_risk_factor" xml:space="preserve">
+    <value>เอกสารผลการตรวจสิ่งแวดล้อม</value>
+  </data>
+  <data name="rqdurationriskfactor" xml:space="preserve">
+    <value>กรุณาเลือกระยะเวลาที่ได้รับความเสี่ยงแต่ละวัน</value>
+  </data>
+  <data name="healthstep2" xml:space="preserve">
+    <value>มาตรการการฟื้นฟูสุขภาพ</value>
+  </data>
+  <data name="infooccuimage" xml:space="preserve">
+    <value>(สามารถอัพโหลดได้มากสุดที่ 2 ไฟล์ (เฉพาะไฟล์ PDF, JPG และ PNG เท่านั้น) และขนาดทั้งหมดรวมแล้วไม่เกิน 10 MB)</value>
+  </data>
+  <data name="inforiskimage" xml:space="preserve">
+    <value>(สามารถอัพโหลดได้มากสุดที่ 3 ไฟล์ (เฉพาะไฟล์ PDF, JPG และ PNG เท่านั้น) และขนาดทั้งหมดรวมแล้วไม่เกิน 10 MB)</value>
+  </data>
+  <data name="rqJobTypeLength" xml:space="preserve">
+    <value>ลักษณะงานที่ทำ/ชนิดเครื่องจักรจำนวนตัวอักษรต้องไม่เกิน 4000 ตัวอักษร</value>
+  </data>
+  <data name="insignificant" xml:space="preserve">
+    <value>ไม่มีนัยสำคัญจากปัจจัยเสี่ยงการทำงาน</value>
+  </data>
+  <data name="rqsignificantorinsignificant" xml:space="preserve">
+    <value>กรุณาเลือก มีนัยสำคัญจากปัจจัยเสี่ยงการทำงานหรือไม่มีนัยสำคัญจากปัจจัยเสี่ยงการทำงาน</value>
+  </data>
+  <data name="significant" xml:space="preserve">
+    <value>มีนัยสำคัญจากปัจจัยเสี่ยงการทำงาน</value>
+  </data>
+  <data name="significantorinsignificant" xml:space="preserve">
+    <value>มีนัยสำคัญจากปัจจัยเสี่ยงการทำงาน หรือไม่มีนัยสำคัญจากปัจจัยเสี่ยงการทำงาน</value>
+  </data>
+  <data name="message_form1" xml:space="preserve">
+    <value>ข้อมูลผลการตรวจสุขภาพถือเป็นข้อมูลที่เป็นความลับเฉพาะส่วนบุคคล ห้ามสั่งพิมพ์หรือเผยแพร่กับบุคคลที่ไม่เกี่ยวข้องรับทราบโดยเด็ดขาด</value>
+  </data>
+  <data name="lbdateofbirth" xml:space="preserve">
+    <value>วันเกิด</value>
+  </data>
+  <data name="lbhiringdate" xml:space="preserve">
+    <value>วันที่เริ่มงานกับบริษัท</value>
+  </data>
+  <data name="rqdateofbirth" xml:space="preserve">
+    <value>กรุณากรอกวันเกิด</value>
+  </data>
+  <data name="rqhiringdate" xml:space="preserve">
+    <value>กรุณากรอกวันที่เริ่มงานกับบริษัท</value>
+  </data>
+  <data name="lbmonth" xml:space="preserve">
+    <value>เดือน</value>
+  </data>
+  <data name="lbyears" xml:space="preserve">
+    <value>ปี</value>
+  </data>
+  <data name="lbhospital" xml:space="preserve">
+    <value>โรงพยาบาลที่ตรวจ</value>
+  </data>
+  <data name="rqhospital" xml:space="preserve">
+    <value>กรุณาเลือกโรงพยาบาลที่ตรวจ</value>
+  </data>
+  <data name="comply" xml:space="preserve">
+    <value>ผ่าน</value>
+  </data>
+  <data name="lbno" xml:space="preserve">
+    <value>ไม่มี</value>
+  </data>
+  <data name="lbyes" xml:space="preserve">
+    <value>มี</value>
+  </data>
+  <data name="monitoringenvironment" xml:space="preserve">
+    <value>มีการตรวจสิ่งแวดล้อมหรือไม่</value>
+  </data>
+  <data name="monitoring_results" xml:space="preserve">
+    <value>สรุปผลการตรวจสิ่งแวดล้อม</value>
+  </data>
+  <data name="not_comply" xml:space="preserve">
+    <value>ไม่ผ่าน</value>
+  </data>
+  <data name="rqmonitoringenvironment" xml:space="preserve">
+    <value>กรุณาเลือกว่ามีการตรวจสิ่งแวดล้อมหรือไม่</value>
+  </data>
+  <data name="rqmonitoringresults" xml:space="preserve">
+    <value>กรุณาเลือกสรุปผลการตรวจสิ่งแวดล้อม</value>
+  </data>
+  <data name="lbabnormalaudiogram" xml:space="preserve">
+    <value>หูที่ผิดปกติ</value>
+  </data>
+  <data name="lbboth_ear" xml:space="preserve">
+    <value>หูทั้ง 2 ข้าง</value>
+  </data>
+  <data name="lbchronic_diseases_ear" xml:space="preserve">
+    <value>มีโรคประจำตัวหรือโรคเรื้อรังเกี่ยวกับหูหรือไม่</value>
+  </data>
+  <data name="lbhearing_threshold_level" xml:space="preserve">
+    <value>ความถี่</value>
+  </data>
+  <data name="lbleft_ear" xml:space="preserve">
+    <value>หูซ้าย</value>
+  </data>
+  <data name="lbright_ear" xml:space="preserve">
+    <value>หูขวา</value>
+  </data>
+  <data name="lbspecify_chronic_diseases_ear" xml:space="preserve">
+    <value>ถ้ามี โปรดระบุ</value>
+  </data>
+  <data name="rqabnormalaudiogram" xml:space="preserve">
+    <value>กรุณาเลือกหูที่ผิดปกติ</value>
+  </data>
+  <data name="rqchronic_diseases_ear" xml:space="preserve">
+    <value>กรุณาเลือกว่ามีโรคประจำตัวหรือโรคเรื้อรังเกี่ยวกับหูหรือไม่</value>
+  </data>
+  <data name="rqspecify_chronic_diseases_ear" xml:space="preserve">
+    <value>กรุณากรอกถ้ามีโรคเกี่ยวกับหู โปรดระบุ</value>
+  </data>
+  <data name="rqthearing_threshold_level" xml:space="preserve">
+    <value>กรุณากรอกความถี่</value>
+  </data>
+  <data name="lbabnormal_pulmonary_function" xml:space="preserve">
+    <value>สรุปผลการทำงานของปอดผิดปกติ</value>
+  </data>
+  <data name="lbcigarettes_per_day" xml:space="preserve">
+    <value>มวน/วัน</value>
+  </data>
+  <data name="lbmonths" xml:space="preserve">
+    <value>เดือน</value>
+  </data>
+  <data name="lbobstructive" xml:space="preserve">
+    <value>ความผิดปกติแบบหลอดลมอุดกั้น</value>
+  </data>
+  <data name="lbobstructive_restrictive" xml:space="preserve">
+    <value>ความผิดปกติแบบหลอดลมอุดกั้น และความผิดปกติแบบจำกัดการขยายตัว</value>
+  </data>
+  <data name="lbrestrictive" xml:space="preserve">
+    <value>ความผิดปกติแบบจำกัดการขยายตัว</value>
+  </data>
+  <data name="lbsmoked_cigarettes" xml:space="preserve">
+    <value>เคยสูบบุหรี่หรือไม่</value>
+  </data>
+  <data name="lbsmoked_other" xml:space="preserve">
+    <value>อื่นๆ</value>
+  </data>
+  <data name="lbyes_smoked" xml:space="preserve">
+    <value>เคยแต่เลิกแล้ว ระยะเวลาที่เคยสูบนาน</value>
+  </data>
+  <data name="lbyes_smoking" xml:space="preserve">
+    <value>เคยและปัจจุบันยังสูบอยู่ปริมาณ</value>
+  </data>
+  <data name="rqabnormal_pulmonary_function" xml:space="preserve">
+    <value>กรุณาเลือกสรุปผลการทำงานของปอดผิดปกติ</value>
+  </data>
+  <data name="rqsmoked_cigarettes" xml:space="preserve">
+    <value>กรุณาเลือกว่าเคยสูบบุหรี่หรือไม่</value>
+  </data>
+  <data name="lbabnormal_health_check_report" xml:space="preserve">
+    <value>ผลการตรวจสุขภาพตามปัจจัยเสี่ยงที่พบความผิดปกติ</value>
+  </data>
+  <data name="lbaudiogram" xml:space="preserve">
+    <value>สมรรถภาพการได้ยิน</value>
+  </data>
+  <data name="lbenvironment_report" xml:space="preserve">
+    <value>สรุปผลการตรวจวัดสิ่งแวดล้อม</value>
+  </data>
+  <data name="lbhealth_check" xml:space="preserve">
+    <value>รายการตรวจ</value>
+  </data>
+  <data name="lbhealth_check_report" xml:space="preserve">
+    <value>ผลการตรวจสุขภาพตามปัจจัยเสี่ยงของงาน</value>
+  </data>
+  <data name="lbhealth_check_up_hospital" xml:space="preserve">
+    <value>ชื่อหน่วยงานที่ตรวจสุขภาพ</value>
+  </data>
+  <data name="lbimbalance_body_chemistry" xml:space="preserve">
+    <value>ระดับสารเคมีในร่างกายไม่เป็นไปตามมาตรฐาน</value>
+  </data>
+  <data name="lboccupational_vision" xml:space="preserve">
+    <value>การมองเห็นสายตาอาชีวอนามัย</value>
+  </data>
+  <data name="lbpersonal_health_problem" xml:space="preserve">
+    <value>โรคประจำตัวหรือโรคเรื้อรังเกี่ยวกับหู</value>
+  </data>
+  <data name="lbpulmonary_function" xml:space="preserve">
+    <value>สมรรถภาพการทำงานของปอด</value>
+  </data>
+  <data name="lbsmoking_record" xml:space="preserve">
+    <value>ประวัติการสูบบุหรี่</value>
+  </data>
+  <data name="lbworking_background" xml:space="preserve">
+    <value>ประวัติการทำงาน</value>
+  </data>
+  <data name="lbyear_check" xml:space="preserve">
+    <value>ปีที่ตรวจ</value>
+  </data>
+  <data name="lbabnormal" xml:space="preserve">
+    <value>ผิดปกติ</value>
+  </data>
+  <data name="lbprofile" xml:space="preserve">
+    <value>ประวัติส่วนตัว</value>
+  </data>
+  <data name="lbhealth_rehabilitation_individual_report" xml:space="preserve">
+    <value>รายงานสรุปผลสุขภาพรายบุคคล</value>
+  </data>
+  <data name="detailreject" xml:space="preserve">
+    <value>รายละเอียดเพิ่มเติม</value>
+  </data>
+  <data name="lbreasonreject" xml:space="preserve">
+    <value>เหตุผลที่ปฏิเสธรายงาน</value>
+  </data>
+  <data name="rqfileresulthealthcheck" xml:space="preserve">
+    <value>กรุณาแนบเอกสารผลการตรวจสุขภาพ</value>
+  </data>
+  <data name="report_message_form1" xml:space="preserve">
+    <value>ข้อมูลผลการตรวจสุขภาพถือเป็นข้อมูลที่เป็นความลับเฉพาะส่วนบุคคล ห้ามสั่งพิมพ์หรือเผยแพร่กับบุคคลที่ไม่เกี่ยวข้องรับทราบโดยเด็ดขาด</value>
+  </data>
+  <data name="rqfileriskfactor" xml:space="preserve">
+    <value>กรุณาแนบเอกสารผลการตรวจสิ่งแวดล้อม</value>
+  </data>
+</root>

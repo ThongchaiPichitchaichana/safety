@@ -1,0 +1,1305 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="getFuctionlist">
+        <s:complexType />
+      </s:element>
+      <s:element name="getFuctionlistResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="createContractor">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="function_id" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="userid" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="email" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="prefixth" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="firstnameth" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="lastnameth" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="prefixen" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="firstnameen" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="lastnameen" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="companyname" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="mobilephone" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="phone" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="active" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="createContractorResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="updateContractor">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="function_id" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="id" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="userid" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="email" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="prefixth" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="firstnameth" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="lastnameth" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="prefixen" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="firstnameen" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="lastnameen" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="companyname" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="mobilephone" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="phone" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="active" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="updateContractorResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="getContractorbyid">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="id" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="lang" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getContractorbyidResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="checkEmailContractor">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="email" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="function_id" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="id" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="checkEmailContractorResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="createSuperadmin">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="employee_id" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfString">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="string" nillable="true" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="createSuperadminResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="createDelegateSuperadmin">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="employee_id" type="tns:ArrayOfAnyType" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfAnyType">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="anyType" nillable="true" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="createDelegateSuperadminResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="deleteSuperadmin">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="id" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="deleteSuperadminResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="deleteDelegateSuperadmin">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="id" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="deleteDelegateSuperadminResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="createOHS">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="employee_id" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="createOHSResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="createDelegateOHS">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="employee_id" type="tns:ArrayOfAnyType" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="createDelegateOHSResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="deleteOHS">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="id" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="deleteOHSResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="createArea">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="name_th" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="name_en" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="company_id" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="function_id" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="department_id" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="division_id" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="section_id" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="createAreaResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="deleteArea">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="id" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="deleteAreaResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="deleteDelegateOHS">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="id" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="deleteDelegateOHSResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="getAreaByid">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="id" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getAreaByidResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="updateArea">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="id" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="name_th" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="name_en" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="updateAreaResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="createAreaOHS">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="employee_id" type="tns:ArrayOfString" />
+            <s:element minOccurs="0" maxOccurs="1" name="department_id" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="createAreaOHSResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="createAreaManager">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="employee_id" type="tns:ArrayOfString" />
+            <s:element minOccurs="0" maxOccurs="1" name="department_id" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="division_id" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="createAreaManagerResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="createAreaSupervisor">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="employee_id" type="tns:ArrayOfString" />
+            <s:element minOccurs="0" maxOccurs="1" name="department_id" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="division_id" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="section_id" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="createAreaSupervisorResponse">
+        <s:complexType />
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="getFuctionlistSoapIn">
+    <wsdl:part name="parameters" element="tns:getFuctionlist" />
+  </wsdl:message>
+  <wsdl:message name="getFuctionlistSoapOut">
+    <wsdl:part name="parameters" element="tns:getFuctionlistResponse" />
+  </wsdl:message>
+  <wsdl:message name="createContractorSoapIn">
+    <wsdl:part name="parameters" element="tns:createContractor" />
+  </wsdl:message>
+  <wsdl:message name="createContractorSoapOut">
+    <wsdl:part name="parameters" element="tns:createContractorResponse" />
+  </wsdl:message>
+  <wsdl:message name="updateContractorSoapIn">
+    <wsdl:part name="parameters" element="tns:updateContractor" />
+  </wsdl:message>
+  <wsdl:message name="updateContractorSoapOut">
+    <wsdl:part name="parameters" element="tns:updateContractorResponse" />
+  </wsdl:message>
+  <wsdl:message name="getContractorbyidSoapIn">
+    <wsdl:part name="parameters" element="tns:getContractorbyid" />
+  </wsdl:message>
+  <wsdl:message name="getContractorbyidSoapOut">
+    <wsdl:part name="parameters" element="tns:getContractorbyidResponse" />
+  </wsdl:message>
+  <wsdl:message name="checkEmailContractorSoapIn">
+    <wsdl:part name="parameters" element="tns:checkEmailContractor" />
+  </wsdl:message>
+  <wsdl:message name="checkEmailContractorSoapOut">
+    <wsdl:part name="parameters" element="tns:checkEmailContractorResponse" />
+  </wsdl:message>
+  <wsdl:message name="createSuperadminSoapIn">
+    <wsdl:part name="parameters" element="tns:createSuperadmin" />
+  </wsdl:message>
+  <wsdl:message name="createSuperadminSoapOut">
+    <wsdl:part name="parameters" element="tns:createSuperadminResponse" />
+  </wsdl:message>
+  <wsdl:message name="createDelegateSuperadminSoapIn">
+    <wsdl:part name="parameters" element="tns:createDelegateSuperadmin" />
+  </wsdl:message>
+  <wsdl:message name="createDelegateSuperadminSoapOut">
+    <wsdl:part name="parameters" element="tns:createDelegateSuperadminResponse" />
+  </wsdl:message>
+  <wsdl:message name="deleteSuperadminSoapIn">
+    <wsdl:part name="parameters" element="tns:deleteSuperadmin" />
+  </wsdl:message>
+  <wsdl:message name="deleteSuperadminSoapOut">
+    <wsdl:part name="parameters" element="tns:deleteSuperadminResponse" />
+  </wsdl:message>
+  <wsdl:message name="deleteDelegateSuperadminSoapIn">
+    <wsdl:part name="parameters" element="tns:deleteDelegateSuperadmin" />
+  </wsdl:message>
+  <wsdl:message name="deleteDelegateSuperadminSoapOut">
+    <wsdl:part name="parameters" element="tns:deleteDelegateSuperadminResponse" />
+  </wsdl:message>
+  <wsdl:message name="createOHSSoapIn">
+    <wsdl:part name="parameters" element="tns:createOHS" />
+  </wsdl:message>
+  <wsdl:message name="createOHSSoapOut">
+    <wsdl:part name="parameters" element="tns:createOHSResponse" />
+  </wsdl:message>
+  <wsdl:message name="createDelegateOHSSoapIn">
+    <wsdl:part name="parameters" element="tns:createDelegateOHS" />
+  </wsdl:message>
+  <wsdl:message name="createDelegateOHSSoapOut">
+    <wsdl:part name="parameters" element="tns:createDelegateOHSResponse" />
+  </wsdl:message>
+  <wsdl:message name="deleteOHSSoapIn">
+    <wsdl:part name="parameters" element="tns:deleteOHS" />
+  </wsdl:message>
+  <wsdl:message name="deleteOHSSoapOut">
+    <wsdl:part name="parameters" element="tns:deleteOHSResponse" />
+  </wsdl:message>
+  <wsdl:message name="createAreaSoapIn">
+    <wsdl:part name="parameters" element="tns:createArea" />
+  </wsdl:message>
+  <wsdl:message name="createAreaSoapOut">
+    <wsdl:part name="parameters" element="tns:createAreaResponse" />
+  </wsdl:message>
+  <wsdl:message name="deleteAreaSoapIn">
+    <wsdl:part name="parameters" element="tns:deleteArea" />
+  </wsdl:message>
+  <wsdl:message name="deleteAreaSoapOut">
+    <wsdl:part name="parameters" element="tns:deleteAreaResponse" />
+  </wsdl:message>
+  <wsdl:message name="deleteDelegateOHSSoapIn">
+    <wsdl:part name="parameters" element="tns:deleteDelegateOHS" />
+  </wsdl:message>
+  <wsdl:message name="deleteDelegateOHSSoapOut">
+    <wsdl:part name="parameters" element="tns:deleteDelegateOHSResponse" />
+  </wsdl:message>
+  <wsdl:message name="getAreaByidSoapIn">
+    <wsdl:part name="parameters" element="tns:getAreaByid" />
+  </wsdl:message>
+  <wsdl:message name="getAreaByidSoapOut">
+    <wsdl:part name="parameters" element="tns:getAreaByidResponse" />
+  </wsdl:message>
+  <wsdl:message name="updateAreaSoapIn">
+    <wsdl:part name="parameters" element="tns:updateArea" />
+  </wsdl:message>
+  <wsdl:message name="updateAreaSoapOut">
+    <wsdl:part name="parameters" element="tns:updateAreaResponse" />
+  </wsdl:message>
+  <wsdl:message name="createAreaOHSSoapIn">
+    <wsdl:part name="parameters" element="tns:createAreaOHS" />
+  </wsdl:message>
+  <wsdl:message name="createAreaOHSSoapOut">
+    <wsdl:part name="parameters" element="tns:createAreaOHSResponse" />
+  </wsdl:message>
+  <wsdl:message name="createAreaManagerSoapIn">
+    <wsdl:part name="parameters" element="tns:createAreaManager" />
+  </wsdl:message>
+  <wsdl:message name="createAreaManagerSoapOut">
+    <wsdl:part name="parameters" element="tns:createAreaManagerResponse" />
+  </wsdl:message>
+  <wsdl:message name="createAreaSupervisorSoapIn">
+    <wsdl:part name="parameters" element="tns:createAreaSupervisor" />
+  </wsdl:message>
+  <wsdl:message name="createAreaSupervisorSoapOut">
+    <wsdl:part name="parameters" element="tns:createAreaSupervisorResponse" />
+  </wsdl:message>
+  <wsdl:message name="getFuctionlistHttpGetIn" />
+  <wsdl:message name="getFuctionlistHttpGetOut" />
+  <wsdl:message name="createContractorHttpGetIn">
+    <wsdl:part name="function_id" type="s:string" />
+    <wsdl:part name="userid" type="s:string" />
+    <wsdl:part name="email" type="s:string" />
+    <wsdl:part name="prefixth" type="s:string" />
+    <wsdl:part name="firstnameth" type="s:string" />
+    <wsdl:part name="lastnameth" type="s:string" />
+    <wsdl:part name="prefixen" type="s:string" />
+    <wsdl:part name="firstnameen" type="s:string" />
+    <wsdl:part name="lastnameen" type="s:string" />
+    <wsdl:part name="companyname" type="s:string" />
+    <wsdl:part name="mobilephone" type="s:string" />
+    <wsdl:part name="phone" type="s:string" />
+    <wsdl:part name="active" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="createContractorHttpGetOut" />
+  <wsdl:message name="updateContractorHttpGetIn">
+    <wsdl:part name="function_id" type="s:string" />
+    <wsdl:part name="id" type="s:string" />
+    <wsdl:part name="userid" type="s:string" />
+    <wsdl:part name="email" type="s:string" />
+    <wsdl:part name="prefixth" type="s:string" />
+    <wsdl:part name="firstnameth" type="s:string" />
+    <wsdl:part name="lastnameth" type="s:string" />
+    <wsdl:part name="prefixen" type="s:string" />
+    <wsdl:part name="firstnameen" type="s:string" />
+    <wsdl:part name="lastnameen" type="s:string" />
+    <wsdl:part name="companyname" type="s:string" />
+    <wsdl:part name="mobilephone" type="s:string" />
+    <wsdl:part name="phone" type="s:string" />
+    <wsdl:part name="active" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="updateContractorHttpGetOut" />
+  <wsdl:message name="getContractorbyidHttpGetIn">
+    <wsdl:part name="id" type="s:string" />
+    <wsdl:part name="lang" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="getContractorbyidHttpGetOut" />
+  <wsdl:message name="checkEmailContractorHttpGetIn">
+    <wsdl:part name="email" type="s:string" />
+    <wsdl:part name="function_id" type="s:string" />
+    <wsdl:part name="id" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="checkEmailContractorHttpGetOut" />
+  <wsdl:message name="deleteSuperadminHttpGetIn">
+    <wsdl:part name="id" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="deleteSuperadminHttpGetOut" />
+  <wsdl:message name="deleteDelegateSuperadminHttpGetIn">
+    <wsdl:part name="id" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="deleteDelegateSuperadminHttpGetOut" />
+  <wsdl:message name="deleteOHSHttpGetIn">
+    <wsdl:part name="id" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="deleteOHSHttpGetOut" />
+  <wsdl:message name="createAreaHttpGetIn">
+    <wsdl:part name="name_th" type="s:string" />
+    <wsdl:part name="name_en" type="s:string" />
+    <wsdl:part name="company_id" type="s:string" />
+    <wsdl:part name="function_id" type="s:string" />
+    <wsdl:part name="department_id" type="s:string" />
+    <wsdl:part name="division_id" type="s:string" />
+    <wsdl:part name="section_id" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="createAreaHttpGetOut" />
+  <wsdl:message name="deleteAreaHttpGetIn">
+    <wsdl:part name="id" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="deleteAreaHttpGetOut" />
+  <wsdl:message name="deleteDelegateOHSHttpGetIn">
+    <wsdl:part name="id" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="deleteDelegateOHSHttpGetOut" />
+  <wsdl:message name="getAreaByidHttpGetIn">
+    <wsdl:part name="id" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="getAreaByidHttpGetOut" />
+  <wsdl:message name="updateAreaHttpGetIn">
+    <wsdl:part name="id" type="s:string" />
+    <wsdl:part name="name_th" type="s:string" />
+    <wsdl:part name="name_en" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="updateAreaHttpGetOut" />
+  <wsdl:message name="getFuctionlistHttpPostIn" />
+  <wsdl:message name="getFuctionlistHttpPostOut" />
+  <wsdl:message name="createContractorHttpPostIn">
+    <wsdl:part name="function_id" type="s:string" />
+    <wsdl:part name="userid" type="s:string" />
+    <wsdl:part name="email" type="s:string" />
+    <wsdl:part name="prefixth" type="s:string" />
+    <wsdl:part name="firstnameth" type="s:string" />
+    <wsdl:part name="lastnameth" type="s:string" />
+    <wsdl:part name="prefixen" type="s:string" />
+    <wsdl:part name="firstnameen" type="s:string" />
+    <wsdl:part name="lastnameen" type="s:string" />
+    <wsdl:part name="companyname" type="s:string" />
+    <wsdl:part name="mobilephone" type="s:string" />
+    <wsdl:part name="phone" type="s:string" />
+    <wsdl:part name="active" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="createContractorHttpPostOut" />
+  <wsdl:message name="updateContractorHttpPostIn">
+    <wsdl:part name="function_id" type="s:string" />
+    <wsdl:part name="id" type="s:string" />
+    <wsdl:part name="userid" type="s:string" />
+    <wsdl:part name="email" type="s:string" />
+    <wsdl:part name="prefixth" type="s:string" />
+    <wsdl:part name="firstnameth" type="s:string" />
+    <wsdl:part name="lastnameth" type="s:string" />
+    <wsdl:part name="prefixen" type="s:string" />
+    <wsdl:part name="firstnameen" type="s:string" />
+    <wsdl:part name="lastnameen" type="s:string" />
+    <wsdl:part name="companyname" type="s:string" />
+    <wsdl:part name="mobilephone" type="s:string" />
+    <wsdl:part name="phone" type="s:string" />
+    <wsdl:part name="active" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="updateContractorHttpPostOut" />
+  <wsdl:message name="getContractorbyidHttpPostIn">
+    <wsdl:part name="id" type="s:string" />
+    <wsdl:part name="lang" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="getContractorbyidHttpPostOut" />
+  <wsdl:message name="checkEmailContractorHttpPostIn">
+    <wsdl:part name="email" type="s:string" />
+    <wsdl:part name="function_id" type="s:string" />
+    <wsdl:part name="id" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="checkEmailContractorHttpPostOut" />
+  <wsdl:message name="deleteSuperadminHttpPostIn">
+    <wsdl:part name="id" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="deleteSuperadminHttpPostOut" />
+  <wsdl:message name="deleteDelegateSuperadminHttpPostIn">
+    <wsdl:part name="id" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="deleteDelegateSuperadminHttpPostOut" />
+  <wsdl:message name="deleteOHSHttpPostIn">
+    <wsdl:part name="id" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="deleteOHSHttpPostOut" />
+  <wsdl:message name="createAreaHttpPostIn">
+    <wsdl:part name="name_th" type="s:string" />
+    <wsdl:part name="name_en" type="s:string" />
+    <wsdl:part name="company_id" type="s:string" />
+    <wsdl:part name="function_id" type="s:string" />
+    <wsdl:part name="department_id" type="s:string" />
+    <wsdl:part name="division_id" type="s:string" />
+    <wsdl:part name="section_id" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="createAreaHttpPostOut" />
+  <wsdl:message name="deleteAreaHttpPostIn">
+    <wsdl:part name="id" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="deleteAreaHttpPostOut" />
+  <wsdl:message name="deleteDelegateOHSHttpPostIn">
+    <wsdl:part name="id" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="deleteDelegateOHSHttpPostOut" />
+  <wsdl:message name="getAreaByidHttpPostIn">
+    <wsdl:part name="id" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="getAreaByidHttpPostOut" />
+  <wsdl:message name="updateAreaHttpPostIn">
+    <wsdl:part name="id" type="s:string" />
+    <wsdl:part name="name_th" type="s:string" />
+    <wsdl:part name="name_en" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="updateAreaHttpPostOut" />
+  <wsdl:portType name="ActioneventSoap">
+    <wsdl:operation name="getFuctionlist">
+      <wsdl:input message="tns:getFuctionlistSoapIn" />
+      <wsdl:output message="tns:getFuctionlistSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="createContractor">
+      <wsdl:input message="tns:createContractorSoapIn" />
+      <wsdl:output message="tns:createContractorSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="updateContractor">
+      <wsdl:input message="tns:updateContractorSoapIn" />
+      <wsdl:output message="tns:updateContractorSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getContractorbyid">
+      <wsdl:input message="tns:getContractorbyidSoapIn" />
+      <wsdl:output message="tns:getContractorbyidSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="checkEmailContractor">
+      <wsdl:input message="tns:checkEmailContractorSoapIn" />
+      <wsdl:output message="tns:checkEmailContractorSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="createSuperadmin">
+      <wsdl:input message="tns:createSuperadminSoapIn" />
+      <wsdl:output message="tns:createSuperadminSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="createDelegateSuperadmin">
+      <wsdl:input message="tns:createDelegateSuperadminSoapIn" />
+      <wsdl:output message="tns:createDelegateSuperadminSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="deleteSuperadmin">
+      <wsdl:input message="tns:deleteSuperadminSoapIn" />
+      <wsdl:output message="tns:deleteSuperadminSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="deleteDelegateSuperadmin">
+      <wsdl:input message="tns:deleteDelegateSuperadminSoapIn" />
+      <wsdl:output message="tns:deleteDelegateSuperadminSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="createOHS">
+      <wsdl:input message="tns:createOHSSoapIn" />
+      <wsdl:output message="tns:createOHSSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="createDelegateOHS">
+      <wsdl:input message="tns:createDelegateOHSSoapIn" />
+      <wsdl:output message="tns:createDelegateOHSSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="deleteOHS">
+      <wsdl:input message="tns:deleteOHSSoapIn" />
+      <wsdl:output message="tns:deleteOHSSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="createArea">
+      <wsdl:input message="tns:createAreaSoapIn" />
+      <wsdl:output message="tns:createAreaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="deleteArea">
+      <wsdl:input message="tns:deleteAreaSoapIn" />
+      <wsdl:output message="tns:deleteAreaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="deleteDelegateOHS">
+      <wsdl:input message="tns:deleteDelegateOHSSoapIn" />
+      <wsdl:output message="tns:deleteDelegateOHSSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getAreaByid">
+      <wsdl:input message="tns:getAreaByidSoapIn" />
+      <wsdl:output message="tns:getAreaByidSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="updateArea">
+      <wsdl:input message="tns:updateAreaSoapIn" />
+      <wsdl:output message="tns:updateAreaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="createAreaOHS">
+      <wsdl:input message="tns:createAreaOHSSoapIn" />
+      <wsdl:output message="tns:createAreaOHSSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="createAreaManager">
+      <wsdl:input message="tns:createAreaManagerSoapIn" />
+      <wsdl:output message="tns:createAreaManagerSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="createAreaSupervisor">
+      <wsdl:input message="tns:createAreaSupervisorSoapIn" />
+      <wsdl:output message="tns:createAreaSupervisorSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="ActioneventHttpGet">
+    <wsdl:operation name="getFuctionlist">
+      <wsdl:input message="tns:getFuctionlistHttpGetIn" />
+      <wsdl:output message="tns:getFuctionlistHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="createContractor">
+      <wsdl:input message="tns:createContractorHttpGetIn" />
+      <wsdl:output message="tns:createContractorHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="updateContractor">
+      <wsdl:input message="tns:updateContractorHttpGetIn" />
+      <wsdl:output message="tns:updateContractorHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getContractorbyid">
+      <wsdl:input message="tns:getContractorbyidHttpGetIn" />
+      <wsdl:output message="tns:getContractorbyidHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="checkEmailContractor">
+      <wsdl:input message="tns:checkEmailContractorHttpGetIn" />
+      <wsdl:output message="tns:checkEmailContractorHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="deleteSuperadmin">
+      <wsdl:input message="tns:deleteSuperadminHttpGetIn" />
+      <wsdl:output message="tns:deleteSuperadminHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="deleteDelegateSuperadmin">
+      <wsdl:input message="tns:deleteDelegateSuperadminHttpGetIn" />
+      <wsdl:output message="tns:deleteDelegateSuperadminHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="deleteOHS">
+      <wsdl:input message="tns:deleteOHSHttpGetIn" />
+      <wsdl:output message="tns:deleteOHSHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="createArea">
+      <wsdl:input message="tns:createAreaHttpGetIn" />
+      <wsdl:output message="tns:createAreaHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="deleteArea">
+      <wsdl:input message="tns:deleteAreaHttpGetIn" />
+      <wsdl:output message="tns:deleteAreaHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="deleteDelegateOHS">
+      <wsdl:input message="tns:deleteDelegateOHSHttpGetIn" />
+      <wsdl:output message="tns:deleteDelegateOHSHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getAreaByid">
+      <wsdl:input message="tns:getAreaByidHttpGetIn" />
+      <wsdl:output message="tns:getAreaByidHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="updateArea">
+      <wsdl:input message="tns:updateAreaHttpGetIn" />
+      <wsdl:output message="tns:updateAreaHttpGetOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="ActioneventHttpPost">
+    <wsdl:operation name="getFuctionlist">
+      <wsdl:input message="tns:getFuctionlistHttpPostIn" />
+      <wsdl:output message="tns:getFuctionlistHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="createContractor">
+      <wsdl:input message="tns:createContractorHttpPostIn" />
+      <wsdl:output message="tns:createContractorHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="updateContractor">
+      <wsdl:input message="tns:updateContractorHttpPostIn" />
+      <wsdl:output message="tns:updateContractorHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getContractorbyid">
+      <wsdl:input message="tns:getContractorbyidHttpPostIn" />
+      <wsdl:output message="tns:getContractorbyidHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="checkEmailContractor">
+      <wsdl:input message="tns:checkEmailContractorHttpPostIn" />
+      <wsdl:output message="tns:checkEmailContractorHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="deleteSuperadmin">
+      <wsdl:input message="tns:deleteSuperadminHttpPostIn" />
+      <wsdl:output message="tns:deleteSuperadminHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="deleteDelegateSuperadmin">
+      <wsdl:input message="tns:deleteDelegateSuperadminHttpPostIn" />
+      <wsdl:output message="tns:deleteDelegateSuperadminHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="deleteOHS">
+      <wsdl:input message="tns:deleteOHSHttpPostIn" />
+      <wsdl:output message="tns:deleteOHSHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="createArea">
+      <wsdl:input message="tns:createAreaHttpPostIn" />
+      <wsdl:output message="tns:createAreaHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="deleteArea">
+      <wsdl:input message="tns:deleteAreaHttpPostIn" />
+      <wsdl:output message="tns:deleteAreaHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="deleteDelegateOHS">
+      <wsdl:input message="tns:deleteDelegateOHSHttpPostIn" />
+      <wsdl:output message="tns:deleteDelegateOHSHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getAreaByid">
+      <wsdl:input message="tns:getAreaByidHttpPostIn" />
+      <wsdl:output message="tns:getAreaByidHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="updateArea">
+      <wsdl:input message="tns:updateAreaHttpPostIn" />
+      <wsdl:output message="tns:updateAreaHttpPostOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="ActioneventSoap" type="tns:ActioneventSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="getFuctionlist">
+      <soap:operation soapAction="http://tempuri.org/getFuctionlist" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="createContractor">
+      <soap:operation soapAction="http://tempuri.org/createContractor" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="updateContractor">
+      <soap:operation soapAction="http://tempuri.org/updateContractor" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getContractorbyid">
+      <soap:operation soapAction="http://tempuri.org/getContractorbyid" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="checkEmailContractor">
+      <soap:operation soapAction="http://tempuri.org/checkEmailContractor" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="createSuperadmin">
+      <soap:operation soapAction="http://tempuri.org/createSuperadmin" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="createDelegateSuperadmin">
+      <soap:operation soapAction="http://tempuri.org/createDelegateSuperadmin" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="deleteSuperadmin">
+      <soap:operation soapAction="http://tempuri.org/deleteSuperadmin" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="deleteDelegateSuperadmin">
+      <soap:operation soapAction="http://tempuri.org/deleteDelegateSuperadmin" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="createOHS">
+      <soap:operation soapAction="http://tempuri.org/createOHS" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="createDelegateOHS">
+      <soap:operation soapAction="http://tempuri.org/createDelegateOHS" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="deleteOHS">
+      <soap:operation soapAction="http://tempuri.org/deleteOHS" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="createArea">
+      <soap:operation soapAction="http://tempuri.org/createArea" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="deleteArea">
+      <soap:operation soapAction="http://tempuri.org/deleteArea" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="deleteDelegateOHS">
+      <soap:operation soapAction="http://tempuri.org/deleteDelegateOHS" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getAreaByid">
+      <soap:operation soapAction="http://tempuri.org/getAreaByid" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="updateArea">
+      <soap:operation soapAction="http://tempuri.org/updateArea" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="createAreaOHS">
+      <soap:operation soapAction="http://tempuri.org/createAreaOHS" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="createAreaManager">
+      <soap:operation soapAction="http://tempuri.org/createAreaManager" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="createAreaSupervisor">
+      <soap:operation soapAction="http://tempuri.org/createAreaSupervisor" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="ActioneventSoap12" type="tns:ActioneventSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="getFuctionlist">
+      <soap12:operation soapAction="http://tempuri.org/getFuctionlist" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="createContractor">
+      <soap12:operation soapAction="http://tempuri.org/createContractor" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="updateContractor">
+      <soap12:operation soapAction="http://tempuri.org/updateContractor" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getContractorbyid">
+      <soap12:operation soapAction="http://tempuri.org/getContractorbyid" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="checkEmailContractor">
+      <soap12:operation soapAction="http://tempuri.org/checkEmailContractor" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="createSuperadmin">
+      <soap12:operation soapAction="http://tempuri.org/createSuperadmin" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="createDelegateSuperadmin">
+      <soap12:operation soapAction="http://tempuri.org/createDelegateSuperadmin" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="deleteSuperadmin">
+      <soap12:operation soapAction="http://tempuri.org/deleteSuperadmin" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="deleteDelegateSuperadmin">
+      <soap12:operation soapAction="http://tempuri.org/deleteDelegateSuperadmin" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="createOHS">
+      <soap12:operation soapAction="http://tempuri.org/createOHS" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="createDelegateOHS">
+      <soap12:operation soapAction="http://tempuri.org/createDelegateOHS" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="deleteOHS">
+      <soap12:operation soapAction="http://tempuri.org/deleteOHS" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="createArea">
+      <soap12:operation soapAction="http://tempuri.org/createArea" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="deleteArea">
+      <soap12:operation soapAction="http://tempuri.org/deleteArea" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="deleteDelegateOHS">
+      <soap12:operation soapAction="http://tempuri.org/deleteDelegateOHS" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getAreaByid">
+      <soap12:operation soapAction="http://tempuri.org/getAreaByid" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="updateArea">
+      <soap12:operation soapAction="http://tempuri.org/updateArea" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="createAreaOHS">
+      <soap12:operation soapAction="http://tempuri.org/createAreaOHS" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="createAreaManager">
+      <soap12:operation soapAction="http://tempuri.org/createAreaManager" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="createAreaSupervisor">
+      <soap12:operation soapAction="http://tempuri.org/createAreaSupervisor" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="ActioneventHttpGet" type="tns:ActioneventHttpGet">
+    <http:binding verb="GET" />
+    <wsdl:operation name="getFuctionlist">
+      <http:operation location="/getFuctionlist" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output />
+    </wsdl:operation>
+    <wsdl:operation name="createContractor">
+      <http:operation location="/createContractor" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output />
+    </wsdl:operation>
+    <wsdl:operation name="updateContractor">
+      <http:operation location="/updateContractor" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output />
+    </wsdl:operation>
+    <wsdl:operation name="getContractorbyid">
+      <http:operation location="/getContractorbyid" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output />
+    </wsdl:operation>
+    <wsdl:operation name="checkEmailContractor">
+      <http:operation location="/checkEmailContractor" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output />
+    </wsdl:operation>
+    <wsdl:operation name="deleteSuperadmin">
+      <http:operation location="/deleteSuperadmin" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output />
+    </wsdl:operation>
+    <wsdl:operation name="deleteDelegateSuperadmin">
+      <http:operation location="/deleteDelegateSuperadmin" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output />
+    </wsdl:operation>
+    <wsdl:operation name="deleteOHS">
+      <http:operation location="/deleteOHS" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output />
+    </wsdl:operation>
+    <wsdl:operation name="createArea">
+      <http:operation location="/createArea" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output />
+    </wsdl:operation>
+    <wsdl:operation name="deleteArea">
+      <http:operation location="/deleteArea" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output />
+    </wsdl:operation>
+    <wsdl:operation name="deleteDelegateOHS">
+      <http:operation location="/deleteDelegateOHS" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output />
+    </wsdl:operation>
+    <wsdl:operation name="getAreaByid">
+      <http:operation location="/getAreaByid" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output />
+    </wsdl:operation>
+    <wsdl:operation name="updateArea">
+      <http:operation location="/updateArea" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output />
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="ActioneventHttpPost" type="tns:ActioneventHttpPost">
+    <http:binding verb="POST" />
+    <wsdl:operation name="getFuctionlist">
+      <http:operation location="/getFuctionlist" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output />
+    </wsdl:operation>
+    <wsdl:operation name="createContractor">
+      <http:operation location="/createContractor" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output />
+    </wsdl:operation>
+    <wsdl:operation name="updateContractor">
+      <http:operation location="/updateContractor" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output />
+    </wsdl:operation>
+    <wsdl:operation name="getContractorbyid">
+      <http:operation location="/getContractorbyid" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output />
+    </wsdl:operation>
+    <wsdl:operation name="checkEmailContractor">
+      <http:operation location="/checkEmailContractor" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output />
+    </wsdl:operation>
+    <wsdl:operation name="deleteSuperadmin">
+      <http:operation location="/deleteSuperadmin" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output />
+    </wsdl:operation>
+    <wsdl:operation name="deleteDelegateSuperadmin">
+      <http:operation location="/deleteDelegateSuperadmin" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output />
+    </wsdl:operation>
+    <wsdl:operation name="deleteOHS">
+      <http:operation location="/deleteOHS" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output />
+    </wsdl:operation>
+    <wsdl:operation name="createArea">
+      <http:operation location="/createArea" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output />
+    </wsdl:operation>
+    <wsdl:operation name="deleteArea">
+      <http:operation location="/deleteArea" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output />
+    </wsdl:operation>
+    <wsdl:operation name="deleteDelegateOHS">
+      <http:operation location="/deleteDelegateOHS" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output />
+    </wsdl:operation>
+    <wsdl:operation name="getAreaByid">
+      <http:operation location="/getAreaByid" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output />
+    </wsdl:operation>
+    <wsdl:operation name="updateArea">
+      <http:operation location="/updateArea" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output />
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Actionevent">
+    <wsdl:port name="ActioneventSoap" binding="tns:ActioneventSoap">
+      <soap:address location="http://localhost/safetys4/Actionevent.asmx" />
+    </wsdl:port>
+    <wsdl:port name="ActioneventSoap12" binding="tns:ActioneventSoap12">
+      <soap12:address location="http://localhost/safetys4/Actionevent.asmx" />
+    </wsdl:port>
+    <wsdl:port name="ActioneventHttpGet" binding="tns:ActioneventHttpGet">
+      <http:address location="http://localhost/safetys4/Actionevent.asmx" />
+    </wsdl:port>
+    <wsdl:port name="ActioneventHttpPost" binding="tns:ActioneventHttpPost">
+      <http:address location="http://localhost/safetys4/Actionevent.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

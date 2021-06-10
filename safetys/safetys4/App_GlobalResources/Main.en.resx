@@ -1,0 +1,504 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="btLoginCheck" xml:space="preserve">
+    <value>Login</value>
+  </data>
+  <data name="btLoginContractor" xml:space="preserve">
+    <value>Notify case</value>
+  </data>
+  <data name="btLoginNotify" xml:space="preserve">
+    <value>Notify case</value>
+  </data>
+  <data name="listTab1" xml:space="preserve">
+    <value>Notify Case By Employee</value>
+  </data>
+  <data name="listTab2" xml:space="preserve">
+    <value>Notify Case By Contractor</value>
+  </data>
+  <data name="listTab3" xml:space="preserve">
+    <value>Computer ID</value>
+  </data>
+  <data name="txtEmailRegister" xml:space="preserve">
+    <value>Email</value>
+  </data>
+  <data name="txtFirstnameNotify" xml:space="preserve">
+    <value>First Name</value>
+  </data>
+  <data name="txtPasswordCheck" xml:space="preserve">
+    <value>Password</value>
+  </data>
+  <data name="txtUsernameCheck" xml:space="preserve">
+    <value>Computer ID</value>
+  </data>
+  <data name="txtUserNotify" xml:space="preserve">
+    <value>Employee ID</value>
+  </data>
+  <data name="errorCheck" xml:space="preserve">
+    <value>Incomplete Login!Please enter the correct user name and password or contact Service Desk if you could not access the system</value>
+  </data>
+  <data name="errorContractor" xml:space="preserve">
+    <value>Incomplete Login!Please enter the correct email address or contact your area safety officer if you could not access the system</value>
+  </data>
+  <data name="errorNotify" xml:space="preserve">
+    <value>Incomplete Login!Please enter the correct employee ID and First name or contact P&amp;OP to check your ID or contact Service Desk if you could not access the system</value>
+  </data>
+  <data name="loading" xml:space="preserve">
+    <value>Please wait</value>
+  </data>
+  <data name="btLogout" xml:space="preserve">
+    <value>Logout</value>
+  </data>
+  <data name="lbAdmin" xml:space="preserve">
+    <value>Admin</value>
+  </data>
+  <data name="lbAllHazard" xml:space="preserve">
+    <value>Hazard</value>
+  </data>
+  <data name="lbAllIncident" xml:space="preserve">
+    <value>Incident</value>
+  </data>
+  <data name="lbContractor" xml:space="preserve">
+    <value>Contractor</value>
+  </data>
+  <data name="lbDashboard" xml:space="preserve">
+    <value>Dashboard</value>
+  </data>
+  <data name="lbMyAction" xml:space="preserve">
+    <value>My Action</value>
+  </data>
+  <data name="lbReport" xml:space="preserve">
+    <value>Report</value>
+  </data>
+  <data name="lbReportHazard" xml:space="preserve">
+    <value>Report &lt;/br&gt; Hazard</value>
+  </data>
+  <data name="lbReportIncident" xml:space="preserve">
+    <value>Report &lt;/br&gt;Accident /Near Miss</value>
+  </data>
+  <data name="menubarAllHazard" xml:space="preserve">
+    <value>Hazard</value>
+  </data>
+  <data name="menubarAllIncident" xml:space="preserve">
+    <value>Incident</value>
+  </data>
+  <data name="sEmptyTable" xml:space="preserve">
+    <value>Empty</value>
+  </data>
+  <data name="sFirst" xml:space="preserve">
+    <value>First</value>
+  </data>
+  <data name="sInfo" xml:space="preserve">
+    <value>view _START_ - _END_ of _TOTAL_</value>
+  </data>
+  <data name="sInfoEmpty" xml:space="preserve">
+    <value>0 to 0 of 0</value>
+  </data>
+  <data name="sInfoFiltered" xml:space="preserve">
+    <value>(filtering from _MAX_ records)</value>
+  </data>
+  <data name="sLast" xml:space="preserve">
+    <value>Last</value>
+  </data>
+  <data name="sLengthMenu" xml:space="preserve">
+    <value>Display _MENU_ records</value>
+  </data>
+  <data name="sLoadingRecords" xml:space="preserve">
+    <value>Loading...</value>
+  </data>
+  <data name="sNext" xml:space="preserve">
+    <value>Next</value>
+  </data>
+  <data name="sPrevious" xml:space="preserve">
+    <value>Previous</value>
+  </data>
+  <data name="sProcessing" xml:space="preserve">
+    <value>Processing...</value>
+  </data>
+  <data name="sSearch" xml:space="preserve">
+    <value>Search</value>
+  </data>
+  <data name="sZeroRecords" xml:space="preserve">
+    <value>Not Data</value>
+  </data>
+  <data name="btadd" xml:space="preserve">
+    <value>Add</value>
+  </data>
+  <data name="all" xml:space="preserve">
+    <value>All</value>
+  </data>
+  <data name="btsave" xml:space="preserve">
+    <value>Save</value>
+  </data>
+  <data name="btCancel" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
+  <data name="lbHome" xml:space="preserve">
+    <value>Home</value>
+  </data>
+  <data name="btClose" xml:space="preserve">
+    <value>Close</value>
+  </data>
+  <data name="confirm_delete" xml:space="preserve">
+    <value>Are you sure you want to delete this item?</value>
+  </data>
+  <data name="lbHederDelegateSuperadmin" xml:space="preserve">
+    <value>Delegate Super Admin</value>
+  </data>
+  <data name="lbHederSuperadmin" xml:space="preserve">
+    <value>Super Admin</value>
+  </data>
+  <data name="lbHederDelegateOHS" xml:space="preserve">
+    <value>Delegate OH&amp;S Admin</value>
+  </data>
+  <data name="lbHederOHS" xml:space="preserve">
+    <value>OH&amp;S Admin</value>
+  </data>
+  <data name="btOK" xml:space="preserve">
+    <value>OK</value>
+  </data>
+  <data name="select" xml:space="preserve">
+    <value>Select</value>
+  </data>
+  <data name="lbArea" xml:space="preserve">
+    <value>Area</value>
+  </data>
+  <data name="lbDepartment" xml:space="preserve">
+    <value>Department</value>
+  </data>
+  <data name="lbDivision" xml:space="preserve">
+    <value>Division</value>
+  </data>
+  <data name="lbSection" xml:space="preserve">
+    <value>Section</value>
+  </data>
+  <data name="delete" xml:space="preserve">
+    <value>Delete</value>
+  </data>
+  <data name="edit" xml:space="preserve">
+    <value>Edit</value>
+  </data>
+  <data name="manage" xml:space="preserve">
+    <value>Manage</value>
+  </data>
+  <data name="areaname" xml:space="preserve">
+    <value>Area name</value>
+  </data>
+  <data name="lbNameEnArea" xml:space="preserve">
+    <value>English</value>
+  </data>
+  <data name="lbNameThArea" xml:space="preserve">
+    <value>Thai</value>
+  </data>
+  <data name="rqNameEnArea" xml:space="preserve">
+    <value>Name English no more than 50 characters.</value>
+  </data>
+  <data name="rqNameThArea" xml:space="preserve">
+    <value>Name Thai no more than 50 characters.</value>
+  </data>
+  <data name="areamanager" xml:space="preserve">
+    <value>Area Manager</value>
+  </data>
+  <data name="areaohs" xml:space="preserve">
+    <value>Area OH&amp;S</value>
+  </data>
+  <data name="areasupervisor" xml:space="preserve">
+    <value>Area Supervisor</value>
+  </data>
+  <data name="alertselectarea" xml:space="preserve">
+    <value>Please select company,function,department,division and section.</value>
+  </data>
+  <data name="btconfirm" xml:space="preserve">
+    <value>Confirm</value>
+  </data>
+  <data name="btdownload" xml:space="preserve">
+    <value>Download</value>
+  </data>
+  <data name="btConfirmandInvestigate" xml:space="preserve">
+    <value>Confirm and Investigate</value>
+  </data>
+  <data name="btSubmitReport" xml:space="preserve">
+    <value>Submit Report</value>
+  </data>
+  <data name="confirm_cancel_action" xml:space="preserve">
+    <value>Are you sure you want to cancel this action?</value>
+  </data>
+  <data name="confirm_close_action" xml:space="preserve">
+    <value>Are you sure you want to close this action?</value>
+  </data>
+  <data name="btSideBarAreaManagement" xml:space="preserve">
+    <value>Area Management</value>
+  </data>
+  <data name="btSideBarHoliday" xml:space="preserve">
+    <value>Holiday</value>
+  </data>
+  <data name="btSideBarMyActionHazard" xml:space="preserve">
+    <value>Hazard</value>
+  </data>
+  <data name="btSideBarMyActionIncident" xml:space="preserve">
+    <value>Incident</value>
+  </data>
+  <data name="btSideBarNotifyGroup" xml:space="preserve">
+    <value>Notify Group</value>
+  </data>
+  <data name="btSideBarSetting" xml:space="preserve">
+    <value>Setting</value>
+  </data>
+  <data name="btSideBarSuperAdmin" xml:space="preserve">
+    <value>Super Admin</value>
+  </data>
+  <data name="btSideBarTarget" xml:space="preserve">
+    <value>Target</value>
+  </data>
+  <data name="btSideBarWorkHour" xml:space="preserve">
+    <value>Work and Training Hour</value>
+  </data>
+  <data name="nopermission" xml:space="preserve">
+    <value>No permision</value>
+  </data>
+  <data name="close_all_action" xml:space="preserve">
+    <value>Please close all action</value>
+  </data>
+  <data name="success" xml:space="preserve">
+    <value>Success</value>
+  </data>
+  <data name="confirm_request_close_action" xml:space="preserve">
+    <value>Are you sure you want to request close this action?</value>
+  </data>
+  <data name="btSideBarDashboardHazard" xml:space="preserve">
+    <value>Hazard</value>
+  </data>
+  <data name="btSideBarDashboardIncident" xml:space="preserve">
+    <value>Incident</value>
+  </data>
+  <data name="select_division_section" xml:space="preserve">
+    <value>Please select division and section or select other when you do not.</value>
+  </data>
+  <data name="btExport" xml:space="preserve">
+    <value>Export Excel</value>
+  </data>
+  <data name="btOK2" xml:space="preserve">
+    <value>OK</value>
+  </data>
+  <data name="lbcountry" xml:space="preserve">
+    <value>Country</value>
+  </data>
+  <data name="btSideBarMyActionSot" xml:space="preserve">
+    <value>VFL</value>
+  </data>
+  <data name="lbReportSot" xml:space="preserve">
+    <value>Report &lt;/br&gt; VFL</value>
+  </data>
+  <data name="lbAllSot" xml:space="preserve">
+    <value>All VFL</value>
+  </data>
+  <data name="menubarAllSot" xml:space="preserve">
+    <value>All VFL</value>
+  </data>
+  <data name="confirm_upload_image_action" xml:space="preserve">
+    <value>Please attach file before submit.</value>
+  </data>
+  <data name="employee_reporter" xml:space="preserve">
+    <value>Employee ID of reporter</value>
+  </data>
+  <data name="force_login_ad" xml:space="preserve">
+    <value>You are not allowed to login with Employee ID, Please use Computer ID tab</value>
+  </data>
+  <data name="btReopen" xml:space="preserve">
+    <value>Reopen</value>
+  </data>
+  <data name="lbareamanager" xml:space="preserve">
+    <value>Area Manager</value>
+  </data>
+  <data name="lbareaohs" xml:space="preserve">
+    <value>Area OH&amp;S</value>
+  </data>
+  <data name="lbareasupervisor" xml:space="preserve">
+    <value>Area Supervisor</value>
+  </data>
+  <data name="lbtypereport" xml:space="preserve">
+    <value>Report Type</value>
+  </data>
+  <data name="doc_no" xml:space="preserve">
+    <value>Doc no.</value>
+  </data>
+  <data name="lbinfodashboard" xml:space="preserve">
+    <value>Click on bar graph for more detail</value>
+  </data>
+  <data name="lbdateclose" xml:space="preserve">
+    <value>Date of close</value>
+  </data>
+  <data name="btSideBarDashboardSot" xml:space="preserve">
+    <value>VFL</value>
+  </data>
+  <data name="lbdepartment_area" xml:space="preserve">
+    <value>Department (Area OH&amp;S)</value>
+  </data>
+  <data name="lbdivision_area" xml:space="preserve">
+    <value>Division (Area Manager)</value>
+  </data>
+  <data name="lbsection_area" xml:space="preserve">
+    <value>Section (Area Supervisor)</value>
+  </data>
+  <data name="take_action" xml:space="preserve">
+    <value>Please create action</value>
+  </data>
+  <data name="require_attach_file" xml:space="preserve">
+    <value>Please attach file before close action.</value>
+  </data>
+  <data name="lbenddate" xml:space="preserve">
+    <value>End date is reqired.</value>
+  </data>
+  <data name="lbstartdate" xml:space="preserve">
+    <value>Start date is reqired.</value>
+  </data>
+  <data name="lbdepartment_functional_area" xml:space="preserve">
+    <value>Functional Manager (Health Rehab)</value>
+  </data>
+  <data name="functionalmanager" xml:space="preserve">
+    <value>Func. Mgr. Health</value>
+  </data>
+  <data name="lbReportHealth" xml:space="preserve">
+    <value>Report &lt;/br&gt; Health Rehab.</value>
+  </data>
+  <data name="menubarAllHealth" xml:space="preserve">
+    <value>Health Rehabilitation</value>
+  </data>
+  <data name="lbAllHealth" xml:space="preserve">
+    <value>Health &lt;/br&gt; Rehabilitation</value>
+  </data>
+  <data name="lbrqtalberiskandoccu" xml:space="preserve">
+    <value>Risk Factor Related Work and Health Check Report is reqired.</value>
+  </data>
+  <data name="lbHazardExport" xml:space="preserve">
+    <value>Hazard Report</value>
+  </data>
+  <data name="lbIncidentExport" xml:space="preserve">
+    <value>Incident Report</value>
+  </data>
+  <data name="areaall" xml:space="preserve">
+    <value>Area All</value>
+  </data>
+  <data name="btExportpdf" xml:space="preserve">
+    <value>Export PDF</value>
+  </data>
+  <data name="lbHealthExport" xml:space="preserve">
+    <value>Health Rehabilitation Report</value>
+  </data>
+</root>

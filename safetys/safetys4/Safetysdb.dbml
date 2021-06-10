@@ -1,0 +1,1587 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="safetys" Class="safetys4dbDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="WebSettings" ConnectionString="Data Source=WARUNEE_KOS;Initial Catalog=safetys;User ID=sa" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="safetys3ConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.action_health_status" Member="action_health_status">
+    <Type Name="action_health_status">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="name_th" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="name_en" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="status" Type="System.String" DbType="NVarChar(1)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.workhour_sub" Member="workhour_subs">
+    <Type Name="workhour_sub">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="division_id" Type="System.String" DbType="NVarChar(15)" CanBeNull="true" />
+      <Column Name="employee" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="contractor_onsite" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="contractor_offsite" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="created" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="training_hour" Type="System.Double" DbType="Float" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.action_status" Member="action_status">
+    <Type Name="action_status">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="name_th" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="name_en" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="status" Type="System.String" DbType="NVarChar(1)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.area_group" Member="area_groups">
+    <Type Name="area_group">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="name" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.area_group_has_permission" Member="area_group_has_permissions">
+    <Type Name="area_group_has_permission">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="area_group_id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="permission_id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.area_management" Member="area_managements">
+    <Type Name="area_management">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="name_th" Type="System.String" DbType="NVarChar(400)" CanBeNull="true" />
+      <Column Name="name_en" Type="System.String" DbType="NVarChar(400)" CanBeNull="true" />
+      <Column Name="company_id" Type="System.String" DbType="NVarChar(15)" CanBeNull="true" />
+      <Column Name="function_id" Type="System.String" DbType="NVarChar(15)" CanBeNull="true" />
+      <Column Name="department_id" Type="System.String" DbType="NVarChar(15)" CanBeNull="true" />
+      <Column Name="division_id" Type="System.String" DbType="NVarChar(15)" CanBeNull="true" />
+      <Column Name="section_id" Type="System.String" DbType="NVarChar(15)" CanBeNull="true" />
+      <Column Name="status" Type="System.String" DbType="NVarChar(1) NOT NULL" CanBeNull="false" />
+      <Column Name="created_at" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="updated_at" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="country" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.body_parts" Member="body_parts">
+    <Type Name="body_part">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="name_en" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="name_th" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="status" Type="System.String" DbType="NVarChar(1)" CanBeNull="true" />
+      <Column Name="created_at" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="updated_at" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="country" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.close_step_hazard" Member="close_step_hazards">
+    <Type Name="close_step_hazard">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="group_id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="step" Type="System.Byte" DbType="TinyInt" CanBeNull="true" />
+      <Column Name="country" Type="System.String" DbType="NVarChar(15)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.close_step_health" Member="close_step_healths">
+    <Type Name="close_step_health">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="group_id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="step" Type="System.Byte" DbType="TinyInt" CanBeNull="true" />
+      <Column Name="country" Type="System.String" DbType="NVarChar(15)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.close_step_incident" Member="close_step_incidents">
+    <Type Name="close_step_incident">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="group_id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="step" Type="System.Byte" DbType="TinyInt" CanBeNull="true" />
+      <Column Name="country" Type="System.String" DbType="NVarChar(15)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.company" Member="companies">
+    <Type Name="company">
+      <Column Name="company_id" Type="System.String" DbType="NVarChar(15) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="company_en" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="company_th" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="country" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
+      <Column Name="valid_from" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="valid_to" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.company_ignore_target" Member="company_ignore_targets">
+    <Type Name="company_ignore_target">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="company_id" Type="System.String" DbType="NVarChar(15)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.contractor" Member="contractors">
+    <Type Name="contractor">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="prefix_en" Type="System.String" DbType="NVarChar(5)" CanBeNull="true" />
+      <Column Name="first_name_en" Type="System.String" DbType="NVarChar(25)" CanBeNull="true" />
+      <Column Name="last_name_en" Type="System.String" DbType="NVarChar(25)" CanBeNull="true" />
+      <Column Name="prefix_th" Type="System.String" DbType="NChar(6)" CanBeNull="true" />
+      <Column Name="first_name_th" Type="System.String" DbType="NVarChar(25)" CanBeNull="true" />
+      <Column Name="last_name_th" Type="System.String" DbType="NVarChar(25)" CanBeNull="true" />
+      <Column Name="company_en" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="company" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="company_th" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="email" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="mobile_phone" Type="System.String" DbType="NVarChar(15)" CanBeNull="true" />
+      <Column Name="phone" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="password" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="status" Type="System.String" DbType="NVarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="function_id" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="name_modified" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="employee_id" Type="System.String" DbType="NVarChar(15)" CanBeNull="true" />
+      <Column Name="created_at" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="updated_at" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="country" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
+      <Column Name="timezone" Type="System.String" DbType="VarChar(7)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.corrective_prevention_action_incident" Member="corrective_prevention_action_incidents">
+    <Type Name="corrective_prevention_action_incident">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="corrective_preventive_action" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="responsible_person" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="due_date" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="date_complete" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="notify_contractor" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="remark" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="attachment_file" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="contractor_id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="employee_id" Type="System.String" DbType="NVarChar(15)" CanBeNull="true" />
+      <Column Name="action_status_id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="root_cause_action" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="incident_id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="last_alerted_at" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="assign_by_employee_id" Type="System.String" DbType="NVarChar(15)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.country" Member="countries">
+    <Type Name="country">
+      <Column Name="country_id" Type="System.String" DbType="NVarChar(15) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="name_en" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="name_th" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.currency" Member="currencies">
+    <Type Name="currency">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="name_en" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="name_th" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="country" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.damage_list" Member="damage_lists">
+    <Type Name="damage_list">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="property_environment_damage" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="detail_damage" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="damage_cost" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="incident_id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="status" Type="System.String" DbType="NVarChar(1)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.definition_level_incident" Member="definition_level_incidents">
+    <Type Name="definition_level_incident">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="name_en" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="name_th" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.department" Member="departments">
+    <Type Name="department">
+      <Column Name="department_id" Type="System.String" DbType="NVarChar(15) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="department_en" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="department_th" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="function_id" Type="System.String" DbType="NVarChar(15)" CanBeNull="true" />
+      <Column Name="country" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
+      <Column Name="valid_from" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="valid_to" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.division" Member="divisions">
+    <Type Name="division">
+      <Column Name="division_id" Type="System.String" DbType="NVarChar(15) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="division_en" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="division_th" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="department_id" Type="System.String" DbType="NVarChar(15)" CanBeNull="true" />
+      <Column Name="country" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
+      <Column Name="valid_from" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="valid_to" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.duration_risk_factor" Member="duration_risk_factors">
+    <Type Name="duration_risk_factor">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="name_th" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="name_en" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="status" Type="System.String" DbType="NVarChar(1)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.employee_has_department" Member="employee_has_departments">
+    <Type Name="employee_has_department">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="employee_id" Type="System.String" DbType="NVarChar(15)" CanBeNull="true" />
+      <Column Name="department_id" Type="System.String" DbType="NVarChar(15)" CanBeNull="true" />
+      <Column Name="country" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.employee_has_department_functional_manager" Member="employee_has_department_functional_managers">
+    <Type Name="employee_has_department_functional_manager">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="employee_id" Type="System.String" DbType="NVarChar(15)" CanBeNull="true" />
+      <Column Name="department_id" Type="System.String" DbType="NVarChar(15)" CanBeNull="true" />
+      <Column Name="country" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.employee_has_division" Member="employee_has_divisions">
+    <Type Name="employee_has_division">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="employee_id" Type="System.String" DbType="NVarChar(15)" CanBeNull="true" />
+      <Column Name="division_id" Type="System.String" DbType="NVarChar(15)" CanBeNull="true" />
+      <Column Name="country" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.employee_has_group" Member="employee_has_groups">
+    <Type Name="employee_has_group">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="employee_id" Type="System.String" DbType="NVarChar(15)" CanBeNull="true" />
+      <Column Name="group_id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="function_id" Type="System.String" DbType="NVarChar(15)" CanBeNull="true" />
+      <Column Name="country" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.employee_has_section" Member="employee_has_sections">
+    <Type Name="employee_has_section">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="employee_id" Type="System.String" DbType="NVarChar(15)" CanBeNull="true" />
+      <Column Name="section_id" Type="System.String" DbType="NVarChar(15)" CanBeNull="true" />
+      <Column Name="country" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.employee_has_sot" Member="employee_has_sots">
+    <Type Name="employee_has_sot">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="employee_id" Type="System.String" DbType="NVarChar(15) NOT NULL" CanBeNull="false" />
+      <Column Name="sot_id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.event_exposure" Member="event_exposures">
+    <Type Name="event_exposure">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="name_en" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="name_th" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="status" Type="System.String" DbType="NVarChar(1)" CanBeNull="true" />
+      <Column Name="created_at" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="updated_at" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="country" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.fact_finding" Member="fact_findings">
+    <Type Name="fact_finding">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="fact_finding_name" Type="System.String" DbType="NVarChar(2000)" CanBeNull="true" />
+      <Column Name="source_incident_id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="event_exposure_id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="unsafe_action" Type="System.String" DbType="NVarChar(1)" CanBeNull="true" />
+      <Column Name="unsafe_condition" Type="System.String" DbType="NVarChar(1)" CanBeNull="true" />
+      <Column Name="evidence_file" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="status" Type="System.String" DbType="NVarChar(1)" CanBeNull="true" />
+      <Column Name="incident_id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.fatality_prevention_element" Member="fatality_prevention_elements">
+    <Type Name="fatality_prevention_element">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="name_en" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="name_th" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="status" Type="System.String" DbType="NVarChar(1)" CanBeNull="true" />
+      <Column Name="created_at" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="updated_at" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="country" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.[function]" Member="functions">
+    <Type Name="function">
+      <Column Name="function_id" Type="System.String" DbType="NVarChar(15) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="function_en" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="function_th" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="company_id" Type="System.String" DbType="NVarChar(15)" CanBeNull="true" />
+      <Column Name="country" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
+      <Column Name="valid_from" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="valid_to" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.[group]" Member="groups">
+    <Type Name="group">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="name" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="value" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.group_has_permission" Member="group_has_permissions">
+    <Type Name="group_has_permission">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="group_id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="permission_id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="country" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.hazard" Member="hazards">
+    <Type Name="hazard">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="doc_no" Type="System.String" DbType="NVarChar(15)" CanBeNull="true" />
+      <Column Name="hazard_date" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="report_date" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="hazard_name" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="hazard_detail" Type="System.String" DbType="NVarChar(4000)" CanBeNull="true" />
+      <Column Name="preliminary_action" Type="System.String" DbType="NVarChar(1000)" CanBeNull="true" />
+      <Column Name="type_action" Type="System.String" DbType="NVarChar(1)" CanBeNull="true" />
+      <Column Name="hazard_area" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="company_id" Type="System.String" DbType="NVarChar(15)" CanBeNull="true" />
+      <Column Name="function_id" Type="System.String" DbType="NVarChar(15)" CanBeNull="true" />
+      <Column Name="department_id" Type="System.String" DbType="NVarChar(15)" CanBeNull="true" />
+      <Column Name="division_id" Type="System.String" DbType="NVarChar(15)" CanBeNull="true" />
+      <Column Name="section_id" Type="System.String" DbType="NVarChar(15)" CanBeNull="true" />
+      <Column Name="reason_reject" Type="System.String" DbType="NVarChar(800)" CanBeNull="true" />
+      <Column Name="typeuser_login" Type="System.String" DbType="NVarChar(15)" CanBeNull="true" />
+      <Column Name="employee_id" Type="System.String" DbType="NVarChar(15)" CanBeNull="true" />
+      <Column Name="phone" Type="System.String" DbType="NVarChar(15)" CanBeNull="true" />
+      <Column Name="hazard_flow" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="step_form" Type="System.Byte" DbType="TinyInt" CanBeNull="true" />
+      <Column Name="is_alert_over_due" Type="System.Byte" DbType="TinyInt" CanBeNull="true" />
+      <Column Name="process_status" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="verifying_date" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="level_hazard" Type="System.String" DbType="NVarChar(1)" CanBeNull="true" />
+      <Column Name="safety_officer_id" Type="System.String" DbType="NVarChar(15)" CanBeNull="true" />
+      <Column Name="area_owner_id" Type="System.String" DbType="NVarChar(15)" CanBeNull="true" />
+      <Column Name="fatality_prevention_element_id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="faltality_prevention_element_other" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="source_hazard" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="submit_report_form" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="verify_report_form1" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="reject_report_form1" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="edit_form1" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="process_action_form2" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="reject_report_form2" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="submit_report_form2" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="edit_form2" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="request_close_form3" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="create_action_form3" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="edit_action_form3" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="close_action_form3" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="reject_action_form3" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="edit_form3" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="edit_form4" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="lat" Type="System.Decimal" DbType="Decimal(10,6)" CanBeNull="true" />
+      <Column Name="lng" Type="System.Decimal" DbType="Decimal(10,6)" CanBeNull="true" />
+      <Column Name="created_at" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="updated_at" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="last_alerted_at" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="device_type" Type="System.String" DbType="NVarChar(15)" CanBeNull="true" />
+      <Column Name="country" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
+      <Column Name="hazard_characteristic_id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="close_hazard_date" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="reporter_company_id" Type="System.String" DbType="NVarChar(15)" CanBeNull="true" />
+      <Column Name="reporter_company_name" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="reporter_function_id" Type="System.String" DbType="NVarChar(15)" CanBeNull="true" />
+      <Column Name="reporter_function_name" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="reporter_department_id" Type="System.String" DbType="NVarChar(15)" CanBeNull="true" />
+      <Column Name="reporter_department_name" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="reporter_division_id" Type="System.String" DbType="NVarChar(15)" CanBeNull="true" />
+      <Column Name="reporter_division_name" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="reporter_section_id" Type="System.String" DbType="NVarChar(15)" CanBeNull="true" />
+      <Column Name="reporter_section_name" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="location_company_id" Type="System.String" DbType="NVarChar(15)" CanBeNull="true" />
+      <Column Name="location_function_id" Type="System.String" DbType="NVarChar(15)" CanBeNull="true" />
+      <Column Name="location_department_id" Type="System.String" DbType="NVarChar(15)" CanBeNull="true" />
+      <Column Name="location_division_id" Type="System.String" DbType="NVarChar(15)" CanBeNull="true" />
+      <Column Name="location_section_id" Type="System.String" DbType="NVarChar(15)" CanBeNull="true" />
+      <Column Name="location_company_name_en" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="location_function_name_en" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="location_department_name_en" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="location_division_name_en" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="location_section_name_en" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="location_company_name_th" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="location_function_name_th" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="location_department_name_th" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="location_division_name_th" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="location_section_name_th" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="confirm_form_two_to_three_at" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="confirm_form_three_to_four_at" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="alert_form_two_to_three_at" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="alert_form_three_to_four_at" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="reason_reject_type" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="alert_form_two_to_three_boss_at" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="last_alerted_boss_at" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.hazard_characteristic" Member="hazard_characteristics">
+    <Type Name="hazard_characteristic">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="name_th" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="name_en" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="status" Type="System.String" DbType="NVarChar(1)" CanBeNull="true" />
+      <Column Name="country" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.hazard_detail" Member="hazard_details">
+    <Type Name="hazard_detail">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="type_login" Type="System.String" DbType="NVarChar(15)" CanBeNull="true" />
+      <Column Name="process_status" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="employee_id" Type="System.String" DbType="NVarChar(15)" CanBeNull="true" />
+      <Column Name="action_time" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="hazard_id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.hazard_status" Member="hazard_status">
+    <Type Name="hazard_status">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="name_th" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="name_en" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="status" Type="System.String" DbType="NVarChar(1)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.health_detail" Member="health_details">
+    <Type Name="health_detail">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="type_login" Type="System.String" DbType="NVarChar(15)" CanBeNull="true" />
+      <Column Name="process_status" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="employee_id" Type="System.String" DbType="NVarChar(15)" CanBeNull="true" />
+      <Column Name="action_time" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="health_id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.health_status" Member="health_status">
+    <Type Name="health_status">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="name_th" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="name_en" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="status" Type="System.String" DbType="NVarChar(1)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.holiday" Member="holidays">
+    <Type Name="holiday">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="holiday_date" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="holiday_name" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="created" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="country" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.incident_detail" Member="incident_details">
+    <Type Name="incident_detail">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="type_login" Type="System.String" DbType="NVarChar(15)" CanBeNull="true" />
+      <Column Name="process_status" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="employee_id" Type="System.String" DbType="NVarChar(15)" CanBeNull="true" />
+      <Column Name="action_time" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="incident_id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.incident_status" Member="incident_status">
+    <Type Name="incident_status">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="name_th" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="name_en" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="status" Type="System.String" DbType="NVarChar(1)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.injury_person" Member="injury_persons">
+    <Type Name="injury_person">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="full_name" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="employee_id" Type="System.String" DbType="NVarChar(15)" CanBeNull="true" />
+      <Column Name="type_employment_id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="department_id" Type="System.String" DbType="NVarChar(15)" CanBeNull="true" />
+      <Column Name="function_id" Type="System.String" DbType="NVarChar(15)" CanBeNull="true" />
+      <Column Name="nature_injury_id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="body_parts_id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="severity_injury_id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="day_lost" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="remark" Type="System.String" DbType="NVarChar(300)" CanBeNull="true" />
+      <Column Name="incident_id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="status" Type="System.String" DbType="NVarChar(1)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.level_environment_impact" Member="level_environment_impacts">
+    <Type Name="level_environment_impact">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="name_en" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="name_th" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="country" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.level_has_definition_level_incident" Member="level_has_definition_level_incidents">
+    <Type Name="level_has_definition_level_incident">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="level_incident" Type="System.Byte" DbType="TinyInt" CanBeNull="true" />
+      <Column Name="definition_level_incident_id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="incident_id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.level_incident" Member="level_incidents">
+    <Type Name="level_incident">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="name_en" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="name_th" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="country" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.level_property_damage" Member="level_property_damages">
+    <Type Name="level_property_damage">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="name_en" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="name_th" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="country" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.log_boss_email" Member="log_boss_emails">
+    <Type Name="log_boss_email">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="type" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="type_name" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="case_id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="employee_id" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="first_supervisor_id" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="first_employee_id" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="email" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="mngt_level" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="status" Type="System.String" DbType="NVarChar(1)" CanBeNull="true" />
+      <Column Name="created_at" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.log_emails" Member="log_emails">
+    <Type Name="log_email">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="send_to" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="subject_email" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="error_message" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="created" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.log_import_data_old" Member="log_import_data_olds">
+    <Type Name="log_import_data_old">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="row_number" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="error_message" Type="System.String" DbType="NVarChar(2500)" CanBeNull="true" />
+      <Column Name="title" Type="System.String" DbType="NVarChar(2000)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.log_request_close_hazard" Member="log_request_close_hazards">
+    <Type Name="log_request_close_hazard">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="group_id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="employee_id" Type="System.String" DbType="NVarChar(15)" CanBeNull="true" />
+      <Column Name="created_at" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="status_process" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="remark" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="hazard_id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="status" Type="System.String" DbType="NVarChar(1)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.log_request_close_health" Member="log_request_close_healths">
+    <Type Name="log_request_close_health">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="group_id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="employee_id" Type="System.String" DbType="NVarChar(15)" CanBeNull="true" />
+      <Column Name="created_at" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="status_process" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="remark" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="health_id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="status" Type="System.String" DbType="NVarChar(1)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.log_request_close_incident" Member="log_request_close_incidents">
+    <Type Name="log_request_close_incident">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="group_id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="employee_id" Type="System.String" DbType="NVarChar(15)" CanBeNull="true" />
+      <Column Name="created_at" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="status_process" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="remark" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="incident_id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="status" Type="System.String" DbType="NVarChar(1)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.log_sequence_email" Member="log_sequence_emails">
+    <Type Name="log_sequence_email">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="type" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="type_name" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="case_id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="employee_id" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="email" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="title" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="subject" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="created_at" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="sequence" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.login_log" Member="login_logs">
+    <Type Name="login_log">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ip_address" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="type_login" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="type_device" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="browser" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="employee_id" Type="System.String" DbType="NVarChar(15)" CanBeNull="true" />
+      <Column Name="contractor_id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="created_at" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.months" Member="months">
+    <Type Name="month">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="month_th" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="month_en" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="status" Type="System.String" DbType="NVarChar(1)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.nature_injury" Member="nature_injuries">
+    <Type Name="nature_injury">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="name_en" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="name_th" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="status" Type="System.String" DbType="NVarChar(1)" CanBeNull="true" />
+      <Column Name="created_at" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="updated_at" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="country" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.notification" Member="notifications">
+    <Type Name="notification">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="incident_hazard_id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="type" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="flow" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="body_th" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="body_en" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="created_at" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="employee_id" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="read_flag" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.notification_incident" Member="notification_incidents">
+    <Type Name="notification_incident">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="employee_id" Type="System.String" DbType="NVarChar(15)" CanBeNull="true" />
+      <Column Name="incident_id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.occupational_health_report" Member="occupational_health_reports">
+    <Type Name="occupational_health_report">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="name_th" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="name_en" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="code" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="status" Type="System.String" DbType="NVarChar(1)" CanBeNull="true" />
+      <Column Name="country" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
+      <Column Name="updated_at" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="created_at" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.organization" Member="organizations">
+    <Type Name="organization">
+      <Column Name="org_unit_id" Type="System.String" DbType="NVarChar(15) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="org_unit" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="parent_id" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="ou_abbr" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="function_id" Type="System.String" DbType="NVarChar(15)" CanBeNull="true" />
+      <Column Name="[function]" Member="function" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="sub_function_id" Type="System.String" DbType="NVarChar(15)" CanBeNull="true" />
+      <Column Name="sub_function" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="department_id" Type="System.String" DbType="NVarChar(15)" CanBeNull="true" />
+      <Column Name="department" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="division_id" Type="System.String" DbType="NVarChar(15)" CanBeNull="true" />
+      <Column Name="division" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="section_id" Type="System.String" DbType="NVarChar(15)" CanBeNull="true" />
+      <Column Name="section" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="unit_id" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="unit" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="company_id" Type="System.String" DbType="NVarChar(15)" CanBeNull="true" />
+      <Column Name="company" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="country" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
+      <Column Name="personnel_area" Type="System.String" DbType="NVarChar(15)" CanBeNull="true" />
+      <Column Name="personnel_area_description" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="personnel_subarea" Type="System.String" DbType="NVarChar(15)" CanBeNull="true" />
+      <Column Name="personnel_subarea_description" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="valid_from" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="valid_to" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.other_impacts" Member="other_impacts">
+    <Type Name="other_impact">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="other_impact_value" Type="System.String" DbType="NVarChar(15)" CanBeNull="true" />
+      <Column Name="incident_id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.permission" Member="permissions">
+    <Type Name="permission">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="name" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.process_action" Member="process_actions">
+    <Type Name="process_action">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="type_control" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="action" Type="System.String" DbType="NVarChar(1000)" CanBeNull="true" />
+      <Column Name="responsible_person" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="due_date" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="date_complete" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="notify_contractor" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="remark" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="attachment_file" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="contractor_id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="employee_id" Type="System.String" DbType="NVarChar(15)" CanBeNull="true" />
+      <Column Name="action_status_id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="root_cause_action" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="hazard_id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="last_alerted_at" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="assign_by_employee_id" Type="System.String" DbType="NVarChar(15)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.process_action_health" Member="process_action_healths">
+    <Type Name="process_action_health">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="type_control_id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="action" Type="System.String" DbType="NVarChar(1000)" CanBeNull="true" />
+      <Column Name="responsible_person" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="due_date" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="date_complete" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="remark" Type="System.String" DbType="NVarChar(1000)" CanBeNull="true" />
+      <Column Name="doctor_opinion_file" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="recovery_plan_file" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="attachment_file" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="employee_id" Type="System.String" DbType="NVarChar(15)" CanBeNull="true" />
+      <Column Name="action_status_id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="health_id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="last_alerted_at" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="assign_by_employee_id" Type="System.String" DbType="NVarChar(15)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.process_action_sot" Member="process_action_sots">
+    <Type Name="process_action_sot">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="type_control" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="action" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="responsible_person" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="due_date" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="date_complete" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="notify_contractor" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="remark" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="attachment_file" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="contractor_id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="employee_id" Type="System.String" DbType="NVarChar(15)" CanBeNull="true" />
+      <Column Name="action_status_id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="root_cause_action" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="sot_id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="last_alerted_at" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="assign_by_employee_id" Type="System.String" DbType="NVarChar(15)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.reason_reject" Member="reason_rejects">
+    <Type Name="reason_reject">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="name_th" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="name_en" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="status" Type="System.String" DbType="NVarChar(1)" CanBeNull="true" />
+      <Column Name="country" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.reason_reject_hazard" Member="reason_reject_hazards">
+    <Type Name="reason_reject_hazard">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="name_th" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="name_en" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="status" Type="System.String" DbType="NVarChar(1)" CanBeNull="true" />
+      <Column Name="country" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.risk_factor_relate_work" Member="risk_factor_relate_works">
+    <Type Name="risk_factor_relate_work">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="name_th" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="name_en" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="code" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="status" Type="System.String" DbType="NVarChar(1)" CanBeNull="true" />
+      <Column Name="country" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
+      <Column Name="updated_at" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="created_at" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.root_cause_action" Member="root_cause_actions">
+    <Type Name="root_cause_action">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="name" Type="System.String" DbType="NVarChar(700)" CanBeNull="true" />
+      <Column Name="root_cause_number" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="status" Type="System.String" DbType="NVarChar(1)" CanBeNull="true" />
+      <Column Name="incident_id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.root_cause_incident" Member="root_cause_incidents">
+    <Type Name="root_cause_incident">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="root_cause" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="incident_id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.section" Member="sections">
+    <Type Name="section">
+      <Column Name="section_id" Type="System.String" DbType="NVarChar(15) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="section_en" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="section_th" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="division_id" Type="System.String" DbType="NVarChar(15)" CanBeNull="true" />
+      <Column Name="unit_id" Type="System.String" DbType="NVarChar(15)" CanBeNull="true" />
+      <Column Name="country" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
+      <Column Name="valid_from" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="valid_to" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.severity_injury" Member="severity_injuries">
+    <Type Name="severity_injury">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="name_en" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="name_th" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="status" Type="System.String" DbType="NVarChar(1)" CanBeNull="true" />
+      <Column Name="created_at" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="updated_at" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="country" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.site" Member="sites">
+    <Type Name="site">
+      <Column Name="site_id" Type="System.String" DbType="NVarChar(15) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="site_en" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="site_th" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="country" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.sot" Member="sots">
+    <Type Name="sot">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="doc_no" Type="System.String" DbType="NVarChar(15) NOT NULL" CanBeNull="false" />
+      <Column Name="country_id" Type="System.String" DbType="NVarChar(15)" CanBeNull="true" />
+      <Column Name="company_id" Type="System.String" DbType="NVarChar(15) NOT NULL" CanBeNull="false" />
+      <Column Name="function_id" Type="System.String" DbType="NVarChar(15) NOT NULL" CanBeNull="false" />
+      <Column Name="department_id" Type="System.String" DbType="NVarChar(15) NOT NULL" CanBeNull="false" />
+      <Column Name="site_id" Type="System.String" DbType="NVarChar(15)" CanBeNull="true" />
+      <Column Name="sot_date" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="report_date" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="sot_date_end" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="process_status" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="type_work" Type="System.String" DbType="NVarChar(1000)" CanBeNull="true" />
+      <Column Name="location" Type="System.String" DbType="NChar(100)" CanBeNull="true" />
+      <Column Name="comment" Type="System.String" DbType="NVarChar(2000)" CanBeNull="true" />
+      <Column Name="edit_form" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="created_at" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="updated_at" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="country" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
+      <Column Name="status_form" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="division_id" Type="System.String" DbType="NVarChar(15)" CanBeNull="true" />
+      <Column Name="employee_id" Type="System.String" DbType="NVarChar(15)" CanBeNull="true" />
+      <Column Name="type_employment_id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="close_sot_date" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="typeuser_login" Type="System.String" DbType="NVarChar(15)" CanBeNull="true" />
+      <Column Name="reporter_company_id" Type="System.String" DbType="NVarChar(15)" CanBeNull="true" />
+      <Column Name="reporter_company_name" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="reporter_function_id" Type="System.String" DbType="NVarChar(15)" CanBeNull="true" />
+      <Column Name="reporter_function_name" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="reporter_department_id" Type="System.String" DbType="NVarChar(15)" CanBeNull="true" />
+      <Column Name="reporter_department_name" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="reporter_division_id" Type="System.String" DbType="NVarChar(15)" CanBeNull="true" />
+      <Column Name="reporter_division_name" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="location_company_id" Type="System.String" DbType="NVarChar(15)" CanBeNull="true" />
+      <Column Name="location_company_name_th" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="location_function_id" Type="System.String" DbType="NVarChar(15)" CanBeNull="true" />
+      <Column Name="location_function_name_th" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="location_department_id" Type="System.String" DbType="NVarChar(15)" CanBeNull="true" />
+      <Column Name="location_department_name_th" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="location_division_id" Type="System.String" DbType="NVarChar(15)" CanBeNull="true" />
+      <Column Name="location_division_name_th" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="location_company_name_en" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="location_function_name_en" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="location_department_name_en" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="location_division_name_en" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.sot_action_status" Member="sot_action_status">
+    <Type Name="sot_action_status">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="name_th" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="name_en" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="status" Type="System.String" DbType="NVarChar(1)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.sot_detail" Member="sot_details">
+    <Type Name="sot_detail">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="type_login" Type="System.String" DbType="NVarChar(15)" CanBeNull="true" />
+      <Column Name="process_status" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="employee_id" Type="System.String" DbType="NVarChar(15)" CanBeNull="true" />
+      <Column Name="action_time" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="sot_id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.sot_has_environment" Member="sot_has_environments">
+    <Type Name="sot_has_environment">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="housekeeping" Type="System.String" DbType="NVarChar(3)" CanBeNull="true" />
+      <Column Name="chemical_storage" Type="System.String" DbType="NVarChar(3)" CanBeNull="true" />
+      <Column Name="waste_diposal" Type="System.String" DbType="NVarChar(3)" CanBeNull="true" />
+      <Column Name="walking_working_surface" Type="System.String" DbType="NVarChar(3)" CanBeNull="true" />
+      <Column Name="description" Type="System.String" DbType="NVarChar(1000)" CanBeNull="true" />
+      <Column Name="sot_id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.sot_has_orderliness_tidiness" Member="sot_has_orderliness_tidinesses">
+    <Type Name="sot_has_orderliness_tidiness">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="standards_established_understood" Type="System.String" DbType="NVarChar(3)" CanBeNull="true" />
+      <Column Name="walkway_passageways" Type="System.String" DbType="NVarChar(3)" CanBeNull="true" />
+      <Column Name="disorganized_tools_bench" Type="System.String" DbType="NVarChar(3)" CanBeNull="true" />
+      <Column Name="materials_storage" Type="System.String" DbType="NVarChar(3)" CanBeNull="true" />
+      <Column Name="obstructions_leaning_items" Type="System.String" DbType="NVarChar(3)" CanBeNull="true" />
+      <Column Name="stairs_platforms" Type="System.String" DbType="NVarChar(3)" CanBeNull="true" />
+      <Column Name="description" Type="System.String" DbType="NVarChar(1000)" CanBeNull="true" />
+      <Column Name="sot_id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.sot_has_personal_protection_equipment" Member="sot_has_personal_protection_equipments">
+    <Type Name="sot_has_personal_protection_equipment">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="head" Type="System.String" DbType="NVarChar(3)" CanBeNull="true" />
+      <Column Name="ears_eyes" Type="System.String" DbType="NVarChar(3)" CanBeNull="true" />
+      <Column Name="face_respiratory" Type="System.String" DbType="NVarChar(3)" CanBeNull="true" />
+      <Column Name="hand_arms" Type="System.String" DbType="NVarChar(3)" CanBeNull="true" />
+      <Column Name="feet_legs" Type="System.String" DbType="NVarChar(3)" CanBeNull="true" />
+      <Column Name="description" Type="System.String" DbType="NVarChar(1000)" CanBeNull="true" />
+      <Column Name="sot_id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.sot_has_position_people" Member="sot_has_position_peoples">
+    <Type Name="sot_has_position_people">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="striking_against" Type="System.String" DbType="NVarChar(3)" CanBeNull="true" />
+      <Column Name="caught_between" Type="System.String" DbType="NVarChar(3)" CanBeNull="true" />
+      <Column Name="inhaling" Type="System.String" DbType="NVarChar(3)" CanBeNull="true" />
+      <Column Name="absorbing" Type="System.String" DbType="NVarChar(3)" CanBeNull="true" />
+      <Column Name="electricity" Type="System.String" DbType="NVarChar(3)" CanBeNull="true" />
+      <Column Name="falling" Type="System.String" DbType="NVarChar(3)" CanBeNull="true" />
+      <Column Name="struck_by" Type="System.String" DbType="NVarChar(3)" CanBeNull="true" />
+      <Column Name="description" Type="System.String" DbType="NVarChar(1000)" CanBeNull="true" />
+      <Column Name="sot_id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="line_fire" Type="System.String" DbType="NVarChar(3)" CanBeNull="true" />
+      <Column Name="eyes_tasks" Type="System.String" DbType="NVarChar(3)" CanBeNull="true" />
+      <Column Name="lifting_lowering" Type="System.String" DbType="NVarChar(3)" CanBeNull="true" />
+      <Column Name="posture" Type="System.String" DbType="NVarChar(3)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.sot_has_procedures" Member="sot_has_procedures">
+    <Type Name="sot_has_procedure">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="standard_adequate_job" Type="System.String" DbType="NVarChar(3)" CanBeNull="true" />
+      <Column Name="standard_established" Type="System.String" DbType="NVarChar(3)" CanBeNull="true" />
+      <Column Name="standard_maintained" Type="System.String" DbType="NVarChar(3)" CanBeNull="true" />
+      <Column Name="isolation_lockout" Type="System.String" DbType="NVarChar(3)" CanBeNull="true" />
+      <Column Name="hot_work_permit" Type="System.String" DbType="NVarChar(3)" CanBeNull="true" />
+      <Column Name="confined_space_permit" Type="System.String" DbType="NVarChar(3)" CanBeNull="true" />
+      <Column Name="electrical_permit" Type="System.String" DbType="NVarChar(3)" CanBeNull="true" />
+      <Column Name="work_height_permit" Type="System.String" DbType="NVarChar(3)" CanBeNull="true" />
+      <Column Name="rescue_plan_place" Type="System.String" DbType="NVarChar(3)" CanBeNull="true" />
+      <Column Name="description" Type="System.String" DbType="NVarChar(1000)" CanBeNull="true" />
+      <Column Name="sot_id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.sot_has_reactions_people" Member="sot_has_reactions_peoples">
+    <Type Name="sot_has_reactions_people">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="changinge_position" Type="System.String" DbType="NVarChar(3)" CanBeNull="true" />
+      <Column Name="stopping_work" Type="System.String" DbType="NVarChar(3)" CanBeNull="true" />
+      <Column Name="rearranging_job" Type="System.String" DbType="NVarChar(3)" CanBeNull="true" />
+      <Column Name="hiding_dodging" Type="System.String" DbType="NVarChar(3)" CanBeNull="true" />
+      <Column Name="changing_tools" Type="System.String" DbType="NVarChar(3)" CanBeNull="true" />
+      <Column Name="applying_lockout" Type="System.String" DbType="NVarChar(3)" CanBeNull="true" />
+      <Column Name="adjusting_ppe" Type="System.String" DbType="NVarChar(3)" CanBeNull="true" />
+      <Column Name="description" Type="System.String" DbType="NVarChar(1000)" CanBeNull="true" />
+      <Column Name="sot_id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.sot_has_tools_equipment" Member="sot_has_tools_equipments">
+    <Type Name="sot_has_tools_equipment">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="right_job" Type="System.String" DbType="NVarChar(3)" CanBeNull="true" />
+      <Column Name="used_correctly" Type="System.String" DbType="NVarChar(3)" CanBeNull="true" />
+      <Column Name="safe_conditions" Type="System.String" DbType="NVarChar(3)" CanBeNull="true" />
+      <Column Name="hamesses" Type="System.String" DbType="NVarChar(3)" CanBeNull="true" />
+      <Column Name="barricades_warning_lights" Type="System.String" DbType="NVarChar(3)" CanBeNull="true" />
+      <Column Name="chock_restraints" Type="System.String" DbType="NVarChar(3)" CanBeNull="true" />
+      <Column Name="prejob_safety_checks" Type="System.String" DbType="NVarChar(3)" CanBeNull="true" />
+      <Column Name="description" Type="System.String" DbType="NVarChar(1000)" CanBeNull="true" />
+      <Column Name="sot_id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.sot_status" Member="sot_status">
+    <Type Name="sot_status">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="name_th" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="name_en" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="status" Type="System.String" DbType="NVarChar(1)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.source_hazard" Member="source_hazards">
+    <Type Name="source_hazard">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="name_en" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="name_th" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="status" Type="System.String" DbType="NVarChar(1)" CanBeNull="true" />
+      <Column Name="created_at" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="updated_at" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="country" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.source_incident" Member="source_incidents">
+    <Type Name="source_incident">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="name_en" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="name_th" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="status" Type="System.String" DbType="NVarChar(1)" CanBeNull="true" />
+      <Column Name="created_at" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="updated_at" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="country" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.status_contractor" Member="status_contractors">
+    <Type Name="status_contractor">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="name" Type="System.String" DbType="NVarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="value" Type="System.String" DbType="NVarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="lang" Type="System.String" DbType="NChar(2) NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.target_main" Member="target_mains">
+    <Type Name="target_main">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="function_id" Type="System.String" DbType="NVarChar(15)" CanBeNull="true" />
+      <Column Name="ltifr_employee" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="ltifr_contractor_onsite" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="ltifr_contractor_offsite" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="tifr_employee" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="tifr_contractor_onsite" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="tifr_contractor_offsite" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="multiplier_contractor" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="multiplier" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="created" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="multiplier_all" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="ltifr_all" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="tifr_all" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="multiplier_contractor_offsite" Type="System.Double" DbType="Float" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.target_main_srilanka" Member="target_main_srilankas">
+    <Type Name="target_main_srilanka">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="site_id" Type="System.String" DbType="NVarChar(15)" CanBeNull="true" />
+      <Column Name="ltifr_employee" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="ltifr_contractor_onsite" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="ltifr_contractor_offsite" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="tifr_employee" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="tifr_contractor_onsite" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="tifr_contractor_offsite" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="multiplier_contractor" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="multiplier" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="created" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.target_sub" Member="target_subs">
+    <Type Name="target_sub">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="department_id" Type="System.String" DbType="NVarChar(15)" CanBeNull="true" />
+      <Column Name="ltifr_employee" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="ltifr_contractor_onsite" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="ltifr_contractor_offsite" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="tifr_employee" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="tifr_contractor_onsite" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="tifr_contractor_offsite" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="multiplier_contractor" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="multiplier" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="created" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="multiplier_all" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="ltifr_all" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="tifr_all" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="multiplier_contractor_offsite" Type="System.Double" DbType="Float" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.type_control" Member="type_controls">
+    <Type Name="type_control">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="name_th" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="name_en" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="status" Type="System.String" DbType="NVarChar(1)" CanBeNull="true" />
+      <Column Name="country" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.type_control_health" Member="type_control_healths">
+    <Type Name="type_control_health">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="name_th" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="name_en" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="code" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="status" Type="System.String" DbType="NVarChar(1)" CanBeNull="true" />
+      <Column Name="country" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
+      <Column Name="updated_at" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="created_at" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.type_employment" Member="type_employments">
+    <Type Name="type_employment">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="name_en" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="name_th" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="status" Type="System.String" DbType="NVarChar(1)" CanBeNull="true" />
+      <Column Name="created_at" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="updated_at" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="country" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.workhour_main" Member="workhour_mains">
+    <Type Name="workhour_main">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="function_id" Type="System.String" DbType="NVarChar(15)" CanBeNull="true" />
+      <Column Name="employee" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="contractor_onsite" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="contractor_offsite" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="created" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="training_hour" Type="System.Double" DbType="Float" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.workhour_main_srilanka" Member="workhour_main_srilankas">
+    <Type Name="workhour_main_srilanka">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="site_id" Type="System.String" DbType="NVarChar(15)" CanBeNull="true" />
+      <Column Name="employee" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="contractor_onsite" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="contractor_offsite" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="created" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.view_employee_active" Member="view_employee_actives">
+    <Type Name="view_employee_active">
+      <Column Name="employee_id" Type="System.String" DbType="NVarChar(15) NOT NULL" CanBeNull="false" />
+      <Column Name="supervisor_id" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="domain_user" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="email" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="mngt_level" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="prefix_en" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="first_name_en" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="last_name_en" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="prefix_th" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="first_name_th" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="last_name_th" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="country" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
+      <Column Name="company_code" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="company_text" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="company_id" Type="System.String" DbType="NVarChar(15)" CanBeNull="true" />
+      <Column Name="company" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="function_id" Type="System.String" DbType="NVarChar(15)" CanBeNull="true" />
+      <Column Name="[function]" Member="function" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="department_id" Type="System.String" DbType="NVarChar(16)" CanBeNull="true" />
+      <Column Name="department" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.view_employee_active_all" Member="view_employee_active_alls">
+    <Type Name="view_employee_active_all">
+      <Column Name="employee_id" Type="System.String" DbType="NVarChar(15) NOT NULL" CanBeNull="false" />
+      <Column Name="supervisor_id" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="domain_user" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="email" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="mngt_level" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="prefix_en" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="first_name_en" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="last_name_en" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="prefix_th" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="first_name_th" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="last_name_th" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="country" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
+      <Column Name="company_code" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="company_text" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="company_id" Type="System.String" DbType="NVarChar(15)" CanBeNull="true" />
+      <Column Name="company" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="function_id" Type="System.String" DbType="NVarChar(15)" CanBeNull="true" />
+      <Column Name="[function]" Member="function" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="department_id" Type="System.String" DbType="NVarChar(16)" CanBeNull="true" />
+      <Column Name="department" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.reason_except" Member="reason_excepts">
+    <Type Name="reason_except">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="name_th" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="name_en" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="status" Type="System.String" DbType="NVarChar(1)" CanBeNull="true" />
+      <Column Name="country" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.incident" Member="incidents">
+    <Type Name="incident">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="doc_no" Type="System.String" DbType="NVarChar(15)" CanBeNull="true" />
+      <Column Name="incident_date" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="report_date" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="incident_name" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="incident_detail" Type="System.String" DbType="NVarChar(4000)" CanBeNull="true" />
+      <Column Name="incident_area" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="company_id" Type="System.String" DbType="NVarChar(15)" CanBeNull="true" />
+      <Column Name="function_id" Type="System.String" DbType="NVarChar(15)" CanBeNull="true" />
+      <Column Name="department_id" Type="System.String" DbType="NVarChar(15)" CanBeNull="true" />
+      <Column Name="division_id" Type="System.String" DbType="NVarChar(15)" CanBeNull="true" />
+      <Column Name="section_id" Type="System.String" DbType="NVarChar(15)" CanBeNull="true" />
+      <Column Name="reason_reject_type" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="reason_reject" Type="System.String" DbType="NVarChar(800)" CanBeNull="true" />
+      <Column Name="typeuser_login" Type="System.String" DbType="NVarChar(15)" CanBeNull="true" />
+      <Column Name="employee_id" Type="System.String" DbType="NVarChar(15)" CanBeNull="true" />
+      <Column Name="phone" Type="System.String" DbType="NVarChar(15)" CanBeNull="true" />
+      <Column Name="submit_report_form" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="step_form" Type="System.Byte" DbType="TinyInt" CanBeNull="true" />
+      <Column Name="is_alert_over_due" Type="System.Byte" DbType="TinyInt" CanBeNull="true" />
+      <Column Name="incident_flow" Type="System.Byte" DbType="TinyInt" CanBeNull="true" />
+      <Column Name="process_status" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="work_relate" Type="System.String" DbType="NVarChar(5)" CanBeNull="true" />
+      <Column Name="responsible_area" Type="System.String" DbType="NVarChar(5)" CanBeNull="true" />
+      <Column Name="impact" Type="System.String" DbType="NVarChar(5)" CanBeNull="true" />
+      <Column Name="injury_fatality_involve" Type="System.String" DbType="NVarChar(5)" CanBeNull="true" />
+      <Column Name="effect_environment" Type="System.String" DbType="NVarChar(5)" CanBeNull="true" />
+      <Column Name="level_environment" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="level_damange" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="other_impact" Type="System.String" DbType="NVarChar(15)" CanBeNull="true" />
+      <Column Name="critical" Type="System.String" DbType="NVarChar(5)" CanBeNull="true" />
+      <Column Name="external_reportable" Type="System.String" DbType="NVarChar(5)" CanBeNull="true" />
+      <Column Name="immediate_temporary" Type="System.String" DbType="NVarChar(4000)" CanBeNull="true" />
+      <Column Name="consequence_level" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="currency" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="culpability" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="road_accident" Type="System.String" DbType="NVarChar(1)" CanBeNull="true" />
+      <Column Name="fatality_prevention_element_id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="faltality_prevention_element_other" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="investigation_committee_file" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="contributing_factor" Type="System.String" DbType="NVarChar(1000)" CanBeNull="true" />
+      <Column Name="form2_function_id" Type="System.String" DbType="NVarChar(15)" CanBeNull="true" />
+      <Column Name="form3_department_id" Type="System.String" DbType="NVarChar(15)" CanBeNull="true" />
+      <Column Name="verify_report_form1" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="reject_report_form1" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="edit_form1" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="reject_report_form2" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="submit_report_form2" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="confirm_investigate_form2" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="confirm_by_groupohs_form2" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="edit_form2" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="request_close_form3" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="create_action_form3" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="edit_action_form3" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="close_action_form3" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="reject_action_form3" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="edit_form3" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="edit_form4" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="lat" Type="System.Decimal" DbType="Decimal(10,6)" CanBeNull="true" />
+      <Column Name="lng" Type="System.Decimal" DbType="Decimal(10,6)" CanBeNull="true" />
+      <Column Name="created_at" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="updated_at" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="last_alerted_at" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="device_type" Type="System.String" DbType="NVarChar(15)" CanBeNull="true" />
+      <Column Name="country" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
+      <Column Name="close_incident_date" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="reporter_company_id" Type="System.String" DbType="NVarChar(15)" CanBeNull="true" />
+      <Column Name="reporter_company_name" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="reporter_function_id" Type="System.String" DbType="NVarChar(15)" CanBeNull="true" />
+      <Column Name="reporter_function_name" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="reporter_department_id" Type="System.String" DbType="NVarChar(15)" CanBeNull="true" />
+      <Column Name="reporter_department_name" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="reporter_division_id" Type="System.String" DbType="NVarChar(15)" CanBeNull="true" />
+      <Column Name="reporter_division_name" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="reporter_section_id" Type="System.String" DbType="NVarChar(15)" CanBeNull="true" />
+      <Column Name="reporter_section_name" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="location_company_id" Type="System.String" DbType="NVarChar(15)" CanBeNull="true" />
+      <Column Name="location_company_name_th" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="location_function_id" Type="System.String" DbType="NVarChar(15)" CanBeNull="true" />
+      <Column Name="location_function_name_th" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="location_department_id" Type="System.String" DbType="NVarChar(15)" CanBeNull="true" />
+      <Column Name="location_department_name_th" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="location_division_id" Type="System.String" DbType="NVarChar(15)" CanBeNull="true" />
+      <Column Name="location_division_name_th" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="location_section_id" Type="System.String" DbType="NVarChar(15)" CanBeNull="true" />
+      <Column Name="location_section_name_th" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="location_company_name_en" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="location_function_name_en" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="location_department_name_en" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="location_division_name_en" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="location_section_name_en" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="confirm_form_two_to_three_at" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="confirm_form_three_to_four_at" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="action_form_three_at" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="alert_form_two_to_three_at" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="alert_form_three_to_four_at" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="alert_form_two_to_three_boss_at" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="last_alerted_boss_at" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="activity_company_id" Type="System.String" DbType="NVarChar(15)" CanBeNull="true" />
+      <Column Name="activity_function_id" Type="System.String" DbType="NVarChar(15)" CanBeNull="true" />
+      <Column Name="activity_department_id" Type="System.String" DbType="NVarChar(15)" CanBeNull="true" />
+      <Column Name="activity_division_id" Type="System.String" DbType="NVarChar(15)" CanBeNull="true" />
+      <Column Name="activity_section_id" Type="System.String" DbType="NVarChar(15)" CanBeNull="true" />
+      <Column Name="owner_activity" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="activity_location_company_id" Type="System.String" DbType="NVarChar(15)" CanBeNull="true" />
+      <Column Name="activity_location_company_name_th" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="activity_location_company_name_en" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="activity_location_function_id" Type="System.String" DbType="NVarChar(15)" CanBeNull="true" />
+      <Column Name="activity_location_function_name_th" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="activity_location_function_name_en" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="activity_location_department_id" Type="System.String" DbType="NVarChar(15)" CanBeNull="true" />
+      <Column Name="activity_location_department_name_th" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="activity_location_department_name_en" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="activity_location_division_id" Type="System.String" DbType="NVarChar(15)" CanBeNull="true" />
+      <Column Name="activity_location_division_name_th" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="activity_location_division_name_en" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="activity_location_section_id" Type="System.String" DbType="NVarChar(15)" CanBeNull="true" />
+      <Column Name="activity_location_section_name_th" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="activity_location_section_name_en" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="reason_except_type" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="reason_except" Type="System.String" DbType="NVarChar(800)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.reason_reject_health" Member="reason_reject_healths">
+    <Type Name="reason_reject_health">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="name_th" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="name_en" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="status" Type="System.String" DbType="NVarChar(1)" CanBeNull="true" />
+      <Column Name="country" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.hospital" Member="hospitals">
+    <Type Name="hospital">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="name_th" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="name_en" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="code" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="status" Type="System.String" DbType="NVarChar(1)" CanBeNull="true" />
+      <Column Name="country" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
+      <Column Name="updated_at" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="created_at" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.health" Member="healths">
+    <Type Name="health">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="doc_no" Type="System.String" DbType="NVarChar(15)" CanBeNull="true" />
+      <Column Name="health_employee_id" Type="System.String" DbType="NVarChar(15)" CanBeNull="true" />
+      <Column Name="year_health" Type="System.String" DbType="NVarChar(4)" CanBeNull="true" />
+      <Column Name="report_date" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="employee_name" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="birth_date" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="hiring_date" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="age" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="service_year" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="service_year_current" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="job_type_machine_type" Type="System.String" DbType="NVarChar(4000)" CanBeNull="true" />
+      <Column Name="company_id" Type="System.String" DbType="NVarChar(15)" CanBeNull="true" />
+      <Column Name="function_id" Type="System.String" DbType="NVarChar(15)" CanBeNull="true" />
+      <Column Name="department_id" Type="System.String" DbType="NVarChar(15)" CanBeNull="true" />
+      <Column Name="division_id" Type="System.String" DbType="NVarChar(15)" CanBeNull="true" />
+      <Column Name="section_id" Type="System.String" DbType="NVarChar(15)" CanBeNull="true" />
+      <Column Name="typeuser_login" Type="System.String" DbType="NVarChar(15)" CanBeNull="true" />
+      <Column Name="employee_id" Type="System.String" DbType="NVarChar(15)" CanBeNull="true" />
+      <Column Name="step_form" Type="System.Byte" DbType="TinyInt" CanBeNull="true" />
+      <Column Name="is_alert_over_due" Type="System.Byte" DbType="TinyInt" CanBeNull="true" />
+      <Column Name="process_status" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="edit_form1" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="edit_form2" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="request_close_form" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="created_at" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="updated_at" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="last_alerted_at" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="country" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
+      <Column Name="close_health_date" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="reporter_company_id" Type="System.String" DbType="NVarChar(15)" CanBeNull="true" />
+      <Column Name="reporter_company_name" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="reporter_function_id" Type="System.String" DbType="NVarChar(15)" CanBeNull="true" />
+      <Column Name="reporter_function_name" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="reporter_department_id" Type="System.String" DbType="NVarChar(15)" CanBeNull="true" />
+      <Column Name="reporter_department_name" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="reporter_division_id" Type="System.String" DbType="NVarChar(15)" CanBeNull="true" />
+      <Column Name="reporter_division_name" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="reporter_section_id" Type="System.String" DbType="NVarChar(15)" CanBeNull="true" />
+      <Column Name="reporter_section_name" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="location_company_id" Type="System.String" DbType="NVarChar(15)" CanBeNull="true" />
+      <Column Name="location_function_id" Type="System.String" DbType="NVarChar(15)" CanBeNull="true" />
+      <Column Name="location_department_id" Type="System.String" DbType="NVarChar(15)" CanBeNull="true" />
+      <Column Name="location_division_id" Type="System.String" DbType="NVarChar(15)" CanBeNull="true" />
+      <Column Name="location_section_id" Type="System.String" DbType="NVarChar(15)" CanBeNull="true" />
+      <Column Name="location_company_name_en" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="location_function_name_en" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="location_department_name_en" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="location_division_name_en" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="location_section_name_en" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="location_company_name_th" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="location_function_name_th" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="location_department_name_th" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="location_division_name_th" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="location_section_name_th" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="confirm_form_two_to_three_at" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="confirm_form_one_to_two_at" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="alert_form_one_to_two_at" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="edit_form3" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="alert_form_two_to_three_at" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="significant_insignificant" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="reason_reject_type" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="reason_reject" Type="System.String" DbType="NVarChar(800)" CanBeNull="true" />
+      <Column Name="reject_report_form1" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="hospital_id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.risk_factor_relate_work_action" Member="risk_factor_relate_work_actions">
+    <Type Name="risk_factor_relate_work_action">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="risk_factor_relate_work_id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="other" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="year" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="result" Type="System.String" DbType="NVarChar(1000)" CanBeNull="true" />
+      <Column Name="file_risk_factor" Type="System.String" DbType="NVarChar(300)" CanBeNull="true" />
+      <Column Name="duration_risk_factor_id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="health_id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="status" Type="System.String" DbType="NVarChar(1)" CanBeNull="true" />
+      <Column Name="created_at" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="monitoring_environment" Type="System.String" DbType="NVarChar(1)" CanBeNull="true" />
+      <Column Name="monitoring_results" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.consequence_management_incident" Member="consequence_management_incidents">
+    <Type Name="consequence_management_incident">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="consequence_management" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="responsible_person" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="due_date" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="date_complete" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="notify_contractor" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="remark" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="attachment_file" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="contractor_id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="employee_id" Type="System.String" DbType="NVarChar(15)" CanBeNull="true" />
+      <Column Name="action_status_id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="root_cause_action" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="incident_id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="last_alerted_at" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="assign_by_employee_id" Type="System.String" DbType="NVarChar(15)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.preventive_action_incident" Member="preventive_action_incidents">
+    <Type Name="preventive_action_incident">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="preventive_action" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="responsible_person" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="due_date" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="date_complete" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="notify_contractor" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="remark" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="attachment_file" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="contractor_id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="employee_id" Type="System.String" DbType="NVarChar(15)" CanBeNull="true" />
+      <Column Name="action_status_id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="root_cause_action" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="incident_id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="last_alerted_at" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="assign_by_employee_id" Type="System.String" DbType="NVarChar(15)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.action_log" Member="action_logs">
+    <Type Name="action_log">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="function_name" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="file_name" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="type_report" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="report_id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="area_manager_close" Type="System.String" DbType="NVarChar(6)" CanBeNull="true" />
+      <Column Name="admin_ohs_close" Type="System.String" DbType="NVarChar(6)" CanBeNull="true" />
+      <Column Name="group_incident_close" Type="System.String" DbType="NVarChar(6)" CanBeNull="true" />
+      <Column Name="group_hazard_close" Type="System.String" DbType="NVarChar(6)" CanBeNull="true" />
+      <Column Name="error_message" Type="System.String" DbType="Text" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="status" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="created" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="receive" Type="System.String" DbType="Text" CanBeNull="true" UpdateCheck="Never" />
+    </Type>
+  </Table>
+  <Table Name="dbo.occupational_health_report_action" Member="occupational_health_report_actions">
+    <Type Name="occupational_health_report_action">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="occupational_health_report_id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="repeat_health_check" Type="System.String" DbType="NVarChar(1)" CanBeNull="true" />
+      <Column Name="file_health_check" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="flie_repeat_health_check" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="health_id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="status" Type="System.String" DbType="NVarChar(1)" CanBeNull="true" />
+      <Column Name="created_at" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="abnormal_audiogram" Type="System.String" DbType="NVarChar(5)" CanBeNull="true" />
+      <Column Name="hearing_threshold_level" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="chronic_diseases_ear" Type="System.String" DbType="NVarChar(1)" CanBeNull="true" />
+      <Column Name="specify_chronic_diseases_ear" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="abnormal_pulmonary_function" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" />
+      <Column Name="smoked_cigarettes" Type="System.String" DbType="NVarChar(15)" CanBeNull="true" />
+      <Column Name="cigarette_per_day" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="smoked_years" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="smoked_months" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="smoked_cigarettes_other" Type="System.String" DbType="NVarChar(300)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.employee" Member="employees">
+    <Type Name="employee">
+      <Column Name="employee_id" Type="System.String" DbType="NVarChar(15) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="first_name_en" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="middle_name" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="last_name_en" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="personnel_area" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="cost_center" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="status" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="position_id" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="unit_id" Type="System.String" DbType="NVarChar(15)" CanBeNull="true" />
+      <Column Name="supervisor_id" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="supervisor_dot_line_id" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="time_status" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="employee_subgroup" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="employee_subgroup_text" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="major_dept" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="pers_sub_area" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="payroll_area" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="supos_id" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="nick_name" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="birth_place" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="nationality" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="marital_status" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="religion" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="gender" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="company_code" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="prefix_en" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="prefix_th" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="first_name_th" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="last_name_th" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="mngt_level" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="personal_grade" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="job_grade" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="email" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="domain_user" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="id_card" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="cost_center_text" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="emp_status_id" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="supervisor_name" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="emp_group_text" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="company_text" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="extension_no_office" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="country" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
+      <Column Name="timezone" Type="System.String" DbType="VarChar(7)" CanBeNull="true" />
+      <Column Name="hiring_date" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="birth_date" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.year_health_check_up" Member="year_health_check_ups">
+    <Type Name="year_health_check_up">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="year" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+</Database>

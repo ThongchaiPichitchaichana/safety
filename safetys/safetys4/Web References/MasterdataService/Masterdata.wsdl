@@ -1,0 +1,374 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="getFuctionlist">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="lang" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getFuctionlistResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="getFuctionByCompany">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="company" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="lang" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getFuctionByCompanyResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="getCompany">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="lang" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getCompanyResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="getStatuscontractor">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="lang" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getStatuscontractorResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="generateMasterData">
+        <s:complexType />
+      </s:element>
+      <s:element name="generateMasterDataResponse">
+        <s:complexType />
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="getFuctionlistSoapIn">
+    <wsdl:part name="parameters" element="tns:getFuctionlist" />
+  </wsdl:message>
+  <wsdl:message name="getFuctionlistSoapOut">
+    <wsdl:part name="parameters" element="tns:getFuctionlistResponse" />
+  </wsdl:message>
+  <wsdl:message name="getFuctionByCompanySoapIn">
+    <wsdl:part name="parameters" element="tns:getFuctionByCompany" />
+  </wsdl:message>
+  <wsdl:message name="getFuctionByCompanySoapOut">
+    <wsdl:part name="parameters" element="tns:getFuctionByCompanyResponse" />
+  </wsdl:message>
+  <wsdl:message name="getCompanySoapIn">
+    <wsdl:part name="parameters" element="tns:getCompany" />
+  </wsdl:message>
+  <wsdl:message name="getCompanySoapOut">
+    <wsdl:part name="parameters" element="tns:getCompanyResponse" />
+  </wsdl:message>
+  <wsdl:message name="getStatuscontractorSoapIn">
+    <wsdl:part name="parameters" element="tns:getStatuscontractor" />
+  </wsdl:message>
+  <wsdl:message name="getStatuscontractorSoapOut">
+    <wsdl:part name="parameters" element="tns:getStatuscontractorResponse" />
+  </wsdl:message>
+  <wsdl:message name="generateMasterDataSoapIn">
+    <wsdl:part name="parameters" element="tns:generateMasterData" />
+  </wsdl:message>
+  <wsdl:message name="generateMasterDataSoapOut">
+    <wsdl:part name="parameters" element="tns:generateMasterDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="getFuctionlistHttpGetIn">
+    <wsdl:part name="lang" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="getFuctionlistHttpGetOut" />
+  <wsdl:message name="getFuctionByCompanyHttpGetIn">
+    <wsdl:part name="company" type="s:string" />
+    <wsdl:part name="lang" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="getFuctionByCompanyHttpGetOut" />
+  <wsdl:message name="getCompanyHttpGetIn">
+    <wsdl:part name="lang" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="getCompanyHttpGetOut" />
+  <wsdl:message name="getStatuscontractorHttpGetIn">
+    <wsdl:part name="lang" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="getStatuscontractorHttpGetOut" />
+  <wsdl:message name="generateMasterDataHttpGetIn" />
+  <wsdl:message name="generateMasterDataHttpGetOut" />
+  <wsdl:message name="getFuctionlistHttpPostIn">
+    <wsdl:part name="lang" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="getFuctionlistHttpPostOut" />
+  <wsdl:message name="getFuctionByCompanyHttpPostIn">
+    <wsdl:part name="company" type="s:string" />
+    <wsdl:part name="lang" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="getFuctionByCompanyHttpPostOut" />
+  <wsdl:message name="getCompanyHttpPostIn">
+    <wsdl:part name="lang" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="getCompanyHttpPostOut" />
+  <wsdl:message name="getStatuscontractorHttpPostIn">
+    <wsdl:part name="lang" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="getStatuscontractorHttpPostOut" />
+  <wsdl:message name="generateMasterDataHttpPostIn" />
+  <wsdl:message name="generateMasterDataHttpPostOut" />
+  <wsdl:portType name="MasterdataSoap">
+    <wsdl:operation name="getFuctionlist">
+      <wsdl:input message="tns:getFuctionlistSoapIn" />
+      <wsdl:output message="tns:getFuctionlistSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getFuctionByCompany">
+      <wsdl:input message="tns:getFuctionByCompanySoapIn" />
+      <wsdl:output message="tns:getFuctionByCompanySoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getCompany">
+      <wsdl:input message="tns:getCompanySoapIn" />
+      <wsdl:output message="tns:getCompanySoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getStatuscontractor">
+      <wsdl:input message="tns:getStatuscontractorSoapIn" />
+      <wsdl:output message="tns:getStatuscontractorSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="generateMasterData">
+      <wsdl:input message="tns:generateMasterDataSoapIn" />
+      <wsdl:output message="tns:generateMasterDataSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="MasterdataHttpGet">
+    <wsdl:operation name="getFuctionlist">
+      <wsdl:input message="tns:getFuctionlistHttpGetIn" />
+      <wsdl:output message="tns:getFuctionlistHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getFuctionByCompany">
+      <wsdl:input message="tns:getFuctionByCompanyHttpGetIn" />
+      <wsdl:output message="tns:getFuctionByCompanyHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getCompany">
+      <wsdl:input message="tns:getCompanyHttpGetIn" />
+      <wsdl:output message="tns:getCompanyHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getStatuscontractor">
+      <wsdl:input message="tns:getStatuscontractorHttpGetIn" />
+      <wsdl:output message="tns:getStatuscontractorHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="generateMasterData">
+      <wsdl:input message="tns:generateMasterDataHttpGetIn" />
+      <wsdl:output message="tns:generateMasterDataHttpGetOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="MasterdataHttpPost">
+    <wsdl:operation name="getFuctionlist">
+      <wsdl:input message="tns:getFuctionlistHttpPostIn" />
+      <wsdl:output message="tns:getFuctionlistHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getFuctionByCompany">
+      <wsdl:input message="tns:getFuctionByCompanyHttpPostIn" />
+      <wsdl:output message="tns:getFuctionByCompanyHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getCompany">
+      <wsdl:input message="tns:getCompanyHttpPostIn" />
+      <wsdl:output message="tns:getCompanyHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getStatuscontractor">
+      <wsdl:input message="tns:getStatuscontractorHttpPostIn" />
+      <wsdl:output message="tns:getStatuscontractorHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="generateMasterData">
+      <wsdl:input message="tns:generateMasterDataHttpPostIn" />
+      <wsdl:output message="tns:generateMasterDataHttpPostOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="MasterdataSoap" type="tns:MasterdataSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="getFuctionlist">
+      <soap:operation soapAction="http://tempuri.org/getFuctionlist" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getFuctionByCompany">
+      <soap:operation soapAction="http://tempuri.org/getFuctionByCompany" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getCompany">
+      <soap:operation soapAction="http://tempuri.org/getCompany" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getStatuscontractor">
+      <soap:operation soapAction="http://tempuri.org/getStatuscontractor" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="generateMasterData">
+      <soap:operation soapAction="http://tempuri.org/generateMasterData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="MasterdataSoap12" type="tns:MasterdataSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="getFuctionlist">
+      <soap12:operation soapAction="http://tempuri.org/getFuctionlist" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getFuctionByCompany">
+      <soap12:operation soapAction="http://tempuri.org/getFuctionByCompany" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getCompany">
+      <soap12:operation soapAction="http://tempuri.org/getCompany" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getStatuscontractor">
+      <soap12:operation soapAction="http://tempuri.org/getStatuscontractor" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="generateMasterData">
+      <soap12:operation soapAction="http://tempuri.org/generateMasterData" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="MasterdataHttpGet" type="tns:MasterdataHttpGet">
+    <http:binding verb="GET" />
+    <wsdl:operation name="getFuctionlist">
+      <http:operation location="/getFuctionlist" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output />
+    </wsdl:operation>
+    <wsdl:operation name="getFuctionByCompany">
+      <http:operation location="/getFuctionByCompany" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output />
+    </wsdl:operation>
+    <wsdl:operation name="getCompany">
+      <http:operation location="/getCompany" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output />
+    </wsdl:operation>
+    <wsdl:operation name="getStatuscontractor">
+      <http:operation location="/getStatuscontractor" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output />
+    </wsdl:operation>
+    <wsdl:operation name="generateMasterData">
+      <http:operation location="/generateMasterData" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output />
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="MasterdataHttpPost" type="tns:MasterdataHttpPost">
+    <http:binding verb="POST" />
+    <wsdl:operation name="getFuctionlist">
+      <http:operation location="/getFuctionlist" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output />
+    </wsdl:operation>
+    <wsdl:operation name="getFuctionByCompany">
+      <http:operation location="/getFuctionByCompany" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output />
+    </wsdl:operation>
+    <wsdl:operation name="getCompany">
+      <http:operation location="/getCompany" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output />
+    </wsdl:operation>
+    <wsdl:operation name="getStatuscontractor">
+      <http:operation location="/getStatuscontractor" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output />
+    </wsdl:operation>
+    <wsdl:operation name="generateMasterData">
+      <http:operation location="/generateMasterData" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output />
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Masterdata">
+    <wsdl:port name="MasterdataSoap" binding="tns:MasterdataSoap">
+      <soap:address location="http://localhost/safetys4/Masterdata.asmx" />
+    </wsdl:port>
+    <wsdl:port name="MasterdataSoap12" binding="tns:MasterdataSoap12">
+      <soap12:address location="http://localhost/safetys4/Masterdata.asmx" />
+    </wsdl:port>
+    <wsdl:port name="MasterdataHttpGet" binding="tns:MasterdataHttpGet">
+      <http:address location="http://localhost/safetys4/Masterdata.asmx" />
+    </wsdl:port>
+    <wsdl:port name="MasterdataHttpPost" binding="tns:MasterdataHttpPost">
+      <http:address location="http://localhost/safetys4/Masterdata.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

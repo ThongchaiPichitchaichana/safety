@@ -1,0 +1,992 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="btIncidentcheck" xml:space="preserve">
+    <value>Verify Report</value>
+  </data>
+  <data name="btIncidentedit" xml:space="preserve">
+    <value>Edit</value>
+  </data>
+  <data name="btIncidentreject" xml:space="preserve">
+    <value>Reject Report</value>
+  </data>
+  <data name="HeaderDate" xml:space="preserve">
+    <value>Date/time and location of incident</value>
+  </data>
+  <data name="incidentarea" xml:space="preserve">
+    <value>Location of incident</value>
+  </data>
+  <data name="incidentdetail" xml:space="preserve">
+    <value>Detail of the incident</value>
+  </data>
+  <data name="incidentname" xml:space="preserve">
+    <value>Incident title</value>
+  </data>
+  <data name="incidentstep1" xml:space="preserve">
+    <value>Incident Report</value>
+  </data>
+  <data name="incidentstep2" xml:space="preserve">
+    <value>Verify Incident Report</value>
+  </data>
+  <data name="incidentstep3" xml:space="preserve">
+    <value>Investigation and Corrective/Preventive Action</value>
+  </data>
+  <data name="incidentstep4" xml:space="preserve">
+    <value>Request to Close Incident Report</value>
+  </data>
+  <data name="incident_date" xml:space="preserve">
+    <value>Date of incident</value>
+  </data>
+  <data name="incident_time" xml:space="preserve">
+    <value>Time</value>
+  </data>
+  <data name="lbCompany" xml:space="preserve">
+    <value>Company of incident</value>
+  </data>
+  <data name="lbdepartment" xml:space="preserve">
+    <value>Plant/Department of incident</value>
+  </data>
+  <data name="lbDescriptionHeader" xml:space="preserve">
+    <value>Description</value>
+  </data>
+  <data name="lbdivision" xml:space="preserve">
+    <value>Division of incident</value>
+  </data>
+  <data name="lbfucntion" xml:space="preserve">
+    <value>Function/Business Unit of incident</value>
+  </data>
+  <data name="lbIncidentHeader" xml:space="preserve">
+    <value>Incident Report</value>
+  </data>
+  <data name="lbsection" xml:space="preserve">
+    <value>Section of incident</value>
+  </data>
+  <data name="report_date" xml:space="preserve">
+    <value>Date of report</value>
+  </data>
+  <data name="report_time" xml:space="preserve">
+    <value>Time</value>
+  </data>
+  <data name="incidentnamesurname" xml:space="preserve">
+    <value>Name and Surname</value>
+  </data>
+  <data name="incidentphone" xml:space="preserve">
+    <value>Phone number</value>
+  </data>
+  <data name="lbNameReportHeader" xml:space="preserve">
+    <value>Name of reporter</value>
+  </data>
+  <data name="rqcompany" xml:space="preserve">
+    <value>Company field is reqired.</value>
+  </data>
+  <data name="rqdepartment" xml:space="preserve">
+    <value>Plant/Department field is reqired.</value>
+  </data>
+  <data name="rqfunction" xml:space="preserve">
+    <value>Function/Business Unit field is reqired.</value>
+  </data>
+  <data name="rqincidentdate" xml:space="preserve">
+    <value>Date of incident field is reqired.</value>
+  </data>
+  <data name="rqincidentdetail" xml:space="preserve">
+    <value>Detail of the incident field is reqired.</value>
+  </data>
+  <data name="rqincidentname" xml:space="preserve">
+    <value>Incident title field is reqired.</value>
+  </data>
+  <data name="rqincidenttime" xml:space="preserve">
+    <value>Time of incident field is reqired.</value>
+  </data>
+  <data name="area" xml:space="preserve">
+    <value>Area</value>
+  </data>
+  <data name="rqmobilephone" xml:space="preserve">
+    <value>Phone field is reqired.</value>
+  </data>
+  <data name="rqmobilephonelength" xml:space="preserve">
+    <value>Phone no more than 10 characters.</value>
+  </data>
+  <data name="rqmobileformphone" xml:space="preserve">
+    <value>Invalid mobile phone.</value>
+  </data>
+  <data name="showfile" xml:space="preserve">
+    <value>Show file</value>
+  </data>
+  <data name="lbreasonreject" xml:space="preserve">
+    <value>Reason for reject report</value>
+  </data>
+  <data name="rqreasonreject" xml:space="preserve">
+    <value>Reason for reject report is reqired.</value>
+  </data>
+  <data name="lbincidentdate" xml:space="preserve">
+    <value>Date of incident</value>
+  </data>
+  <data name="lbincidentdetail" xml:space="preserve">
+    <value>Detail of the incident</value>
+  </data>
+  <data name="lbincidentno" xml:space="preserve">
+    <value>Incident No.</value>
+  </data>
+  <data name="lbincidenttitle" xml:space="preserve">
+    <value>Incident title</value>
+  </data>
+  <data name="lbstatus" xml:space="preserve">
+    <value>Status</value>
+  </data>
+  <data name="lbyear" xml:space="preserve">
+    <value>Year</value>
+  </data>
+  <data name="header" xml:space="preserve">
+    <value>All Incidents</value>
+  </data>
+  <data name="infoimage" xml:space="preserve">
+    <value>Can upload up to 5 pictures (only JPG, and PNG) and maximum 3 MB per picture.</value>
+  </data>
+  <data name="rqmobilephone1" xml:space="preserve">
+    <value>Mobile phone field is reqired.</value>
+  </data>
+  <data name="no" xml:space="preserve">
+    <value>No</value>
+  </data>
+  <data name="sourceincident" xml:space="preserve">
+    <value>Source of Incident</value>
+  </data>
+  <data name="workrelate" xml:space="preserve">
+    <value>Work related incident?</value>
+  </data>
+  <data name="yes" xml:space="preserve">
+    <value>Yes</value>
+  </data>
+  <data name="impact" xml:space="preserve">
+    <value>Have an impact or consequence</value>
+  </data>
+  <data name="impact_incident" xml:space="preserve">
+    <value>Impact of incident</value>
+  </data>
+  <data name="injury_fatality" xml:space="preserve">
+    <value>Injury or fatality involved</value>
+  </data>
+  <data name="injury_fatality_involve" xml:space="preserve">
+    <value>Injury or fatality involved</value>
+  </data>
+  <data name="no_impact" xml:space="preserve">
+    <value>No Impact (Near Miss)</value>
+  </data>
+  <data name="no_injury_fatality" xml:space="preserve">
+    <value>No injury/Fatality</value>
+  </data>
+  <data name="offsite" xml:space="preserve">
+    <value>Offsite</value>
+  </data>
+  <data name="onsite" xml:space="preserve">
+    <value>Onsite</value>
+  </data>
+  <data name="responsible_area" xml:space="preserve">
+    <value>Area of incident</value>
+  </data>
+  <data name="add_injury" xml:space="preserve">
+    <value>Add injured person</value>
+  </data>
+  <data name="body_parts" xml:space="preserve">
+    <value>Body Parts</value>
+  </data>
+  <data name="day_lost" xml:space="preserve">
+    <value>Day lost(day)</value>
+  </data>
+  <data name="delete" xml:space="preserve">
+    <value>Delete</value>
+  </data>
+  <data name="name_injury" xml:space="preserve">
+    <value>Name - Surname of injured person</value>
+  </data>
+  <data name="nature_injury" xml:space="preserve">
+    <value>Nature of injury</value>
+  </data>
+  <data name="remark" xml:space="preserve">
+    <value>Remark</value>
+  </data>
+  <data name="severity_injury" xml:space="preserve">
+    <value>Severity of injury</value>
+  </data>
+  <data name="type_employment" xml:space="preserve">
+    <value>Type of employment</value>
+  </data>
+  <data name="add_damage_list" xml:space="preserve">
+    <value>Add damage list</value>
+  </data>
+  <data name="consequence_level" xml:space="preserve">
+    <value>Consequence Level</value>
+  </data>
+  <data name="consequence_property_environment" xml:space="preserve">
+    <value>Consequence to property or environment</value>
+  </data>
+  <data name="corrective_action" xml:space="preserve">
+    <value>Corrective Action</value>
+  </data>
+  <data name="critical_incident" xml:space="preserve">
+    <value>Critical Incident (CI) ?</value>
+  </data>
+  <data name="damage_cost" xml:space="preserve">
+    <value>Damage cost</value>
+  </data>
+  <data name="detail_damage" xml:space="preserve">
+    <value>Detail of damage</value>
+  </data>
+  <data name="effect_property_environment" xml:space="preserve">
+    <value>Effect to property or environment</value>
+  </data>
+  <data name="external_reportable" xml:space="preserve">
+    <value>External Reportable ?</value>
+  </data>
+  <data name="immediate_temporary_action" xml:space="preserve">
+    <value>Immediate/Temporary action</value>
+  </data>
+  <data name="list_property_enviroment_damage" xml:space="preserve">
+    <value>List of Property/environment damage</value>
+  </data>
+  <data name="no_effect_property_environment" xml:space="preserve">
+    <value>No effect to property or environment</value>
+  </data>
+  <data name="other_impact" xml:space="preserve">
+    <value>Other Impact</value>
+  </data>
+  <data name="potential_image" xml:space="preserve">
+    <value>Have the potential to image</value>
+  </data>
+  <data name="potential_issue" xml:space="preserve">
+    <value>Have the potential to productivity issue</value>
+  </data>
+  <data name="potential_legal" xml:space="preserve">
+    <value>Have the potential to legal</value>
+  </data>
+  <data name="info_external_reportable" xml:space="preserve">
+    <value>Fatality (F) Loss of human life as a result of a work related accident 
+
+Permanent Disability (PD) When the affected person is no longer able to have gainful employment with any employer as a result of a work-related incident 
+
+Lost Time Injury (LTI) A work-related injury causing the absence of one or more working days (or shifts), counting from the day after the injury 
+
+Medical Treatment (MTI) An injury requiring a treatment by a qualified person for treat injury or disease or abnormality 
+
+Minor Injury(MI) An Incident that results in minor injury and first aid treatment is applied</value>
+  </data>
+  <data name="rqbodypart" xml:space="preserve">
+    <value>Body part field is reqired.</value>
+  </data>
+  <data name="rqdaylost" xml:space="preserve">
+    <value>Day lost field is reqired.</value>
+  </data>
+  <data name="rqddltypeemployment" xml:space="preserve">
+    <value>Type employment field is reqired.</value>
+  </data>
+  <data name="rqNameInjury" xml:space="preserve">
+    <value>Name  field is reqired.</value>
+  </data>
+  <data name="rqnatureinjury" xml:space="preserve">
+    <value>Nature injury field is reqired.</value>
+  </data>
+  <data name="rqseverityinjury" xml:space="preserve">
+    <value>Severity injury field is reqired.</value>
+  </data>
+  <data name="rqdamagecost" xml:space="preserve">
+    <value>Damage cost field is reqired.</value>
+  </data>
+  <data name="rqdetaildmage" xml:space="preserve">
+    <value>Detail of damage field is reqired.</value>
+  </data>
+  <data name="rqpropertyenviroment" xml:space="preserve">
+    <value>List of Property/enviroment damage field is reqired.</value>
+  </data>
+  <data name="currency" xml:space="preserve">
+    <value>Currency</value>
+  </data>
+  <data name="total_damage_cost" xml:space="preserve">
+    <value>Total damage cost</value>
+  </data>
+  <data name="total_lost_day" xml:space="preserve">
+    <value>Total lost day(s)</value>
+  </data>
+  <data name="require_select_table" xml:space="preserve">
+    <value>Please select level incident on table.</value>
+  </data>
+  <data name="rqcheckdaylost" xml:space="preserve">
+    <value>Invalid day lost.</value>
+  </data>
+  <data name="rqdaylostcheck" xml:space="preserve">
+    <value>Invalid day lost.</value>
+  </data>
+  <data name="rqdamagecostcheck" xml:space="preserve">
+    <value>Invalid damage cost</value>
+  </data>
+  <data name="consequence_criteria_guideline" xml:space="preserve">
+    <value>Consequence Criteria Guideline</value>
+  </data>
+  <data name="level1" xml:space="preserve">
+    <value>Dramatic</value>
+  </data>
+  <data name="level1_damage" xml:space="preserve">
+    <value>&gt; 10,000,000  Baht</value>
+  </data>
+  <data name="level1_environment" xml:space="preserve">
+    <value>Large Scale, long term environmental damage off site</value>
+  </data>
+  <data name="level1_image" xml:space="preserve">
+    <value>Boycotting by Stakeholders</value>
+  </data>
+  <data name="level1_legal" xml:space="preserve">
+    <value>Regulatory breach that threatens continued operations</value>
+  </data>
+  <data name="level1_person" xml:space="preserve">
+    <value>Crisis Management Team(CMT)</value>
+  </data>
+  <data name="level1_process" xml:space="preserve">
+    <value>Plant interruption more than 1 month</value>
+  </data>
+  <data name="level1_safety" xml:space="preserve">
+    <value>Fatality</value>
+  </data>
+  <data name="level2" xml:space="preserve">
+    <value>Major</value>
+  </data>
+  <data name="level2_damage" xml:space="preserve">
+    <value>&lt; 10,000,000 Baht</value>
+  </data>
+  <data name="level2_environment" xml:space="preserve">
+    <value>Large Scale, short term environmental damage off site</value>
+  </data>
+  <data name="level2_image" xml:space="preserve">
+    <value>Some Rejection by Stakholders</value>
+  </data>
+  <data name="level2_legal" xml:space="preserve">
+    <value>Major regulatory breach with sanctions</value>
+  </data>
+  <data name="level2_person" xml:space="preserve">
+    <value>Emergency Management Team(EMT)</value>
+  </data>
+  <data name="level2_process" xml:space="preserve">
+    <value>Plant interruption more than 1 week</value>
+  </data>
+  <data name="level2_safety" xml:space="preserve">
+    <value>Permanent Disability</value>
+  </data>
+  <data name="level3" xml:space="preserve">
+    <value>Moderate</value>
+  </data>
+  <data name="level3_damage" xml:space="preserve">
+    <value>&lt; 1,000,000 Baht</value>
+  </data>
+  <data name="level3_environment" xml:space="preserve">
+    <value>Large scale environmental damage only on site</value>
+  </data>
+  <data name="level3_image" xml:space="preserve">
+    <value>Serious Negative Response</value>
+  </data>
+  <data name="level3_legal" xml:space="preserve">
+    <value>Reportable regulatory breach</value>
+  </data>
+  <data name="level3_person" xml:space="preserve">
+    <value>Management Team</value>
+  </data>
+  <data name="level3_process" xml:space="preserve">
+    <value>Plant interruption more than 1 day</value>
+  </data>
+  <data name="level3_safety" xml:space="preserve">
+    <value>Lost Time Injury/&lt;/br&gt;Restricted Work Case</value>
+  </data>
+  <data name="level4" xml:space="preserve">
+    <value>Minor</value>
+  </data>
+  <data name="level4_damage" xml:space="preserve">
+    <value>&lt; 100,000 Baht</value>
+  </data>
+  <data name="level4_environment" xml:space="preserve">
+    <value>Significant environmental damage only on site</value>
+  </data>
+  <data name="level4_image" xml:space="preserve">
+    <value>Multiple Negative Responses</value>
+  </data>
+  <data name="level4_legal" xml:space="preserve">
+    <value>Multiple regulatory breaches and non reportable</value>
+  </data>
+  <data name="level4_person" xml:space="preserve">
+    <value>Manager</value>
+  </data>
+  <data name="level4_process" xml:space="preserve">
+    <value>Plant disturbance 1 shift</value>
+  </data>
+  <data name="level4_safety" xml:space="preserve">
+    <value>Medical Treatment Injury</value>
+  </data>
+  <data name="level5" xml:space="preserve">
+    <value>Insignificant</value>
+  </data>
+  <data name="level5_damage" xml:space="preserve">
+    <value>&lt; 10,000 Baht</value>
+  </data>
+  <data name="level5_environment" xml:space="preserve">
+    <value>Minor environemntal impact</value>
+  </data>
+  <data name="level5_image" xml:space="preserve">
+    <value>Minor Negative Response</value>
+  </data>
+  <data name="level5_legal" xml:space="preserve">
+    <value>Minor regulatory breach</value>
+  </data>
+  <data name="level5_person" xml:space="preserve">
+    <value>Supervisor</value>
+  </data>
+  <data name="level5_process" xml:space="preserve">
+    <value>Plant disturbance up to 1 hour</value>
+  </data>
+  <data name="level5_safety" xml:space="preserve">
+    <value>Minor Injury /&lt;/br&gt;First Aid Injury</value>
+  </data>
+  <data name="level_incident_table" xml:space="preserve">
+    <value>Consequence Level: CL</value>
+  </data>
+  <data name="definition_damage" xml:space="preserve">
+    <value>Cost Effect</value>
+  </data>
+  <data name="definition_environment" xml:space="preserve">
+    <value>Environment</value>
+  </data>
+  <data name="definition_image" xml:space="preserve">
+    <value>Image</value>
+  </data>
+  <data name="definition_legal" xml:space="preserve">
+    <value>Legal</value>
+  </data>
+  <data name="definition_level" xml:space="preserve">
+    <value>General Definition</value>
+  </data>
+  <data name="definition_person" xml:space="preserve">
+    <value>Involvement</value>
+  </data>
+  <data name="definition_process" xml:space="preserve">
+    <value>Operations</value>
+  </data>
+  <data name="definition_safety" xml:space="preserve">
+    <value>Safety</value>
+  </data>
+  <data name="culpability" xml:space="preserve">
+    <value>Culpability</value>
+  </data>
+  <data name="event_exposure" xml:space="preserve">
+    <value>Event or Exposure</value>
+  </data>
+  <data name="evidence" xml:space="preserve">
+    <value>Evidence</value>
+  </data>
+  <data name="fact_finding" xml:space="preserve">
+    <value>Fact Finding</value>
+  </data>
+  <data name="guilty" xml:space="preserve">
+    <value>Guilty of INSEE Group</value>
+  </data>
+  <data name="lb_fact_finding" xml:space="preserve">
+    <value>Fact Finding</value>
+  </data>
+  <data name="no_guilty" xml:space="preserve">
+    <value>Not guilty of INSEE Group</value>
+  </data>
+  <data name="partial" xml:space="preserve">
+    <value>Partial guilty of INSEE Group</value>
+  </data>
+  <data name="road_accident" xml:space="preserve">
+    <value>Road Accident</value>
+  </data>
+  <data name="source_incident" xml:space="preserve">
+    <value>Source of incident</value>
+  </data>
+  <data name="unsafe_action" xml:space="preserve">
+    <value>Unsafe Action</value>
+  </data>
+  <data name="unsafe_condition" xml:space="preserve">
+    <value>Unsafe Condition</value>
+  </data>
+  <data name="add_fact_finding" xml:space="preserve">
+    <value>Add Fact Finding</value>
+  </data>
+  <data name="attachment_header" xml:space="preserve">
+    <value>Attachment (Can upload only  1 file (JPG, PNG,PDF,DOCX)  and max file size is 5 MB)</value>
+  </data>
+  <data name="close_action" xml:space="preserve">
+    <value>Close Action</value>
+  </data>
+  <data name="communication_involvement" xml:space="preserve">
+    <value>Communication and involvement</value>
+  </data>
+  <data name="corrective_preventive" xml:space="preserve">
+    <value>Corrective action</value>
+  </data>
+  <data name="date_complete" xml:space="preserve">
+    <value>Date Complete</value>
+  </data>
+  <data name="document_reporting" xml:space="preserve">
+    <value>Document controls and reporting</value>
+  </data>
+  <data name="due_date" xml:space="preserve">
+    <value>Due date</value>
+  </data>
+  <data name="emergency_preparation" xml:space="preserve">
+    <value>Emergency preparation</value>
+  </data>
+  <data name="fatality_prevention" xml:space="preserve">
+    <value>Fatality Prevention Elements: FPEs</value>
+  </data>
+  <data name="hazard_assesment" xml:space="preserve">
+    <value>Hazard identification and assesment</value>
+  </data>
+  <data name="health_wellness" xml:space="preserve">
+    <value>Health and wellness</value>
+  </data>
+  <data name="hygience" xml:space="preserve">
+    <value>Hygiene monitoring</value>
+  </data>
+  <data name="incident_hazard" xml:space="preserve">
+    <value>Incident and hazard reporting</value>
+  </data>
+  <data name="inspection_monitoring" xml:space="preserve">
+    <value>Inspection and monitoring</value>
+  </data>
+  <data name="investigation_committee" xml:space="preserve">
+    <value>Investigation Document</value>
+  </data>
+  <data name="lb_corrective_preventive" xml:space="preserve">
+    <value>Corrective Action</value>
+  </data>
+  <data name="legal_compliance" xml:space="preserve">
+    <value>Legal and compliance</value>
+  </data>
+  <data name="management" xml:space="preserve">
+    <value>Management of change</value>
+  </data>
+  <data name="notify_contractor" xml:space="preserve">
+    <value>Notify contractor (if any)</value>
+  </data>
+  <data name="occupational" xml:space="preserve">
+    <value>Occupational rehabillitation</value>
+  </data>
+  <data name="other_please" xml:space="preserve">
+    <value>Other please specify</value>
+  </data>
+  <data name="policy_planning" xml:space="preserve">
+    <value>Policy and planning</value>
+  </data>
+  <data name="purchasing_contractor" xml:space="preserve">
+    <value>Purchasing and contractor management</value>
+  </data>
+  <data name="responsibilities_resourses" xml:space="preserve">
+    <value>Responsibilities and resourses</value>
+  </data>
+  <data name="responsible_person" xml:space="preserve">
+    <value>Responsible person</value>
+  </data>
+  <data name="root_cause" xml:space="preserve">
+    <value>Root cause of incident by OH&amp;S pyramid</value>
+  </data>
+  <data name="safety_installation" xml:space="preserve">
+    <value>Safety design and installation</value>
+  </data>
+  <data name="selection_competency" xml:space="preserve">
+    <value>Selection , training and competency development</value>
+  </data>
+  <data name="standard_controls" xml:space="preserve">
+    <value>Standard instruction and controls</value>
+  </data>
+  <data name="status" xml:space="preserve">
+    <value>Status</value>
+  </data>
+  <data name="system_performance" xml:space="preserve">
+    <value>System auditing and performance review</value>
+  </data>
+  <data name="tb_corrective_preventive" xml:space="preserve">
+    <value>Corrective  action</value>
+  </data>
+  <data name="add_corrective_preventive" xml:space="preserve">
+    <value>Add Corrective action</value>
+  </data>
+  <data name="fact_finding_form" xml:space="preserve">
+    <value>Fact Finding</value>
+  </data>
+  <data name="corrective_preventive_form" xml:space="preserve">
+    <value>Corrective Action</value>
+  </data>
+  <data name="rqcorrective_preventive" xml:space="preserve">
+    <value>Corrective action is reqired.</value>
+  </data>
+  <data name="rqdatecomplete" xml:space="preserve">
+    <value>Date complete is reqired.</value>
+  </data>
+  <data name="rqduedate" xml:space="preserve">
+    <value>Due date is reqired.</value>
+  </data>
+  <data name="rqeventexposure" xml:space="preserve">
+    <value>Event or Exposure is reqired.</value>
+  </data>
+  <data name="rqpfactfinding" xml:space="preserve">
+    <value>Fact Finding is reqired.</value>
+  </data>
+  <data name="rqresponsible_person" xml:space="preserve">
+    <value>Responsible is reqired.</value>
+  </data>
+  <data name="rqsourceincident" xml:space="preserve">
+    <value>Source of incident is reqired.</value>
+  </data>
+  <data name="btRequestclose" xml:space="preserve">
+    <value>Request Close Incident</value>
+  </data>
+  <data name="manage" xml:space="preserve">
+    <value>Manage</value>
+  </data>
+  <data name="doc_no" xml:space="preserve">
+    <value>Incident No.</value>
+  </data>
+  <data name="incident" xml:space="preserve">
+    <value>Incident</value>
+  </data>
+  <data name="approval" xml:space="preserve">
+    <value>Approval</value>
+  </data>
+  <data name="close" xml:space="preserve">
+    <value>Close</value>
+  </data>
+  <data name="date" xml:space="preserve">
+    <value>Date</value>
+  </data>
+  <data name="name_surname" xml:space="preserve">
+    <value>Name and Surname</value>
+  </data>
+  <data name="notclose" xml:space="preserve">
+    <value>Not close</value>
+  </data>
+  <data name="postion" xml:space="preserve">
+    <value>Position</value>
+  </data>
+  <data name="reason_not_close" xml:space="preserve">
+    <value>Reason</value>
+  </data>
+  <data name="request_close" xml:space="preserve">
+    <value>Request to close incident (Review risk of the actions before approval)</value>
+  </data>
+  <data name="add_root_cause_action" xml:space="preserve">
+    <value>Add root cause</value>
+  </data>
+  <data name="lb_root_cause_action" xml:space="preserve">
+    <value>Root Causes</value>
+  </data>
+  <data name="root_cause_action" xml:space="preserve">
+    <value>Root cause</value>
+  </data>
+  <data name="root_cause_action_no" xml:space="preserve">
+    <value>Root Cause No.</value>
+  </data>
+  <data name="contributing_factor" xml:space="preserve">
+    <value>Contributing Factor</value>
+  </data>
+  <data name="btIncidentconfirm" xml:space="preserve">
+    <value>Confirm and Investigate</value>
+  </data>
+  <data name="close_action1" xml:space="preserve">
+    <value>Close Action</value>
+  </data>
+  <data name="hazardnameareaowner" xml:space="preserve">
+    <value>Acknowledge by area owner (FML and up)</value>
+  </data>
+  <data name="no1" xml:space="preserve">
+    <value>No.</value>
+  </data>
+  <data name="to" xml:space="preserve">
+    <value>to</value>
+  </data>
+  <data name="detailreject" xml:space="preserve">
+    <value>Comment</value>
+  </data>
+  <data name="duplicate_report" xml:space="preserve">
+    <value>Duplicate report</value>
+  </data>
+  <data name="not_workrelate" xml:space="preserve">
+    <value>Not work relate</value>
+  </data>
+  <data name="rqduedate2" xml:space="preserve">
+    <value>Duedate more than date now.</value>
+  </data>
+  <data name="rqincidentdate2" xml:space="preserve">
+    <value>Incident date less than or equal date now.</value>
+  </data>
+  <data name="rqculpability" xml:space="preserve">
+    <value>Culpability is require.</value>
+  </data>
+  <data name="incident_type" xml:space="preserve">
+    <value>Incident Type</value>
+  </data>
+  <data name="sequence" xml:space="preserve">
+    <value>No.</value>
+  </data>
+  <data name="btIncidentconfirmgroup" xml:space="preserve">
+    <value>Confirm by GroupOH&amp;S</value>
+  </data>
+  <data name="continue_report" xml:space="preserve">
+    <value>Do you want to report another incident?</value>
+  </data>
+  <data name="request_close_form4" xml:space="preserve">
+    <value>Request to close incident field is reqired.</value>
+  </data>
+  <data name="close_incident_date" xml:space="preserve">
+    <value>Date of close</value>
+  </data>
+  <data name="delay_report" xml:space="preserve">
+    <value>Delay Report</value>
+  </data>
+  <data name="type_reporter" xml:space="preserve">
+    <value>Type Reporter</value>
+  </data>
+  <data name="lbincidentlocation" xml:space="preserve">
+    <value>Location of incident</value>
+  </data>
+  <data name="lbsite" xml:space="preserve">
+    <value>Site</value>
+  </data>
+  <data name="attachment" xml:space="preserve">
+    <value>Attachment</value>
+  </data>
+  <data name="rqconsequencelevel" xml:space="preserve">
+    <value>Consequence Level field is reqired.</value>
+  </data>
+  <data name="rqimpact" xml:space="preserve">
+    <value>Impact is reqired.</value>
+  </data>
+  <data name="rqresponsiblearea" xml:space="preserve">
+    <value>Responsible area is reqired.</value>
+  </data>
+  <data name="rqeffect" xml:space="preserve">
+    <value>Please add damage list</value>
+  </data>
+  <data name="rqinjury" xml:space="preserve">
+    <value>Please add injury person.</value>
+  </data>
+  <data name="lbdepartment_culpability" xml:space="preserve">
+    <value>Plant/Department of Culpability</value>
+  </data>
+  <data name="lbfunction_culpability" xml:space="preserve">
+    <value>Function/Business Unit of Culpability</value>
+  </data>
+  <data name="lbdepartment_action" xml:space="preserve">
+    <value>Plant/Department</value>
+  </data>
+  <data name="rqCharacters" xml:space="preserve">
+    <value>characters</value>
+  </data>
+  <data name="rqIncidentContributingFactorLength" xml:space="preserve">
+    <value>Contributing Factor no more than 1000 characters.</value>
+  </data>
+  <data name="rqIncidentDetailLength" xml:space="preserve">
+    <value>Detail of the incident no more than 4000 characters.</value>
+  </data>
+  <data name="rqIncidentImmediateLength" xml:space="preserve">
+    <value>Immediate/Temporary action no more than 4000 characters.</value>
+  </data>
+  <data name="rqIncidentTitleLength" xml:space="preserve">
+    <value>Incident title no more than 500 characters.</value>
+  </data>
+  <data name="rqincidentarea" xml:space="preserve">
+    <value>Location of incident field is reqired.</value>
+  </data>
+  <data name="lbActivityCompany" xml:space="preserve">
+    <value>Under control of Company</value>
+  </data>
+  <data name="lbActivityDepartment" xml:space="preserve">
+    <value>Under control of Plant/Department</value>
+  </data>
+  <data name="lbActivityDivision" xml:space="preserve">
+    <value>Under control of Division</value>
+  </data>
+  <data name="lbActivityFunction" xml:space="preserve">
+    <value>Under control of Function/Business unit</value>
+  </data>
+  <data name="lbActivitySection" xml:space="preserve">
+    <value>Under control of Section</value>
+  </data>
+  <data name="owner_activity" xml:space="preserve">
+    <value>Owner of activity</value>
+  </data>
+  <data name="owner_activity_known" xml:space="preserve">
+    <value>Known</value>
+  </data>
+  <data name="owner_activity_unknown" xml:space="preserve">
+    <value>Unknown</value>
+  </data>
+  <data name="rqActivityCompany" xml:space="preserve">
+    <value>Under control of company field is reqired.</value>
+  </data>
+  <data name="rqActivityDepartment" xml:space="preserve">
+    <value>Under control of plant/department field is reqired.</value>
+  </data>
+  <data name="rqActivityDivision" xml:space="preserve">
+    <value>Under control of division field is reqired.</value>
+  </data>
+  <data name="rqActivityFucntion" xml:space="preserve">
+    <value>Under control of function/business unit field is reqired.</value>
+  </data>
+  <data name="rqActivitySection" xml:space="preserve">
+    <value>Under control of section field is reqired.</value>
+  </data>
+  <data name="rqOwneractivity" xml:space="preserve">
+    <value>Owner of activity field is reqired.</value>
+  </data>
+  <data name="lbdepartment_injured" xml:space="preserve">
+    <value>Plant/Department Unit of injured person</value>
+  </data>
+  <data name="lbfunction_injured" xml:space="preserve">
+    <value>Function/Business Unit of injured person</value>
+  </data>
+  <data name="btIncidentexcept" xml:space="preserve">
+    <value>Exemptions from reporting</value>
+  </data>
+  <data name="detailexcept" xml:space="preserve">
+    <value>Comment</value>
+  </data>
+  <data name="lbreasonexcept" xml:space="preserve">
+    <value>Reason for exemptions from reporting</value>
+  </data>
+  <data name="rqreasonexcept" xml:space="preserve">
+    <value>Reason for exemptions from reporting report is reqired.</value>
+  </data>
+  <data name="add_consequence" xml:space="preserve">
+    <value>Add Consequence Management</value>
+  </data>
+  <data name="add_preventive" xml:space="preserve">
+    <value>Add Preventive Action</value>
+  </data>
+  <data name="lb_consequence" xml:space="preserve">
+    <value>Consequence Management</value>
+  </data>
+  <data name="lb_preventive" xml:space="preserve">
+    <value>Preventive Action</value>
+  </data>
+  <data name="tb_consequence" xml:space="preserve">
+    <value>Consequence management</value>
+  </data>
+  <data name="tb_preventive" xml:space="preserve">
+    <value>Preventive action</value>
+  </data>
+  <data name="lb_search_area" xml:space="preserve">
+    <value>Area of search</value>
+  </data>
+</root>

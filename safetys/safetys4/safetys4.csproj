@@ -1,0 +1,2575 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{EB3C69AB-7350-45A1-A42A-98121988DE4F}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>safetys4</RootNamespace>
+    <AssemblyName>safetys4</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <Use64BitIISExpress />
+    <UseGlobalApplicationHostFile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportAppServer.ClientDoc, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <HintPath>..\packages\CrystalDecisions.ReportAppServer.1.0.0\lib\CrystalDecisions.ReportAppServer.ClientDoc.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportAppServer.CommLayer, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <HintPath>..\packages\CrystalReports.ReportAppServer.CommLayer.13.0.3501\lib\net20\CrystalDecisions.ReportAppServer.CommLayer.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportAppServer.CommonObjectModel, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <HintPath>..\packages\CrystalReports.ReportAppServer.CommonObjectModel.13.0.3501\lib\net20\CrystalDecisions.ReportAppServer.CommonObjectModel.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportAppServer.Controllers, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <HintPath>..\packages\CrystalReports.ReportAppServer.Controllers.13.0.3501\lib\net20\CrystalDecisions.ReportAppServer.Controllers.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportAppServer.CubeDefModel, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <HintPath>..\packages\CrystalReports.ReportAppServer.CubeDefModel.13.0.3501\lib\net20\CrystalDecisions.ReportAppServer.CubeDefModel.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportAppServer.DataDefModel, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <HintPath>..\packages\CrystalReports.ReportAppServer.DataDefModel.13.0.3501\lib\net20\CrystalDecisions.ReportAppServer.DataDefModel.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportAppServer.ReportDefModel, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <HintPath>..\packages\CrystalReports.ReportAppServer.ReportDefModel.13.0.3501\lib\net20\CrystalDecisions.ReportAppServer.ReportDefModel.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <HintPath>..\packages\CrystalDecisions.ReportSource.1.0.0\lib\CrystalDecisions.ReportSource.dll</HintPath>
+    </Reference>
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="CrystalDecisions.Web, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="ICSharpCode.SharpZipLib, Version=0.86.0.518, Culture=neutral, PublicKeyToken=1b03e6acf1164f73, processorArchitecture=MSIL">
+      <HintPath>..\packages\SharpZipLib.0.86.0\lib\20\ICSharpCode.SharpZipLib.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="NPOI, Version=2.2.1.0, Culture=neutral, PublicKeyToken=0df73ec7942b34e1, processorArchitecture=MSIL">
+      <HintPath>..\packages\NPOI.2.2.1\lib\net40\NPOI.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="NPOI.OOXML, Version=2.2.1.0, Culture=neutral, PublicKeyToken=0df73ec7942b34e1, processorArchitecture=MSIL">
+      <HintPath>..\packages\NPOI.2.2.1\lib\net40\NPOI.OOXML.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="NPOI.OpenXml4Net, Version=2.2.1.0, Culture=neutral, PublicKeyToken=0df73ec7942b34e1, processorArchitecture=MSIL">
+      <HintPath>..\packages\NPOI.2.2.1\lib\net40\NPOI.OpenXml4Net.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="NPOI.OpenXmlFormats, Version=2.2.1.0, Culture=neutral, PublicKeyToken=0df73ec7942b34e1, processorArchitecture=MSIL">
+      <HintPath>..\packages\NPOI.2.2.1\lib\net40\NPOI.OpenXmlFormats.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data.Linq">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.IO.Compression">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.IO.Compression.FileSystem">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="AspNet.ScriptManager.bootstrap">
+      <HintPath>..\packages\AspNet.ScriptManager.bootstrap.3.0.0\lib\net45\AspNet.ScriptManager.bootstrap.dll</HintPath>
+    </Reference>
+    <Reference Include="AspNet.ScriptManager.jQuery">
+      <HintPath>..\packages\AspNet.ScriptManager.jQuery.1.10.2\lib\net45\AspNet.ScriptManager.jQuery.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ScriptManager.MSAjax">
+      <HintPath>..\packages\Microsoft.AspNet.ScriptManager.MSAjax.5.0.0\lib\net45\Microsoft.ScriptManager.MSAjax.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ScriptManager.WebForms">
+      <HintPath>..\packages\Microsoft.AspNet.ScriptManager.WebForms.5.0.0\lib\net45\Microsoft.ScriptManager.WebForms.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Optimization, Version=1.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35">
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.1.3\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="WebGrease">
+      <Private>True</Private>
+      <HintPath>..\packages\WebGrease.1.5.2\lib\WebGrease.dll</HintPath>
+    </Reference>
+    <Reference Include="Antlr3.Runtime">
+      <Private>True</Private>
+      <HintPath>..\packages\Antlr.3.4.1.9004\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <Private>True</Private>
+      <HintPath>..\packages\Newtonsoft.Json.6.0.4\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Web.Optimization.WebForms">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.WebForms.1.1.3\lib\net45\Microsoft.AspNet.Web.Optimization.WebForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.FriendlyUrls">
+      <HintPath>..\packages\Microsoft.AspNet.FriendlyUrls.Core.1.0.2\lib\net45\Microsoft.AspNet.FriendlyUrls.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.Core">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.Core.2.2.1\lib\net45\Microsoft.AspNet.Identity.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.Owin">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.Owin.2.2.1\lib\net45\Microsoft.AspNet.Identity.Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.EntityFramework">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.EntityFramework.2.2.1\lib\net45\Microsoft.AspNet.Identity.EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Providers">
+      <HintPath>..\packages\Microsoft.AspNet.Providers.Core.2.0.0\lib\net40\System.Web.Providers.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin">
+      <HintPath>..\packages\Microsoft.Owin.3.0.1\lib\net45\Microsoft.Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Host.SystemWeb">
+      <HintPath>..\packages\Microsoft.Owin.Host.SystemWeb.3.0.1\lib\net45\Microsoft.Owin.Host.SystemWeb.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security">
+      <HintPath>..\packages\Microsoft.Owin.Security.3.0.1\lib\net45\Microsoft.Owin.Security.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Facebook">
+      <HintPath>..\packages\Microsoft.Owin.Security.Facebook.3.0.1\lib\net45\Microsoft.Owin.Security.Facebook.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Cookies">
+      <HintPath>..\packages\Microsoft.Owin.Security.Cookies.3.0.1\lib\net45\Microsoft.Owin.Security.Cookies.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Google">
+      <HintPath>..\packages\Microsoft.Owin.Security.Google.3.0.1\lib\net45\Microsoft.Owin.Security.Google.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Twitter">
+      <HintPath>..\packages\Microsoft.Owin.Security.Twitter.3.0.1\lib\net45\Microsoft.Owin.Security.Twitter.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.MicrosoftAccount">
+      <HintPath>..\packages\Microsoft.Owin.Security.MicrosoftAccount.3.0.1\lib\net45\Microsoft.Owin.Security.MicrosoftAccount.dll</HintPath>
+    </Reference>
+    <Reference Include="Owin">
+      <HintPath>..\packages\Owin.1.0\lib\net40\Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.OAuth">
+      <HintPath>..\packages\Microsoft.Owin.Security.OAuth.3.0.1\lib\net45\Microsoft.Owin.Security.OAuth.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Actionevent.asmx" />
+    <Content Include="Alert.aspx" />
+    <Content Include="AllactionReport.aspx" />
+    <Content Include="allhazard.aspx" />
+    <Content Include="allhealth.aspx" />
+    <Content Include="allincident.aspx" />
+    <Content Include="allsot.aspx" />
+    <Content Include="areamanagement.aspx" />
+    <Content Include="checklogclose.aspx" />
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\Site.css" />
+    <Content Include="contractor.aspx" />
+    <Content Include="contractoredit.aspx" />
+    <Content Include="Dashboard.asmx" />
+    <Content Include="dashboardhazard.aspx" />
+    <Content Include="dashboardhazard2.aspx" />
+    <Content Include="dashboardincident.aspx" />
+    <Content Include="dashboardincident2.aspx" />
+    <Content Include="dashboardincident3.aspx" />
+    <Content Include="dashboardsot.aspx" />
+    <Content Include="Datatablelist.asmx" />
+    <Content Include="dropzoneremove.aspx" />
+    <Content Include="dropzoneremoveaction.aspx" />
+    <Content Include="dropzoneremoveactionsot.aspx" />
+    <Content Include="dropzoneremovesot.aspx" />
+    <Content Include="dropzoneupload.aspx" />
+    <Content Include="dropzoneuploadaction.aspx" />
+    <Content Include="dropzoneuploadactionsot.aspx" />
+    <Content Include="dropzoneuploadcorrective.aspx" />
+    <Content Include="dropzoneuploadfact.aspx" />
+    <Content Include="dropzoneuploadform3.aspx" />
+    <Content Include="dropzoneuploadhazard.aspx" />
+    <Content Include="dropzoneuploadhealth.aspx" />
+    <Content Include="dropzoneuploadsot.aspx" />
+    <Content Include="FaltalityRateReport.aspx" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="HazardExport.aspx" />
+    <Content Include="hazardform.aspx" />
+    <Content Include="hazardform2.aspx" />
+    <Content Include="hazardform3.aspx" />
+    <Content Include="hazardform4.aspx" />
+    <Content Include="HazardReport.aspx" />
+    <Content Include="HealthExport.aspx" />
+    <Content Include="healthform.aspx" />
+    <Content Include="healthform2.aspx" />
+    <Content Include="healthform3.aspx" />
+    <Content Include="HealthIndividualReport.aspx" />
+    <Content Include="HealthReport.aspx" />
+    <Content Include="holiday.aspx" />
+    <Content Include="IncidentExport.aspx" />
+    <Content Include="incidentform.aspx" />
+    <Content Include="incidentform2.aspx" />
+    <Content Include="incidentform3.aspx" />
+    <Content Include="incidentform4.aspx" />
+    <Content Include="IncidentReport.aspx" />
+    <Content Include="Langdatatable.aspx" />
+    <Content Include="logemail.aspx" />
+    <Content Include="login.aspx" />
+    <Content Include="LTIFRReport.aspx" />
+    <Content Include="LTIFRSrilankaReport.aspx" />
+    <Content Include="MainMenu.aspx" />
+    <Content Include="Masterdata.asmx" />
+    <Content Include="Mobile.asmx" />
+    <Content Include="mobilelogin.aspx" />
+    <Content Include="myactionhazard.aspx" />
+    <Content Include="myactionincident.aspx" />
+    <Content Include="myactionsot.aspx" />
+    <Content Include="Notificationservice.aspx" />
+    <Content Include="notifygroup.aspx" />
+    <Content Include="packages.config" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Report.asmx" />
+    <Content Include="RootCauseIncident.aspx" />
+    <Content Include="Safetysdb.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>Safetysdb.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Saftetymain.Master" />
+    <Content Include="Sotform.aspx" />
+    <Content Include="SOTReport.aspx" />
+    <Content Include="SourcehazardReport.aspx" />
+    <Content Include="target2.aspx" />
+    <Content Include="template\css\plugins\datepicker\bootstrap-datepicker.css" />
+    <Content Include="template\css\plugins\datepicker\bootstrap-datepicker.min.css" />
+    <Content Include="template\css\plugins\datepicker\bootstrap-datepicker3.css" />
+    <Content Include="template\css\plugins\datepicker\bootstrap-datepicker3.min.css" />
+    <Content Include="template\css\plugins\datepicker\datepicker.css" />
+    <Content Include="template\css\plugins\jqGrid\ui.jqgrid-bootstrap-ui.css" />
+    <Content Include="template\css\plugins\jqGrid\ui.jqgrid-bootstrap.css" />
+    <Content Include="template\css\plugins\jqGrid\ui.jqgrid.css" />
+    <Content Include="template\css\plugins\multiautocomplete\token-input-facebook.css" />
+    <Content Include="template\css\plugins\multiautocomplete\token-input-mac.css" />
+    <Content Include="template\css\plugins\multiautocomplete\token-input.css" />
+    <Content Include="template\img\img_inside_lk.jpg" />
+    <Content Include="template\img\excel_icon.png" />
+    <Content Include="template\img\Logo_Srilanka.png" />
+    <Content Include="template\js\plugins\highchart\css\annotations\popup.css" />
+    <Content Include="template\js\plugins\highchart\css\highcharts.css" />
+    <Content Include="template\js\plugins\highchart\css\stocktools\gui.css" />
+    <Content Include="template\js\plugins\highchart\css\themes\dark-unica.css" />
+    <Content Include="template\js\plugins\highchart\css\themes\grid-light.css" />
+    <Content Include="template\js\plugins\highchart\css\themes\sand-signika.css" />
+    <Content Include="template\js\plugins\highchart\es-modules\annotations\annotations.src.js" />
+    <Content Include="template\js\plugins\highchart\es-modules\annotations\controllable\ControllableCircle.js" />
+    <Content Include="template\js\plugins\highchart\es-modules\annotations\controllable\ControllableImage.js" />
+    <Content Include="template\js\plugins\highchart\es-modules\annotations\controllable\ControllableLabel.js" />
+    <Content Include="template\js\plugins\highchart\es-modules\annotations\controllable\controllableMixin.js" />
+    <Content Include="template\js\plugins\highchart\es-modules\annotations\controllable\ControllablePath.js" />
+    <Content Include="template\js\plugins\highchart\es-modules\annotations\controllable\ControllableRect.js" />
+    <Content Include="template\js\plugins\highchart\es-modules\annotations\controllable\markerMixin.js" />
+    <Content Include="template\js\plugins\highchart\es-modules\annotations\ControlPoint.js" />
+    <Content Include="template\js\plugins\highchart\es-modules\annotations\eventEmitterMixin.js" />
+    <Content Include="template\js\plugins\highchart\es-modules\annotations\MockPoint.js" />
+    <Content Include="template\js\plugins\highchart\es-modules\annotations\navigationBindings.js" />
+    <Content Include="template\js\plugins\highchart\es-modules\annotations\popup.js" />
+    <Content Include="template\js\plugins\highchart\es-modules\annotations\types\CrookedLine.js" />
+    <Content Include="template\js\plugins\highchart\es-modules\annotations\types\ElliottWave.js" />
+    <Content Include="template\js\plugins\highchart\es-modules\annotations\types\Fibonacci.js" />
+    <Content Include="template\js\plugins\highchart\es-modules\annotations\types\InfinityLine.js" />
+    <Content Include="template\js\plugins\highchart\es-modules\annotations\types\Measure.js" />
+    <Content Include="template\js\plugins\highchart\es-modules\annotations\types\Pitchfork.js" />
+    <Content Include="template\js\plugins\highchart\es-modules\annotations\types\Tunnel.js" />
+    <Content Include="template\js\plugins\highchart\es-modules\annotations\types\VerticalLine.js" />
+    <Content Include="template\js\plugins\highchart\es-modules\error-messages.js" />
+    <Content Include="template\js\plugins\highchart\es-modules\error.js" />
+    <Content Include="template\js\plugins\highchart\es-modules\masters\highcharts-3d.src.js" />
+    <Content Include="template\js\plugins\highchart\es-modules\masters\highcharts-more.src.js" />
+    <Content Include="template\js\plugins\highchart\es-modules\masters\highcharts.src.js" />
+    <Content Include="template\js\plugins\highchart\es-modules\masters\modules\accessibility.src.js" />
+    <Content Include="template\js\plugins\highchart\es-modules\masters\modules\annotations-advanced.src.js" />
+    <Content Include="template\js\plugins\highchart\es-modules\masters\modules\annotations.src.js" />
+    <Content Include="template\js\plugins\highchart\es-modules\masters\modules\arrow-symbols.src.js" />
+    <Content Include="template\js\plugins\highchart\es-modules\masters\modules\boost-canvas.src.js" />
+    <Content Include="template\js\plugins\highchart\es-modules\masters\modules\boost.src.js" />
+    <Content Include="template\js\plugins\highchart\es-modules\masters\modules\broken-axis.src.js" />
+    <Content Include="template\js\plugins\highchart\es-modules\masters\modules\bullet.src.js" />
+    <Content Include="template\js\plugins\highchart\es-modules\masters\modules\current-date-indicator.src.js" />
+    <Content Include="template\js\plugins\highchart\es-modules\masters\modules\cylinder.src.js" />
+    <Content Include="template\js\plugins\highchart\es-modules\masters\modules\data.src.js" />
+    <Content Include="template\js\plugins\highchart\es-modules\masters\modules\datagrouping.src.js" />
+    <Content Include="template\js\plugins\highchart\es-modules\masters\modules\debugger.src.js" />
+    <Content Include="template\js\plugins\highchart\es-modules\masters\modules\dependency-wheel.src.js" />
+    <Content Include="template\js\plugins\highchart\es-modules\masters\modules\dotplot.src.js" />
+    <Content Include="template\js\plugins\highchart\es-modules\masters\modules\drag-panes.src.js" />
+    <Content Include="template\js\plugins\highchart\es-modules\masters\modules\draggable-points.src.js" />
+    <Content Include="template\js\plugins\highchart\es-modules\masters\modules\drilldown.src.js" />
+    <Content Include="template\js\plugins\highchart\es-modules\masters\modules\export-data.src.js" />
+    <Content Include="template\js\plugins\highchart\es-modules\masters\modules\exporting.src.js" />
+    <Content Include="template\js\plugins\highchart\es-modules\masters\modules\full-screen.src.js" />
+    <Content Include="template\js\plugins\highchart\es-modules\masters\modules\funnel.src.js" />
+    <Content Include="template\js\plugins\highchart\es-modules\masters\modules\funnel3d.src.js" />
+    <Content Include="template\js\plugins\highchart\es-modules\masters\modules\gantt.src.js" />
+    <Content Include="template\js\plugins\highchart\es-modules\masters\modules\grid-axis.src.js" />
+    <Content Include="template\js\plugins\highchart\es-modules\masters\modules\heatmap.src.js" />
+    <Content Include="template\js\plugins\highchart\es-modules\masters\modules\histogram-bellcurve.src.js" />
+    <Content Include="template\js\plugins\highchart\es-modules\masters\modules\item-series.src.js" />
+    <Content Include="template\js\plugins\highchart\es-modules\masters\modules\networkgraph.src.js" />
+    <Content Include="template\js\plugins\highchart\es-modules\masters\modules\no-data-to-display.src.js" />
+    <Content Include="template\js\plugins\highchart\es-modules\masters\modules\offline-exporting.src.js" />
+    <Content Include="template\js\plugins\highchart\es-modules\masters\modules\oldie-polyfills.src.js" />
+    <Content Include="template\js\plugins\highchart\es-modules\masters\modules\oldie.src.js" />
+    <Content Include="template\js\plugins\highchart\es-modules\masters\modules\organization.src.js" />
+    <Content Include="template\js\plugins\highchart\es-modules\masters\modules\overlapping-datalabels.src.js" />
+    <Content Include="template\js\plugins\highchart\es-modules\masters\modules\parallel-coordinates.src.js" />
+    <Content Include="template\js\plugins\highchart\es-modules\masters\modules\pareto.src.js" />
+    <Content Include="template\js\plugins\highchart\es-modules\masters\modules\pathfinder.src.js" />
+    <Content Include="template\js\plugins\highchart\es-modules\masters\modules\pattern-fill.src.js" />
+    <Content Include="template\js\plugins\highchart\es-modules\masters\modules\price-indicator.src.js" />
+    <Content Include="template\js\plugins\highchart\es-modules\masters\modules\pyramid3d.src.js" />
+    <Content Include="template\js\plugins\highchart\es-modules\masters\modules\sankey.src.js" />
+    <Content Include="template\js\plugins\highchart\es-modules\masters\modules\series-label.src.js" />
+    <Content Include="template\js\plugins\highchart\es-modules\masters\modules\solid-gauge.src.js" />
+    <Content Include="template\js\plugins\highchart\es-modules\masters\modules\sonification.src.js" />
+    <Content Include="template\js\plugins\highchart\es-modules\masters\modules\static-scale.src.js" />
+    <Content Include="template\js\plugins\highchart\es-modules\masters\modules\stock-tools.src.js" />
+    <Content Include="template\js\plugins\highchart\es-modules\masters\modules\stock.src.js" />
+    <Content Include="template\js\plugins\highchart\es-modules\masters\modules\streamgraph.src.js" />
+    <Content Include="template\js\plugins\highchart\es-modules\masters\modules\sunburst.src.js" />
+    <Content Include="template\js\plugins\highchart\es-modules\masters\modules\tilemap.src.js" />
+    <Content Include="template\js\plugins\highchart\es-modules\masters\modules\timeline.src.js" />
+    <Content Include="template\js\plugins\highchart\es-modules\masters\modules\treegrid.src.js" />
+    <Content Include="template\js\plugins\highchart\es-modules\masters\modules\treemap.src.js" />
+    <Content Include="template\js\plugins\highchart\es-modules\masters\modules\variable-pie.src.js" />
+    <Content Include="template\js\plugins\highchart\es-modules\masters\modules\variwide.src.js" />
+    <Content Include="template\js\plugins\highchart\es-modules\masters\modules\vector.src.js" />
+    <Content Include="template\js\plugins\highchart\es-modules\masters\modules\venn.src.js" />
+    <Content Include="template\js\plugins\highchart\es-modules\masters\modules\windbarb.src.js" />
+    <Content Include="template\js\plugins\highchart\es-modules\masters\modules\wordcloud.src.js" />
+    <Content Include="template\js\plugins\highchart\es-modules\masters\modules\xrange.src.js" />
+    <Content Include="template\js\plugins\highchart\es-modules\masters\themes\avocado.js" />
+    <Content Include="template\js\plugins\highchart\es-modules\masters\themes\avocado.src.js" />
+    <Content Include="template\js\plugins\highchart\es-modules\masters\themes\dark-blue.src.js" />
+    <Content Include="template\js\plugins\highchart\es-modules\masters\themes\dark-green.src.js" />
+    <Content Include="template\js\plugins\highchart\es-modules\masters\themes\dark-unica.src.js" />
+    <Content Include="template\js\plugins\highchart\es-modules\masters\themes\gray.src.js" />
+    <Content Include="template\js\plugins\highchart\es-modules\masters\themes\grid-light.src.js" />
+    <Content Include="template\js\plugins\highchart\es-modules\masters\themes\grid.src.js" />
+    <Content Include="template\js\plugins\highchart\es-modules\masters\themes\sand-signika.src.js" />
+    <Content Include="template\js\plugins\highchart\es-modules\masters\themes\skies.src.js" />
+    <Content Include="template\js\plugins\highchart\es-modules\masters\themes\sunset.js" />
+    <Content Include="template\js\plugins\highchart\es-modules\masters\themes\sunset.src.js" />
+    <Content Include="template\js\plugins\highchart\es-modules\mixins\ajax.js" />
+    <Content Include="template\js\plugins\highchart\es-modules\mixins\centered-series.js" />
+    <Content Include="template\js\plugins\highchart\es-modules\mixins\derived-series.js" />
+    <Content Include="template\js\plugins\highchart\es-modules\mixins\download-url.js" />
+    <Content Include="template\js\plugins\highchart\es-modules\mixins\draw-point.js" />
+    <Content Include="template\js\plugins\highchart\es-modules\mixins\geometry-circles.js" />
+    <Content Include="template\js\plugins\highchart\es-modules\mixins\geometry.js" />
+    <Content Include="template\js\plugins\highchart\es-modules\mixins\indicator-required.js" />
+    <Content Include="template\js\plugins\highchart\es-modules\mixins\multipe-lines.js" />
+    <Content Include="template\js\plugins\highchart\es-modules\mixins\navigation.js" />
+    <Content Include="template\js\plugins\highchart\es-modules\mixins\nodes.js" />
+    <Content Include="template\js\plugins\highchart\es-modules\mixins\on-series.js" />
+    <Content Include="template\js\plugins\highchart\es-modules\mixins\polygon.js" />
+    <Content Include="template\js\plugins\highchart\es-modules\mixins\reduce-array.js" />
+    <Content Include="template\js\plugins\highchart\es-modules\mixins\tree-series.js" />
+    <Content Include="template\js\plugins\highchart\es-modules\modules\accessibility\a11y-i18n.js" />
+    <Content Include="template\js\plugins\highchart\es-modules\modules\accessibility\accessibility.js" />
+    <Content Include="template\js\plugins\highchart\es-modules\modules\accessibility\AccessibilityComponent.js" />
+    <Content Include="template\js\plugins\highchart\es-modules\modules\accessibility\components\ContainerComponent.js" />
+    <Content Include="template\js\plugins\highchart\es-modules\modules\accessibility\components\InfoRegionComponent.js" />
+    <Content Include="template\js\plugins\highchart\es-modules\modules\accessibility\components\LegendComponent.js" />
+    <Content Include="template\js\plugins\highchart\es-modules\modules\accessibility\components\MenuComponent.js" />
+    <Content Include="template\js\plugins\highchart\es-modules\modules\accessibility\components\RangeSelectorComponent.js" />
+    <Content Include="template\js\plugins\highchart\es-modules\modules\accessibility\components\SeriesComponent.js" />
+    <Content Include="template\js\plugins\highchart\es-modules\modules\accessibility\components\ZoomComponent.js" />
+    <Content Include="template\js\plugins\highchart\es-modules\modules\accessibility\KeyboardNavigation.js" />
+    <Content Include="template\js\plugins\highchart\es-modules\modules\accessibility\KeyboardNavigationHandler.js" />
+    <Content Include="template\js\plugins\highchart\es-modules\modules\accessibility\options.js" />
+    <Content Include="template\js\plugins\highchart\es-modules\modules\bellcurve.src.js" />
+    <Content Include="template\js\plugins\highchart\es-modules\modules\boost-canvas.src.js" />
+    <Content Include="template\js\plugins\highchart\es-modules\modules\boost\boost-attach.js" />
+    <Content Include="template\js\plugins\highchart\es-modules\modules\boost\boost-init.js" />
+    <Content Include="template\js\plugins\highchart\es-modules\modules\boost\boost-options.js" />
+    <Content Include="template\js\plugins\highchart\es-modules\modules\boost\boost-overrides.js" />
+    <Content Include="template\js\plugins\highchart\es-modules\modules\boost\boost-utils.js" />
+    <Content Include="template\js\plugins\highchart\es-modules\modules\boost\boost.js" />
+    <Content Include="template\js\plugins\highchart\es-modules\modules\boost\boostable-map.js" />
+    <Content Include="template\js\plugins\highchart\es-modules\modules\boost\boostables.js" />
+    <Content Include="template\js\plugins\highchart\es-modules\modules\boost\named-colors.js" />
+    <Content Include="template\js\plugins\highchart\es-modules\modules\boost\wgl-renderer.js" />
+    <Content Include="template\js\plugins\highchart\es-modules\modules\boost\wgl-shader.js" />
+    <Content Include="template\js\plugins\highchart\es-modules\modules\boost\wgl-vbuffer.js" />
+    <Content Include="template\js\plugins\highchart\es-modules\modules\broken-axis.src.js" />
+    <Content Include="template\js\plugins\highchart\es-modules\modules\bullet.src.js" />
+    <Content Include="template\js\plugins\highchart\es-modules\modules\cylinder.src.js" />
+    <Content Include="template\js\plugins\highchart\es-modules\modules\data.src.js" />
+    <Content Include="template\js\plugins\highchart\es-modules\modules\debugger.src.js" />
+    <Content Include="template\js\plugins\highchart\es-modules\modules\dependency-wheel.src.js" />
+    <Content Include="template\js\plugins\highchart\es-modules\modules\dotplot.src.js" />
+    <Content Include="template\js\plugins\highchart\es-modules\modules\drag-panes.src.js" />
+    <Content Include="template\js\plugins\highchart\es-modules\modules\draggable-points.src.js" />
+    <Content Include="template\js\plugins\highchart\es-modules\modules\drilldown.src.js" />
+    <Content Include="template\js\plugins\highchart\es-modules\modules\export-data.src.js" />
+    <Content Include="template\js\plugins\highchart\es-modules\modules\exporting.src.js" />
+    <Content Include="template\js\plugins\highchart\es-modules\modules\full-screen.src.js" />
+    <Content Include="template\js\plugins\highchart\es-modules\modules\funnel.src.js" />
+    <Content Include="template\js\plugins\highchart\es-modules\modules\funnel3d.src.js" />
+    <Content Include="template\js\plugins\highchart\es-modules\modules\histogram.src.js" />
+    <Content Include="template\js\plugins\highchart\es-modules\modules\item-series.src.js" />
+    <Content Include="template\js\plugins\highchart\es-modules\modules\networkgraph\draggable-nodes.js" />
+    <Content Include="template\js\plugins\highchart\es-modules\modules\networkgraph\integrations.js" />
+    <Content Include="template\js\plugins\highchart\es-modules\modules\networkgraph\layouts.js" />
+    <Content Include="template\js\plugins\highchart\es-modules\modules\networkgraph\networkgraph.src.js" />
+    <Content Include="template\js\plugins\highchart\es-modules\modules\networkgraph\QuadTree.js" />
+    <Content Include="template\js\plugins\highchart\es-modules\modules\no-data-to-display.src.js" />
+    <Content Include="template\js\plugins\highchart\es-modules\modules\offline-exporting.src.js" />
+    <Content Include="template\js\plugins\highchart\es-modules\modules\oldie-polyfills.src.js" />
+    <Content Include="template\js\plugins\highchart\es-modules\modules\oldie.src.js" />
+    <Content Include="template\js\plugins\highchart\es-modules\modules\organization.src.js" />
+    <Content Include="template\js\plugins\highchart\es-modules\modules\overlapping-datalabels.src.js" />
+    <Content Include="template\js\plugins\highchart\es-modules\modules\parallel-coordinates.src.js" />
+    <Content Include="template\js\plugins\highchart\es-modules\modules\pareto.src.js" />
+    <Content Include="template\js\plugins\highchart\es-modules\modules\pattern-fill.src.js" />
+    <Content Include="template\js\plugins\highchart\es-modules\modules\price-indicator.src.js" />
+    <Content Include="template\js\plugins\highchart\es-modules\modules\pyramid3d.src.js" />
+    <Content Include="template\js\plugins\highchart\es-modules\modules\sankey.src.js" />
+    <Content Include="template\js\plugins\highchart\es-modules\modules\series-label.src.js" />
+    <Content Include="template\js\plugins\highchart\es-modules\modules\solid-gauge.src.js" />
+    <Content Include="template\js\plugins\highchart\es-modules\modules\sonification\chartSonify.js" />
+    <Content Include="template\js\plugins\highchart\es-modules\modules\sonification\Earcon.js" />
+    <Content Include="template\js\plugins\highchart\es-modules\modules\sonification\Instrument.js" />
+    <Content Include="template\js\plugins\highchart\es-modules\modules\sonification\instrumentDefinitions.js" />
+    <Content Include="template\js\plugins\highchart\es-modules\modules\sonification\musicalFrequencies.js" />
+    <Content Include="template\js\plugins\highchart\es-modules\modules\sonification\pointSonify.js" />
+    <Content Include="template\js\plugins\highchart\es-modules\modules\sonification\sonification.js" />
+    <Content Include="template\js\plugins\highchart\es-modules\modules\sonification\Timeline.js" />
+    <Content Include="template\js\plugins\highchart\es-modules\modules\sonification\utilities.js" />
+    <Content Include="template\js\plugins\highchart\es-modules\modules\static-scale.src.js" />
+    <Content Include="template\js\plugins\highchart\es-modules\modules\stock-tools-bindings.js" />
+    <Content Include="template\js\plugins\highchart\es-modules\modules\stock-tools-gui.js" />
+    <Content Include="template\js\plugins\highchart\es-modules\modules\streamgraph.src.js" />
+    <Content Include="template\js\plugins\highchart\es-modules\modules\sunburst.src.js" />
+    <Content Include="template\js\plugins\highchart\es-modules\modules\tilemap.src.js" />
+    <Content Include="template\js\plugins\highchart\es-modules\modules\timeline.src.js" />
+    <Content Include="template\js\plugins\highchart\es-modules\modules\treemap.src.js" />
+    <Content Include="template\js\plugins\highchart\es-modules\modules\variable-pie.src.js" />
+    <Content Include="template\js\plugins\highchart\es-modules\modules\variwide.src.js" />
+    <Content Include="template\js\plugins\highchart\es-modules\modules\vector.src.js" />
+    <Content Include="template\js\plugins\highchart\es-modules\modules\venn.src.js" />
+    <Content Include="template\js\plugins\highchart\es-modules\modules\windbarb.src.js" />
+    <Content Include="template\js\plugins\highchart\es-modules\modules\wordcloud.src.js" />
+    <Content Include="template\js\plugins\highchart\es-modules\modules\xrange.src.js" />
+    <Content Include="template\js\plugins\highchart\es-modules\parts-3d\Axis.js" />
+    <Content Include="template\js\plugins\highchart\es-modules\parts-3d\Chart.js" />
+    <Content Include="template\js\plugins\highchart\es-modules\parts-3d\Column.js" />
+    <Content Include="template\js\plugins\highchart\es-modules\parts-3d\Math.js" />
+    <Content Include="template\js\plugins\highchart\es-modules\parts-3d\Pie.js" />
+    <Content Include="template\js\plugins\highchart\es-modules\parts-3d\Scatter.js" />
+    <Content Include="template\js\plugins\highchart\es-modules\parts-3d\Series.js" />
+    <Content Include="template\js\plugins\highchart\es-modules\parts-3d\SVGRenderer.js" />
+    <Content Include="template\js\plugins\highchart\es-modules\parts-3d\VMLRenderer.js" />
+    <Content Include="template\js\plugins\highchart\es-modules\parts-gantt\ArrowSymbols.js" />
+    <Content Include="template\js\plugins\highchart\es-modules\parts-gantt\CurrentDateIndicator.js" />
+    <Content Include="template\js\plugins\highchart\es-modules\parts-gantt\GanttChart.js" />
+    <Content Include="template\js\plugins\highchart\es-modules\parts-gantt\GanttSeries.js" />
+    <Content Include="template\js\plugins\highchart\es-modules\parts-gantt\GridAxis.js" />
+    <Content Include="template\js\plugins\highchart\es-modules\parts-gantt\Pathfinder.js" />
+    <Content Include="template\js\plugins\highchart\es-modules\parts-gantt\PathfinderAlgorithms.js" />
+    <Content Include="template\js\plugins\highchart\es-modules\parts-gantt\Tree.js" />
+    <Content Include="template\js\plugins\highchart\es-modules\parts-gantt\TreeGrid.js" />
+    <Content Include="template\js\plugins\highchart\es-modules\parts-map\ColorAxis.js" />
+    <Content Include="template\js\plugins\highchart\es-modules\parts-map\ColorSeriesMixin.js" />
+    <Content Include="template\js\plugins\highchart\es-modules\parts-map\GeoJSON.js" />
+    <Content Include="template\js\plugins\highchart\es-modules\parts-map\HeatmapSeries.js" />
+    <Content Include="template\js\plugins\highchart\es-modules\parts-map\Map.js" />
+    <Content Include="template\js\plugins\highchart\es-modules\parts-map\MapAxis.js" />
+    <Content Include="template\js\plugins\highchart\es-modules\parts-map\MapBubbleSeries.js" />
+    <Content Include="template\js\plugins\highchart\es-modules\parts-map\MapLineSeries.js" />
+    <Content Include="template\js\plugins\highchart\es-modules\parts-map\MapNavigation.js" />
+    <Content Include="template\js\plugins\highchart\es-modules\parts-map\MapPointer.js" />
+    <Content Include="template\js\plugins\highchart\es-modules\parts-map\MapPointSeries.js" />
+    <Content Include="template\js\plugins\highchart\es-modules\parts-map\MapSeries.js" />
+    <Content Include="template\js\plugins\highchart\es-modules\parts-more\AreaRangeSeries.js" />
+    <Content Include="template\js\plugins\highchart\es-modules\parts-more\AreaSplineRangeSeries.js" />
+    <Content Include="template\js\plugins\highchart\es-modules\parts-more\BoxPlotSeries.js" />
+    <Content Include="template\js\plugins\highchart\es-modules\parts-more\BubbleLegend.js" />
+    <Content Include="template\js\plugins\highchart\es-modules\parts-more\BubbleSeries.js" />
+    <Content Include="template\js\plugins\highchart\es-modules\parts-more\ColumnPyramidSeries.js" />
+    <Content Include="template\js\plugins\highchart\es-modules\parts-more\ColumnRangeSeries.js" />
+    <Content Include="template\js\plugins\highchart\es-modules\parts-more\ErrorBarSeries.js" />
+    <Content Include="template\js\plugins\highchart\es-modules\parts-more\GaugeSeries.js" />
+    <Content Include="template\js\plugins\highchart\es-modules\parts-more\PackedBubbleSeries.js" />
+    <Content Include="template\js\plugins\highchart\es-modules\parts-more\Pane.js" />
+    <Content Include="template\js\plugins\highchart\es-modules\parts-more\Polar.js" />
+    <Content Include="template\js\plugins\highchart\es-modules\parts-more\PolygonSeries.js" />
+    <Content Include="template\js\plugins\highchart\es-modules\parts-more\RadialAxis.js" />
+    <Content Include="template\js\plugins\highchart\es-modules\parts-more\WaterfallSeries.js" />
+    <Content Include="template\js\plugins\highchart\es-modules\parts.js" />
+    <Content Include="template\js\plugins\highchart\es-modules\parts\AreaSeries.js" />
+    <Content Include="template\js\plugins\highchart\es-modules\parts\AreaSplineSeries.js" />
+    <Content Include="template\js\plugins\highchart\es-modules\parts\Axis.js" />
+    <Content Include="template\js\plugins\highchart\es-modules\parts\BarSeries.js" />
+    <Content Include="template\js\plugins\highchart\es-modules\parts\CandlestickSeries.js" />
+    <Content Include="template\js\plugins\highchart\es-modules\parts\Chart.js" />
+    <Content Include="template\js\plugins\highchart\es-modules\parts\Color.js" />
+    <Content Include="template\js\plugins\highchart\es-modules\parts\ColumnSeries.js" />
+    <Content Include="template\js\plugins\highchart\es-modules\parts\DataGrouping.js" />
+    <Content Include="template\js\plugins\highchart\es-modules\parts\DataLabels.js" />
+    <Content Include="template\js\plugins\highchart\es-modules\parts\DateTimeAxis.js" />
+    <Content Include="template\js\plugins\highchart\es-modules\parts\Dynamics.js" />
+    <Content Include="template\js\plugins\highchart\es-modules\parts\FlagsSeries.js" />
+    <Content Include="template\js\plugins\highchart\es-modules\parts\Globals.js" />
+    <Content Include="template\js\plugins\highchart\es-modules\parts\Html.js" />
+    <Content Include="template\js\plugins\highchart\es-modules\parts\Interaction.js" />
+    <Content Include="template\js\plugins\highchart\es-modules\parts\Legend.js" />
+    <Content Include="template\js\plugins\highchart\es-modules\parts\LogarithmicAxis.js" />
+    <Content Include="template\js\plugins\highchart\es-modules\parts\MSPointer.js" />
+    <Content Include="template\js\plugins\highchart\es-modules\parts\Navigator.js" />
+    <Content Include="template\js\plugins\highchart\es-modules\parts\OHLCSeries.js" />
+    <Content Include="template\js\plugins\highchart\es-modules\parts\Options.js" />
+    <Content Include="template\js\plugins\highchart\es-modules\parts\OrdinalAxis.js" />
+    <Content Include="template\js\plugins\highchart\es-modules\parts\PieSeries.js" />
+    <Content Include="template\js\plugins\highchart\es-modules\parts\PlotBandSeries.experimental.js" />
+    <Content Include="template\js\plugins\highchart\es-modules\parts\PlotLineOrBand.js" />
+    <Content Include="template\js\plugins\highchart\es-modules\parts\Point.js" />
+    <Content Include="template\js\plugins\highchart\es-modules\parts\Pointer.js" />
+    <Content Include="template\js\plugins\highchart\es-modules\parts\RangeSelector.js" />
+    <Content Include="template\js\plugins\highchart\es-modules\parts\Responsive.js" />
+    <Content Include="template\js\plugins\highchart\es-modules\parts\ScatterSeries.js" />
+    <Content Include="template\js\plugins\highchart\es-modules\parts\ScrollablePlotArea.js" />
+    <Content Include="template\js\plugins\highchart\es-modules\parts\Scrollbar.js" />
+    <Content Include="template\js\plugins\highchart\es-modules\parts\Series.js" />
+    <Content Include="template\js\plugins\highchart\es-modules\parts\SplineSeries.js" />
+    <Content Include="template\js\plugins\highchart\es-modules\parts\Stacking.js" />
+    <Content Include="template\js\plugins\highchart\es-modules\parts\StockChart.js" />
+    <Content Include="template\js\plugins\highchart\es-modules\parts\SvgRenderer.js" />
+    <Content Include="template\js\plugins\highchart\es-modules\parts\Tick.js" />
+    <Content Include="template\js\plugins\highchart\es-modules\parts\Time.js" />
+    <Content Include="template\js\plugins\highchart\es-modules\parts\Tooltip.js" />
+    <Content Include="template\js\plugins\highchart\es-modules\parts\TouchPointer.js" />
+    <Content Include="template\js\plugins\highchart\es-modules\parts\Utilities.js" />
+    <Content Include="template\js\plugins\highchart\es-modules\themes\avocado.js" />
+    <Content Include="template\js\plugins\highchart\es-modules\themes\dark-blue.js" />
+    <Content Include="template\js\plugins\highchart\es-modules\themes\dark-green.js" />
+    <Content Include="template\js\plugins\highchart\es-modules\themes\dark-unica.js" />
+    <Content Include="template\js\plugins\highchart\es-modules\themes\gray.js" />
+    <Content Include="template\js\plugins\highchart\es-modules\themes\grid-light.js" />
+    <Content Include="template\js\plugins\highchart\es-modules\themes\grid.js" />
+    <Content Include="template\js\plugins\highchart\es-modules\themes\sand-signika.js" />
+    <Content Include="template\js\plugins\highchart\es-modules\themes\skies.js" />
+    <Content Include="template\js\plugins\highchart\es-modules\themes\sunset.js" />
+    <Content Include="template\js\plugins\highchart\highcharts-3d.js" />
+    <Content Include="template\js\plugins\highchart\highcharts-3d.src.js" />
+    <Content Include="template\js\plugins\highchart\highcharts-more.js" />
+    <Content Include="template\js\plugins\highchart\highcharts-more.src.js" />
+    <Content Include="template\js\plugins\highchart\highcharts.js" />
+    <Content Include="template\js\plugins\highchart\highcharts.src.js" />
+    <Content Include="template\js\plugins\highchart\lib\canvg.js" />
+    <Content Include="template\js\plugins\highchart\lib\canvg.src.js" />
+    <Content Include="template\js\plugins\highchart\lib\jspdf.js" />
+    <Content Include="template\js\plugins\highchart\lib\jspdf.src.js" />
+    <Content Include="template\js\plugins\highchart\lib\rgbcolor.js" />
+    <Content Include="template\js\plugins\highchart\lib\rgbcolor.src.js" />
+    <Content Include="template\js\plugins\highchart\lib\svg2pdf.js" />
+    <Content Include="template\js\plugins\highchart\lib\svg2pdf.src.js" />
+    <Content Include="template\js\plugins\highchart\modules\accessibility.js" />
+    <Content Include="template\js\plugins\highchart\modules\accessibility.src.js" />
+    <Content Include="template\js\plugins\highchart\modules\annotations-advanced.js" />
+    <Content Include="template\js\plugins\highchart\modules\annotations-advanced.src.js" />
+    <Content Include="template\js\plugins\highchart\modules\annotations.js" />
+    <Content Include="template\js\plugins\highchart\modules\annotations.src.js" />
+    <Content Include="template\js\plugins\highchart\modules\arrow-symbols.js" />
+    <Content Include="template\js\plugins\highchart\modules\arrow-symbols.src.js" />
+    <Content Include="template\js\plugins\highchart\modules\boost-canvas.js" />
+    <Content Include="template\js\plugins\highchart\modules\boost-canvas.src.js" />
+    <Content Include="template\js\plugins\highchart\modules\boost.js" />
+    <Content Include="template\js\plugins\highchart\modules\boost.src.js" />
+    <Content Include="template\js\plugins\highchart\modules\broken-axis.js" />
+    <Content Include="template\js\plugins\highchart\modules\broken-axis.src.js" />
+    <Content Include="template\js\plugins\highchart\modules\bullet.js" />
+    <Content Include="template\js\plugins\highchart\modules\bullet.src.js" />
+    <Content Include="template\js\plugins\highchart\modules\current-date-indicator.js" />
+    <Content Include="template\js\plugins\highchart\modules\current-date-indicator.src.js" />
+    <Content Include="template\js\plugins\highchart\modules\cylinder.js" />
+    <Content Include="template\js\plugins\highchart\modules\cylinder.src.js" />
+    <Content Include="template\js\plugins\highchart\modules\data.js" />
+    <Content Include="template\js\plugins\highchart\modules\data.src.js" />
+    <Content Include="template\js\plugins\highchart\modules\datagrouping.js" />
+    <Content Include="template\js\plugins\highchart\modules\datagrouping.src.js" />
+    <Content Include="template\js\plugins\highchart\modules\debugger.js" />
+    <Content Include="template\js\plugins\highchart\modules\debugger.src.js" />
+    <Content Include="template\js\plugins\highchart\modules\dependency-wheel.js" />
+    <Content Include="template\js\plugins\highchart\modules\dependency-wheel.src.js" />
+    <Content Include="template\js\plugins\highchart\modules\dotplot.js" />
+    <Content Include="template\js\plugins\highchart\modules\dotplot.src.js" />
+    <Content Include="template\js\plugins\highchart\modules\drag-panes.js" />
+    <Content Include="template\js\plugins\highchart\modules\drag-panes.src.js" />
+    <Content Include="template\js\plugins\highchart\modules\draggable-points.js" />
+    <Content Include="template\js\plugins\highchart\modules\draggable-points.src.js" />
+    <Content Include="template\js\plugins\highchart\modules\drilldown.js" />
+    <Content Include="template\js\plugins\highchart\modules\drilldown.src.js" />
+    <Content Include="template\js\plugins\highchart\modules\export-data.js" />
+    <Content Include="template\js\plugins\highchart\modules\export-data.src.js" />
+    <Content Include="template\js\plugins\highchart\modules\exporting.js" />
+    <Content Include="template\js\plugins\highchart\modules\exporting.src.js" />
+    <Content Include="template\js\plugins\highchart\modules\full-screen.js" />
+    <Content Include="template\js\plugins\highchart\modules\full-screen.src.js" />
+    <Content Include="template\js\plugins\highchart\modules\funnel.js" />
+    <Content Include="template\js\plugins\highchart\modules\funnel.src.js" />
+    <Content Include="template\js\plugins\highchart\modules\funnel3d.js" />
+    <Content Include="template\js\plugins\highchart\modules\funnel3d.src.js" />
+    <Content Include="template\js\plugins\highchart\modules\gantt.js" />
+    <Content Include="template\js\plugins\highchart\modules\gantt.src.js" />
+    <Content Include="template\js\plugins\highchart\modules\grid-axis.js" />
+    <Content Include="template\js\plugins\highchart\modules\grid-axis.src.js" />
+    <Content Include="template\js\plugins\highchart\modules\heatmap.js" />
+    <Content Include="template\js\plugins\highchart\modules\heatmap.src.js" />
+    <Content Include="template\js\plugins\highchart\modules\histogram-bellcurve.js" />
+    <Content Include="template\js\plugins\highchart\modules\histogram-bellcurve.src.js" />
+    <Content Include="template\js\plugins\highchart\modules\item-series.js" />
+    <Content Include="template\js\plugins\highchart\modules\item-series.src.js" />
+    <Content Include="template\js\plugins\highchart\modules\networkgraph.js" />
+    <Content Include="template\js\plugins\highchart\modules\networkgraph.src.js" />
+    <Content Include="template\js\plugins\highchart\modules\no-data-to-display.js" />
+    <Content Include="template\js\plugins\highchart\modules\no-data-to-display.src.js" />
+    <Content Include="template\js\plugins\highchart\modules\offline-exporting.js" />
+    <Content Include="template\js\plugins\highchart\modules\offline-exporting.src.js" />
+    <Content Include="template\js\plugins\highchart\modules\oldie-polyfills.js" />
+    <Content Include="template\js\plugins\highchart\modules\oldie-polyfills.src.js" />
+    <Content Include="template\js\plugins\highchart\modules\oldie.js" />
+    <Content Include="template\js\plugins\highchart\modules\oldie.src.js" />
+    <Content Include="template\js\plugins\highchart\modules\organization.js" />
+    <Content Include="template\js\plugins\highchart\modules\organization.src.js" />
+    <Content Include="template\js\plugins\highchart\modules\overlapping-datalabels.js" />
+    <Content Include="template\js\plugins\highchart\modules\overlapping-datalabels.src.js" />
+    <Content Include="template\js\plugins\highchart\modules\parallel-coordinates.js" />
+    <Content Include="template\js\plugins\highchart\modules\parallel-coordinates.src.js" />
+    <Content Include="template\js\plugins\highchart\modules\pareto.js" />
+    <Content Include="template\js\plugins\highchart\modules\pareto.src.js" />
+    <Content Include="template\js\plugins\highchart\modules\pathfinder.js" />
+    <Content Include="template\js\plugins\highchart\modules\pathfinder.src.js" />
+    <Content Include="template\js\plugins\highchart\modules\pattern-fill.js" />
+    <Content Include="template\js\plugins\highchart\modules\pattern-fill.src.js" />
+    <Content Include="template\js\plugins\highchart\modules\price-indicator.js" />
+    <Content Include="template\js\plugins\highchart\modules\price-indicator.src.js" />
+    <Content Include="template\js\plugins\highchart\modules\pyramid3d.js" />
+    <Content Include="template\js\plugins\highchart\modules\pyramid3d.src.js" />
+    <Content Include="template\js\plugins\highchart\modules\sankey.js" />
+    <Content Include="template\js\plugins\highchart\modules\sankey.src.js" />
+    <Content Include="template\js\plugins\highchart\modules\series-label.js" />
+    <Content Include="template\js\plugins\highchart\modules\series-label.src.js" />
+    <Content Include="template\js\plugins\highchart\modules\solid-gauge.js" />
+    <Content Include="template\js\plugins\highchart\modules\solid-gauge.src.js" />
+    <Content Include="template\js\plugins\highchart\modules\sonification.js" />
+    <Content Include="template\js\plugins\highchart\modules\sonification.src.js" />
+    <Content Include="template\js\plugins\highchart\modules\static-scale.js" />
+    <Content Include="template\js\plugins\highchart\modules\static-scale.src.js" />
+    <Content Include="template\js\plugins\highchart\modules\stock-tools.js" />
+    <Content Include="template\js\plugins\highchart\modules\stock-tools.src.js" />
+    <Content Include="template\js\plugins\highchart\modules\stock.js" />
+    <Content Include="template\js\plugins\highchart\modules\stock.src.js" />
+    <Content Include="template\js\plugins\highchart\modules\streamgraph.js" />
+    <Content Include="template\js\plugins\highchart\modules\streamgraph.src.js" />
+    <Content Include="template\js\plugins\highchart\modules\sunburst.js" />
+    <Content Include="template\js\plugins\highchart\modules\sunburst.src.js" />
+    <Content Include="template\js\plugins\highchart\modules\tilemap.js" />
+    <Content Include="template\js\plugins\highchart\modules\tilemap.src.js" />
+    <Content Include="template\js\plugins\highchart\modules\timeline.js" />
+    <Content Include="template\js\plugins\highchart\modules\timeline.src.js" />
+    <Content Include="template\js\plugins\highchart\modules\treegrid.js" />
+    <Content Include="template\js\plugins\highchart\modules\treegrid.src.js" />
+    <Content Include="template\js\plugins\highchart\modules\treemap.js" />
+    <Content Include="template\js\plugins\highchart\modules\treemap.src.js" />
+    <Content Include="template\js\plugins\highchart\modules\variable-pie.js" />
+    <Content Include="template\js\plugins\highchart\modules\variable-pie.src.js" />
+    <Content Include="template\js\plugins\highchart\modules\variwide.js" />
+    <Content Include="template\js\plugins\highchart\modules\variwide.src.js" />
+    <Content Include="template\js\plugins\highchart\modules\vector.js" />
+    <Content Include="template\js\plugins\highchart\modules\vector.src.js" />
+    <Content Include="template\js\plugins\highchart\modules\venn.js" />
+    <Content Include="template\js\plugins\highchart\modules\venn.src.js" />
+    <Content Include="template\js\plugins\highchart\modules\windbarb.js" />
+    <Content Include="template\js\plugins\highchart\modules\windbarb.src.js" />
+    <Content Include="template\js\plugins\highchart\modules\wordcloud.js" />
+    <Content Include="template\js\plugins\highchart\modules\wordcloud.src.js" />
+    <Content Include="template\js\plugins\highchart\modules\xrange.js" />
+    <Content Include="template\js\plugins\highchart\modules\xrange.src.js" />
+    <Content Include="template\js\plugins\highchart\themes\avocado.js" />
+    <Content Include="template\js\plugins\highchart\themes\avocado.src.js" />
+    <Content Include="template\js\plugins\highchart\themes\dark-blue.js" />
+    <Content Include="template\js\plugins\highchart\themes\dark-blue.src.js" />
+    <Content Include="template\js\plugins\highchart\themes\dark-green.js" />
+    <Content Include="template\js\plugins\highchart\themes\dark-green.src.js" />
+    <Content Include="template\js\plugins\highchart\themes\dark-unica.js" />
+    <Content Include="template\js\plugins\highchart\themes\dark-unica.src.js" />
+    <Content Include="template\js\plugins\highchart\themes\gray.js" />
+    <Content Include="template\js\plugins\highchart\themes\gray.src.js" />
+    <Content Include="template\js\plugins\highchart\themes\grid-light.js" />
+    <Content Include="template\js\plugins\highchart\themes\grid-light.src.js" />
+    <Content Include="template\js\plugins\highchart\themes\grid.js" />
+    <Content Include="template\js\plugins\highchart\themes\grid.src.js" />
+    <Content Include="template\js\plugins\highchart\themes\sand-signika.js" />
+    <Content Include="template\js\plugins\highchart\themes\sand-signika.src.js" />
+    <Content Include="template\js\plugins\highchart\themes\skies.js" />
+    <Content Include="template\js\plugins\highchart\themes\skies.src.js" />
+    <Content Include="template\js\plugins\highchart\themes\sunset.js" />
+    <Content Include="template\js\plugins\highchart\themes\sunset.src.js" />
+    <Content Include="template\js\plugins\datepicker\bootstrap-datepicker-th.js" />
+    <Content Include="template\js\plugins\datepicker\bootstrap-datepicker-th.min.js" />
+    <Content Include="template\js\plugins\datepicker\bootstrap-datepicker-thai.js" />
+    <Content Include="template\js\plugins\datepicker\bootstrap-datepicker.js" />
+    <Content Include="template\js\plugins\datepicker\locales\bootstrap-datepicker.ar.min.js" />
+    <Content Include="template\js\plugins\datepicker\locales\bootstrap-datepicker.az.min.js" />
+    <Content Include="template\js\plugins\datepicker\locales\bootstrap-datepicker.bg.min.js" />
+    <Content Include="template\js\plugins\datepicker\locales\bootstrap-datepicker.bs.min.js" />
+    <Content Include="template\js\plugins\datepicker\locales\bootstrap-datepicker.ca.min.js" />
+    <Content Include="template\js\plugins\datepicker\locales\bootstrap-datepicker.cs.min.js" />
+    <Content Include="template\js\plugins\datepicker\locales\bootstrap-datepicker.cy.min.js" />
+    <Content Include="template\js\plugins\datepicker\locales\bootstrap-datepicker.da.min.js" />
+    <Content Include="template\js\plugins\datepicker\locales\bootstrap-datepicker.de.min.js" />
+    <Content Include="template\js\plugins\datepicker\locales\bootstrap-datepicker.el.min.js" />
+    <Content Include="template\js\plugins\datepicker\locales\bootstrap-datepicker.en-AU.min.js" />
+    <Content Include="template\js\plugins\datepicker\locales\bootstrap-datepicker.en-GB.min.js" />
+    <Content Include="template\js\plugins\datepicker\locales\bootstrap-datepicker.eo.min.js" />
+    <Content Include="template\js\plugins\datepicker\locales\bootstrap-datepicker.es.min.js" />
+    <Content Include="template\js\plugins\datepicker\locales\bootstrap-datepicker.et.min.js" />
+    <Content Include="template\js\plugins\datepicker\locales\bootstrap-datepicker.eu.min.js" />
+    <Content Include="template\js\plugins\datepicker\locales\bootstrap-datepicker.fa.min.js" />
+    <Content Include="template\js\plugins\datepicker\locales\bootstrap-datepicker.fi.min.js" />
+    <Content Include="template\js\plugins\datepicker\locales\bootstrap-datepicker.fo.min.js" />
+    <Content Include="template\js\plugins\datepicker\locales\bootstrap-datepicker.fr-CH.min.js" />
+    <Content Include="template\js\plugins\datepicker\locales\bootstrap-datepicker.fr.min.js" />
+    <Content Include="template\js\plugins\datepicker\locales\bootstrap-datepicker.gl.min.js" />
+    <Content Include="template\js\plugins\datepicker\locales\bootstrap-datepicker.he.min.js" />
+    <Content Include="template\js\plugins\datepicker\locales\bootstrap-datepicker.hr.min.js" />
+    <Content Include="template\js\plugins\datepicker\locales\bootstrap-datepicker.hu.min.js" />
+    <Content Include="template\js\plugins\datepicker\locales\bootstrap-datepicker.hy.min.js" />
+    <Content Include="template\js\plugins\datepicker\locales\bootstrap-datepicker.id.min.js" />
+    <Content Include="template\js\plugins\datepicker\locales\bootstrap-datepicker.is.min.js" />
+    <Content Include="template\js\plugins\datepicker\locales\bootstrap-datepicker.it-CH.min.js" />
+    <Content Include="template\js\plugins\datepicker\locales\bootstrap-datepicker.it.min.js" />
+    <Content Include="template\js\plugins\datepicker\locales\bootstrap-datepicker.ja.min.js" />
+    <Content Include="template\js\plugins\datepicker\locales\bootstrap-datepicker.ka.min.js" />
+    <Content Include="template\js\plugins\datepicker\locales\bootstrap-datepicker.kh.min.js" />
+    <Content Include="template\js\plugins\datepicker\locales\bootstrap-datepicker.kk.min.js" />
+    <Content Include="template\js\plugins\datepicker\locales\bootstrap-datepicker.ko.min.js" />
+    <Content Include="template\js\plugins\datepicker\locales\bootstrap-datepicker.kr.min.js" />
+    <Content Include="template\js\plugins\datepicker\locales\bootstrap-datepicker.lt.min.js" />
+    <Content Include="template\js\plugins\datepicker\locales\bootstrap-datepicker.lv.min.js" />
+    <Content Include="template\js\plugins\datepicker\locales\bootstrap-datepicker.me.min.js" />
+    <Content Include="template\js\plugins\datepicker\locales\bootstrap-datepicker.mk.min.js" />
+    <Content Include="template\js\plugins\datepicker\locales\bootstrap-datepicker.mn.min.js" />
+    <Content Include="template\js\plugins\datepicker\locales\bootstrap-datepicker.ms.min.js" />
+    <Content Include="template\js\plugins\datepicker\locales\bootstrap-datepicker.nb.min.js" />
+    <Content Include="template\js\plugins\datepicker\locales\bootstrap-datepicker.nl-BE.min.js" />
+    <Content Include="template\js\plugins\datepicker\locales\bootstrap-datepicker.nl.min.js" />
+    <Content Include="template\js\plugins\datepicker\locales\bootstrap-datepicker.no.min.js" />
+    <Content Include="template\js\plugins\datepicker\locales\bootstrap-datepicker.pl.min.js" />
+    <Content Include="template\js\plugins\datepicker\locales\bootstrap-datepicker.pt-BR.min.js" />
+    <Content Include="template\js\plugins\datepicker\locales\bootstrap-datepicker.pt.min.js" />
+    <Content Include="template\js\plugins\datepicker\locales\bootstrap-datepicker.ro.min.js" />
+    <Content Include="template\js\plugins\datepicker\locales\bootstrap-datepicker.rs-latin.min.js" />
+    <Content Include="template\js\plugins\datepicker\locales\bootstrap-datepicker.rs.min.js" />
+    <Content Include="template\js\plugins\datepicker\locales\bootstrap-datepicker.ru.min.js" />
+    <Content Include="template\js\plugins\datepicker\locales\bootstrap-datepicker.sk.min.js" />
+    <Content Include="template\js\plugins\datepicker\locales\bootstrap-datepicker.sl.min.js" />
+    <Content Include="template\js\plugins\datepicker\locales\bootstrap-datepicker.sq.min.js" />
+    <Content Include="template\js\plugins\datepicker\locales\bootstrap-datepicker.sr-latin.min.js" />
+    <Content Include="template\js\plugins\datepicker\locales\bootstrap-datepicker.sr.min.js" />
+    <Content Include="template\js\plugins\datepicker\locales\bootstrap-datepicker.sv.min.js" />
+    <Content Include="template\js\plugins\datepicker\locales\bootstrap-datepicker.sw.min.js" />
+    <Content Include="template\js\plugins\datepicker\locales\bootstrap-datepicker.th.min.js" />
+    <Content Include="template\js\plugins\datepicker\locales\bootstrap-datepicker.tr.min.js" />
+    <Content Include="template\js\plugins\datepicker\locales\bootstrap-datepicker.uk.js" />
+    <Content Include="template\js\plugins\datepicker\locales\bootstrap-datepicker.uk.min.js" />
+    <Content Include="template\js\plugins\datepicker\locales\bootstrap-datepicker.vi.min.js" />
+    <Content Include="template\js\plugins\datepicker\locales\bootstrap-datepicker.zh-CN.min.js" />
+    <Content Include="template\js\plugins\datepicker\locales\bootstrap-datepicker.zh-TW.min.js" />
+    <Content Include="template\js\plugins\jqGrid\i18n\grid.locale-ar.js" />
+    <Content Include="template\js\plugins\jqGrid\i18n\grid.locale-bg.js" />
+    <Content Include="template\js\plugins\jqGrid\i18n\grid.locale-bg1251.js" />
+    <Content Include="template\js\plugins\jqGrid\i18n\grid.locale-cat.js" />
+    <Content Include="template\js\plugins\jqGrid\i18n\grid.locale-cn.js" />
+    <Content Include="template\js\plugins\jqGrid\i18n\grid.locale-cs.js" />
+    <Content Include="template\js\plugins\jqGrid\i18n\grid.locale-da.js" />
+    <Content Include="template\js\plugins\jqGrid\i18n\grid.locale-de.js" />
+    <Content Include="template\js\plugins\jqGrid\i18n\grid.locale-dk.js" />
+    <Content Include="template\js\plugins\jqGrid\i18n\grid.locale-el.js" />
+    <Content Include="template\js\plugins\jqGrid\i18n\grid.locale-en.js" />
+    <Content Include="template\js\plugins\jqGrid\i18n\grid.locale-es.js" />
+    <Content Include="template\js\plugins\jqGrid\i18n\grid.locale-fa.js" />
+    <Content Include="template\js\plugins\jqGrid\i18n\grid.locale-fi.js" />
+    <Content Include="template\js\plugins\jqGrid\i18n\grid.locale-fr.js" />
+    <Content Include="template\js\plugins\jqGrid\i18n\grid.locale-gl.js" />
+    <Content Include="template\js\plugins\jqGrid\i18n\grid.locale-he.js" />
+    <Content Include="template\js\plugins\jqGrid\i18n\grid.locale-hr.js" />
+    <Content Include="template\js\plugins\jqGrid\i18n\grid.locale-hr1250.js" />
+    <Content Include="template\js\plugins\jqGrid\i18n\grid.locale-hu.js" />
+    <Content Include="template\js\plugins\jqGrid\i18n\grid.locale-id.js" />
+    <Content Include="template\js\plugins\jqGrid\i18n\grid.locale-is.js" />
+    <Content Include="template\js\plugins\jqGrid\i18n\grid.locale-it.js" />
+    <Content Include="template\js\plugins\jqGrid\i18n\grid.locale-ja.js" />
+    <Content Include="template\js\plugins\jqGrid\i18n\grid.locale-kr.js" />
+    <Content Include="template\js\plugins\jqGrid\i18n\grid.locale-lt.js" />
+    <Content Include="template\js\plugins\jqGrid\i18n\grid.locale-mne.js" />
+    <Content Include="template\js\plugins\jqGrid\i18n\grid.locale-nl.js" />
+    <Content Include="template\js\plugins\jqGrid\i18n\grid.locale-no.js" />
+    <Content Include="template\js\plugins\jqGrid\i18n\grid.locale-pl.js" />
+    <Content Include="template\js\plugins\jqGrid\i18n\grid.locale-pt-br.js" />
+    <Content Include="template\js\plugins\jqGrid\i18n\grid.locale-pt.js" />
+    <Content Include="template\js\plugins\jqGrid\i18n\grid.locale-ro.js" />
+    <Content Include="template\js\plugins\jqGrid\i18n\grid.locale-ru.js" />
+    <Content Include="template\js\plugins\jqGrid\i18n\grid.locale-sk.js" />
+    <Content Include="template\js\plugins\jqGrid\i18n\grid.locale-sr-latin.js" />
+    <Content Include="template\js\plugins\jqGrid\i18n\grid.locale-sr.js" />
+    <Content Include="template\js\plugins\jqGrid\i18n\grid.locale-sv.js" />
+    <Content Include="template\js\plugins\jqGrid\i18n\grid.locale-th.js" />
+    <Content Include="template\js\plugins\jqGrid\i18n\grid.locale-tr.js" />
+    <Content Include="template\js\plugins\jqGrid\i18n\grid.locale-tw.js" />
+    <Content Include="template\js\plugins\jqGrid\i18n\grid.locale-ua.js" />
+    <Content Include="template\js\plugins\jqGrid\i18n\grid.locale-vi.js" />
+    <Content Include="template\js\plugins\jqGrid\jquery.jqGrid.min.js" />
+    <Content Include="template\js\plugins\jquery.number\jquery.number.min.js" />
+    <Content Include="template\js\plugins\multiautocomplete\jquery.tokeninput.js" />
+    <Content Include="template\js\plugins\jquery.jqplot\jqplot.highlighter.js" />
+    <Content Include="template\js\plugins\jquery.tokeninput.js" />
+    <Content Include="TIFRReport.aspx" />
+    <Content Include="TIFRSrilankaReport.aspx" />
+    <Content Include="TrainingHourReport.aspx" />
+    <Content Include="workhour.aspx" />
+    <Content Include="workhour2.aspx" />
+    <Content Include="DataIncident.xsc">
+      <DependentUpon>DataIncident.xsd</DependentUpon>
+    </Content>
+    <Content Include="DataHazard.xsc">
+      <DependentUpon>DataHazard.xsd</DependentUpon>
+    </Content>
+    <None Include="DataHazard.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataHazard.Designer.cs</LastGenOutput>
+    </None>
+    <Content Include="DataHazard.xss">
+      <DependentUpon>DataHazard.xsd</DependentUpon>
+    </Content>
+    <Content Include="DataHealthIndividual.xsc">
+      <DependentUpon>DataHealthIndividual.xsd</DependentUpon>
+    </Content>
+    <Content Include="DataHealth.xsc">
+      <DependentUpon>DataHealth.xsd</DependentUpon>
+    </Content>
+    <None Include="DataHealth.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataHealth.Designer.cs</LastGenOutput>
+    </None>
+    <Content Include="DataHealth.xss">
+      <DependentUpon>DataHealth.xsd</DependentUpon>
+    </Content>
+    <None Include="DataHealthIndividual.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataHealthIndividual.Designer.cs</LastGenOutput>
+    </None>
+    <Content Include="DataHealthIndividual.xss">
+      <DependentUpon>DataHealthIndividual.xsd</DependentUpon>
+    </Content>
+    <None Include="DataIncident.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataIncident.Designer.cs</LastGenOutput>
+    </None>
+    <Content Include="DataIncident.xss">
+      <DependentUpon>DataIncident.xsd</DependentUpon>
+    </Content>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Content Include="report\template\incident_report.xlsx" />
+    <None Include="Scripts\jquery-1.10.2.intellisense.js" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Scripts\jquery-1.10.2.js" />
+    <Content Include="Scripts\jquery-1.10.2.min.js" />
+    <Content Include="Scripts\modernizr-2.6.2.js" />
+    <Content Include="Scripts\respond.js" />
+    <Content Include="Scripts\respond.min.js" />
+    <Content Include="Scripts\WebForms\DetailsView.js" />
+    <Content Include="Scripts\WebForms\Focus.js" />
+    <Content Include="Scripts\WebForms\GridView.js" />
+    <Content Include="Scripts\WebForms\Menu.js" />
+    <Content Include="Scripts\WebForms\MenuStandards.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjax.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxApplicationServices.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxComponentModel.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxCore.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxGlobalization.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxHistory.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxNetwork.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxSerialization.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxTimer.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxWebForms.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxWebServices.js" />
+    <Content Include="Scripts\WebForms\SmartNav.js" />
+    <Content Include="Scripts\WebForms\TreeView.js" />
+    <Content Include="Scripts\WebForms\WebForms.js" />
+    <Content Include="Scripts\WebForms\WebParts.js" />
+    <Content Include="Scripts\WebForms\WebUIValidation.js" />
+    <Content Include="Scripts\_references.js" />
+    <Content Include="favicon.ico" />
+    <Content Include="Global.asax" />
+    <Content Include="setting.aspx" />
+    <Content Include="superadmin.aspx" />
+    <Content Include="target.aspx" />
+    <Content Include="template\css\animate.css" />
+    <Content Include="template\css\bootstrap.css" />
+    <Content Include="template\css\bootstrap.min.css" />
+    <Content Include="template\css\jquery-ui.css" />
+    <Content Include="template\css\patterns\1.png" />
+    <Content Include="template\css\patterns\2.png" />
+    <Content Include="template\css\patterns\3.png" />
+    <Content Include="template\css\patterns\4.png" />
+    <Content Include="template\css\patterns\5.png" />
+    <Content Include="template\css\patterns\6.png" />
+    <Content Include="template\css\patterns\7.png" />
+    <Content Include="template\css\patterns\congruent_pentagon.png" />
+    <Content Include="template\css\patterns\header-profile-skin-1.png" />
+    <Content Include="template\css\patterns\header-profile-skin-2.png" />
+    <Content Include="template\css\patterns\header-profile-skin-3.png" />
+    <Content Include="template\css\patterns\header-profile.png" />
+    <Content Include="template\css\patterns\otis_redding.png" />
+    <Content Include="template\css\patterns\shattered.png" />
+    <Content Include="template\css\patterns\triangular.png" />
+    <Content Include="template\css\plugins\clockpicker\clockpicker.css" />
+    <Content Include="template\css\plugins\datapicker\datepicker3.css" />
+    <Content Include="template\css\plugins\datatables\dataTables.bootstrap.css" />
+    <Content Include="template\css\plugins\datatables\dataTables.responsive.css" />
+    <Content Include="template\img\img_inside.jpg" />
+    <Content Include="template\img\Logo_Eng.png" />
+    <Content Include="template\img\Logo_Thai.png" />
+    <Content Include="template\img\scco_goverment_eng.png" />
+    <Content Include="template\img\scco_goverment_thai.png" />
+    <Content Include="template\js\plugins\datatables\dataTables.responsive.js" />
+    <Content Include="template\css\plugins\datatables\fnReloadAjax.js" />
+    <Content Include="template\css\plugins\datatables\images\back_disabled.png" />
+    <Content Include="template\css\plugins\datatables\images\back_enabled.png" />
+    <Content Include="template\css\plugins\datatables\images\back_enabled_hover.png" />
+    <Content Include="template\css\plugins\datatables\images\favicon.ico" />
+    <Content Include="template\css\plugins\datatables\images\forward_disabled.png" />
+    <Content Include="template\css\plugins\datatables\images\forward_enabled.png" />
+    <Content Include="template\css\plugins\datatables\images\forward_enabled_hover.png" />
+    <Content Include="template\css\plugins\datatables\images\sort_asc.png" />
+    <Content Include="template\css\plugins\datatables\images\sort_asc_disabled.png" />
+    <Content Include="template\css\plugins\datatables\images\sort_both.png" />
+    <Content Include="template\css\plugins\datatables\images\sort_desc.png" />
+    <Content Include="template\css\plugins\datatables\images\sort_desc_disabled.png" />
+    <Content Include="template\css\plugins\datatables\jquery.datatable2.min.css" />
+    <Content Include="template\css\plugins\datatables\jquery.dataTables.css" />
+    <Content Include="template\css\plugins\datatables\jquery.dataTables.min.css" />
+    <Content Include="template\css\plugins\datatables\jquery.dataTables_themeroller.css" />
+    <Content Include="template\css\plugins\datatables\select.dataTables.min.css" />
+    <Content Include="template\css\plugins\datepicker\datepicker3.css" />
+    <Content Include="template\css\plugins\dropzone\dropzone.css" />
+    <Content Include="template\css\plugins\images\bootstrap-colorpicker\alpha-horizontal.png" />
+    <Content Include="template\css\plugins\images\bootstrap-colorpicker\alpha.png" />
+    <Content Include="template\css\plugins\images\bootstrap-colorpicker\hue-horizontal.png" />
+    <Content Include="template\css\plugins\images\bootstrap-colorpicker\hue.png" />
+    <Content Include="template\css\plugins\images\bootstrap-colorpicker\saturation.png" />
+    <Content Include="template\css\plugins\images\sort.png" />
+    <Content Include="template\css\plugins\images\sort_asc.png" />
+    <Content Include="template\css\plugins\images\sort_both.png" />
+    <Content Include="template\css\plugins\images\sort_desc.png" />
+    <Content Include="template\css\plugins\images\sprite-skin-flat.png" />
+    <Content Include="template\css\plugins\images\sprite-skin-flat2.png" />
+    <Content Include="template\css\plugins\images\sprite-skin-nice.png" />
+    <Content Include="template\css\plugins\images\sprite-skin-simple.png" />
+    <Content Include="template\css\plugins\images\spritemap%402x.png" />
+    <Content Include="template\css\plugins\images\spritemap.png" />
+    <Content Include="template\css\plugins\jquery-steps\jquery.steps.css" />
+    <Content Include="template\css\plugins\jquery-ui-1.12.0\images\ui-icons_444444_256x240.png" />
+    <Content Include="template\css\plugins\jquery-ui-1.12.0\images\ui-icons_555555_256x240.png" />
+    <Content Include="template\css\plugins\jquery-ui-1.12.0\images\ui-icons_777620_256x240.png" />
+    <Content Include="template\css\plugins\jquery-ui-1.12.0\images\ui-icons_777777_256x240.png" />
+    <Content Include="template\css\plugins\jquery-ui-1.12.0\images\ui-icons_cc0000_256x240.png" />
+    <Content Include="template\css\plugins\jquery-ui-1.12.0\images\ui-icons_ffffff_256x240.png" />
+    <Content Include="template\css\plugins\jquery-ui-1.12.0\index.html" />
+    <Content Include="template\css\plugins\jquery-ui-1.12.0\jquery-ui.css" />
+    <Content Include="template\css\plugins\jquery-ui-1.12.0\jquery-ui.min.css" />
+    <Content Include="template\css\plugins\jquery-ui-1.12.0\jquery-ui.structure.css" />
+    <Content Include="template\css\plugins\jquery-ui-1.12.0\jquery-ui.structure.min.css" />
+    <Content Include="template\css\plugins\jquery-ui-1.12.0\jquery-ui.theme.css" />
+    <Content Include="template\css\plugins\jquery-ui-1.12.0\jquery-ui.theme.min.css" />
+    <Content Include="template\css\plugins\loading\HoldOn.min.css" />
+    <Content Include="template\css\plugins\select2\select2.css" />
+    <Content Include="template\css\plugins\select2\select2.min.css" />
+    <Content Include="template\css\plugins\tautocomplete\tautocomplete.css" />
+    <Content Include="template\css\plugins\timepicker\bootstrap-timepicker.css" />
+    <Content Include="template\css\plugins\timepicker\bootstrap-timepicker.min.css" />
+    <Content Include="template\css\style.css" />
+    <Content Include="template\font-awesome\css\font-awesome.css" />
+    <Content Include="template\font-awesome\css\font-awesome.min.css" />
+    <Content Include="template\font-awesome\fonts\fontawesome-webfont.svg" />
+    <Content Include="template\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="template\css\images\ui-bg_highlight-hard_100_f2f5f7_1x100.png" />
+    <Content Include="template\images\Ui-icons_72a7cf_256x240.png" />
+    <Content Include="template\img\area-management.png" />
+    <Content Include="template\img\hazard.png" />
+    <Content Include="template\img\hazard2.png" />
+    <Content Include="template\img\holiday.png" />
+    <Content Include="template\img\hour.png" />
+    <Content Include="template\img\icon_scco.jpg" />
+    <Content Include="template\img\incident.png" />
+    <Content Include="template\img\incident2.png" />
+    <Content Include="template\img\logo_login.png" />
+    <Content Include="template\img\language\gb.png" />
+    <Content Include="template\img\language\th.png" />
+    <Content Include="template\img\noti.png" />
+    <Content Include="template\img\pdf_icon.jpg" />
+    <Content Include="template\img\Risk_en.png" />
+    <Content Include="template\img\Risk_th.png" />
+    <Content Include="template\img\sett.png" />
+    <Content Include="template\img\super-admin.png" />
+    <Content Include="template\img\target.png" />
+    <Content Include="template\index.html" />
+    <Content Include="template\js\bootstrap.js" />
+    <Content Include="template\js\bootstrap.min.js" />
+    <Content Include="template\js\inspinia.js" />
+    <Content Include="template\js\jquery-2.1.1.js" />
+    <Content Include="template\js\jquery-ui-1.10.4.min.js" />
+    <Content Include="template\js\jquery-ui.custom.min.js" />
+    <Content Include="template\js\jquery.mcautocomplete.js" />
+    <Content Include="template\js\jquery.numberformatter-1.2.4.jsmin.js" />
+    <Content Include="template\js\numeric-comma.js" />
+    <Content Include="template\js\plugins\bootbox\bootbox.js" />
+    <Content Include="template\js\plugins\bootbox\bootbox.min.js" />
+    <Content Include="template\js\plugins\clockpicker\clockpicker.js" />
+    <Content Include="template\js\plugins\datapicker\bootstrap-datepicker.js" />
+    <Content Include="template\js\plugins\datatables\buttons.flash.min.js" />
+    <Content Include="template\js\plugins\datatables\buttons.html5.min.js" />
+    <Content Include="template\js\plugins\datatables\dataTables.bootstrap.js" />
+    <Content Include="template\js\plugins\datatables\dataTables.buttons.min.js" />
+    <Content Include="template\js\plugins\datatables\dataTables.select.min.js" />
+    <Content Include="template\js\plugins\datatables\fnReloadAjax.js" />
+    <Content Include="template\js\plugins\datatables\jquery.datatable2.min.js" />
+    <Content Include="template\js\plugins\datatables\jquery.dataTables.js" />
+    <Content Include="template\js\plugins\datatables\jquery.dataTables.min.js" />
+    <Content Include="template\js\plugins\datatables\jszip.min.js" />
+    <Content Include="template\js\plugins\datatables\sum%28%29.js" />
+    <Content Include="template\js\plugins\datepicker\bootstrap-datepicker-custom.js" />
+    <Content Include="template\js\plugins\datepicker\locales\bootstrap-datepicker.ar.js" />
+    <Content Include="template\js\plugins\datepicker\locales\bootstrap-datepicker.az.js" />
+    <Content Include="template\js\plugins\datepicker\locales\bootstrap-datepicker.bg.js" />
+    <Content Include="template\js\plugins\datepicker\locales\bootstrap-datepicker.ca.js" />
+    <Content Include="template\js\plugins\datepicker\locales\bootstrap-datepicker.cs.js" />
+    <Content Include="template\js\plugins\datepicker\locales\bootstrap-datepicker.cy.js" />
+    <Content Include="template\js\plugins\datepicker\locales\bootstrap-datepicker.da.js" />
+    <Content Include="template\js\plugins\datepicker\locales\bootstrap-datepicker.de.js" />
+    <Content Include="template\js\plugins\datepicker\locales\bootstrap-datepicker.el.js" />
+    <Content Include="template\js\plugins\datepicker\locales\bootstrap-datepicker.es.js" />
+    <Content Include="template\js\plugins\datepicker\locales\bootstrap-datepicker.et.js" />
+    <Content Include="template\js\plugins\datepicker\locales\bootstrap-datepicker.fa.js" />
+    <Content Include="template\js\plugins\datepicker\locales\bootstrap-datepicker.fi.js" />
+    <Content Include="template\js\plugins\datepicker\locales\bootstrap-datepicker.fr.js" />
+    <Content Include="template\js\plugins\datepicker\locales\bootstrap-datepicker.gl.js" />
+    <Content Include="template\js\plugins\datepicker\locales\bootstrap-datepicker.he.js" />
+    <Content Include="template\js\plugins\datepicker\locales\bootstrap-datepicker.hr.js" />
+    <Content Include="template\js\plugins\datepicker\locales\bootstrap-datepicker.hu.js" />
+    <Content Include="template\js\plugins\datepicker\locales\bootstrap-datepicker.id.js" />
+    <Content Include="template\js\plugins\datepicker\locales\bootstrap-datepicker.is.js" />
+    <Content Include="template\js\plugins\datepicker\locales\bootstrap-datepicker.it.js" />
+    <Content Include="template\js\plugins\datepicker\locales\bootstrap-datepicker.ja.js" />
+    <Content Include="template\js\plugins\datepicker\locales\bootstrap-datepicker.ka.js" />
+    <Content Include="template\js\plugins\datepicker\locales\bootstrap-datepicker.kk.js" />
+    <Content Include="template\js\plugins\datepicker\locales\bootstrap-datepicker.kr.js" />
+    <Content Include="template\js\plugins\datepicker\locales\bootstrap-datepicker.lt.js" />
+    <Content Include="template\js\plugins\datepicker\locales\bootstrap-datepicker.lv.js" />
+    <Content Include="template\js\plugins\datepicker\locales\bootstrap-datepicker.mk.js" />
+    <Content Include="template\js\plugins\datepicker\locales\bootstrap-datepicker.ms.js" />
+    <Content Include="template\js\plugins\datepicker\locales\bootstrap-datepicker.nb.js" />
+    <Content Include="template\js\plugins\datepicker\locales\bootstrap-datepicker.nl-BE.js" />
+    <Content Include="template\js\plugins\datepicker\locales\bootstrap-datepicker.nl.js" />
+    <Content Include="template\js\plugins\datepicker\locales\bootstrap-datepicker.no.js" />
+    <Content Include="template\js\plugins\datepicker\locales\bootstrap-datepicker.pl.js" />
+    <Content Include="template\js\plugins\datepicker\locales\bootstrap-datepicker.pt-BR.js" />
+    <Content Include="template\js\plugins\datepicker\locales\bootstrap-datepicker.pt.js" />
+    <Content Include="template\js\plugins\datepicker\locales\bootstrap-datepicker.ro.js" />
+    <Content Include="template\js\plugins\datepicker\locales\bootstrap-datepicker.rs-latin.js" />
+    <Content Include="template\js\plugins\datepicker\locales\bootstrap-datepicker.rs.js" />
+    <Content Include="template\js\plugins\datepicker\locales\bootstrap-datepicker.ru.js" />
+    <Content Include="template\js\plugins\datepicker\locales\bootstrap-datepicker.sk.js" />
+    <Content Include="template\js\plugins\datepicker\locales\bootstrap-datepicker.sl.js" />
+    <Content Include="template\js\plugins\datepicker\locales\bootstrap-datepicker.sq.js" />
+    <Content Include="template\js\plugins\datepicker\locales\bootstrap-datepicker.sv.js" />
+    <Content Include="template\js\plugins\datepicker\locales\bootstrap-datepicker.sw.js" />
+    <Content Include="template\js\plugins\datepicker\locales\bootstrap-datepicker.th.js" />
+    <Content Include="template\js\plugins\datepicker\locales\bootstrap-datepicker.tr.js" />
+    <Content Include="template\js\plugins\datepicker\locales\bootstrap-datepicker.ua.js" />
+    <Content Include="template\js\plugins\datepicker\locales\bootstrap-datepicker.vi.js" />
+    <Content Include="template\js\plugins\datepicker\locales\bootstrap-datepicker.zh-CN.js" />
+    <Content Include="template\js\plugins\datepicker\locales\bootstrap-datepicker.zh-TW.js" />
+    <Content Include="template\js\plugins\dropzone\dropzone-amd-module.js" />
+    <Content Include="template\js\plugins\dropzone\dropzone-amd-module.min.js" />
+    <Content Include="template\js\plugins\dropzone\dropzone.js" />
+    <Content Include="template\js\plugins\dropzone\dropzone.min.js" />
+    <Content Include="template\js\plugins\jquery-steps\css\jquery.steps.css" />
+    <Content Include="template\js\plugins\jquery-steps\css\main.css" />
+    <Content Include="template\js\plugins\jquery-steps\css\normalize.css" />
+    <Content Include="template\js\plugins\jquery-steps\jquery.steps.js" />
+    <Content Include="template\js\plugins\jquery-steps\jquery.steps.min.js" />
+    <Content Include="template\js\plugins\jquery-ui-1.12.0\AUTHORS.txt" />
+    <Content Include="template\js\plugins\jquery-ui-1.12.0\images\ui-icons_444444_256x240.png" />
+    <Content Include="template\js\plugins\jquery-ui-1.12.0\images\ui-icons_555555_256x240.png" />
+    <Content Include="template\js\plugins\jquery-ui-1.12.0\images\ui-icons_777620_256x240.png" />
+    <Content Include="template\js\plugins\jquery-ui-1.12.0\images\ui-icons_777777_256x240.png" />
+    <Content Include="template\js\plugins\jquery-ui-1.12.0\images\ui-icons_cc0000_256x240.png" />
+    <Content Include="template\js\plugins\jquery-ui-1.12.0\images\ui-icons_ffffff_256x240.png" />
+    <Content Include="template\js\plugins\jquery-ui-1.12.0\index.html" />
+    <Content Include="template\js\plugins\jquery-ui-1.12.0\jquery-ui.css" />
+    <Content Include="template\js\plugins\jquery-ui-1.12.0\jquery-ui.js" />
+    <Content Include="template\js\plugins\jquery-ui-1.12.0\jquery-ui.min.css" />
+    <Content Include="template\js\plugins\jquery-ui-1.12.0\jquery-ui.min.js" />
+    <Content Include="template\js\plugins\jquery-ui-1.12.0\jquery-ui.structure.css" />
+    <Content Include="template\js\plugins\jquery-ui-1.12.0\jquery-ui.structure.min.css" />
+    <Content Include="template\js\plugins\jquery-ui-1.12.0\jquery-ui.theme.css" />
+    <Content Include="template\js\plugins\jquery-ui-1.12.0\jquery-ui.theme.min.css" />
+    <Content Include="template\js\plugins\jquery-validation\dist\additional-methods.js" />
+    <Content Include="template\js\plugins\jquery-validation\dist\additional-methods.min.js" />
+    <Content Include="template\js\plugins\jquery-validation\dist\jquery.validate.js" />
+    <Content Include="template\js\plugins\jquery-validation\dist\jquery.validate.min.js" />
+    <Content Include="template\js\plugins\jquery-validation\dist\localization\messages_es.js" />
+    <Content Include="template\js\plugins\jquery-validation\dist\localization\messages_es.min.js" />
+    <Content Include="template\js\plugins\jquery-validation\dist\localization\messages_es_AR.js" />
+    <Content Include="template\js\plugins\jquery-validation\dist\localization\messages_es_AR.min.js" />
+    <Content Include="template\js\plugins\jquery-validation\dist\localization\messages_es_PE.js" />
+    <Content Include="template\js\plugins\jquery-validation\dist\localization\messages_es_PE.min.js" />
+    <Content Include="template\js\plugins\jquery-validation\src\additional\accept.js" />
+    <Content Include="template\js\plugins\jquery-validation\src\additional\additional.js" />
+    <Content Include="template\js\plugins\jquery-validation\src\additional\alphanumeric.js" />
+    <Content Include="template\js\plugins\jquery-validation\src\additional\bankaccountNL.js" />
+    <Content Include="template\js\plugins\jquery-validation\src\additional\bankorgiroaccountNL.js" />
+    <Content Include="template\js\plugins\jquery-validation\src\additional\bic.js" />
+    <Content Include="template\js\plugins\jquery-validation\src\additional\cifES.js" />
+    <Content Include="template\js\plugins\jquery-validation\src\additional\cpfBR.js" />
+    <Content Include="template\js\plugins\jquery-validation\src\additional\creditcardtypes.js" />
+    <Content Include="template\js\plugins\jquery-validation\src\additional\currency.js" />
+    <Content Include="template\js\plugins\jquery-validation\src\additional\dateFA.js" />
+    <Content Include="template\js\plugins\jquery-validation\src\additional\dateITA.js" />
+    <Content Include="template\js\plugins\jquery-validation\src\additional\dateNL.js" />
+    <Content Include="template\js\plugins\jquery-validation\src\additional\extension.js" />
+    <Content Include="template\js\plugins\jquery-validation\src\additional\giroaccountNL.js" />
+    <Content Include="template\js\plugins\jquery-validation\src\additional\iban.js" />
+    <Content Include="template\js\plugins\jquery-validation\src\additional\integer.js" />
+    <Content Include="template\js\plugins\jquery-validation\src\additional\ipv4.js" />
+    <Content Include="template\js\plugins\jquery-validation\src\additional\ipv6.js" />
+    <Content Include="template\js\plugins\jquery-validation\src\additional\lettersonly.js" />
+    <Content Include="template\js\plugins\jquery-validation\src\additional\letterswithbasicpunc.js" />
+    <Content Include="template\js\plugins\jquery-validation\src\additional\mobileNL.js" />
+    <Content Include="template\js\plugins\jquery-validation\src\additional\mobileUK.js" />
+    <Content Include="template\js\plugins\jquery-validation\src\additional\nieES.js" />
+    <Content Include="template\js\plugins\jquery-validation\src\additional\nifES.js" />
+    <Content Include="template\js\plugins\jquery-validation\src\additional\notEqualTo.js" />
+    <Content Include="template\js\plugins\jquery-validation\src\additional\nowhitespace.js" />
+    <Content Include="template\js\plugins\jquery-validation\src\additional\pattern.js" />
+    <Content Include="template\js\plugins\jquery-validation\src\additional\phoneNL.js" />
+    <Content Include="template\js\plugins\jquery-validation\src\additional\phonesUK.js" />
+    <Content Include="template\js\plugins\jquery-validation\src\additional\phoneUK.js" />
+    <Content Include="template\js\plugins\jquery-validation\src\additional\phoneUS.js" />
+    <Content Include="template\js\plugins\jquery-validation\src\additional\postalcodeBR.js" />
+    <Content Include="template\js\plugins\jquery-validation\src\additional\postalCodeCA.js" />
+    <Content Include="template\js\plugins\jquery-validation\src\additional\postalcodeIT.js" />
+    <Content Include="template\js\plugins\jquery-validation\src\additional\postalcodeNL.js" />
+    <Content Include="template\js\plugins\jquery-validation\src\additional\postcodeUK.js" />
+    <Content Include="template\js\plugins\jquery-validation\src\additional\require_from_group.js" />
+    <Content Include="template\js\plugins\jquery-validation\src\additional\skip_or_fill_minimum.js" />
+    <Content Include="template\js\plugins\jquery-validation\src\additional\statesUS.js" />
+    <Content Include="template\js\plugins\jquery-validation\src\additional\strippedminlength.js" />
+    <Content Include="template\js\plugins\jquery-validation\src\additional\time.js" />
+    <Content Include="template\js\plugins\jquery-validation\src\additional\time12h.js" />
+    <Content Include="template\js\plugins\jquery-validation\src\additional\url2.js" />
+    <Content Include="template\js\plugins\jquery-validation\src\additional\vinUS.js" />
+    <Content Include="template\js\plugins\jquery-validation\src\additional\zipcodeUS.js" />
+    <Content Include="template\js\plugins\jquery-validation\src\additional\ziprange.js" />
+    <Content Include="template\js\plugins\jquery-validation\src\ajax.js" />
+    <Content Include="template\js\plugins\jquery-validation\src\core.js" />
+    <Content Include="template\js\plugins\jquery-validation\src\localization\messages_es.js" />
+    <Content Include="template\js\plugins\jquery-validation\src\localization\messages_es_AR.js" />
+    <Content Include="template\js\plugins\jquery-validation\src\localization\messages_es_PE.js" />
+    <Content Include="template\js\plugins\jquery-validation\src\localization\messages_th.js" />
+    <Content Include="template\js\plugins\jquery-validation\src\localization\methods_es_CL.js" />
+    <Content Include="template\js\plugins\jquery.jqplot\excanvas.js" />
+    <Content Include="template\js\plugins\jquery.jqplot\jquery.jqplot.css" />
+    <Content Include="template\js\plugins\jquery.jqplot\jquery.jqplot.js" />
+    <Content Include="template\js\plugins\jquery.jqplot\jquery.jqplot.min.css" />
+    <Content Include="template\js\plugins\jquery.jqplot\jquery.jqplot.min.js" />
+    <Content Include="template\js\plugins\jquery.jqplot\plugins\jqplot.barRenderer.js" />
+    <Content Include="template\js\plugins\jquery.jqplot\plugins\jqplot.BezierCurveRenderer.js" />
+    <Content Include="template\js\plugins\jquery.jqplot\plugins\jqplot.blockRenderer.js" />
+    <Content Include="template\js\plugins\jquery.jqplot\plugins\jqplot.bubbleRenderer.js" />
+    <Content Include="template\js\plugins\jquery.jqplot\plugins\jqplot.canvasAxisLabelRenderer.js" />
+    <Content Include="template\js\plugins\jquery.jqplot\plugins\jqplot.canvasAxisTickRenderer.js" />
+    <Content Include="template\js\plugins\jquery.jqplot\plugins\jqplot.canvasOverlay.js" />
+    <Content Include="template\js\plugins\jquery.jqplot\plugins\jqplot.canvasTextRenderer.js" />
+    <Content Include="template\js\plugins\jquery.jqplot\plugins\jqplot.categoryAxisRenderer.js" />
+    <Content Include="template\js\plugins\jquery.jqplot\plugins\jqplot.ciParser.js" />
+    <Content Include="template\js\plugins\jquery.jqplot\plugins\jqplot.cursor.js" />
+    <Content Include="template\js\plugins\jquery.jqplot\plugins\jqplot.dateAxisRenderer.js" />
+    <Content Include="template\js\plugins\jquery.jqplot\plugins\jqplot.donutRenderer.js" />
+    <Content Include="template\js\plugins\jquery.jqplot\plugins\jqplot.dragable.js" />
+    <Content Include="template\js\plugins\jquery.jqplot\plugins\jqplot.enhancedLegendRenderer.js" />
+    <Content Include="template\js\plugins\jquery.jqplot\plugins\jqplot.enhancedPieLegendRenderer.js" />
+    <Content Include="template\js\plugins\jquery.jqplot\plugins\jqplot.funnelRenderer.js" />
+    <Content Include="template\js\plugins\jquery.jqplot\plugins\jqplot.highlighter.js" />
+    <Content Include="template\js\plugins\jquery.jqplot\plugins\jqplot.json2.js" />
+    <Content Include="template\js\plugins\jquery.jqplot\plugins\jqplot.logAxisRenderer.js" />
+    <Content Include="template\js\plugins\jquery.jqplot\plugins\jqplot.mekkoAxisRenderer.js" />
+    <Content Include="template\js\plugins\jquery.jqplot\plugins\jqplot.mekkoRenderer.js" />
+    <Content Include="template\js\plugins\jquery.jqplot\plugins\jqplot.meterGaugeRenderer.js" />
+    <Content Include="template\js\plugins\jquery.jqplot\plugins\jqplot.mobile.js" />
+    <Content Include="template\js\plugins\jquery.jqplot\plugins\jqplot.ohlcRenderer.js" />
+    <Content Include="template\js\plugins\jquery.jqplot\plugins\jqplot.pieRenderer.js" />
+    <Content Include="template\js\plugins\jquery.jqplot\plugins\jqplot.pointLabels.js" />
+    <Content Include="template\js\plugins\jquery.jqplot\plugins\jqplot.pyramidAxisRenderer.js" />
+    <Content Include="template\js\plugins\jquery.jqplot\plugins\jqplot.pyramidGridRenderer.js" />
+    <Content Include="template\js\plugins\jquery.jqplot\plugins\jqplot.pyramidRenderer.js" />
+    <Content Include="template\js\plugins\jquery.jqplot\plugins\jqplot.trendline.js" />
+    <Content Include="template\js\plugins\loading\HoldOn.min.js" />
+    <Content Include="template\js\plugins\metisMenu\jquery.metisMenu.js" />
+    <Content Include="template\js\plugins\pace\pace.min.js" />
+    <Content Include="template\js\plugins\select2\i18n\en.js" />
+    <Content Include="template\js\plugins\select2\i18n\es.js" />
+    <Content Include="template\js\plugins\select2\i18n\th.js" />
+    <Content Include="template\js\plugins\select2\select2.full.js" />
+    <Content Include="template\js\plugins\select2\select2.full.min.js" />
+    <Content Include="template\js\plugins\select2\select2.js" />
+    <Content Include="template\js\plugins\select2\select2.min.js" />
+    <Content Include="template\js\plugins\slimscroll\jquery.slimscroll.js" />
+    <Content Include="template\js\plugins\slimscroll\jquery.slimscroll.min.js" />
+    <Content Include="template\js\plugins\fancybox\blank.gif" />
+    <Content Include="template\js\plugins\fancybox\fancybox_loading%402x.gif" />
+    <Content Include="template\js\plugins\fancybox\fancybox_loading.gif" />
+    <Content Include="template\js\plugins\fancybox\fancybox_overlay.png" />
+    <Content Include="template\js\plugins\fancybox\fancybox_sprite%402x.png" />
+    <Content Include="template\js\plugins\fancybox\fancybox_sprite.png" />
+    <Content Include="template\js\plugins\fancybox\helpers\fancybox_buttons.png" />
+    <Content Include="template\js\plugins\fancybox\helpers\jquery.fancybox-buttons.css" />
+    <Content Include="template\js\plugins\fancybox\helpers\jquery.fancybox-buttons.js" />
+    <Content Include="template\js\plugins\fancybox\helpers\jquery.fancybox-media.js" />
+    <Content Include="template\js\plugins\fancybox\helpers\jquery.fancybox-thumbs.css" />
+    <Content Include="template\js\plugins\fancybox\helpers\jquery.fancybox-thumbs.js" />
+    <Content Include="template\js\plugins\fancybox\jquery.fancybox.css" />
+    <Content Include="template\js\plugins\fancybox\jquery.fancybox.js" />
+    <Content Include="template\js\plugins\fancybox\jquery.fancybox.pack.js" />
+    <Content Include="template\js\plugins\tautocomplete\tautocomplete.js" />
+    <Content Include="template\js\plugins\timepicker\bootstrap-timepicker.js" />
+    <Content Include="template\js\plugins\timepicker\bootstrap-timepicker.min.js" />
+    <Content Include="template\minor.html" />
+    <Content Include="testemail.aspx" />
+    <Content Include="TotalinjuryFPEReport.aspx" />
+    <Content Include="upload\incident\icon_scco.jpg" />
+    <Content Include="ViewSwitcher.ascx" />
+    <Content Include="template\js\plugins\highchart\css\annotations\popup.scss" />
+    <Content Include="template\js\plugins\highchart\css\highcharts.scss" />
+    <Content Include="template\js\plugins\highchart\css\stocktools\gui.scss" />
+    <Content Include="template\js\plugins\highchart\css\themes\dark-unica.scss" />
+    <Content Include="template\js\plugins\highchart\css\themes\grid-light.scss" />
+    <Content Include="template\js\plugins\highchart\css\themes\sand-signika.scss" />
+    <Content Include="template\js\plugins\highchart\highcharts-3d.js.map" />
+    <Content Include="template\js\plugins\highchart\highcharts-more.js.map" />
+    <Content Include="template\js\plugins\highchart\highcharts.js.map" />
+    <Content Include="template\js\plugins\highchart\modules\accessibility.js.map" />
+    <Content Include="template\js\plugins\highchart\modules\annotations-advanced.js.map" />
+    <Content Include="template\js\plugins\highchart\modules\annotations.js.map" />
+    <Content Include="template\js\plugins\highchart\modules\arrow-symbols.js.map" />
+    <Content Include="template\js\plugins\highchart\modules\boost-canvas.js.map" />
+    <Content Include="template\js\plugins\highchart\modules\boost.js.map" />
+    <Content Include="template\js\plugins\highchart\modules\broken-axis.js.map" />
+    <Content Include="template\js\plugins\highchart\modules\bullet.js.map" />
+    <Content Include="template\js\plugins\highchart\modules\current-date-indicator.js.map" />
+    <Content Include="template\js\plugins\highchart\modules\cylinder.js.map" />
+    <Content Include="template\js\plugins\highchart\modules\data.js.map" />
+    <Content Include="template\js\plugins\highchart\modules\datagrouping.js.map" />
+    <Content Include="template\js\plugins\highchart\modules\debugger.js.map" />
+    <Content Include="template\js\plugins\highchart\modules\dependency-wheel.js.map" />
+    <Content Include="template\js\plugins\highchart\modules\dotplot.js.map" />
+    <Content Include="template\js\plugins\highchart\modules\drag-panes.js.map" />
+    <Content Include="template\js\plugins\highchart\modules\draggable-points.js.map" />
+    <Content Include="template\js\plugins\highchart\modules\drilldown.js.map" />
+    <Content Include="template\js\plugins\highchart\modules\export-data.js.map" />
+    <Content Include="template\js\plugins\highchart\modules\exporting.js.map" />
+    <Content Include="template\js\plugins\highchart\modules\full-screen.js.map" />
+    <Content Include="template\js\plugins\highchart\modules\funnel.js.map" />
+    <Content Include="template\js\plugins\highchart\modules\funnel3d.js.map" />
+    <Content Include="template\js\plugins\highchart\modules\gantt.js.map" />
+    <Content Include="template\js\plugins\highchart\modules\grid-axis.js.map" />
+    <Content Include="template\js\plugins\highchart\modules\heatmap.js.map" />
+    <Content Include="template\js\plugins\highchart\modules\histogram-bellcurve.js.map" />
+    <Content Include="template\js\plugins\highchart\modules\item-series.js.map" />
+    <Content Include="template\js\plugins\highchart\modules\networkgraph.js.map" />
+    <Content Include="template\js\plugins\highchart\modules\no-data-to-display.js.map" />
+    <Content Include="template\js\plugins\highchart\modules\offline-exporting.js.map" />
+    <Content Include="template\js\plugins\highchart\modules\oldie-polyfills.js.map" />
+    <Content Include="template\js\plugins\highchart\modules\oldie.js.map" />
+    <Content Include="template\js\plugins\highchart\modules\organization.js.map" />
+    <Content Include="template\js\plugins\highchart\modules\overlapping-datalabels.js.map" />
+    <Content Include="template\js\plugins\highchart\modules\parallel-coordinates.js.map" />
+    <Content Include="template\js\plugins\highchart\modules\pareto.js.map" />
+    <Content Include="template\js\plugins\highchart\modules\pathfinder.js.map" />
+    <Content Include="template\js\plugins\highchart\modules\pattern-fill.js.map" />
+    <Content Include="template\js\plugins\highchart\modules\price-indicator.js.map" />
+    <Content Include="template\js\plugins\highchart\modules\pyramid3d.js.map" />
+    <Content Include="template\js\plugins\highchart\modules\sankey.js.map" />
+    <Content Include="template\js\plugins\highchart\modules\series-label.js.map" />
+    <Content Include="template\js\plugins\highchart\modules\solid-gauge.js.map" />
+    <Content Include="template\js\plugins\highchart\modules\sonification.js.map" />
+    <Content Include="template\js\plugins\highchart\modules\static-scale.js.map" />
+    <Content Include="template\js\plugins\highchart\modules\stock-tools.js.map" />
+    <Content Include="template\js\plugins\highchart\modules\stock.js.map" />
+    <Content Include="template\js\plugins\highchart\modules\streamgraph.js.map" />
+    <Content Include="template\js\plugins\highchart\modules\sunburst.js.map" />
+    <Content Include="template\js\plugins\highchart\modules\tilemap.js.map" />
+    <Content Include="template\js\plugins\highchart\modules\timeline.js.map" />
+    <Content Include="template\js\plugins\highchart\modules\treegrid.js.map" />
+    <Content Include="template\js\plugins\highchart\modules\treemap.js.map" />
+    <Content Include="template\js\plugins\highchart\modules\variable-pie.js.map" />
+    <Content Include="template\js\plugins\highchart\modules\variwide.js.map" />
+    <Content Include="template\js\plugins\highchart\modules\vector.js.map" />
+    <Content Include="template\js\plugins\highchart\modules\venn.js.map" />
+    <Content Include="template\js\plugins\highchart\modules\windbarb.js.map" />
+    <Content Include="template\js\plugins\highchart\modules\wordcloud.js.map" />
+    <Content Include="template\js\plugins\highchart\modules\xrange.js.map" />
+    <Content Include="template\js\plugins\highchart\themes\avocado.js.map" />
+    <Content Include="template\js\plugins\highchart\themes\dark-blue.js.map" />
+    <Content Include="template\js\plugins\highchart\themes\dark-green.js.map" />
+    <Content Include="template\js\plugins\highchart\themes\dark-unica.js.map" />
+    <Content Include="template\js\plugins\highchart\themes\gray.js.map" />
+    <Content Include="template\js\plugins\highchart\themes\grid-light.js.map" />
+    <Content Include="template\js\plugins\highchart\themes\grid.js.map" />
+    <Content Include="template\js\plugins\highchart\themes\sand-signika.js.map" />
+    <Content Include="template\js\plugins\highchart\themes\skies.js.map" />
+    <Content Include="template\js\plugins\highchart\themes\sunset.js.map" />
+    <None Include="Web References\ActioneventService\Actionevent.wsdl" />
+    <Content Include="Web References\ActioneventService\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </Content>
+    <None Include="Web References\MasterdataService\Masterdata.disco" />
+    <None Include="Web References\ActioneventService\Actionevent.disco" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Bundle.config" />
+    <None Include="Project_Readme.html" />
+    <Content Include="Scripts\jquery-1.10.2.min.map" />
+    <Content Include="template\css\bootstrap.css.map" />
+    <Content Include="template\css\bootstrap.min.css.map" />
+    <Content Include="template\font-awesome\fonts\fontawesome-webfont.eot" />
+    <Content Include="template\font-awesome\fonts\fontawesome-webfont.ttf" />
+    <Content Include="template\font-awesome\fonts\fontawesome-webfont.woff" />
+    <Content Include="template\font-awesome\fonts\fontawesome-webfont.woff2" />
+    <Content Include="template\font-awesome\fonts\FontAwesome.otf" />
+    <Content Include="template\font-awesome\less\animated.less" />
+    <Content Include="template\font-awesome\less\bordered-pulled.less" />
+    <Content Include="template\font-awesome\less\core.less" />
+    <Content Include="template\font-awesome\less\fixed-width.less" />
+    <Content Include="template\font-awesome\less\font-awesome.less" />
+    <Content Include="template\font-awesome\less\icons.less" />
+    <Content Include="template\font-awesome\less\larger.less" />
+    <Content Include="template\font-awesome\less\list.less" />
+    <Content Include="template\font-awesome\less\mixins.less" />
+    <Content Include="template\font-awesome\less\path.less" />
+    <Content Include="template\font-awesome\less\rotated-flipped.less" />
+    <Content Include="template\font-awesome\less\stacked.less" />
+    <Content Include="template\font-awesome\less\variables.less" />
+    <Content Include="template\font-awesome\scss\font-awesome.scss" />
+    <Content Include="template\font-awesome\scss\_animated.scss" />
+    <Content Include="template\font-awesome\scss\_bordered-pulled.scss" />
+    <Content Include="template\font-awesome\scss\_core.scss" />
+    <Content Include="template\font-awesome\scss\_fixed-width.scss" />
+    <Content Include="template\font-awesome\scss\_icons.scss" />
+    <Content Include="template\font-awesome\scss\_larger.scss" />
+    <Content Include="template\font-awesome\scss\_list.scss" />
+    <Content Include="template\font-awesome\scss\_mixins.scss" />
+    <Content Include="template\font-awesome\scss\_path.scss" />
+    <Content Include="template\font-awesome\scss\_rotated-flipped.scss" />
+    <Content Include="template\font-awesome\scss\_stacked.scss" />
+    <Content Include="template\font-awesome\scss\_variables.scss" />
+    <Content Include="template\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="template\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="template\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="template\fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="template\css\plugins\datatables\images\Sorting icons.psd" />
+    <None Include="Web References\MasterdataService\Masterdata.wsdl" />
+    <Content Include="Web References\MasterdataService\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </Content>
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Actionevent.asmx.cs">
+      <DependentUpon>Actionevent.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Alert.aspx.cs">
+      <DependentUpon>Alert.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Alert.aspx.designer.cs">
+      <DependentUpon>Alert.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AllactionReport.aspx.cs">
+      <DependentUpon>AllactionReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AllactionReport.aspx.designer.cs">
+      <DependentUpon>AllactionReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="allhazard.aspx.cs">
+      <DependentUpon>allhazard.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="allhazard.aspx.designer.cs">
+      <DependentUpon>allhazard.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="allhealth.aspx.cs">
+      <DependentUpon>allhealth.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="allhealth.aspx.designer.cs">
+      <DependentUpon>allhealth.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="allincident.aspx.cs">
+      <DependentUpon>allincident.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="allincident.aspx.designer.cs">
+      <DependentUpon>allincident.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="allsot.aspx.cs">
+      <DependentUpon>allsot.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="allsot.aspx.designer.cs">
+      <DependentUpon>allsot.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="App_Code\ChangeToDatatable.cs" />
+    <Compile Include="App_Code\DatabaseConnector.cs" />
+    <Compile Include="App_Code\FormatDates.cs" />
+    <Compile Include="App_Code\Permission.cs" />
+    <Compile Include="App_Code\SafetyEmail.cs" />
+    <Compile Include="App_GlobalResources\Health.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Health.resx</DependentUpon>
+    </Compile>
+    <Compile Include="App_GlobalResources\Health.en.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Health.en.resx</DependentUpon>
+    </Compile>
+    <Compile Include="App_GlobalResources\Health.si.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Health.si.resx</DependentUpon>
+    </Compile>
+    <Compile Include="App_GlobalResources\Health.th.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Health.th.resx</DependentUpon>
+    </Compile>
+    <Compile Include="App_GlobalResources\Traininghour.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Traininghour.resx</DependentUpon>
+    </Compile>
+    <Compile Include="App_GlobalResources\Traininghour.en.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Traininghour.en.resx</DependentUpon>
+    </Compile>
+    <Compile Include="App_GlobalResources\Traininghour.si.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Traininghour.si.resx</DependentUpon>
+    </Compile>
+    <Compile Include="App_GlobalResources\Traininghour.th.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Traininghour.th.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Class\OccupationalHealthEntity.cs" />
+    <Compile Include="Class\ProcessActionHealthEntity.cs" />
+    <Compile Include="Class\RiskFactorEntity.cs" />
+    <Compile Include="dashboardhazard2.aspx.cs">
+      <DependentUpon>dashboardhazard2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="dashboardhazard2.aspx.designer.cs">
+      <DependentUpon>dashboardhazard2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="dashboardincident3.aspx.cs">
+      <DependentUpon>dashboardincident3.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="dashboardincident3.aspx.designer.cs">
+      <DependentUpon>dashboardincident3.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DataHazard.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataHazard.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataHealth.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataHealth.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataHealthIndividual.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataHealthIndividual.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataIncident.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataIncident.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="dropzoneuploadhealth.aspx.cs">
+      <DependentUpon>dropzoneuploadhealth.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="dropzoneuploadhealth.aspx.designer.cs">
+      <DependentUpon>dropzoneuploadhealth.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FaltalityRateReport.aspx.cs">
+      <DependentUpon>FaltalityRateReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FaltalityRateReport.aspx.designer.cs">
+      <DependentUpon>FaltalityRateReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="HazardExport.aspx.cs">
+      <DependentUpon>HazardExport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="HazardExport.aspx.designer.cs">
+      <DependentUpon>HazardExport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="HealthExport.aspx.cs">
+      <DependentUpon>HealthExport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="HealthExport.aspx.designer.cs">
+      <DependentUpon>HealthExport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="HealthExport.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>HealthExport.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="healthform.aspx.cs">
+      <DependentUpon>healthform.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="healthform.aspx.designer.cs">
+      <DependentUpon>healthform.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="healthform2.aspx.cs">
+      <DependentUpon>healthform2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="healthform2.aspx.designer.cs">
+      <DependentUpon>healthform2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="healthform3.aspx.cs">
+      <DependentUpon>healthform3.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="healthform3.aspx.designer.cs">
+      <DependentUpon>healthform3.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="HealthIndividualReport.aspx.cs">
+      <DependentUpon>HealthIndividualReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="HealthIndividualReport.aspx.designer.cs">
+      <DependentUpon>HealthIndividualReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="HealthpersonExport.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>HealthpersonExport.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="HealthReport.aspx.cs">
+      <DependentUpon>HealthReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="HealthReport.aspx.designer.cs">
+      <DependentUpon>HealthReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="HazardExport.cs">
+      <DependentUpon>HazardExport.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="IncidentExport.aspx.cs">
+      <DependentUpon>IncidentExport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="IncidentExport.aspx.designer.cs">
+      <DependentUpon>IncidentExport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="IncidentExport.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>IncidentExport.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="TrainingHourReport.aspx.cs">
+      <DependentUpon>TrainingHourReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TrainingHourReport.aspx.designer.cs">
+      <DependentUpon>TrainingHourReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Utility.cs" />
+    <Compile Include="App_GlobalResources\Contractor.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Contractor.resx</DependentUpon>
+    </Compile>
+    <Compile Include="App_GlobalResources\Contractor.en.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Contractor.en.resx</DependentUpon>
+    </Compile>
+    <Compile Include="App_GlobalResources\Contractor.si.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Contractor.si.resx</DependentUpon>
+    </Compile>
+    <Compile Include="App_GlobalResources\Contractor.th.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Contractor.th.resx</DependentUpon>
+    </Compile>
+    <Compile Include="App_GlobalResources\Hazard.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Hazard.resx</DependentUpon>
+    </Compile>
+    <Compile Include="App_GlobalResources\Hazard.en.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Hazard.en.resx</DependentUpon>
+    </Compile>
+    <Compile Include="App_GlobalResources\Hazard.si.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Hazard.si.resx</DependentUpon>
+    </Compile>
+    <Compile Include="App_GlobalResources\Hazard.th.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Hazard.th.resx</DependentUpon>
+    </Compile>
+    <Compile Include="App_GlobalResources\Incident.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Incident.resx</DependentUpon>
+    </Compile>
+    <Compile Include="App_GlobalResources\Incident.en.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Incident.en.resx</DependentUpon>
+    </Compile>
+    <Compile Include="App_GlobalResources\Incident.si.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Incident.si.resx</DependentUpon>
+    </Compile>
+    <Compile Include="App_GlobalResources\Incident.th.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Incident.th.resx</DependentUpon>
+    </Compile>
+    <Compile Include="App_GlobalResources\Main.designer.cs">
+      <DependentUpon>Main.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="App_GlobalResources\Main.si.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Main.si.resx</DependentUpon>
+    </Compile>
+    <Compile Include="App_GlobalResources\Main.th.designer.cs">
+      <DependentUpon>Main.th.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="App_GlobalResources\Main.en.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Main.en.resx</DependentUpon>
+    </Compile>
+    <Compile Include="App_GlobalResources\Setting.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Setting.resx</DependentUpon>
+    </Compile>
+    <Compile Include="App_GlobalResources\Setting.si.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Setting.si.resx</DependentUpon>
+    </Compile>
+    <Compile Include="App_GlobalResources\Setting.th.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Setting.th.resx</DependentUpon>
+    </Compile>
+    <Compile Include="App_GlobalResources\Sot.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Sot.resx</DependentUpon>
+    </Compile>
+    <Compile Include="App_GlobalResources\Sot.en.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Sot.en.resx</DependentUpon>
+    </Compile>
+    <Compile Include="App_GlobalResources\Sot.th.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Sot.th.resx</DependentUpon>
+    </Compile>
+    <Compile Include="App_GlobalResources\Sot.si.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Sot.si.resx</DependentUpon>
+    </Compile>
+    <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="App_Start\IdentityConfig.cs" />
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="App_Start\Startup.Auth.cs" />
+    <Compile Include="areamanagement.aspx.cs">
+      <DependentUpon>areamanagement.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="areamanagement.aspx.designer.cs">
+      <DependentUpon>areamanagement.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="checklogclose.aspx.cs">
+      <DependentUpon>checklogclose.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="checklogclose.aspx.designer.cs">
+      <DependentUpon>checklogclose.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Class\ProcessActionSotEntity.cs" />
+    <Compile Include="Class\SafetyNotification.cs" />
+    <Compile Include="Class\SafetyPermission.cs" />
+    <Compile Include="contractor.aspx.cs">
+      <DependentUpon>contractor.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="contractor.aspx.designer.cs">
+      <DependentUpon>contractor.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="contractoredit.aspx.cs">
+      <DependentUpon>contractoredit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="contractoredit.aspx.designer.cs">
+      <DependentUpon>contractoredit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Dashboard.asmx.cs">
+      <DependentUpon>Dashboard.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="dashboardhazard.aspx.cs">
+      <DependentUpon>dashboardhazard.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="dashboardhazard.aspx.designer.cs">
+      <DependentUpon>dashboardhazard.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="dashboardincident.aspx.cs">
+      <DependentUpon>dashboardincident.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="dashboardincident.aspx.designer.cs">
+      <DependentUpon>dashboardincident.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="dashboardincident2.aspx.cs">
+      <DependentUpon>dashboardincident2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="dashboardincident2.aspx.designer.cs">
+      <DependentUpon>dashboardincident2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="dashboardsot.aspx.cs">
+      <DependentUpon>dashboardsot.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="dashboardsot.aspx.designer.cs">
+      <DependentUpon>dashboardsot.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Datatablelist.asmx.cs">
+      <DependentUpon>Datatablelist.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Dictionary.cs" />
+    <Compile Include="dropzoneremove.aspx.cs">
+      <DependentUpon>dropzoneremove.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="dropzoneremove.aspx.designer.cs">
+      <DependentUpon>dropzoneremove.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="dropzoneremoveaction.aspx.cs">
+      <DependentUpon>dropzoneremoveaction.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="dropzoneremoveaction.aspx.designer.cs">
+      <DependentUpon>dropzoneremoveaction.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="dropzoneremoveactionsot.aspx.cs">
+      <DependentUpon>dropzoneremoveactionsot.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="dropzoneremoveactionsot.aspx.designer.cs">
+      <DependentUpon>dropzoneremoveactionsot.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="dropzoneremovesot.aspx.cs">
+      <DependentUpon>dropzoneremovesot.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="dropzoneremovesot.aspx.designer.cs">
+      <DependentUpon>dropzoneremovesot.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="dropzoneupload.aspx.cs">
+      <DependentUpon>dropzoneupload.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="dropzoneupload.aspx.designer.cs">
+      <DependentUpon>dropzoneupload.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="dropzoneuploadaction.aspx.cs">
+      <DependentUpon>dropzoneuploadaction.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="dropzoneuploadaction.aspx.designer.cs">
+      <DependentUpon>dropzoneuploadaction.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="dropzoneuploadactionsot.aspx.cs">
+      <DependentUpon>dropzoneuploadactionsot.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="dropzoneuploadactionsot.aspx.designer.cs">
+      <DependentUpon>dropzoneuploadactionsot.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="dropzoneuploadcorrective.aspx.cs">
+      <DependentUpon>dropzoneuploadcorrective.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="dropzoneuploadcorrective.aspx.designer.cs">
+      <DependentUpon>dropzoneuploadcorrective.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="dropzoneuploadfact.aspx.cs">
+      <DependentUpon>dropzoneuploadfact.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="dropzoneuploadfact.aspx.designer.cs">
+      <DependentUpon>dropzoneuploadfact.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="dropzoneuploadform3.aspx.cs">
+      <DependentUpon>dropzoneuploadform3.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="dropzoneuploadform3.aspx.designer.cs">
+      <DependentUpon>dropzoneuploadform3.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="dropzoneuploadhazard.aspx.cs">
+      <DependentUpon>dropzoneuploadhazard.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="dropzoneuploadhazard.aspx.designer.cs">
+      <DependentUpon>dropzoneuploadhazard.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="dropzoneuploadsot.aspx.cs">
+      <DependentUpon>dropzoneuploadsot.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="dropzoneuploadsot.aspx.designer.cs">
+      <DependentUpon>dropzoneuploadsot.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="hazardform.aspx.cs">
+      <DependentUpon>hazardform.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="hazardform.aspx.designer.cs">
+      <DependentUpon>hazardform.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="hazardform2.aspx.cs">
+      <DependentUpon>hazardform2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="hazardform2.aspx.designer.cs">
+      <DependentUpon>hazardform2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="hazardform3.aspx.cs">
+      <DependentUpon>hazardform3.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="hazardform3.aspx.designer.cs">
+      <DependentUpon>hazardform3.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="hazardform4.aspx.cs">
+      <DependentUpon>hazardform4.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="hazardform4.aspx.designer.cs">
+      <DependentUpon>hazardform4.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="HazardReport.aspx.cs">
+      <DependentUpon>HazardReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="HazardReport.aspx.designer.cs">
+      <DependentUpon>HazardReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="holiday.aspx.cs">
+      <DependentUpon>holiday.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="holiday.aspx.designer.cs">
+      <DependentUpon>holiday.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="incidentform.aspx.cs">
+      <DependentUpon>incidentform.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="incidentform.aspx.designer.cs">
+      <DependentUpon>incidentform.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="incidentform2.aspx.cs">
+      <DependentUpon>incidentform2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="incidentform2.aspx.designer.cs">
+      <DependentUpon>incidentform2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="incidentform3.aspx.cs">
+      <DependentUpon>incidentform3.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="incidentform3.aspx.designer.cs">
+      <DependentUpon>incidentform3.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="incidentform4.aspx.cs">
+      <DependentUpon>incidentform4.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="incidentform4.aspx.designer.cs">
+      <DependentUpon>incidentform4.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="IncidentReport.aspx.cs">
+      <DependentUpon>IncidentReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="IncidentReport.aspx.designer.cs">
+      <DependentUpon>IncidentReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Langdatatable.aspx.cs">
+      <DependentUpon>Langdatatable.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Langdatatable.aspx.designer.cs">
+      <DependentUpon>Langdatatable.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="logemail.aspx.cs">
+      <DependentUpon>logemail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="logemail.aspx.designer.cs">
+      <DependentUpon>logemail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="login.aspx.cs">
+      <DependentUpon>login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="login.aspx.designer.cs">
+      <DependentUpon>login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="LTIFRReport.aspx.cs">
+      <DependentUpon>LTIFRReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="LTIFRReport.aspx.designer.cs">
+      <DependentUpon>LTIFRReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="LTIFRSrilankaReport.aspx.cs">
+      <DependentUpon>LTIFRSrilankaReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="LTIFRSrilankaReport.aspx.designer.cs">
+      <DependentUpon>LTIFRSrilankaReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MainMenu.aspx.cs">
+      <DependentUpon>MainMenu.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MainMenu.aspx.designer.cs">
+      <DependentUpon>MainMenu.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Masterdata.asmx.cs">
+      <DependentUpon>Masterdata.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Mobile.asmx.cs">
+      <DependentUpon>Mobile.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="mobilelogin.aspx.cs">
+      <DependentUpon>mobilelogin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="mobilelogin.aspx.designer.cs">
+      <DependentUpon>mobilelogin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Models\IdentityModels.cs" />
+    <Compile Include="myactionhazard.aspx.cs">
+      <DependentUpon>myactionhazard.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="myactionhazard.aspx.designer.cs">
+      <DependentUpon>myactionhazard.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="myactionincident.aspx.cs">
+      <DependentUpon>myactionincident.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="myactionincident.aspx.designer.cs">
+      <DependentUpon>myactionincident.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="myactionsot.aspx.cs">
+      <DependentUpon>myactionsot.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="myactionsot.aspx.designer.cs">
+      <DependentUpon>myactionsot.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Notificationservice.aspx.cs">
+      <DependentUpon>Notificationservice.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Notificationservice.aspx.designer.cs">
+      <DependentUpon>Notificationservice.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="notifygroup.aspx.cs">
+      <DependentUpon>notifygroup.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="notifygroup.aspx.designer.cs">
+      <DependentUpon>notifygroup.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="Report.asmx.cs">
+      <DependentUpon>Report.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="RootCauseIncident.aspx.cs">
+      <DependentUpon>RootCauseIncident.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RootCauseIncident.aspx.designer.cs">
+      <DependentUpon>RootCauseIncident.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Safetysdb.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Safetysdb.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="Saftetymain.Master.cs">
+      <DependentUpon>Saftetymain.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Saftetymain.Master.designer.cs">
+      <DependentUpon>Saftetymain.Master</DependentUpon>
+    </Compile>
+    <Compile Include="setting.aspx.cs">
+      <DependentUpon>setting.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="setting.aspx.designer.cs">
+      <DependentUpon>setting.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Sotform.aspx.cs">
+      <DependentUpon>Sotform.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Sotform.aspx.designer.cs">
+      <DependentUpon>Sotform.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SOTReport.aspx.cs">
+      <DependentUpon>SOTReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SOTReport.aspx.designer.cs">
+      <DependentUpon>SOTReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SourcehazardReport.aspx.cs">
+      <DependentUpon>SourcehazardReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SourcehazardReport.aspx.designer.cs">
+      <DependentUpon>SourcehazardReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Startup.cs" />
+    <Compile Include="superadmin.aspx.cs">
+      <DependentUpon>superadmin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="superadmin.aspx.designer.cs">
+      <DependentUpon>superadmin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="target.aspx.cs">
+      <DependentUpon>target.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="target.aspx.designer.cs">
+      <DependentUpon>target.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="target2.aspx.cs">
+      <DependentUpon>target2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="target2.aspx.designer.cs">
+      <DependentUpon>target2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="testemail.aspx.cs">
+      <DependentUpon>testemail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="testemail.aspx.designer.cs">
+      <DependentUpon>testemail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TIFRReport.aspx.cs">
+      <DependentUpon>TIFRReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TIFRReport.aspx.designer.cs">
+      <DependentUpon>TIFRReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TIFRSrilankaReport.aspx.cs">
+      <DependentUpon>TIFRSrilankaReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TIFRSrilankaReport.aspx.designer.cs">
+      <DependentUpon>TIFRSrilankaReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TotalinjuryFPEReport.aspx.cs">
+      <DependentUpon>TotalinjuryFPEReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TotalinjuryFPEReport.aspx.designer.cs">
+      <DependentUpon>TotalinjuryFPEReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ViewSwitcher.ascx.cs">
+      <DependentUpon>ViewSwitcher.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ViewSwitcher.ascx.designer.cs">
+      <DependentUpon>ViewSwitcher.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\ActioneventService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\MasterdataService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="workhour.aspx.cs">
+      <DependentUpon>workhour.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="workhour.aspx.designer.cs">
+      <DependentUpon>workhour.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="workhour2.aspx.cs">
+      <DependentUpon>workhour2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="workhour2.aspx.designer.cs">
+      <DependentUpon>workhour2.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="Export\" />
+    <Folder Include="upload\holiday\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_GlobalResources\Main.en.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>Main.en.designer.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_GlobalResources\Main.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>Main.designer.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_GlobalResources\Main.th.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>Main.th.designer.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Safetysdb.dbml.layout">
+      <DependentUpon>Safetysdb.dbml</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_GlobalResources\Contractor.en.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>Contractor.en.designer.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_GlobalResources\Contractor.th.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>Contractor.th.designer.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_GlobalResources\Contractor.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>Contractor.Designer.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_GlobalResources\Incident.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>Incident.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_GlobalResources\Incident.en.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>Incident.en.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_GlobalResources\Incident.th.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>Incident.th.designer.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferences Include="Web References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferenceUrl Include="http://localhost/safetys/Actionevent.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\ActioneventService\</RelPath>
+      <UpdateFromURL>http://localhost/safetys/Actionevent.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>safetys_ActioneventService_Actionevent</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://localhost/safetys/Masterdata.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\MasterdataService\</RelPath>
+      <UpdateFromURL>http://localhost/safetys/Masterdata.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>safetys_MasterdataService_Masterdata</CachedSettingsPropName>
+    </WebReferenceUrl>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_GlobalResources\Hazard.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>Hazard.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_GlobalResources\Hazard.en.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>Hazard.en.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_GlobalResources\Hazard.th.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>Hazard.th.designer.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_GlobalResources\Setting.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>Setting.designer.cs</LastGenOutput>
+    </Content>
+    <Content Include="App_GlobalResources\Setting.th.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>Setting.th.designer.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_GlobalResources\Contractor.si.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>Contractor.si.designer.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_GlobalResources\Hazard.si.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>Hazard.si.designer.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_GlobalResources\Incident.si.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>Incident.si.designer.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_GlobalResources\Main.si.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>Main.si.designer.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_GlobalResources\Setting.si.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>Setting.si.designer.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_GlobalResources\Sot.en.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>Sot.en.designer.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_GlobalResources\Sot.si.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>Sot.si.designer.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_GlobalResources\Sot.th.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>Sot.th.designer.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_GlobalResources\Sot.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>Sot.Designer.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_GlobalResources\Traininghour.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>Traininghour.Designer.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_GlobalResources\Traininghour.en.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>Traininghour.en.designer.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_GlobalResources\Traininghour.si.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>Traininghour.si.designer.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_GlobalResources\Traininghour.th.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>Traininghour.th.designer.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_GlobalResources\Health.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>Health.Designer.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_GlobalResources\Health.en.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>Health.en.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_GlobalResources\Health.si.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>Health.si.designer.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_GlobalResources\Health.th.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>Health.th.designer.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="HazardExport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>HazardExport.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HealthExport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>HealthExport.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HealthpersonExport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>HealthpersonExport.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IncidentExport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>IncidentExport.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>4652</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:4652/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

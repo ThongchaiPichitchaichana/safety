@@ -1,0 +1,602 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Saftetymain.master.cs" Inherits="safetys4.Saftetymain" %>
+<!DOCTYPE html>
+<html>
+ <head>
+       <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+          <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+        <title>Safety</title>
+       
+         <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+        
+        <link href="template/css/bootstrap.min.css" rel="stylesheet">
+        <link href="template/font-awesome/css/font-awesome.css" rel="stylesheet">
+
+        <link href="template/css/animate.css" rel="stylesheet">
+        <link href="template/css/style.css" rel="stylesheet">
+       
+        <link href="template/css/plugins/jquery-ui-1.12.0/jquery-ui.min.css" rel="stylesheet">
+        <link href="template/css/plugins/loading/HoldOn.min.css" rel="stylesheet" type="text/css" />
+      
+  
+        <script src="template/js/jquery-2.1.1.js"></script>
+        <script src="template/js/bootstrap.min.js"></script>   
+        <script src="template/js/plugins/jquery-ui-1.12.0/jquery-ui.min.js"></script> 
+
+
+<style type="text/css">
+
+    .lbrequire{
+
+        color:red;
+        display:inline;
+        font-weight:bold;
+    }
+
+    
+    .form-filter ,tr,td 
+    {
+        padding:7px;
+
+    }
+
+    .ui-dialog { z-index: 1000 !important ;}
+
+    .page-heading {
+
+        padding-bottom: 15px;
+        padding-top: 15px;
+    }
+
+
+    
+     .menubar {
+        padding: 8px 15px;
+        margin-bottom: 20px;
+        list-style: none;
+        background-color: #f5f5f5;
+        border-radius: 4px;
+        /*font-weight:bold;*/
+    }
+    .menubar > li{
+        display: inline-block;
+    }
+    .menubar > li + li:before {
+        padding: 0 5px;
+        color: #ccc;
+        content: "|";
+    }
+    .menubar > .active  > a {
+        color: #E32102 !important;
+        font-weight:bold;
+    }
+
+
+    .border-bottom-header {
+      /*border-bottom: 1px solid #DD2304;*/
+      border-bottom-style:solid;
+      border-bottom-width:3px;
+      border-bottom-color:#DD2304 !important;
+    }
+
+
+    .menubar {
+        background-color: #ffffff;
+        float: right;
+        margin-bottom: 0;
+        padding-bottom: 0;
+        padding-left: 0;
+        padding-right: 0;
+        padding-top: 0;
+    }
+    .menubar {
+        border-bottom-left-radius: 4px;
+        border-bottom-right-radius: 4px;
+        border-top-left-radius: 4px;
+        border-top-right-radius: 4px;
+        list-style-image: none;
+        list-style-position: outside;
+        list-style-type: none;
+    }
+
+
+    .menubar a:active
+    {
+        color:#E32102;
+
+    }
+
+     .menubar a
+    {
+         color : black;
+
+    }
+
+     .menubar a:visited 
+    {
+        color : black;
+    }
+
+
+  .sidebar {
+   position: absolute;
+   width: 130px;
+   height: 100%;
+   background: #FFF;
+   left:0;
+   padding-left:0px;
+   text-align:center;
+
+
+ }
+
+  .sidebar_second {
+   position: absolute;
+   width: 230px;
+   height: 100%;
+   background: #FFF;
+   left:130px;
+   padding-left:0px;
+   text-align:center;
+   border-left: 1px solid #f3f3f4;
+
+
+ }
+
+
+   .sidebar_third {
+   position: absolute;
+   width: 230px;
+   height: 100%;
+   background: #FFF;
+   left:0px;
+   padding-left:0px;
+   text-align:center;
+   border-left: 1px solid #f3f3f4;
+
+
+ }
+
+
+
+/*::-webkit-scrollbar {
+  width: 5px;
+}
+
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1; 
+}
+ 
+
+::-webkit-scrollbar-thumb {
+  background: #d6d6d6; 
+}
+
+
+::-webkit-scrollbar-thumb:hover {
+  background: #c2c2c2; 
+}*/
+  
+
+  .wrapper-content{
+      margin-left: 100px;
+
+  }
+ 
+  .sidebar a {
+    padding: 8px 8px 8px 18px;
+    text-decoration: none;
+    font-size: 14px;
+    color: #818181;
+    display: block;
+
+}
+
+   .sidebar_second a {
+    padding: 8px 8px 8px 18px;
+    text-decoration: none;
+    font-size: 14px;
+    color: #818181;
+    display: block;
+    text-align:left;
+
+}
+
+     .sidebar_second a:hover {
+    background-color:#f3f3f4;
+
+}
+
+      .sidebar_third a {
+    padding: 8px 8px 8px 18px;
+    text-decoration: none;
+    font-size: 14px;
+    color: #818181;
+    display: block;
+    text-align:left;
+
+}
+
+     .sidebar_third a:hover {
+    background-color:#f3f3f4;
+
+}
+
+</style>
+
+
+
+ </head>
+<body class="top-navigation">
+<form  runat="server" method="post" enctype="multipart/form-data" >
+
+
+ <asp:ScriptManager runat="server">
+<%-- <Scripts>
+   
+        <asp:ScriptReference Name="MsAjaxBundle" />
+        <asp:ScriptReference Name="WebForms.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebForms.js" />
+        <asp:ScriptReference Name="WebUIValidation.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebUIValidation.js" />
+        <asp:ScriptReference Name="MenuStandards.js" Assembly="System.Web" Path="~/Scripts/WebForms/MenuStandards.js" />
+        <asp:ScriptReference Name="GridView.js" Assembly="System.Web" Path="~/Scripts/WebForms/GridView.js" />
+        <asp:ScriptReference Name="DetailsView.js" Assembly="System.Web" Path="~/Scripts/WebForms/DetailsView.js" />
+        <asp:ScriptReference Name="TreeView.js" Assembly="System.Web" Path="~/Scripts/WebForms/TreeView.js" />
+        <asp:ScriptReference Name="WebParts.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebParts.js" />
+        <asp:ScriptReference Name="Focus.js" Assembly="System.Web" Path="~/Scripts/WebForms/Focus.js" />
+        <asp:ScriptReference Name="WebFormsBundle" />
+        
+    </Scripts>--%>
+</asp:ScriptManager>
+
+<div id="wrapper">
+        <div id="page-wrapper" class="gray-bg">
+        <div class="row border-bottom-header white-bg">
+        <nav class="navbar navbar-static-top" role="navigation">
+            <div class="navbar-header">
+             
+                <%
+                
+                if (Session["lang"] != null)         
+                {
+                    if (Session["lang"] =="th")
+                    {                  
+                    %>
+                        <a href="MainMenu.aspx"><img src="template/img/Logo_Thai.png"   style="width:176px;height:56px;"> </a>
+
+                    <%                      
+                    }
+                    else if (Session["lang"] == "en")
+                    { 
+       
+                    %>
+
+                        <a href="MainMenu.aspx"><img src="template/img/Logo_Eng.png" style="width:176px;height:56px;"> </a>
+
+                    <%     
+                    }
+                    else if (Session["lang"] == "si")
+                    {                   
+                    %>
+                         <a href="MainMenu.aspx"><img src="template/img/Logo_Srilanka.png" style="width:176px;height:56px;padding-left:5px;"> </a>
+                    <%
+                    }
+                } 
+               
+                %>
+
+          
+
+            </div>
+            <div class="navbar-collapse collapse" id="navbar">
+                <ul class="nav navbar-nav">
+                 
+                </ul>
+                <ul class="nav navbar-top-links navbar-right">
+                  <li><strong><i class="fa fa-user" aria-hidden="true"></i> <%= Session["name"] %></strong></li>
+                  <li class="dropdown">
+                        <a aria-expanded="false" role="button" href="#" class="dropdown-toggle" data-toggle="dropdown"> <%= Session["langShow"] %> <span class="caret"></span></a>
+                        <ul role="menu" class="dropdown-menu">
+                           <li>
+                              <asp:LinkButton ID="LinkLanguageTH" runat="server" OnClick="LinkLanguageTH_Click" CausesValidation="False"><img src="template/img/language/th.png"><strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ไทย</strong></asp:LinkButton>
+                         </li>
+                          <li>
+                              <asp:LinkButton ID="LinkLanguageEN" runat="server" OnClick="LinkLanguageEN_Click" CausesValidation="False"><img src="template/img/language/gb.png"><strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;English</strong></asp:LinkButton>       
+                          </li>
+                            <% if (Session["country"].ToString() == "srilanka")
+                            {                  
+                            %>  
+                           <li>
+                              <asp:LinkButton ID="LinkLanguageSI" runat="server" OnClick="LinkLanguageSI_Click" CausesValidation="False"><img src="template/img/language/si.png"><strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;English</strong></asp:LinkButton>       
+                          </li>
+                            <%}
+                             %>
+
+
+                        </ul>
+                    </li>
+                    <li>
+                      
+                    
+                    <asp:LinkButton ID="LinkLogout" runat="server" OnClick="LinkLogout_Click" CausesValidation="False">
+                        <i class="fa fa-sign-out"></i> <asp:Label ID="lbLogout" runat="server" Text="<%$ Resources:Main, btLogout %>"></asp:Label></asp:LinkButton>
+                       
+                    </li>
+                </ul>
+            </div>
+        </nav>
+          
+        </div>
+         <div class="row wrapper border-bottom white-bg page-heading">
+                <div class="col-lg-12">
+                    <ul class="menubar">
+                          <li id="bar-home">
+                            <asp:LinkButton ID="btHome" runat="server" OnClick="btHome_Click" CausesValidation="False">
+                             <asp:Label ID="lbHome" runat="server" Text="<%$ Resources:Main, lbHome %>"></asp:Label>
+                            </asp:LinkButton>
+                     
+                        </li>
+                        <li id="bar-myaction">
+                            <asp:LinkButton ID="btMyAction" runat="server" OnClick="btMyAction_Click" CausesValidation="False">
+                             <asp:Label ID="lbMyAction" runat="server" Text="<%$ Resources:Main, lbMyAction %>"></asp:Label>
+                            </asp:LinkButton>
+                     
+                        </li>
+                         <li id="bar-allincident">
+                            <asp:LinkButton ID="btAllIncident" runat="server" OnClick="btAllIncident_Click" CausesValidation="False">
+                             <asp:Label ID="lbAllIncident" runat="server" Text="<%$ Resources:Main, menubarAllIncident %>"></asp:Label>
+                            </asp:LinkButton>
+                     
+                        </li>
+                         <li id="bar-allhazard">
+                            <asp:LinkButton ID="btAllHazard" runat="server" OnClick="btAllHazard_Click" CausesValidation="False">
+                             <asp:Label ID="lbAllHazard" runat="server" Text="<%$ Resources:Main, menubarAllHazard %>"></asp:Label>
+                            </asp:LinkButton>
+                     
+                        </li>
+                          <li id="bar_allhealth" runat="server">
+                            <asp:LinkButton ID="btAllHealth" runat="server" OnClick="btAllHealth_Click" CausesValidation="False">
+                             <asp:Label ID="lbAllHealth" runat="server" Text="<%$ Resources:Main, menubarAllHealth %>"></asp:Label>
+                            </asp:LinkButton>
+                     
+                        </li>
+                         <li id="bar_allsot" runat="server">
+                            <asp:LinkButton ID="btAllSot" runat="server" OnClick="btAllSot_Click" CausesValidation="False">
+                             <asp:Label ID="lbAllSot" runat="server" Text="<%$ Resources:Main, menubarAllSot %>"></asp:Label>
+                            </asp:LinkButton>
+                     
+                        </li>
+                         <li id="bar-dashboard">
+                            <asp:LinkButton ID="btDashboard" runat="server" OnClick="btDashboard_Click" CausesValidation="False" Enabled="True">
+                             <asp:Label ID="lbDashboard" runat="server" Text="<%$ Resources:Main, lbDashboard %>"></asp:Label>
+                            </asp:LinkButton>
+                     
+                        </li>
+                        <li id="bar-report">
+                            <asp:LinkButton ID="btReport" runat="server" OnClick="btReport_Click" CausesValidation="False">
+                             <asp:Label ID="lbReport" runat="server" Text="<%$ Resources:Main, lbReport %>"></asp:Label>
+                            </asp:LinkButton>
+                     
+                        </li>
+                        <li  id="bar-contractor">
+                            <asp:LinkButton ID="btContractor" runat="server" OnClick="btContractor_Click" CausesValidation="False">
+                             <asp:Label ID="lbContractor" runat="server" Text="<%$ Resources:Main, lbContractor %>"></asp:Label>
+                            </asp:LinkButton>
+                        
+                        </li>
+                        <li id="bar-admin">
+                            <asp:LinkButton ID="btAdmin" runat="server" OnClick="btAdmin_Click" CausesValidation="False">
+                             <asp:Label ID="lbAdmin" runat="server" Text="<%$ Resources:Main, lbAdmin %>"></asp:Label>
+                            </asp:LinkButton>
+                          
+                        </li>
+                        
+                       
+                    </ul>
+                </div>
+            </div>
+
+            
+          <asp:Panel id="menu_sidebar_admin" runat="server" Visible="False">
+             <div class="sidebar" style="overflow-y: auto;max-height:80%;">
+                 <asp:LinkButton ID="btSuperAdminSide" runat="server" CausesValidation="False" OnClick="btSuperAdminSide_Click" Visible="false"><img src="template/img/super-admin.png"  style="width:32px;height:32px;"><br/><br/><%= Resources.Main.btSideBarSuperAdmin %></asp:LinkButton>
+                 <asp:LinkButton ID="btHolidaySide" runat="server" CausesValidation="False" OnClick="btHolidaySide_Click" Visible="false"><img src="template/img/holiday.png"  style="width:32px;height:32px;"><br/><br/><%= Resources.Main.btSideBarHoliday %></asp:LinkButton>
+                 <asp:LinkButton ID="btAreaManagementSide" runat="server" CausesValidation="False" OnClick="btAreaManagementSide_Click" Visible="false"><img src="template/img/area-management.png"  style="width:32px;height:32px;"><br/><br/><%= Resources.Main.btSideBarAreaManagement %></asp:LinkButton>
+                 <asp:LinkButton ID="btSettingSide" runat="server" CausesValidation="False" OnClick="btSettingSide_Click" Visible="false"><img src="template/img/sett.png"  style="width:32px;height:32px;"><br/><br/><%= Resources.Main.btSideBarSetting %></asp:LinkButton>
+                 <asp:LinkButton ID="btNotifyGroupSide" runat="server" CausesValidation="False" OnClick="btNotifyGroupSide_Click" Visible="false"><img src="template/img/noti.png"  style="width:32px;height:32px;"><br/><br/><%= Resources.Main.btSideBarNotifyGroup %></asp:LinkButton>
+                 <asp:LinkButton ID="btTargetSide" runat="server" CausesValidation="False" OnClick="btTargetSide_Click" Visible="false"><img src="template/img/target.png"  style="width:32px;height:32px;"><br/><br/><%= Resources.Main.btSideBarTarget %></asp:LinkButton>
+                 <asp:LinkButton ID="btWorkHourSide" runat="server" CausesValidation="False" OnClick="btWorkHourSide_Click" Visible="false"><img src="template/img/hour.png"  style="width:32px;height:32px;"><br/><br/><%= Resources.Main.btSideBarWorkHour %></asp:LinkButton>       
+             
+            </div>
+        </asp:Panel>
+      
+        <asp:Panel id="menu_sidebar_dashboard" runat="server" Visible="False">
+             <div  class="sidebar">
+                    <asp:LinkButton ID="btDashboardIncidentSide" runat="server" CausesValidation="False" OnClick="btDashboardIncidentSide_Click" Visible="false"><img src="template/img/incident2.png"  style="width:32px;height:32px;"><br/><br/><%= Resources.Main.btSideBarDashboardIncident %></asp:LinkButton>
+                    <asp:LinkButton ID="btDashboardHazardSide" runat="server" CausesValidation="False" OnClick="btDashboardHazardSide_Click" Visible="false"><img src="template/img/hazard2.png"  style="width:32px;height:32px;"><br/><br/><%= Resources.Main.btSideBarDashboardHazard %></asp:LinkButton>
+                 <% if (Session["country"].ToString() =="srilanka")
+                    {                  
+                    %>   
+                        <asp:LinkButton ID="btDashboardSotSide" runat="server" CausesValidation="False" OnClick="btDashboardSotSide_Click" Visible="false"><img src="template/img/hazard2.png"  style="width:32px;height:32px;"><br/><br/><%= Resources.Main.btSideBarDashboardSot %></asp:LinkButton>
+                 <% } %>
+            </div>
+         </asp:Panel>
+        
+        <asp:Panel id="menu_sidebar_myaction" runat="server" Visible="False">
+            <div  class="sidebar">
+                 <asp:LinkButton ID="btMyActionIncidentSide" runat="server" CausesValidation="False" OnClick="btMyActionIncidentSide_Click" Visible="false"><img src="template/img/incident.png"  style="width:32px;height:32px;"><br/><br/><%= Resources.Main.btSideBarMyActionIncident %></asp:LinkButton>
+                 <asp:LinkButton ID="btMyActionHazardSide" runat="server" CausesValidation="False" OnClick="btMyActionHazardSide_Click" Visible="false"><img src="template/img/hazard.png"  style="width:32px;height:32px;"><br/><br/><%= Resources.Main.btSideBarMyActionHazard %></asp:LinkButton>
+                 <% if (Session["country"].ToString() == "srilanka")
+                    {                  
+                    %>  
+                 <asp:LinkButton ID="btMyActionSotSide" runat="server" CausesValidation="False" OnClick="btMyActionSotSide_Click" Visible="false"><img src="template/img/hazard.png"  style="width:32px;height:32px;"><br/><br/><%= Resources.Main.btSideBarMyActionSot %></asp:LinkButton>
+                 <% } %>
+            </div>
+        </asp:Panel>
+
+        
+         <asp:Panel id="menu_sidebar_report" runat="server" Visible="False">
+             <div class="sidebar_third">
+                <br />
+                <h3><asp:Label ID="Label2" runat="server" Text="Report"></asp:Label></h3>
+                <br />
+                 <asp:LinkButton ID="btAllincidentReport" runat="server" CausesValidation="False" OnClick="btAllincidentReport_Click" >All Incident Report</asp:LinkButton>
+                 <asp:LinkButton ID="btAllhazardReport" runat="server" CausesValidation="False" OnClick="btAllhazardReport_Click" >All Hazard Report</asp:LinkButton>
+
+                  
+                 <% if (Session["country"].ToString() =="thailand")
+                 {                  
+                 %>
+                    <asp:LinkButton ID="btFaltalityRateReport" runat="server" CausesValidation="False" OnClick="btFaltalityRateReport_Click" >Fatality rate Report</asp:LinkButton>
+                 <% } %>
+                 <asp:LinkButton ID="btLTIFRReport" runat="server" CausesValidation="False" OnClick="btLTIFRReport_Click" >LTIFR/LTISR Report</asp:LinkButton>
+                 <asp:LinkButton ID="btTIFRReport" runat="server" CausesValidation="False" OnClick="btTIFRReport_Click" >TIFR Report</asp:LinkButton>
+                 <asp:LinkButton ID="btTotalInjuryReport" runat="server" CausesValidation="False" OnClick="btTotalInjuryReport_Click" >Total Injury Report by FPEs</asp:LinkButton>
+                 <asp:LinkButton ID="btPyramidReport" runat="server" CausesValidation="False" OnClick="btPyramidReport_Click">OH&S Pyramid Report</asp:LinkButton>
+                 <asp:LinkButton ID="btAllactionReport" runat="server" CausesValidation="False" OnClick="btAllactionReport_Click" >All Action Report</asp:LinkButton>
+                
+                 
+                 <% if (Session["country"].ToString() =="thailand")
+                 {                  
+                 %> 
+                  <asp:LinkButton ID="btAllHealthReport" runat="server" CausesValidation="False" OnClick="btAllHealthReport_Click" >Health Rehabilitation Report</asp:LinkButton>  
+                  <asp:LinkButton ID="btHealthIndividualReport" runat="server" CausesValidation="False" OnClick="btHealthIndividualReport_Click" >Health Rehabilitation Individual Report</asp:LinkButton>             
+                  <asp:LinkButton ID="btTrainingHourReport" runat="server" CausesValidation="False" OnClick="btTrainingHourReport_Click" >OH&S Training Hour Report</asp:LinkButton>
+                 <% } %>
+
+                 <% if (Session["country"].ToString() =="srilanka")
+                 {                  
+                 %> 
+                 <asp:LinkButton ID="btAllSOTReport" runat="server" CausesValidation="False" OnClick="btAllSOTReport_Click" >All VFL Report</asp:LinkButton>
+                 <% } %>
+                 
+                 <%-- <asp:LinkButton ID="btSourceHazard" runat="server" CausesValidation="False" OnClick="btSourceHazard_Click">Source of hazard Report</asp:LinkButton>
+                --%>
+            </div>
+        </asp:Panel>
+        
+
+        <asp:Panel ID="PanelNotifyGroup" runat="server" Visible="False">
+            <div id="menu_second_sidebar" class="sidebar_second">
+                <br />
+                <h3><asp:Label ID="LabelNotifyGroup" runat="server" Text="Notify Group"></asp:Label></h3>
+                <br />
+                <asp:LinkButton ID="LinkGroupCommunicationVP" runat="server" CausesValidation="False" OnClick="LinkGroupCommunicationVP_Click" >Corporate Reputation</asp:LinkButton>
+                <asp:LinkButton ID="LinkLegalDepartment" runat="server" CausesValidation="False" OnClick="LinkLegalDepartment_Click" >Legal Department</asp:LinkButton>
+                <asp:LinkButton ID="LinkGroupOHS" runat="server" CausesValidation="False" OnClick="LinkGroupOHS_Click" >Group OH&S</asp:LinkButton>
+                <asp:LinkButton ID="LinkGroupOHSHazard" runat="server" CausesValidation="False" OnClick="LinkGroupOHSHazard_Click" >Group OH&S Hazard Approve</asp:LinkButton>
+                
+                  <% if (Session["country"].ToString() == "thailand")
+                  {                  
+                  %>  
+                     <asp:LinkButton ID="LinkGroupOHSHealth" runat="server" CausesValidation="False" OnClick="LinkGroupOHSHealth_Click" >Group OH&S Health Rehab.</asp:LinkButton>
+                     <asp:LinkButton ID="LinkGroupEXCO" runat="server" CausesValidation="False" OnClick="LinkGroupEXCO_Click" >Group EXCO</asp:LinkButton>
+                     <asp:LinkButton ID="LinkGroupCEO" runat="server" CausesValidation="False" OnClick="LinkGroupCEO_Click" >Group CEO</asp:LinkButton>
+                 <% } %>
+              
+            </div>
+        </asp:Panel>
+        <asp:Panel ID="PanelSetting" runat="server" Visible="False">
+            <div id="menu_second_sidebar" class="sidebar_second" style="overflow-y: auto;max-height:80%;">
+                <br />
+                <h3><asp:Label ID="Label1" runat="server" Text="Setting"></asp:Label></h3>
+                <br />
+                <asp:LinkButton ID="LinkTypeOfEmployee" runat="server" CausesValidation="False" Text="<%$ Resources:Setting, LinkTypeOfEmployee %>" OnClick="LinkTypeOfEmployee_Click" ></asp:LinkButton>
+                <asp:LinkButton ID="LinkNatureOfInjury" runat="server" CausesValidation="False" Text="<%$ Resources:Setting, LinkNatureOfInjury %>" OnClick="LinkNatureOfInjury_Click" ></asp:LinkButton>
+                <asp:LinkButton ID="LinkBodyPart" runat="server" CausesValidation="False" Text="<%$ Resources:Setting, LinkBodyPart %>" OnClick="LinkBodyPart_Click" ></asp:LinkButton>
+                <asp:LinkButton ID="LinkSeverityOfInjury" runat="server" CausesValidation="False" Text="<%$ Resources:Setting, LinkSeverityOfInjury %>" OnClick="LinkSeverityOfInjury_Click" ></asp:LinkButton>
+                <asp:LinkButton ID="LinkSourceOfHazard" runat="server" CausesValidation="False" Text="<%$ Resources:Setting, LinkSourceOfHazard %>" OnClick="LinkSourceOfHazard_Click" ></asp:LinkButton>
+                <asp:LinkButton ID="LinkSourceOfIncident" runat="server" CausesValidation="False" Text="<%$ Resources:Setting, LinkSourceOfIncident %>" OnClick="LinkSourceOfIncident_Click" ></asp:LinkButton>
+                <asp:LinkButton ID="LinkEventOrExposure" runat="server" CausesValidation="False" Text="<%$ Resources:Setting, LinkEventOrExposure %>" OnClick="LinkEventOrExposure_Click" ></asp:LinkButton>
+                <asp:LinkButton ID="LinkFPE" runat="server" CausesValidation="False" Text="<%$ Resources:Setting, LinkFPE %>" OnClick="LinkFPE_Click" ></asp:LinkButton>
+                
+                <% if (Session["country"].ToString() =="thailand")
+                 {                  
+                 %> 
+                <asp:LinkButton ID="LinkRiskFactorRelateToWork" runat="server" CausesValidation="False" Text="<%$ Resources:Setting, LinkRiskFactorRelateToWork %>" OnClick="LinkRiskFactorRelateToWork_Click" ></asp:LinkButton>
+                <asp:LinkButton ID="LinkOccupationalHealthWork" runat="server" CausesValidation="False" Text="<%$ Resources:Setting, LinkOccupationalHealthWork %>" OnClick="LinkOccupationalHealthWork_Click" ></asp:LinkButton>
+                <asp:LinkButton ID="LinkTypeOfControl" runat="server" CausesValidation="False" Text="<%$ Resources:Setting, LinkTypeOfControl %>" OnClick="LinkTypeOfControl_Click" ></asp:LinkButton>
+                <asp:LinkButton ID="LinkHospital" runat="server" CausesValidation="False" Text="<%$ Resources:Setting, LinkHospital %>" OnClick="LinkHospital_Click" ></asp:LinkButton>
+               <% } %>
+            </div>
+        </asp:Panel>
+        <div class="wrapper wrapper-content">
+           <%-- <div class="container">--%>
+                <div class="row">
+                  
+                     <div class="col-lg-12">
+                
+                         <asp:ContentPlaceHolder ID="MainContent" runat="server">
+                                 
+                        </asp:ContentPlaceHolder>
+
+
+                    </div>
+
+                </div>
+
+
+
+            <%--</div>--%>
+
+        </div>
+     
+
+        </div>
+        </div>
+
+    </form>
+                       
+
+
+<script src="template/js/plugins/metisMenu/jquery.metisMenu.js"></script>
+<script src="template/js/plugins/slimscroll/jquery.slimscroll.min.js"></script>
+
+<!-- Custom and plugin javascript -->
+<script src="template/js/inspinia.js"></script>
+<script src="template/js/plugins/pace/pace.min.js"></script>
+
+<script src="template/js/plugins/loading/HoldOn.min.js"></script>
+
+
+<script type="text/javascript">
+
+  var type_login  = '<%= Session["typeLogin"] %>'; 
+  var lang = '<%= Session["lang"] %>'; 
+  var country = '<%= Session["country"] %>';
+  var user_login_id = '<%= Session["user_id"] %>'; 
+  var user_group_id = '<%= Session["group_id"] %>'; 
+  //var country = '<%= Session["country"] %>';
+  
+    
+ $(document).ready(function(){
+
+
+
+ });
+
+ function showLoading() {
+     HoldOn.open({
+         theme: 'sk-rect',
+         message: "<h4><%= Resources.Main.loading %></h4>"
+     });
+
+ }
+
+ function closeLoading() {
+     setTimeout(function () {
+         HoldOn.close();
+     }, 500);
+
+ }
+
+
+
+    
+</script> 
+
+
+
+</body>
+</html>

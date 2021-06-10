@@ -1,0 +1,462 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="btSubmitReport" xml:space="preserve">
+    <value>ส่งผลการตรวจสอบ</value>
+  </data>
+  <data name="btHazardedit" xml:space="preserve">
+    <value>แก้ไข</value>
+  </data>
+  <data name="btHazardreject" xml:space="preserve">
+    <value>ปฏิเสธรายงาน</value>
+  </data>
+  <data name="hazardarea" xml:space="preserve">
+    <value>บริเวณที่พบแหล่งอันตราย</value>
+  </data>
+  <data name="hazarddetail" xml:space="preserve">
+    <value>รายละเอียด &lt;/br&gt; ลักษณะของแหล่งอันตรายหรือประเด็นปัญหา (รวมถึงประเด็นปัญหาด้านสิ่งแวดล้อม)</value>
+  </data>
+  <data name="hazardname" xml:space="preserve">
+    <value>ชื่อแหล่งอันตราย</value>
+  </data>
+  <data name="hazardnamesurname" xml:space="preserve">
+    <value>ชื่อ - สกุล</value>
+  </data>
+  <data name="hazardphone" xml:space="preserve">
+    <value>เบอร์โทรศัพท์</value>
+  </data>
+  <data name="hazardstep1" xml:space="preserve">
+    <value>รายงานแหล่งอันตราย</value>
+  </data>
+  <data name="hazardstep2" xml:space="preserve">
+    <value>ตรวจสอบรายงานแหล่งอันตราย</value>
+  </data>
+  <data name="hazardstep3" xml:space="preserve">
+    <value>ดำเนินการแก้ไข</value>
+  </data>
+  <data name="hazardstep4" xml:space="preserve">
+    <value>ขอปิดรายงานแหล่งอันตราย</value>
+  </data>
+  <data name="hazard_date" xml:space="preserve">
+    <value>วันที่พบแหล่งอันตราย</value>
+  </data>
+  <data name="hazard_time" xml:space="preserve">
+    <value>เวลาที่พบแหล่งอันตราย</value>
+  </data>
+  <data name="HeaderDate" xml:space="preserve">
+    <value>วัน/เวลาและสถานที่พบแหล่งอันตราย</value>
+  </data>
+  <data name="infoimage" xml:space="preserve">
+    <value>สามารถอัพโหลดรูปได้มากสุดที่ 2 รูปภาพ (เฉพาะไฟล์ JPG และ PNG เท่านั้น) และรูปละไม่เกิน 5 MB</value>
+  </data>
+  <data name="lbCompany" xml:space="preserve">
+    <value>บริษัทที่พบแหล่งอันตราย</value>
+  </data>
+  <data name="lbdepartment" xml:space="preserve">
+    <value>โรงงาน/ฝ่าย ที่พบแหล่งอันตราย</value>
+  </data>
+  <data name="lbDescriptionHeader" xml:space="preserve">
+    <value>รายละเอียดแหล่งอันตราย</value>
+  </data>
+  <data name="lbdivision" xml:space="preserve">
+    <value>ส่วนที่พบแหล่งอันตราย</value>
+  </data>
+  <data name="lbfucntion" xml:space="preserve">
+    <value>พื้นที่สายงานที่พบแหล่งอันตราย</value>
+  </data>
+  <data name="lbNameReportHeader" xml:space="preserve">
+    <value>ผู้รายงานแหล่งอันตราย</value>
+  </data>
+  <data name="lbsection" xml:space="preserve">
+    <value>แผนกที่พบแหล่งอันตราย</value>
+  </data>
+  <data name="report_date" xml:space="preserve">
+    <value>วันที่รายงาน</value>
+  </data>
+  <data name="rqcompany" xml:space="preserve">
+    <value>กรุณาเลือกบริษัท</value>
+  </data>
+  <data name="rqdepartment" xml:space="preserve">
+    <value>กรุณาเลือกโรงงาน/ฝ่าย</value>
+  </data>
+  <data name="rqfunction" xml:space="preserve">
+    <value>กรุณาเลือกพื้นที่สายงาน</value>
+  </data>
+  <data name="rqhazarddate" xml:space="preserve">
+    <value>กรุณากรอกวันที่พบแหล่งอันตราย</value>
+  </data>
+  <data name="rqhazarddetail" xml:space="preserve">
+    <value>กรุณากรอกรายละเอียด</value>
+  </data>
+  <data name="rqhazardname" xml:space="preserve">
+    <value>กรุณากรอกลักษณะของแหล่งอันตราย</value>
+  </data>
+  <data name="rqhazardtime" xml:space="preserve">
+    <value>กรุณากรอกเวลาที่พบแหล่งอันตราย</value>
+  </data>
+  <data name="rqmobileformphone" xml:space="preserve">
+    <value>รุปแบบเบอร์โทรศัพท์ไม่ถูกต้อง</value>
+  </data>
+  <data name="rqmobilephone" xml:space="preserve">
+    <value>กรุณากรอกเบอร์โทรศัพท์</value>
+  </data>
+  <data name="rqmobilephonelength" xml:space="preserve">
+    <value>เบอร์โทรศัพท์มือถือต้องมีค่าไม่เกิน 10 หลัก</value>
+  </data>
+  <data name="showfile" xml:space="preserve">
+    <value>แสดงไฟล์</value>
+  </data>
+  <data name="type_action" xml:space="preserve">
+    <value>ลักษณะการดำเนินการ</value>
+  </data>
+  <data name="preliminary_action" xml:space="preserve">
+    <value>การดำเนินการเบื้องต้นเพื่อป้องกันอันตราย</value>
+  </data>
+  <data name="complete_control" xml:space="preserve">
+    <value>ขจัดและป้องกันอันตรายแล้ว</value>
+  </data>
+  <data name="pending_action" xml:space="preserve">
+    <value>ยังไม่สามารถแก้ไขได้ทันที</value>
+  </data>
+  <data name="temporary_control" xml:space="preserve">
+    <value>เป็นการป้องกันแบบชั่วคราว</value>
+  </data>
+  <data name="hazardnamesecurity" xml:space="preserve">
+    <value>ชื่อ - สกุล</value>
+  </data>
+  <data name="header_acknowledge" xml:space="preserve">
+    <value>ลงชื่อเจ้าหน้าที่ความปลอดภัย</value>
+  </data>
+  <data name="high" xml:space="preserve">
+    <value>สูง</value>
+  </data>
+  <data name="level_hazard" xml:space="preserve">
+    <value>ระดับความเสี่ยง</value>
+  </data>
+  <data name="level_hazard_info" xml:space="preserve">
+    <value />
+  </data>
+  <data name="low" xml:space="preserve">
+    <value>ต่ำ</value>
+  </data>
+  <data name="medium" xml:space="preserve">
+    <value>กลาง</value>
+  </data>
+  <data name="source_hazard" xml:space="preserve">
+    <value>ประเภทของแหล่งอันตราย</value>
+  </data>
+  <data name="verification_hazard" xml:space="preserve">
+    <value>ตรวจสอบรายงานแหล่งอันตราย</value>
+  </data>
+  <data name="verifying_date" xml:space="preserve">
+    <value>วันที่ตรวจสอบรายงาน</value>
+  </data>
+  <data name="lbreasonreject" xml:space="preserve">
+    <value>เหตุผลที่ปฏิเสธรายงาน</value>
+  </data>
+  <data name="rqreasonreject" xml:space="preserve">
+    <value>กรุณากรอกเหตุผลที่ปฏิเสธรายงาน</value>
+  </data>
+  <data name="lbstatus" xml:space="preserve">
+    <value>สถานะ</value>
+  </data>
+  <data name="lbyear" xml:space="preserve">
+    <value>ปี</value>
+  </data>
+  <data name="lbhazarddate" xml:space="preserve">
+    <value>วันเกิดเหตุ</value>
+  </data>
+  <data name="lbhazarddetail" xml:space="preserve">
+    <value>รายละเอียดแหล่งอันตราย</value>
+  </data>
+  <data name="lbhazardno" xml:space="preserve">
+    <value>รหัสแหล่งอันตราย</value>
+  </data>
+  <data name="lbhazardtitle" xml:space="preserve">
+    <value>ชื่อแหล่งอันตราย</value>
+  </data>
+  <data name="all_hazard_header" xml:space="preserve">
+    <value>แหล่งอันตรายทั้งหมด</value>
+  </data>
+  <data name="rqVerifydate" xml:space="preserve">
+    <value>กรุณากรอกวันที่ตรวจสอบรายงาน</value>
+  </data>
+  <data name="rqsourcehazard" xml:space="preserve">
+    <value>กรุณาเลือกที่มาของแหล่งอันตราย</value>
+  </data>
+  <data name="rqLevelhazard" xml:space="preserve">
+    <value>กรุณาเลือกระดับความเสี่ยง</value>
+  </data>
+  <data name="btHazardprocessaction" xml:space="preserve">
+    <value>ดำเนินการแก้ไข</value>
+  </data>
+  <data name="btHazardcheck" xml:space="preserve">
+    <value>ตรวจสอบรายงาน</value>
+  </data>
+  <data name="action" xml:space="preserve">
+    <value>การดำเนินการ</value>
+  </data>
+  <data name="attachment_header" xml:space="preserve">
+    <value>เอกสารแนบ (อัพโหลดได้ 1 ไฟล์ (เฉพาะไฟล์ JPG,PNG,PDF,DOCX) ขนาดไม่เกิน 5 MB)</value>
+  </data>
+  <data name="date_complete" xml:space="preserve">
+    <value>วันที่เสร็จ</value>
+  </data>
+  <data name="due_date" xml:space="preserve">
+    <value>กำหนดเสร็จ</value>
+  </data>
+  <data name="notify_contractor" xml:space="preserve">
+    <value>แจ้งผู้รับเหมา (ถ้ามี)</value>
+  </data>
+  <data name="process_action_form" xml:space="preserve">
+    <value>ดำเนินการแก้ไข</value>
+  </data>
+  <data name="remark" xml:space="preserve">
+    <value>หมายเหตุ</value>
+  </data>
+  <data name="responsible_person" xml:space="preserve">
+    <value>ผู้รับผิดชอบ</value>
+  </data>
+  <data name="rqaction" xml:space="preserve">
+    <value>กรุณากรอกการดำเนินการ</value>
+  </data>
+  <data name="rqduedate" xml:space="preserve">
+    <value>กรุณาเลือกวันกำหนดเสร็จ</value>
+  </data>
+  <data name="rqresponsible_person" xml:space="preserve">
+    <value>กรุณาแจ้งผู้รับเหมา (ถ้ามี)</value>
+  </data>
+  <data name="rqtypecontrol" xml:space="preserve">
+    <value>กรุณาเลือกวิธีการควบคุม</value>
+  </data>
+  <data name="status" xml:space="preserve">
+    <value>สถานะ</value>
+  </data>
+  <data name="typecontrol" xml:space="preserve">
+    <value>วิธีการควบคุม</value>
+  </data>
+  <data name="close_action" xml:space="preserve">
+    <value>ดำเนินการ</value>
+  </data>
+  <data name="hazardnameareaowner" xml:space="preserve">
+    <value>ลงชื่อหัวหน้างานเจ้าของพื้นที่ (FML ขึ้นไป)</value>
+  </data>
+  <data name="no" xml:space="preserve">
+    <value>No.</value>
+  </data>
+  <data name="add_process_action" xml:space="preserve">
+    <value>เพิ่มมาตรการ</value>
+  </data>
+  <data name="hazardnamearea" xml:space="preserve">
+    <value>ชื่อ - สกุล</value>
+  </data>
+  <data name="btRequestclose" xml:space="preserve">
+    <value>ร้องขอปิดรายงาน</value>
+  </data>
+  <data name="approval" xml:space="preserve">
+    <value>การอนุมัติ</value>
+  </data>
+  <data name="approve" xml:space="preserve">
+    <value>อนุมัติ</value>
+  </data>
+  <data name="date" xml:space="preserve">
+    <value>วันที่</value>
+  </data>
+  <data name="name_surname" xml:space="preserve">
+    <value>ชื่อ - สกุล</value>
+  </data>
+  <data name="notapprove" xml:space="preserve">
+    <value>ไม่อนุมัติ</value>
+  </data>
+  <data name="postion" xml:space="preserve">
+    <value>ตำแหน่ง</value>
+  </data>
+  <data name="reason_not_approve" xml:space="preserve">
+    <value>เนื่องจาก</value>
+  </data>
+  <data name="request_approve" xml:space="preserve">
+    <value>พิจารณาอนุมัติการแก้ไข</value>
+  </data>
+  <data name="doc_no" xml:space="preserve">
+    <value>Hazard No.</value>
+  </data>
+  <data name="hazard" xml:space="preserve">
+    <value>แหล่งอันตราย</value>
+  </data>
+  <data name="rqhazarddate2" xml:space="preserve">
+    <value>วันที่พบแหล่งอันตรายต้องไม่เกินวันที่ปัจจุบัน</value>
+  </data>
+  <data name="lbmonth" xml:space="preserve">
+    <value>เดือน</value>
+  </data>
+  <data name="continue_report" xml:space="preserve">
+    <value>คุณต้องการจะรายงานแหล่งอันตรายต่อหรือไม่</value>
+  </data>
+  <data name="consider_approval" xml:space="preserve">
+    <value>กรุณาเลือกผลการพิจารณาอนุมัติการแก้ไข</value>
+  </data>
+  <data name="fatality_prevention" xml:space="preserve">
+    <value>เกี่ยวข้องกับปฏิบัติการปกป้องชีวิต (FPEs)</value>
+  </data>
+  <data name="delay_report" xml:space="preserve">
+    <value>สถานะรายงานล่่าช้า</value>
+  </data>
+  <data name="type_reporter" xml:space="preserve">
+    <value>ประเภทคนรายงาน</value>
+  </data>
+  <data name="lbhazardcharacteristic" xml:space="preserve">
+    <value>ลักษณะของอันตราย</value>
+  </data>
+  <data name="rqhazardcharacteristic" xml:space="preserve">
+    <value>กรุณาเลือกลักษณะของอันตราย</value>
+  </data>
+  <data name="lbhazardlocation" xml:space="preserve">
+    <value>บริเวณที่พบแหล่งอันตราย</value>
+  </data>
+  <data name="lbcompany_reporter" xml:space="preserve">
+    <value>บริษัทของคนรายงาน</value>
+  </data>
+  <data name="lbdepartment_reporter" xml:space="preserve">
+    <value>โรงงาน/ฝ่ายของคนรายงาน</value>
+  </data>
+  <data name="lbfunction_reporter" xml:space="preserve">
+    <value>พื้นที่สายงานของคนรายงาน</value>
+  </data>
+  <data name="attachment" xml:space="preserve">
+    <value>เอกสารแนบ</value>
+  </data>
+  <data name="rqpreliminary_action" xml:space="preserve">
+    <value>กรุณากรอกการดำเนินการเบื้องต้นเพื่อป้องกันอันตราย</value>
+  </data>
+  <data name="detailreject" xml:space="preserve">
+    <value>รายละเอียดเพิ่มเติม</value>
+  </data>
+  <data name="lbdepartment_action" xml:space="preserve">
+    <value>โรงงาน/ฝ่าย</value>
+  </data>
+  <data name="rqHazardDetailLength" xml:space="preserve">
+    <value>ลักษณะของแหล่งอันตรายหรือประเด็นปัญหา (รวมถึงประเด็นปัญหาด้านสิ่งแวดล้อม)ต้องไม่เกิน 4000 ตัวอักษร</value>
+  </data>
+  <data name="rqHazardPreliminaryActionLength" xml:space="preserve">
+    <value>การดำเนินการเบื้องต้นเพื่อป้องกันอันตรายต้องไม่เกิน 1000 ตัวอักษร</value>
+  </data>
+  <data name="rqHazardTitleLength" xml:space="preserve">
+    <value>ชื่อแหล่งอันตรายต้องไม่เกิน 500 ตัวอักษร</value>
+  </data>
+</root>

@@ -1,0 +1,986 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="btIncidentcheck" xml:space="preserve">
+    <value>ตรวจสอบรายงาน</value>
+  </data>
+  <data name="btIncidentedit" xml:space="preserve">
+    <value>แก้ไข</value>
+  </data>
+  <data name="btIncidentreject" xml:space="preserve">
+    <value>ปฏิเสธรายงาน</value>
+  </data>
+  <data name="HeaderDate" xml:space="preserve">
+    <value>วัน/เวลา และสถานที่เกิดเหตุ</value>
+  </data>
+  <data name="incidentarea" xml:space="preserve">
+    <value>บริเวณที่เกิดเหตุ</value>
+  </data>
+  <data name="incidentdetail" xml:space="preserve">
+    <value>รายละเอียดอุบัติการณ์</value>
+  </data>
+  <data name="incidentname" xml:space="preserve">
+    <value>ชื่ออุบัติการณ์</value>
+  </data>
+  <data name="incidentnamesurname" xml:space="preserve">
+    <value>ชื่อ สกุล</value>
+  </data>
+  <data name="incidentphone" xml:space="preserve">
+    <value>เบอร์โทรศัพท์</value>
+  </data>
+  <data name="incidentstep1" xml:space="preserve">
+    <value>รายงานอุบัติการณ์</value>
+  </data>
+  <data name="incidentstep2" xml:space="preserve">
+    <value>ตรวจสอบรายงานอุบัติการณ์</value>
+  </data>
+  <data name="incidentstep3" xml:space="preserve">
+    <value>สอบสวนและกำหนดมาตรการการแก้ไข</value>
+  </data>
+  <data name="incidentstep4" xml:space="preserve">
+    <value>ขอปิดรายงานอุบัติการณ์</value>
+  </data>
+  <data name="incident_date" xml:space="preserve">
+    <value>วันเกิดเหตุ</value>
+  </data>
+  <data name="incident_time" xml:space="preserve">
+    <value>เวลาเกิดเหตุ</value>
+  </data>
+  <data name="lbCompany" xml:space="preserve">
+    <value>บริษัทที่เกิดเหตุ</value>
+  </data>
+  <data name="lbdepartment" xml:space="preserve">
+    <value>โรงงาน/ฝ่ายที่เกิดเหตุ</value>
+  </data>
+  <data name="lbDescriptionHeader" xml:space="preserve">
+    <value>รายละเอียดอุบัติการณ์</value>
+  </data>
+  <data name="lbdivision" xml:space="preserve">
+    <value>ส่วนที่เกิดเหตุ</value>
+  </data>
+  <data name="lbfucntion" xml:space="preserve">
+    <value>พื้นที่สายงานที่เกิดเหตุ</value>
+  </data>
+  <data name="lbIncidentHeader" xml:space="preserve">
+    <value>วันเวลาและสถานที่เกิดเหตุ</value>
+  </data>
+  <data name="lbNameReportHeader" xml:space="preserve">
+    <value>ผู้รายงานอุบัติการณ์</value>
+  </data>
+  <data name="lbsection" xml:space="preserve">
+    <value>แผนกที่เกิดเหตุ</value>
+  </data>
+  <data name="report_date" xml:space="preserve">
+    <value>วันที่รายงาน</value>
+  </data>
+  <data name="report_time" xml:space="preserve">
+    <value>เวลาที่รายงาน</value>
+  </data>
+  <data name="rqcompany" xml:space="preserve">
+    <value>กรุณากรอกบริษัท</value>
+  </data>
+  <data name="rqdepartment" xml:space="preserve">
+    <value>กรุณากรอกโรงงาน/ฝ่าย</value>
+  </data>
+  <data name="rqfunction" xml:space="preserve">
+    <value>กรุณากรอกพื้นที่สายงาน</value>
+  </data>
+  <data name="rqincidentdate" xml:space="preserve">
+    <value>กรุณากรอกวันเกิตเหตุ</value>
+  </data>
+  <data name="rqincidentdetail" xml:space="preserve">
+    <value>กรุณากรอกรายละเอียดอุบัติการณ์</value>
+  </data>
+  <data name="rqincidentname" xml:space="preserve">
+    <value>กรุณากรอกชื่ออุบัติการณ์</value>
+  </data>
+  <data name="rqincidenttime" xml:space="preserve">
+    <value>กรุณากรอกเวลาเกิดเหตุ</value>
+  </data>
+  <data name="area" xml:space="preserve">
+    <value>พื้นที่</value>
+  </data>
+  <data name="rqmobilephone" xml:space="preserve">
+    <value>กรุณากรอกเบอร์โทรศัพท์มือถือ</value>
+  </data>
+  <data name="rqmobilephonelength" xml:space="preserve">
+    <value>เบอร์โทรศัพท์มือถือต้องมีค่าไม่เกิน 10 หลัก</value>
+  </data>
+  <data name="rqmobileformphone" xml:space="preserve">
+    <value>รูปแบบเบอร์โทรศัพท์มือถือไม่ถูกต้อง</value>
+  </data>
+  <data name="showfile" xml:space="preserve">
+    <value>แสดงไฟล์</value>
+  </data>
+  <data name="lbreasonreject" xml:space="preserve">
+    <value>เหตุผลที่ปฏิเสธรายงาน</value>
+  </data>
+  <data name="rqreasonreject" xml:space="preserve">
+    <value>กรุณาเลือกเหตุผลที่ปฏิเสธรายงาน</value>
+  </data>
+  <data name="lbincidentdate" xml:space="preserve">
+    <value>วันเกิดเหตุ</value>
+  </data>
+  <data name="lbincidentdetail" xml:space="preserve">
+    <value>รายละเอียดอุบัติการณ์</value>
+  </data>
+  <data name="lbincidentno" xml:space="preserve">
+    <value>รหัสอุบัติการณ์ทั้งหมด</value>
+  </data>
+  <data name="lbincidenttitle" xml:space="preserve">
+    <value>ชื่ออุบัติการณ์</value>
+  </data>
+  <data name="lbstatus" xml:space="preserve">
+    <value>สถานะ</value>
+  </data>
+  <data name="lbyear" xml:space="preserve">
+    <value>ปี</value>
+  </data>
+  <data name="header" xml:space="preserve">
+    <value>อุบัติการณ์ทั้งหมด</value>
+  </data>
+  <data name="infoimage" xml:space="preserve">
+    <value>สามารถอัพโหลดรูปได้มากสุดที่ 5 รูปภาพ (เฉพาะไฟล์ JPG และ PNG เท่านั้น) และรูปละไม่เกิน 3 MB</value>
+  </data>
+  <data name="rqmobilephone1" xml:space="preserve">
+    <value>กรุณากรอกเบอร์โทรศัพท์มือถือ</value>
+  </data>
+  <data name="no" xml:space="preserve">
+    <value>ไม่ใช่</value>
+  </data>
+  <data name="sourceincident" xml:space="preserve">
+    <value>ที่มาของอุบัติการณ์</value>
+  </data>
+  <data name="workrelate" xml:space="preserve">
+    <value>อุบัติการณ์จากการทำงาน</value>
+  </data>
+  <data name="yes" xml:space="preserve">
+    <value>ใช่</value>
+  </data>
+  <data name="impact" xml:space="preserve">
+    <value>มีผลกระทบ</value>
+  </data>
+  <data name="impact_incident" xml:space="preserve">
+    <value>ผลกระทบของอุบัติการณ์</value>
+  </data>
+  <data name="injury_fatality" xml:space="preserve">
+    <value>การบาดเจ็บต่อบุคคุล/เสียชีวิต</value>
+  </data>
+  <data name="injury_fatality_involve" xml:space="preserve">
+    <value>มีผู้ได้รับบาดเจ็บ/เสียชีวิต</value>
+  </data>
+  <data name="no_impact" xml:space="preserve">
+    <value>ไม่มีผลกระทบ (Near Miss)</value>
+  </data>
+  <data name="no_injury_fatality" xml:space="preserve">
+    <value>ไม่มีผู้ได้รับบาดเจ็บ/เสียชีวิต</value>
+  </data>
+  <data name="offsite" xml:space="preserve">
+    <value>เกิดนอกพื้นที่ควบคุมกลุ่มบริษัทฯ</value>
+  </data>
+  <data name="onsite" xml:space="preserve">
+    <value>เกิดในพื้นที่ควบคุมกลุ่มบริษัทฯ</value>
+  </data>
+  <data name="responsible_area" xml:space="preserve">
+    <value>พื้นที่เกิดเหตุ</value>
+  </data>
+  <data name="add_injury" xml:space="preserve">
+    <value>เพิ่มผู้บาดเจ็บ</value>
+  </data>
+  <data name="body_parts" xml:space="preserve">
+    <value>อวัยวะที่ได้รับบาดเจ็บ</value>
+  </data>
+  <data name="day_lost" xml:space="preserve">
+    <value>หยุดงาน (วัน)</value>
+  </data>
+  <data name="delete" xml:space="preserve">
+    <value>ลบ</value>
+  </data>
+  <data name="name_injury" xml:space="preserve">
+    <value>ชื่อ - สกุลผู้บาดเจ็บ</value>
+  </data>
+  <data name="nature_injury" xml:space="preserve">
+    <value>ลักษณะการบาดเจ็บ</value>
+  </data>
+  <data name="remark" xml:space="preserve">
+    <value>หมายเหตุ</value>
+  </data>
+  <data name="severity_injury" xml:space="preserve">
+    <value>ความรุนแรงของการบาดเจ็บ</value>
+  </data>
+  <data name="type_employment" xml:space="preserve">
+    <value>สถานะการจ้างงาน</value>
+  </data>
+  <data name="add_damage_list" xml:space="preserve">
+    <value>เพิ่มรายการความเสียหาย</value>
+  </data>
+  <data name="consequence_level" xml:space="preserve">
+    <value>ระดับความรุนแรง</value>
+  </data>
+  <data name="consequence_property_environment" xml:space="preserve">
+    <value>ความเสียหายต่อทรัพย์สิน / สภาพแวดล้อม</value>
+  </data>
+  <data name="corrective_action" xml:space="preserve">
+    <value>การดำเนินการแก้ไข</value>
+  </data>
+  <data name="critical_incident" xml:space="preserve">
+    <value>พิจารณาเป็นอุบัติการณ์ขั้นวิกฤต (CI)</value>
+  </data>
+  <data name="damage_cost" xml:space="preserve">
+    <value>มูลค่าความเสียหาย</value>
+  </data>
+  <data name="detail_damage" xml:space="preserve">
+    <value>ลักษณะความเสียหาย</value>
+  </data>
+  <data name="effect_property_environment" xml:space="preserve">
+    <value>มีทรัพย์สิน และ/หรือ สภาพแวดล้อมเสียหาย</value>
+  </data>
+  <data name="external_reportable" xml:space="preserve">
+    <value>เป็นอุบัติการณ์ที่ต้องแจ้งหน่วยราชการหรือไม่</value>
+  </data>
+  <data name="immediate_temporary_action" xml:space="preserve">
+    <value>การดำเนินการแก้ไขทันที่ / ชั่วคราว</value>
+  </data>
+  <data name="list_property_enviroment_damage" xml:space="preserve">
+    <value>ทรัพย์สิน หรือสภาพแวดล้อมที่เสียหาย</value>
+  </data>
+  <data name="no_effect_property_environment" xml:space="preserve">
+    <value>ไม่มีผลกระทบต่อทรัพย์สินและสภาพแวดล้อม</value>
+  </data>
+  <data name="other_impact" xml:space="preserve">
+    <value>ผลกระทบอื่นๆ</value>
+  </data>
+  <data name="potential_image" xml:space="preserve">
+    <value>อาจจะมีผลต่อภาพลักษณ์</value>
+  </data>
+  <data name="potential_issue" xml:space="preserve">
+    <value>อาจจะมีผลต่อกระบวนการผลิต</value>
+  </data>
+  <data name="potential_legal" xml:space="preserve">
+    <value>อาจจะมีผลกระทบทางคดีความกฎหมาย</value>
+  </data>
+  <data name="info_external_reportable" xml:space="preserve">
+    <value>เสียชีวิตหมายถึงการเสียชีวิตที่เป็นผลจากอุบัติเหตุอันเนื่องมาจากการทำงาน 
+
+ทุพพลภาพ หมายถึงอุบัติเหตุที่เกี่ยวข้องกับการทางานจนทำให้บุคคลนั้นได้รับบาดเจ็บถึงขั้นการสูญเสียอวัยวะหรือการสูญเสียสมรรถภาพของอวัยวะหรือของร่างกายหรือการสูญเสียสภาวะปกติของจิตใจจนไม่สามารถปฏิบัติงานให้กับกลุ่มบริษัทฯได้อีก 
+
+บาดเจ็บถึงขั้นหยุดงาน หมายถึงการบาดเจ็บอันเนื่องมาจากการทำงานที่เป็นสาเหตุให้ต้องหยุดงานและไม่สามารถกลับเข้ามาปฏิบัติงานได้ตั้งแต่ 1 วันหรือมากกว่า 1 วันขึ้นไป(หรือมากกว่า1 กะ) เป็นต้นไป 
+
+บาดเจ็บถึงขั้นรักษาพยาบาล หมายถึงอุบัติเหตุที่ทำให้เกิดการบาดเจ็บจนต้องได้รับการดูแลรักษาพยาบาลทางการแพทย์ เพื่อต่อสู้กับการบาดเจ็บหรือโรคหรือความผิดปกติ 
+
+บาดเจ็บถึงขั้นปฐมพยาบาล หมายถึงอุบัติเหตุที่ทำให้เกิดการบาดเจ็บเล็กน้อยและผู้บาดเจ็บได้รับการรักษาพยาบาลเบื้องต้นเท่านั้น</value>
+  </data>
+  <data name="rqbodypart" xml:space="preserve">
+    <value>กรุณาเลือกอวัยวะที่ได้รับบาดเจ็บ</value>
+  </data>
+  <data name="rqdaylost" xml:space="preserve">
+    <value>กรุณากรอกจำนวนวันที่หยดงาน</value>
+  </data>
+  <data name="rqddltypeemployment" xml:space="preserve">
+    <value>กรุณาเลือกสถานะการว่าจ้าง</value>
+  </data>
+  <data name="rqNameInjury" xml:space="preserve">
+    <value>กรุณากรอกชื่อ-สกุลผู้บาดเจ็บ</value>
+  </data>
+  <data name="rqnatureinjury" xml:space="preserve">
+    <value>กรุณาเลือกลักษณะการบาดเจ็บ</value>
+  </data>
+  <data name="rqseverityinjury" xml:space="preserve">
+    <value>กรุณาเลือกความรุนแรงของการบาดเจ็บ</value>
+  </data>
+  <data name="rqdamagecost" xml:space="preserve">
+    <value>กรุณากรอกมูลค่าความเสียหาย</value>
+  </data>
+  <data name="rqdetaildmage" xml:space="preserve">
+    <value>กรุณากรอกลักษณะความเสียหาย</value>
+  </data>
+  <data name="rqpropertyenviroment" xml:space="preserve">
+    <value>กรุณากรอกทรัพย์สิน หรือสภาพแวดล้อมที่เสียหาย</value>
+  </data>
+  <data name="currency" xml:space="preserve">
+    <value>สกุลเงินของค่าความเสียหาย</value>
+  </data>
+  <data name="total_damage_cost" xml:space="preserve">
+    <value>รวมมูลค่าความเสียหาย</value>
+  </data>
+  <data name="total_lost_day" xml:space="preserve">
+    <value>รวมวันหยุดงาน</value>
+  </data>
+  <data name="definition_damage" xml:space="preserve">
+    <value>ความเสียหาย</value>
+  </data>
+  <data name="definition_environment" xml:space="preserve">
+    <value>สิ่งแวดล้อม</value>
+  </data>
+  <data name="definition_image" xml:space="preserve">
+    <value>ภาพลักษณ์</value>
+  </data>
+  <data name="definition_legal" xml:space="preserve">
+    <value>กฎหมาย/ กฎระเบียบบริษัทฯ</value>
+  </data>
+  <data name="definition_level" xml:space="preserve">
+    <value>คำจำกัดความ</value>
+  </data>
+  <data name="definition_person" xml:space="preserve">
+    <value>ผู้เกี่ยวข้อง</value>
+  </data>
+  <data name="definition_process" xml:space="preserve">
+    <value>ด้านการผลิต</value>
+  </data>
+  <data name="definition_safety" xml:space="preserve">
+    <value>ความปลอดภัย</value>
+  </data>
+  <data name="level1" xml:space="preserve">
+    <value>วิกฤต</value>
+  </data>
+  <data name="level1_damage" xml:space="preserve">
+    <value>&gt; 10,000,000  บาท</value>
+  </data>
+  <data name="level1_environment" xml:space="preserve">
+    <value>มีผลเสียหายต่อสิ่งแวดล้อมเป็นวงกว้าง ส่งผลเสียหายต่อพื้นที่รอบนอกในระยะยาว</value>
+  </data>
+  <data name="level1_image" xml:space="preserve">
+    <value>ลูกค้าขึ้นบัญชีดำ</value>
+  </data>
+  <data name="level1_legal" xml:space="preserve">
+    <value>ฝ่าฝืนกฏข้อบังคับที่มีผลต่อการดำเนินงานของบริษัท</value>
+  </data>
+  <data name="level1_person" xml:space="preserve">
+    <value>ทีมการจัดการภาวะวิกฤต (CMT)</value>
+  </data>
+  <data name="level1_process" xml:space="preserve">
+    <value>มีผลกระทบต่อการผลิตหยุดชะงักมากกว่า 1 เดือน</value>
+  </data>
+  <data name="level1_safety" xml:space="preserve">
+    <value>เสียชีวิต</value>
+  </data>
+  <data name="level2" xml:space="preserve">
+    <value>รุนแรง</value>
+  </data>
+  <data name="level2_damage" xml:space="preserve">
+    <value>&lt; 10,000,000 บาท</value>
+  </data>
+  <data name="level2_environment" xml:space="preserve">
+    <value>มีความเสียหายต่อสิ่งแวดล้อมขนาดใหญ่ ส่งผลเสียหายต่อพื้นที่รอบนอกในระยะสั้น</value>
+  </data>
+  <data name="level2_image" xml:space="preserve">
+    <value>มีข้อร้องเรียนเป็นจำนวนมาก และมีผลกระทบต่อบริษัท</value>
+  </data>
+  <data name="level2_legal" xml:space="preserve">
+    <value>ฝ่าฝืนกฏข้อบังคับสำคัญ และมีบทลงโทษ</value>
+  </data>
+  <data name="level2_person" xml:space="preserve">
+    <value>ทีมการจัดการฉุกเฉิน (EMT)</value>
+  </data>
+  <data name="level2_process" xml:space="preserve">
+    <value>มีผลกระทบต่อการผลิตหยุดชะงักมากกว่า 1 สัปดาห์</value>
+  </data>
+  <data name="level2_safety" xml:space="preserve">
+    <value>ทุพพลภาพ</value>
+  </data>
+  <data name="level3" xml:space="preserve">
+    <value>ปานกลาง</value>
+  </data>
+  <data name="level3_damage" xml:space="preserve">
+    <value>&lt; 1,000,000 บาท</value>
+  </data>
+  <data name="level3_environment" xml:space="preserve">
+    <value>มีความเสียหายต่อสิ่งแวดล้อมในระดับหนึ่งในพื้นที่</value>
+  </data>
+  <data name="level3_image" xml:space="preserve">
+    <value>มีข้อร้องเรียนเป็นจำนวนมาก และมีผลกระทบต่อพื้นที่นั้น</value>
+  </data>
+  <data name="level3_legal" xml:space="preserve">
+    <value>มีรายงานการฝ่าฝืนกฏข้อบังคับ</value>
+  </data>
+  <data name="level3_person" xml:space="preserve">
+    <value>ทีมบริหาร</value>
+  </data>
+  <data name="level3_process" xml:space="preserve">
+    <value>มีผลกระทบต่อการผลิตหยุดชะงักมากกว่า 1 ชั่วโมง</value>
+  </data>
+  <data name="level3_safety" xml:space="preserve">
+    <value>การบาดเจ็บถึงขั้นหยุดงาน/เปลี่ยนงานชั่วคราว</value>
+  </data>
+  <data name="level4" xml:space="preserve">
+    <value>น้อย</value>
+  </data>
+  <data name="level4_damage" xml:space="preserve">
+    <value>&lt; 100,000 บาท</value>
+  </data>
+  <data name="level4_environment" xml:space="preserve">
+    <value>มีความเสียหายต่อสิ่งแวดล้อมในพื้นที่อย่างมีนัยสำคัญ</value>
+  </data>
+  <data name="level4_image" xml:space="preserve">
+    <value>มีข้อร้องเรียนจำนวนมาก</value>
+  </data>
+  <data name="level4_legal" xml:space="preserve">
+    <value>ฝ่าฝืนกฏข้อบังคับหลายข้อ และไม่มีรายงานการผ่าฝืนฯ</value>
+  </data>
+  <data name="level4_person" xml:space="preserve">
+    <value>ผู้จัดการ</value>
+  </data>
+  <data name="level4_process" xml:space="preserve">
+    <value>มีผลกระทบต่อการผลิต 1 กะ</value>
+  </data>
+  <data name="level4_safety" xml:space="preserve">
+    <value>บาดเจ็บถึงขั้นรักษาพยาบาล</value>
+  </data>
+  <data name="level5" xml:space="preserve">
+    <value>น้อยมาก</value>
+  </data>
+  <data name="level5_damage" xml:space="preserve">
+    <value>&lt; 10,000 บาท</value>
+  </data>
+  <data name="level5_environment" xml:space="preserve">
+    <value>มีผลกระทบต่อสิ่งแวดล้อมเล้กน้อย</value>
+  </data>
+  <data name="level5_image" xml:space="preserve">
+    <value>มีข้อร้องเรียนจำนวนเล็กน้อย</value>
+  </data>
+  <data name="level5_legal" xml:space="preserve">
+    <value>ฝ่าฝืนกฏข้อบังคับเล็กน้อย</value>
+  </data>
+  <data name="level5_person" xml:space="preserve">
+    <value>หัวหน้างาน</value>
+  </data>
+  <data name="level5_process" xml:space="preserve">
+    <value>มีผลกระทบต่อการผลิต 1 ชั่วโมงขึ้นไป</value>
+  </data>
+  <data name="level5_safety" xml:space="preserve">
+    <value>บาดเจ็บขั้นปฐมพยาบาลเบื้องต้น</value>
+  </data>
+  <data name="level_incident_table" xml:space="preserve">
+    <value>ระดับความรุนแรง</value>
+  </data>
+  <data name="require_select_table" xml:space="preserve">
+    <value>กรุณาเลือกระดับความรุนแรงจากตาราง</value>
+  </data>
+  <data name="rqcheckdaylost" xml:space="preserve">
+    <value>จำนวนวันหยุดงานจะต้องเป็นตัวเลขเท่านั้น</value>
+  </data>
+  <data name="rqdaylostcheck" xml:space="preserve">
+    <value>จำนวนวันหยุดงานจะต้องเป็นตัวเลขเท่านั้น</value>
+  </data>
+  <data name="rqdamagecostcheck" xml:space="preserve">
+    <value>มูลค่าความเสียหายจะต้องเป็นตัวเลขจำเต็ม หรือตัวเลขทศนิยมเท่านั้น</value>
+  </data>
+  <data name="consequence_criteria_guideline" xml:space="preserve">
+    <value>หลักเกณฑ์ในการวิเคราะห์ผลของการเกิดเหตุการณ์</value>
+  </data>
+  <data name="add_fact_finding" xml:space="preserve">
+    <value>เพิ่มประเด็น</value>
+  </data>
+  <data name="culpability" xml:space="preserve">
+    <value>เป็นการกระทำผิดที่เกิดจาก</value>
+  </data>
+  <data name="event_exposure" xml:space="preserve">
+    <value>ลักษณะการประสบอันตราย</value>
+  </data>
+  <data name="evidence" xml:space="preserve">
+    <value>หลักฐานแนบ</value>
+  </data>
+  <data name="fact_finding" xml:space="preserve">
+    <value>ประเด็นข้อเท็จจริงที่พบ</value>
+  </data>
+  <data name="guilty" xml:space="preserve">
+    <value>เป็นความผิดพลาดของกลุ่มบริษัทฯ</value>
+  </data>
+  <data name="lb_fact_finding" xml:space="preserve">
+    <value>ประเด็นข้อเท็จจริงที่พบ</value>
+  </data>
+  <data name="no_guilty" xml:space="preserve">
+    <value>กลุ่มบริษัทฯไม่มีส่วนผิด</value>
+  </data>
+  <data name="partial" xml:space="preserve">
+    <value>กลุ่มบริษัทฯมีส่วนเกี่ยวข้องในความผิด</value>
+  </data>
+  <data name="road_accident" xml:space="preserve">
+    <value>เป็นอุบัติเหตุจากยานพาหนะ</value>
+  </data>
+  <data name="source_incident" xml:space="preserve">
+    <value>สิ่งที่ทำให้ประสบอันตราย</value>
+  </data>
+  <data name="unsafe_action" xml:space="preserve">
+    <value>การกระทำที่ไม่ปลอดภัย</value>
+  </data>
+  <data name="unsafe_condition" xml:space="preserve">
+    <value>สภาพการณ์ที่ไม่ปลอดภัย</value>
+  </data>
+  <data name="attachment_header" xml:space="preserve">
+    <value>เอกสารแนบ (อัพโหลดได้ 1 ไฟล์ (เฉพาะไฟล์ JPG,PNG,PDF,DOCX) ขนาดไม่เกิน 5 MB)</value>
+  </data>
+  <data name="close_action" xml:space="preserve">
+    <value>ดำเนินการ</value>
+  </data>
+  <data name="communication_involvement" xml:space="preserve">
+    <value>การสื่อสารสร้างความตระหนักและมีส่วนร่วม</value>
+  </data>
+  <data name="corrective_preventive" xml:space="preserve">
+    <value>การติดตามแก้ไขข้อบกพร่อง</value>
+  </data>
+  <data name="date_complete" xml:space="preserve">
+    <value>วันที่เสร็จ</value>
+  </data>
+  <data name="document_reporting" xml:space="preserve">
+    <value>การจัดการเอกสารและการทำรายงาน</value>
+  </data>
+  <data name="due_date" xml:space="preserve">
+    <value>กำหนดเสร็จ</value>
+  </data>
+  <data name="emergency_preparation" xml:space="preserve">
+    <value>การเตรียมพร้อมต่อเหตุการณ์ฉุกเฉิน</value>
+  </data>
+  <data name="fatality_prevention" xml:space="preserve">
+    <value>สาเหตุของอุบัติการณ์ ตามปฏิบัติการปกป้องชีวิต (FPEs)</value>
+  </data>
+  <data name="hazard_assesment" xml:space="preserve">
+    <value>การระบุอันตรายและประเมินความเสี่ยง</value>
+  </data>
+  <data name="health_wellness" xml:space="preserve">
+    <value>สุขภาพพลานามัย</value>
+  </data>
+  <data name="hygience" xml:space="preserve">
+    <value>การตรวจวัดทางสุขศาสตรร์อุตสาหกรรม</value>
+  </data>
+  <data name="incident_hazard" xml:space="preserve">
+    <value>การรายงานสอบสวนอุบัติการณ์/อันตราย</value>
+  </data>
+  <data name="inspection_monitoring" xml:space="preserve">
+    <value>การตรวจสอบและเฝ้าระวัง</value>
+  </data>
+  <data name="investigation_committee" xml:space="preserve">
+    <value>คณะกรรมการสอบสวน</value>
+  </data>
+  <data name="lb_corrective_preventive" xml:space="preserve">
+    <value>มาตรการการแก้ไขและป้องกัน</value>
+  </data>
+  <data name="legal_compliance" xml:space="preserve">
+    <value>การปฏิบัติตามกฎหมาย</value>
+  </data>
+  <data name="management" xml:space="preserve">
+    <value>การบริหารการเปลี่ยนแปลง</value>
+  </data>
+  <data name="notify_contractor" xml:space="preserve">
+    <value>แจ้งผู้รับเหมา (ถ้ามี)</value>
+  </data>
+  <data name="occupational" xml:space="preserve">
+    <value>การฟื้นฟูด้านอาชีวอนามัย</value>
+  </data>
+  <data name="other_please" xml:space="preserve">
+    <value>อื่นๆ ระบุ</value>
+  </data>
+  <data name="policy_planning" xml:space="preserve">
+    <value>การกำหนดนโยบายและวางแผนงาน</value>
+  </data>
+  <data name="purchasing_contractor" xml:space="preserve">
+    <value>การควบคุมการจัดซื้ออุปกรณ์และจัดจ้าง</value>
+  </data>
+  <data name="responsibilities_resourses" xml:space="preserve">
+    <value>บทบาทหน้าที่และการจัดการทรัพยากร</value>
+  </data>
+  <data name="responsible_person" xml:space="preserve">
+    <value>ผู้รับผิดชอบ (FML ขึ้นไป)</value>
+  </data>
+  <data name="root_cause" xml:space="preserve">
+    <value>สาเหตุของอุบัติการณ์ตาม OH&amp;S pyramid</value>
+  </data>
+  <data name="safety_installation" xml:space="preserve">
+    <value>การติดตั้งและออกแบบความปลอดภัย</value>
+  </data>
+  <data name="selection_competency" xml:space="preserve">
+    <value>การคัดเลือกอบรมและพัฒนาความสามารถ</value>
+  </data>
+  <data name="standard_controls" xml:space="preserve">
+    <value>มาตรฐานการทำงานและการควบคุม</value>
+  </data>
+  <data name="status" xml:space="preserve">
+    <value>สถานะ</value>
+  </data>
+  <data name="system_performance" xml:space="preserve">
+    <value>การประเมินและทบทวนประสิทธิภาพ</value>
+  </data>
+  <data name="tb_corrective_preventive" xml:space="preserve">
+    <value>มาตรการการแก้ไข</value>
+  </data>
+  <data name="add_corrective_preventive" xml:space="preserve">
+    <value>เพิ่มมาตรการการแก้ไข</value>
+  </data>
+  <data name="fact_finding_form" xml:space="preserve">
+    <value>ประเด็นข้อเท็จจริงที่พบ</value>
+  </data>
+  <data name="corrective_preventive_form" xml:space="preserve">
+    <value>มาตราการการแก้ไข</value>
+  </data>
+  <data name="rqcorrective_preventive" xml:space="preserve">
+    <value>กรุณากรอกมาตราการการแก้ไขและป้องกัน</value>
+  </data>
+  <data name="rqdatecomplete" xml:space="preserve">
+    <value>กรุณาเลือกวันที่เสร็จ</value>
+  </data>
+  <data name="rqduedate" xml:space="preserve">
+    <value>กรุณาเลือกวันที่กำหนดเสร็จ</value>
+  </data>
+  <data name="rqeventexposure" xml:space="preserve">
+    <value>กรุณาเลือกลักษณะประสบอันตราย</value>
+  </data>
+  <data name="rqpfactfinding" xml:space="preserve">
+    <value>กรุณากรอกประเดินข้อเท็จจริง</value>
+  </data>
+  <data name="rqresponsible_person" xml:space="preserve">
+    <value>กรุณากรอกผู้รับผิดชอบ</value>
+  </data>
+  <data name="rqsourceincident" xml:space="preserve">
+    <value>กรุณาเลือกสิ่งที่ทำให้ประสบอันตราย</value>
+  </data>
+  <data name="btRequestclose" xml:space="preserve">
+    <value>ร้องขอปิดรายงานอุบัติการณ์</value>
+  </data>
+  <data name="manage" xml:space="preserve">
+    <value>จัดการ</value>
+  </data>
+  <data name="doc_no" xml:space="preserve">
+    <value>รหัสอุบัติการณ์</value>
+  </data>
+  <data name="incident" xml:space="preserve">
+    <value>อุบัติการณ์</value>
+  </data>
+  <data name="approval" xml:space="preserve">
+    <value>การอนุมัติ</value>
+  </data>
+  <data name="close" xml:space="preserve">
+    <value>ปิด</value>
+  </data>
+  <data name="date" xml:space="preserve">
+    <value>วันที่</value>
+  </data>
+  <data name="name_surname" xml:space="preserve">
+    <value>ชื่อ - สกุล</value>
+  </data>
+  <data name="notclose" xml:space="preserve">
+    <value>ไม่ปิด</value>
+  </data>
+  <data name="postion" xml:space="preserve">
+    <value>ตำแหน่ง</value>
+  </data>
+  <data name="reason_not_close" xml:space="preserve">
+    <value>เนื่องจาก</value>
+  </data>
+  <data name="request_close" xml:space="preserve">
+    <value>สรุปผลปิดเคสอุบัติการณ์ (ได้ทำการทบทวนความเสี่ยงหลังการแก้ไข ก่อนการอนุมัติ)</value>
+  </data>
+  <data name="add_root_cause_action" xml:space="preserve">
+    <value>เพิ่มสาเหตุของอุบัติการณ์</value>
+  </data>
+  <data name="lb_root_cause_action" xml:space="preserve">
+    <value>สาเหตุของอุบัติการณ์</value>
+  </data>
+  <data name="root_cause_action" xml:space="preserve">
+    <value>สาเหตุของอุบัติการณ์</value>
+  </data>
+  <data name="root_cause_action_no" xml:space="preserve">
+    <value>เลขสาเหตุของอุบัติการณ์</value>
+  </data>
+  <data name="contributing_factor" xml:space="preserve">
+    <value>ปัจจัยเสริม</value>
+  </data>
+  <data name="btIncidentconfirm" xml:space="preserve">
+    <value>ยืนยันและดำเนินการสอบสวน</value>
+  </data>
+  <data name="to" xml:space="preserve">
+    <value>ถึง</value>
+  </data>
+  <data name="detailreject" xml:space="preserve">
+    <value>รายละเอียดเพิ่มเติม</value>
+  </data>
+  <data name="duplicate_report" xml:space="preserve">
+    <value>รายงานอุบัติการณ์ซ้ำ</value>
+  </data>
+  <data name="not_workrelate" xml:space="preserve">
+    <value>ไม่ใช่อุบัติการณ์จากการทำงาน</value>
+  </data>
+  <data name="rqduedate2" xml:space="preserve">
+    <value>วันที่กำหนดเสร็จต้องมากกว่าวันที่ปัจจุบัน</value>
+  </data>
+  <data name="rqincidentdate2" xml:space="preserve">
+    <value>วันที่แจ้งเหตุต้องไม่เกินวันที่ปัจจุบัน</value>
+  </data>
+  <data name="rqculpability" xml:space="preserve">
+    <value>กรุณาเลือกสาเหตุการกระทำผิด</value>
+  </data>
+  <data name="rqhazarddate2" xml:space="preserve">
+    <value>วันที่แจ้งแหล่งอันตรายต้องไม่เกินวันที่ปัจจุบัน</value>
+  </data>
+  <data name="incident_type" xml:space="preserve">
+    <value>ประเภทอุบัติการณ์</value>
+  </data>
+  <data name="sequence" xml:space="preserve">
+    <value>ลำดับ</value>
+  </data>
+  <data name="btIncidentconfirmgroup" xml:space="preserve">
+    <value>ยืนยันโดย GroupOH&amp;S</value>
+  </data>
+  <data name="continue_report" xml:space="preserve">
+    <value>คุณต้องการจะรายงานอุบัติการณ์ต่อหรือไม่</value>
+  </data>
+  <data name="request_close_form4" xml:space="preserve">
+    <value>กรุณาเลือกผลสรุปปิดเคสอุบัติการณ์</value>
+  </data>
+  <data name="close_incident_date" xml:space="preserve">
+    <value>วันที่ปิดอุบัติการณ์</value>
+  </data>
+  <data name="delay_report" xml:space="preserve">
+    <value>สถานะรายงานล่่าช้า</value>
+  </data>
+  <data name="type_reporter" xml:space="preserve">
+    <value>ประเภทคนรายงาน</value>
+  </data>
+  <data name="lbincidentlocation" xml:space="preserve">
+    <value>บริเวณที่เกิดเหตุ</value>
+  </data>
+  <data name="lbsite" xml:space="preserve">
+    <value>ไซด์</value>
+  </data>
+  <data name="attachment" xml:space="preserve">
+    <value>เอกสารแนบ</value>
+  </data>
+  <data name="rqconsequencelevel" xml:space="preserve">
+    <value>กรุณาเลือกระดับความรุนแรง</value>
+  </data>
+  <data name="rqimpact" xml:space="preserve">
+    <value>กรุณาเลือกผลกระทบของอุบัติการณ์</value>
+  </data>
+  <data name="rqresponsiblearea" xml:space="preserve">
+    <value>กรุณาเลือกพื้นที่เกิดเหตุ</value>
+  </data>
+  <data name="rqeffect" xml:space="preserve">
+    <value>กรุณาเพิ่มทรัพย์สินเสียหาย</value>
+  </data>
+  <data name="rqinjury" xml:space="preserve">
+    <value>กรุณาเพิ่มผู้บาดเจ็บ</value>
+  </data>
+  <data name="lbdepartment_culpability" xml:space="preserve">
+    <value>เป็นการกระทำผิดที่เกิดจากโรงงาน/ฝ่าย</value>
+  </data>
+  <data name="lbfunction_culpability" xml:space="preserve">
+    <value>เป็นการกระทำผิดที่เกิดจากพื้นที่สายงาน</value>
+  </data>
+  <data name="lbdepartment_action" xml:space="preserve">
+    <value>โรงงาน/ฝ่าย</value>
+  </data>
+  <data name="rqCharacters" xml:space="preserve">
+    <value>ตัวอักษร</value>
+  </data>
+  <data name="rqIncidentContributingFactorLength" xml:space="preserve">
+    <value>ปัจจัยเสริมต้องไม่เกิน 1000 ตัวอักษร</value>
+  </data>
+  <data name="rqIncidentDetailLength" xml:space="preserve">
+    <value>รายละเอียดอุบัติการณ์ต้องไม่เกิน 4000 ตัวอักษร</value>
+  </data>
+  <data name="rqIncidentImmediateLength" xml:space="preserve">
+    <value>การดำเนินการแก้ไขทันที่ / ชั่วคราวต้องไม่เกิน 4000 ตัวอักษร</value>
+  </data>
+  <data name="rqIncidentTitleLength" xml:space="preserve">
+    <value>ชื่ออุบัติการณ์ต้องไม่เกิน 500 ตัวอักษร</value>
+  </data>
+  <data name="rqincidentarea" xml:space="preserve">
+    <value>กรุณากรอกบริเวณที่เกิดเหตุ</value>
+  </data>
+  <data name="lbActivityCompany" xml:space="preserve">
+    <value>บริษัทที่ควบคุมกิจกรรม</value>
+  </data>
+  <data name="lbActivityDepartment" xml:space="preserve">
+    <value>โรงงาน/ฝ่ายที่ควบคุมกิจกรรม</value>
+  </data>
+  <data name="lbActivityDivision" xml:space="preserve">
+    <value>ส่วนที่ควบคุมกิจกรรม</value>
+  </data>
+  <data name="lbActivityFunction" xml:space="preserve">
+    <value>สายงานที่ควบคุมกิจกรรม</value>
+  </data>
+  <data name="lbActivitySection" xml:space="preserve">
+    <value>แผนกที่ควบคุมกิจกรรม</value>
+  </data>
+  <data name="owner_activity" xml:space="preserve">
+    <value>ผู้ควบคุมกิจกรรม</value>
+  </data>
+  <data name="owner_activity_known" xml:space="preserve">
+    <value>ทราบ</value>
+  </data>
+  <data name="owner_activity_unknown" xml:space="preserve">
+    <value>ไม่ทราบ</value>
+  </data>
+  <data name="rqActivityCompany" xml:space="preserve">
+    <value>กรุณาเลือกบริษัทที่ควบคุมกิจกรรม</value>
+  </data>
+  <data name="rqActivityDepartment" xml:space="preserve">
+    <value>กรุณาเลือกโรงงาน/ฝ่ายที่ควบคุมกิจกรรม</value>
+  </data>
+  <data name="rqActivityDivision" xml:space="preserve">
+    <value>กรุณาเลือกส่วนที่ควบคุมกิจกรรม</value>
+  </data>
+  <data name="rqActivityFucntion" xml:space="preserve">
+    <value>กรุณาเลือกสายงานที่ควบคุมกิจกรรม</value>
+  </data>
+  <data name="rqActivitySection" xml:space="preserve">
+    <value>กรุณาเลือกแผนกที่ควบคุมกิจกรรม</value>
+  </data>
+  <data name="rqOwneractivity" xml:space="preserve">
+    <value>กรุณาเลือกผู้ควบคุมกิจกรรม</value>
+  </data>
+  <data name="lbdepartment_injured" xml:space="preserve">
+    <value>ส่วนงานของผู้บาดเจ็บ</value>
+  </data>
+  <data name="lbfunction_injured" xml:space="preserve">
+    <value>โรงงาน/ฝ่ายของผู้บาดเจ็บ</value>
+  </data>
+  <data name="btIncidentexcept" xml:space="preserve">
+    <value>ยกเว้นอุบัติเหตุที่ไม่ต้องบันทึกเป็นอุบัติเหตุในรายงาน</value>
+  </data>
+  <data name="detailexcept" xml:space="preserve">
+    <value>รายละเอียดเพิ่มเติม</value>
+  </data>
+  <data name="lbreasonexcept" xml:space="preserve">
+    <value>เหตุผลที่ยกเว้นอุบัติเหตุที่ไม่ต้องบันทึกเป็นอุบัติเหตุในรายงาน</value>
+  </data>
+  <data name="rqreasonexcept" xml:space="preserve">
+    <value>กรุณาเลือกเหตุผลที่ยกเว้นอุบัติเหตุที่ไม่ต้องบันทึกเป็นอุบัติเหตุในรายงาน</value>
+  </data>
+  <data name="add_consequence" xml:space="preserve">
+    <value>เพิ่มการบริหารจัดการผลกระทบ(บทลงโทษ)​</value>
+  </data>
+  <data name="add_preventive" xml:space="preserve">
+    <value>เพิ่มมาตรการป้องกัน</value>
+  </data>
+  <data name="lb_consequence" xml:space="preserve">
+    <value>การบริหารจัดการผลกระทบ(บทลงโทษ)​</value>
+  </data>
+  <data name="lb_preventive" xml:space="preserve">
+    <value>มาตรการป้องกัน</value>
+  </data>
+  <data name="tb_consequence" xml:space="preserve">
+    <value>การบริหารจัดการผลกระทบ(บทลงโทษ)​</value>
+  </data>
+  <data name="tb_preventive" xml:space="preserve">
+    <value>มาตรการป้องกัน</value>
+  </data>
+  <data name="lb_search_area" xml:space="preserve">
+    <value>พื้นที่ค้นหา</value>
+  </data>
+</root>

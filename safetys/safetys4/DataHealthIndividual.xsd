@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DataHealthIndividual" targetNamespace="http://tempuri.org/DataHealthIndividual.xsd" xmlns:mstns="http://tempuri.org/DataHealthIndividual.xsd" xmlns="http://tempuri.org/DataHealthIndividual.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DataHealthIndividual" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="DataHealthIndividual" msprop:Generator_UserDSName="DataHealthIndividual">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="working_background" msprop:Generator_TableClassName="working_backgroundDataTable" msprop:Generator_TableVarName="tableworking_background" msprop:Generator_TablePropName="working_background" msprop:Generator_RowDeletingName="working_backgroundRowDeleting" msprop:Generator_RowChangingName="working_backgroundRowChanging" msprop:Generator_RowEvHandlerName="working_backgroundRowChangeEventHandler" msprop:Generator_RowDeletedName="working_backgroundRowDeleted" msprop:Generator_UserTableName="working_background" msprop:Generator_RowChangedName="working_backgroundRowChanged" msprop:Generator_RowEvArgName="working_backgroundRowChangeEvent" msprop:Generator_RowClassName="working_backgroundRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="year" msprop:Generator_ColumnVarNameInTable="columnyear" msprop:Generator_ColumnPropNameInRow="year" msprop:Generator_ColumnPropNameInTable="yearColumn" msprop:Generator_UserColumnName="year" type="xs:string" minOccurs="0" />
+              <xs:element name="working_description" msprop:Generator_ColumnVarNameInTable="columnworking_description" msprop:Generator_ColumnPropNameInRow="working_description" msprop:Generator_ColumnPropNameInTable="working_descriptionColumn" msprop:Generator_UserColumnName="working_description" type="xs:string" minOccurs="0" />
+              <xs:element name="service_year" msprop:Generator_ColumnVarNameInTable="columnservice_year" msprop:Generator_ColumnPropNameInRow="service_year" msprop:Generator_ColumnPropNameInTable="service_yearColumn" msprop:Generator_UserColumnName="service_year" type="xs:string" minOccurs="0" />
+              <xs:element name="risk_factor_relate_work" msprop:Generator_ColumnVarNameInTable="columnrisk_factor_relate_work" msprop:Generator_ColumnPropNameInRow="risk_factor_relate_work" msprop:Generator_ColumnPropNameInTable="risk_factor_relate_workColumn" msprop:Generator_UserColumnName="risk_factor_relate_work" type="xs:string" minOccurs="0" />
+              <xs:element name="environment_monitor" msprop:Generator_ColumnVarNameInTable="columnenvironment_monitor" msprop:Generator_ColumnPropNameInRow="environment_monitor" msprop:Generator_ColumnPropNameInTable="environment_monitorColumn" msprop:Generator_UserColumnName="environment_monitor" type="xs:string" minOccurs="0" />
+              <xs:element name="year_environmental_inspection" msprop:Generator_ColumnVarNameInTable="columnyear_environmental_inspection" msprop:Generator_ColumnPropNameInRow="year_environmental_inspection" msprop:Generator_ColumnPropNameInTable="year_environmental_inspectionColumn" msprop:Generator_UserColumnName="year_environmental_inspection" type="xs:string" minOccurs="0" />
+              <xs:element name="result_environmental_inspection" msprop:Generator_ColumnVarNameInTable="columnresult_environmental_inspection" msprop:Generator_ColumnPropNameInRow="result_environmental_inspection" msprop:Generator_ColumnPropNameInTable="result_environmental_inspectionColumn" msprop:Generator_UserColumnName="result_environmental_inspection" type="xs:string" minOccurs="0" />
+              <xs:element name="duration_risk" msprop:Generator_ColumnVarNameInTable="columnduration_risk" msprop:Generator_ColumnPropNameInRow="duration_risk" msprop:Generator_ColumnPropNameInTable="duration_riskColumn" msprop:Generator_UserColumnName="duration_risk" type="xs:string" minOccurs="0" />
+              <xs:element name="workplace_monitoring_results" msprop:Generator_ColumnVarNameInTable="columnworkplace_monitoring_results" msprop:Generator_ColumnPropNameInRow="workplace_monitoring_results" msprop:Generator_ColumnPropNameInTable="workplace_monitoring_resultsColumn" msprop:Generator_UserColumnName="workplace_monitoring_results" type="xs:string" minOccurs="0" />
+              <xs:element name="inspection_attachment" msprop:Generator_ColumnVarNameInTable="columninspection_attachment" msprop:Generator_ColumnPropNameInRow="inspection_attachment" msprop:Generator_ColumnPropNameInTable="inspection_attachmentColumn" msprop:Generator_UserColumnName="inspection_attachment" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="health_check_report" msprop:Generator_TableClassName="health_check_reportDataTable" msprop:Generator_TableVarName="tablehealth_check_report" msprop:Generator_TablePropName="health_check_report" msprop:Generator_RowDeletingName="health_check_reportRowDeleting" msprop:Generator_RowChangingName="health_check_reportRowChanging" msprop:Generator_RowEvHandlerName="health_check_reportRowChangeEventHandler" msprop:Generator_RowDeletedName="health_check_reportRowDeleted" msprop:Generator_UserTableName="health_check_report" msprop:Generator_RowChangedName="health_check_reportRowChanged" msprop:Generator_RowEvArgName="health_check_reportRowChangeEvent" msprop:Generator_RowClassName="health_check_reportRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="name_check" msprop:Generator_ColumnVarNameInTable="columnname_check" msprop:Generator_ColumnPropNameInRow="name_check" msprop:Generator_ColumnPropNameInTable="name_checkColumn" msprop:Generator_UserColumnName="name_check" type="xs:string" minOccurs="0" />
+              <xs:element name="data_year1" msprop:Generator_ColumnVarNameInTable="columndata_year1" msprop:Generator_ColumnPropNameInRow="data_year1" msprop:Generator_ColumnPropNameInTable="data_year1Column" msprop:Generator_UserColumnName="data_year1" type="xs:string" minOccurs="0" />
+              <xs:element name="data_year2" msprop:Generator_ColumnVarNameInTable="columndata_year2" msprop:Generator_ColumnPropNameInRow="data_year2" msprop:Generator_ColumnPropNameInTable="data_year2Column" msprop:Generator_UserColumnName="data_year2" type="xs:string" minOccurs="0" />
+              <xs:element name="data_year3" msprop:Generator_ColumnVarNameInTable="columndata_year3" msprop:Generator_ColumnPropNameInRow="data_year3" msprop:Generator_ColumnPropNameInTable="data_year3Column" msprop:Generator_UserColumnName="data_year3" type="xs:string" minOccurs="0" />
+              <xs:element name="data_year4" msprop:Generator_ColumnVarNameInTable="columndata_year4" msprop:Generator_ColumnPropNameInRow="data_year4" msprop:Generator_ColumnPropNameInTable="data_year4Column" msprop:Generator_UserColumnName="data_year4" type="xs:string" minOccurs="0" />
+              <xs:element name="data_year5" msprop:Generator_ColumnVarNameInTable="columndata_year5" msprop:Generator_ColumnPropNameInRow="data_year5" msprop:Generator_ColumnPropNameInTable="data_year5Column" msprop:Generator_UserColumnName="data_year5" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

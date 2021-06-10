@@ -1,0 +1,480 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="absorbing" xml:space="preserve">
+    <value>Absorbing</value>
+  </data>
+  <data name="action" xml:space="preserve">
+    <value>Action</value>
+  </data>
+  <data name="add_process_action" xml:space="preserve">
+    <value>Add action</value>
+  </data>
+  <data name="adjusting_ppe" xml:space="preserve">
+    <value>Adjusting PPE</value>
+  </data>
+  <data name="applying_lockout" xml:space="preserve">
+    <value>Applying lockout</value>
+  </data>
+  <data name="attachment" xml:space="preserve">
+    <value>Attachment</value>
+  </data>
+  <data name="at_risk" xml:space="preserve">
+    <value>At Risk</value>
+  </data>
+  <data name="barricade_warning_lights" xml:space="preserve">
+    <value>Barricade &amp; warning lights</value>
+  </data>
+  <data name="btSotformedit" xml:space="preserve">
+    <value>Edit</value>
+  </data>
+  <data name="caught_between" xml:space="preserve">
+    <value>Caught in, on or between</value>
+  </data>
+  <data name="changing_position" xml:space="preserve">
+    <value>Changing position</value>
+  </data>
+  <data name="changing_tools" xml:space="preserve">
+    <value>Changing tools</value>
+  </data>
+  <data name="chocks_restraints" xml:space="preserve">
+    <value>Chock/restraints</value>
+  </data>
+  <data name="close_action" xml:space="preserve">
+    <value>Close Action</value>
+  </data>
+  <data name="confined_space_permit" xml:space="preserve">
+    <value>Confined Space Permit</value>
+  </data>
+  <data name="date_complete" xml:space="preserve">
+    <value>Date Complete</value>
+  </data>
+  <data name="description" xml:space="preserve">
+    <value>Description</value>
+  </data>
+  <data name="disorganized_tools_bench" xml:space="preserve">
+    <value>Disorgainized tools &amp; bench</value>
+  </data>
+  <data name="doc_no" xml:space="preserve">
+    <value>VFL No.</value>
+  </data>
+  <data name="due_date" xml:space="preserve">
+    <value>Due date</value>
+  </data>
+  <data name="ears_eyes" xml:space="preserve">
+    <value>Ears &amp; eyes</value>
+  </data>
+  <data name="electrical_permit" xml:space="preserve">
+    <value>Electrical_permit</value>
+  </data>
+  <data name="electricity" xml:space="preserve">
+    <value>Electricity</value>
+  </data>
+  <data name="face_respiratory" xml:space="preserve">
+    <value>Face &amp; respiratory</value>
+  </data>
+  <data name="falling" xml:space="preserve">
+    <value>Falling</value>
+  </data>
+  <data name="feet_legs" xml:space="preserve">
+    <value>Feet and legs</value>
+  </data>
+  <data name="hamesses" xml:space="preserve">
+    <value>Harness</value>
+  </data>
+  <data name="hand_arms" xml:space="preserve">
+    <value>Hands and arms</value>
+  </data>
+  <data name="hd_detail" xml:space="preserve">
+    <value>Detail</value>
+  </data>
+  <data name="hd_hierarchy" xml:space="preserve">
+    <value>Hierarchy</value>
+  </data>
+  <data name="head" xml:space="preserve">
+    <value>Head</value>
+  </data>
+  <data name="hiding_dodging" xml:space="preserve">
+    <value>Hiding or dodging</value>
+  </data>
+  <data name="hot_work_permit" xml:space="preserve">
+    <value>Hot Work Permit</value>
+  </data>
+  <data name="inhaling" xml:space="preserve">
+    <value>Inhaling</value>
+  </data>
+  <data name="in_safe_conditions" xml:space="preserve">
+    <value>In safe conditions</value>
+  </data>
+  <data name="isolation_lockout" xml:space="preserve">
+    <value>Isolation and Lockout(permit)</value>
+  </data>
+  <data name="lbcompany" xml:space="preserve">
+    <value>Company</value>
+  </data>
+  <data name="lbcountry" xml:space="preserve">
+    <value>Country</value>
+  </data>
+  <data name="lbdepartment" xml:space="preserve">
+    <value>Department</value>
+  </data>
+  <data name="lbfunction" xml:space="preserve">
+    <value>Function</value>
+  </data>
+  <data name="lblocation" xml:space="preserve">
+    <value>Location</value>
+  </data>
+  <data name="lbobservation" xml:space="preserve">
+    <value>Observation(Details)</value>
+  </data>
+  <data name="lbreasonreject" xml:space="preserve">
+    <value>Reason for reject report</value>
+  </data>
+  <data name="lbsite" xml:space="preserve">
+    <value>Site</value>
+  </data>
+  <data name="lbsotdate" xml:space="preserve">
+    <value>Date</value>
+  </data>
+  <data name="lbsotteam" xml:space="preserve">
+    <value>VFL Team</value>
+  </data>
+  <data name="lbsottime" xml:space="preserve">
+    <value>Time From/To</value>
+  </data>
+  <data name="lbstatus" xml:space="preserve">
+    <value>Status</value>
+  </data>
+  <data name="lbtypework" xml:space="preserve">
+    <value>Type of work</value>
+  </data>
+  <data name="manage" xml:space="preserve">
+    <value>Manage</value>
+  </data>
+  <data name="materials_storage" xml:space="preserve">
+    <value>Material storage</value>
+  </data>
+  <data name="na" xml:space="preserve">
+    <value>n/a</value>
+  </data>
+  <data name="no" xml:space="preserve">
+    <value>No.</value>
+  </data>
+  <data name="notify_contractor" xml:space="preserve">
+    <value>Notify contractor (if any)</value>
+  </data>
+  <data name="obstruction_leaning_items" xml:space="preserve">
+    <value>Obstructions &amp; leaning items</value>
+  </data>
+  <data name="orderline_tidiness" xml:space="preserve">
+    <value>Orderliness/tidiness</value>
+  </data>
+  <data name="personal_protection_equipment" xml:space="preserve">
+    <value>Personal Protection Equipment</value>
+  </data>
+  <data name="position_people" xml:space="preserve">
+    <value>Position of people</value>
+  </data>
+  <data name="pre_job_safe_checks" xml:space="preserve">
+    <value>Pre job safety checks</value>
+  </data>
+  <data name="procedures" xml:space="preserve">
+    <value>Procedures</value>
+  </data>
+  <data name="process_action_form" xml:space="preserve">
+    <value>Process of Action</value>
+  </data>
+  <data name="reaction_people" xml:space="preserve">
+    <value>Reactions of people</value>
+  </data>
+  <data name="rearranging_job" xml:space="preserve">
+    <value>Rearranging job</value>
+  </data>
+  <data name="remark" xml:space="preserve">
+    <value>Remark</value>
+  </data>
+  <data name="rescue_plan_place" xml:space="preserve">
+    <value>Rescue Plan in place</value>
+  </data>
+  <data name="responsible_person" xml:space="preserve">
+    <value>Responsible person</value>
+  </data>
+  <data name="right_job" xml:space="preserve">
+    <value>Right for job</value>
+  </data>
+  <data name="risk" xml:space="preserve">
+    <value>Risk</value>
+  </data>
+  <data name="rqaction" xml:space="preserve">
+    <value>Action is required.</value>
+  </data>
+  <data name="rqcompany" xml:space="preserve">
+    <value>Company field is reqired.</value>
+  </data>
+  <data name="rqcountry" xml:space="preserve">
+    <value>Country field is reqired.</value>
+  </data>
+  <data name="rqdepartment" xml:space="preserve">
+    <value>Plant/Department field is reqired.</value>
+  </data>
+  <data name="rqduedate" xml:space="preserve">
+    <value>Duedate is required.</value>
+  </data>
+  <data name="rqfunction" xml:space="preserve">
+    <value>Function/Business Unit field is reqired.</value>
+  </data>
+  <data name="rqresponsible_person" xml:space="preserve">
+    <value>Responsible person is required.</value>
+  </data>
+  <data name="rqsite" xml:space="preserve">
+    <value>Site field is reqired.</value>
+  </data>
+  <data name="rqsotdate" xml:space="preserve">
+    <value>Date is required.</value>
+  </data>
+  <data name="rqtypecontrol" xml:space="preserve">
+    <value>Type control is required.</value>
+  </data>
+  <data name="rqtypework" xml:space="preserve">
+    <value>Type of work is reqired.</value>
+  </data>
+  <data name="safe" xml:space="preserve">
+    <value>Safe</value>
+  </data>
+  <data name="sot" xml:space="preserve">
+    <value>VFL</value>
+  </data>
+  <data name="srilanka" xml:space="preserve">
+    <value>Sri Lanka</value>
+  </data>
+  <data name="stairs_platforms" xml:space="preserve">
+    <value>Stairs/platforms</value>
+  </data>
+  <data name="standards_established_understood" xml:space="preserve">
+    <value>Standards established &amp; understood</value>
+  </data>
+  <data name="standard_adequate_job" xml:space="preserve">
+    <value>Standard adequate for job</value>
+  </data>
+  <data name="standard_being_maintained" xml:space="preserve">
+    <value>Standard being maintained</value>
+  </data>
+  <data name="standard_established" xml:space="preserve">
+    <value>Standard established</value>
+  </data>
+  <data name="status" xml:space="preserve">
+    <value>Status</value>
+  </data>
+  <data name="stopping_work" xml:space="preserve">
+    <value>Stopping work</value>
+  </data>
+  <data name="striking_against" xml:space="preserve">
+    <value>Striking against</value>
+  </data>
+  <data name="struck_by" xml:space="preserve">
+    <value>Struck by</value>
+  </data>
+  <data name="thailand" xml:space="preserve">
+    <value>Thailand</value>
+  </data>
+  <data name="tools_equipment" xml:space="preserve">
+    <value>Tool and equipment</value>
+  </data>
+  <data name="typecontrol" xml:space="preserve">
+    <value>Type of control</value>
+  </data>
+  <data name="used_correctly" xml:space="preserve">
+    <value>Used correctly</value>
+  </data>
+  <data name="walkway_passageways" xml:space="preserve">
+    <value>Walkway &amp; passageways</value>
+  </data>
+  <data name="work_height_permit" xml:space="preserve">
+    <value>Work @ Height Permit</value>
+  </data>
+  <data name="lbdivision" xml:space="preserve">
+    <value>Division</value>
+  </data>
+  <data name="rqdivision" xml:space="preserve">
+    <value>Division field is reqired.</value>
+  </data>
+  <data name="lbcomment" xml:space="preserve">
+    <value>Details of Observation</value>
+  </data>
+  <data name="rqtypeemployment" xml:space="preserve">
+    <value>Personnel category is required.</value>
+  </data>
+  <data name="type_employment" xml:space="preserve">
+    <value>Personnel category</value>
+  </data>
+  <data name="infoimage" xml:space="preserve">
+    <value>Can upload up to 1 file of the SOT and maximum 5 MB per file.</value>
+  </data>
+  <data name="chemical_storage" xml:space="preserve">
+    <value>Chemical storage</value>
+  </data>
+  <data name="environment" xml:space="preserve">
+    <value>Environment</value>
+  </data>
+  <data name="eyes_tasks" xml:space="preserve">
+    <value>Eyes on Tasks</value>
+  </data>
+  <data name="housekeeping" xml:space="preserve">
+    <value>Housekeeping</value>
+  </data>
+  <data name="lifting_lowering" xml:space="preserve">
+    <value>Lifting/lowering</value>
+  </data>
+  <data name="line_fire" xml:space="preserve">
+    <value>Line of fire</value>
+  </data>
+  <data name="posture" xml:space="preserve">
+    <value>Posture (Body position)</value>
+  </data>
+  <data name="walking_working_surface" xml:space="preserve">
+    <value>Walking /Working surface</value>
+  </data>
+  <data name="waste_diposal" xml:space="preserve">
+    <value>Waste diposal</value>
+  </data>
+  <data name="all_sot_header" xml:space="preserve">
+    <value>All VFL</value>
+  </data>
+  <data name="lbbehavioral" xml:space="preserve">
+    <value>Behavioral Based Safety Observation Checklist</value>
+  </data>
+  <data name="comments" xml:space="preserve">
+    <value>Comments</value>
+  </data>
+  <data name="report_date" xml:space="preserve">
+    <value>Date of Report</value>
+  </data>
+  <data name="lbdate_observation" xml:space="preserve">
+    <value>Date of Observation</value>
+  </data>
+  <data name="lbname_reporter" xml:space="preserve">
+    <value>Name of reporter</value>
+  </data>
+  <data name="lbmng_level" xml:space="preserve">
+    <value>Management Level</value>
+  </data>
+  <data name="attachment_header" xml:space="preserve">
+    <value>Attachment (Can upload only  1 file (JPG, PNG,PDF,DOCX)  and max file size is 5 MB)</value>
+  </data>
+</root>
